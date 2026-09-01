@@ -1,15 +1,13 @@
 import { useMemo, useState } from 'react';
 import type { Incident, MonitoringDataset, NewsItem, PRItem } from '@/types/monitoring';
-import { NewsCard } from '@/components/news/NewsCard';
+import { ArchiveTile } from '@/components/archive/ArchiveTile';
 import { EmptyState, SectionTitle } from '@/components/common/Primitives';
 import { ExternalLinkButton } from '@/components/common/ExternalLinkButton';
 import { StatusBadge } from '@/components/common/StatusBadge';
-import { dataUrl } from '@/data/loadMonitoringData';
 import { allCorrections, itemTitleIndex } from '@/data/normalize';
 import { effectiveStatus, selectQuietedItems } from '@/lib/dashboardRules';
 import { matchesQuery } from '@/lib/filters';
 import { formatDate, formatDateTime } from '@/lib/format';
-import { INCIDENT_CATEGORY_META } from '@/lib/statusLabels';
 
 interface ArchivePageProps {
   dataset: MonitoringDataset;
@@ -20,8 +18,11 @@ interface ArchivePageProps {
 /**
  * アーカイブ.
  *
- * Everything the N-day rule removed from the dashboard is still searchable here,
- * together with the daily reports, the backlash timeline and the correction log.
+ * N日ルールでダッシュボードから外れた案件を、タイル形式で一覧する。
+ * 各タイルは「タイトル・出典リンク・発覚から沈静化までの流れ」だけを持つ。
+ *
+ * 日別レポートの生データ（archive/*.json）は日次処理が保持し続けているが、
+ * 生JSONへのリンクは閲覧者にとって意味がないため画面には出さない。
  */
 export function ArchivePage({ dataset, now, query }: ArchivePageProps) {
   const { settings } = dataset;
@@ -32,25 +33,19 @@ export function ArchivePage({ dataset, now, query }: ArchivePageProps) {
     const news = selectQuietedItems<NewsItem>(dataset.news, settings, now);
     const incidents = selectQuietedItems<Incident>(dataset.incidents, settings, now);
     const prItems = selectQuietedItems<PRItem>(dataset.prItems, settings, now);
-    return [...news, ...incidents, ...prItems].filter((item) => matchesQuery(item, effectiveQuery));
+    return [...news, ...incidents, ...prItems]
+      .filter((item) => matchesQuery(item, effectiveQuery))
+      .sort((a, b) => b.lastMaterialUpdateAt.localeCompare(a.lastMaterialUpdateAt));
   }, [dataset, settings, now, effectiveQuery]);
 
   const corrections = useMemo(() => allCorrections(dataset), [dataset]);
   const titles = useMemo(() => itemTitleIndex(dataset), [dataset]);
 
-  const archives = dataset.archive.filter(
-    (entry) =>
-      !effectiveQuery ||
-      `${entry.title} ${entry.description ?? ''} ${entry.date}`
-        .toLowerCase()
-        .includes(effectiveQuery.toLowerCase()),
-  );
-
   return (
     <>
       <SectionTitle
         title="アーカイブ"
-        description="ダッシュボードから外れた案件も削除せず保持します。"
+        description={`最終重要更新から${settings.dashboardQuietDays}日以上動きがない案件、解消済・アーカイブ状態の案件。削除せず保持します。`}
       />
 
       <div className="toolbar" role="search">
@@ -60,7 +55,7 @@ export function ArchivePage({ dataset, now, query }: ArchivePageProps) {
             id="archive-query"
             type="search"
             value={localQuery}
-            placeholder="日付・案件・自治体・キャンペーンを検索"
+            placeholder="案件・自治体・システム・キャンペーンを検索"
             onChange={(event) => setLocalQuery(event.target.value)}
           />
         </div>
@@ -68,73 +63,20 @@ export function ArchivePage({ dataset, now, query }: ArchivePageProps) {
           絞り込みを解除
         </button>
       </div>
+      <p className="note" role="status" aria-live="polite" data-testid="archive-count">
+        {quieted.length}件を表示しています。
+      </p>
 
-      <SectionTitle title="日別レポート" />
-      {archives.length === 0 ? (
-        <EmptyState>該当する日別レポートはありません。</EmptyState>
+      {quieted.length === 0 ? (
+        <EmptyState>
+          該当する案件はありません。ダッシュボードから外れた案件が出ると、ここにタイルで並びます。
+        </EmptyState>
       ) : (
-        <ul className="archive-grid">
-          {archives.map((entry) => (
-            <li className="archive-card" key={entry.date}>
-              <b>{formatDate(entry.date)} レポート</b>
-              <small>{entry.title}</small>
-              {entry.description && <small>{entry.description}</small>}
-              <div className="actionrow">
-                {entry.dataPath && (
-                  <ExternalLinkButton
-                    source={{
-                      type: 'primary',
-                      label: 'JSON',
-                      url: new URL(dataUrl(entry.dataPath), window.location.href).toString(),
-                      linkText: '日次データを開く',
-                    }}
-                  />
-                )}
-                {entry.htmlUrl && (
-                  <ExternalLinkButton
-                    source={{
-                      type: 'primary',
-                      label: 'HTML',
-                      url: new URL(entry.htmlUrl, window.location.href).toString(),
-                      linkText: '日次レポートを開く',
-                    }}
-                  />
-                )}
-              </div>
-            </li>
+        <ul className="archive-tiles">
+          {quieted.map((item) => (
+            <ArchiveTile key={item.id} item={item} settings={settings} now={now} />
           ))}
         </ul>
-      )}
-
-      <SectionTitle
-        title="ダッシュボード非表示の案件"
-        description={`最終重要更新から${settings.dashboardQuietDays}日以上動きがない案件、アーカイブ状態の案件`}
-      />
-      {quieted.length === 0 ? (
-        <EmptyState>非表示になっている案件はありません。</EmptyState>
-      ) : (
-        <div className="grid-2" style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(360px,1fr))' }}>
-          {quieted.map((item) => (
-            <NewsCard
-              key={item.id}
-              item={item}
-              settings={settings}
-              now={now}
-              showVisibilityNote
-              extraDetails={
-                'incidentCategory' in item
-                  ? [
-                      { label: '主体', value: (item as Incident).entityName },
-                      {
-                        label: '系統',
-                        value: INCIDENT_CATEGORY_META[(item as Incident).incidentCategory].short,
-                      },
-                    ]
-                  : []
-              }
-            />
-          ))}
-        </div>
       )}
 
       <SectionTitle title="広報炎上タイムライン" />
@@ -196,9 +138,9 @@ export function ArchivePage({ dataset, now, query }: ArchivePageProps) {
         </div>
       )}
 
-      <SectionTitle title="解消済み・沈静化の状態内訳" />
+      <SectionTitle title="状態別の件数" />
       <ul className="legend">
-        {(['resolved', 'quiet', 'archived'] as const).map((status) => {
+        {(['resolved', 'quiet', 'archived', 'planned_outage'] as const).map((status) => {
           const count = [...dataset.news, ...dataset.incidents, ...dataset.prItems].filter(
             (item) => effectiveStatus(item, settings, now) === status,
           ).length;

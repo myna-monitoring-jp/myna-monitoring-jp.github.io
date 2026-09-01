@@ -43,6 +43,16 @@ export function NewsPage({ dataset, now, query }: NewsPageProps) {
     return sortItems(filtered, sort);
   }, [dataset.news, effectiveQuery, status, severity, sort, settings, now]);
 
+  // 「要注視」は最上段に1段で切り出す。今日確認すべき案件を探させないため。
+  const attention = useMemo(
+    () => items.filter((item) => effectiveStatus(item, settings, now) === 'attention'),
+    [items, settings, now],
+  );
+  const others = useMemo(
+    () => items.filter((item) => effectiveStatus(item, settings, now) !== 'attention'),
+    [items, settings, now],
+  );
+
   const reset = () => {
     setLocalQuery('');
     setStatus('');
@@ -75,17 +85,59 @@ export function NewsPage({ dataset, now, query }: NewsPageProps) {
       {items.length === 0 ? (
         <EmptyState>条件に一致するニュースはありません。絞り込みを解除してください。</EmptyState>
       ) : (
-        <div className="grid-2" style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(360px,1fr))' }}>
-          {items.map((item) => (
-            <NewsCard
-              key={item.id}
-              item={item}
-              settings={settings}
-              now={now}
-              showVisibilityNote={!isOnDashboard(item, settings, now)}
-            />
-          ))}
-        </div>
+        <>
+          {attention.length > 0 && (
+            <section aria-labelledby="attention-heading" data-testid="attention-band">
+              <div className="section-title" style={{ margin: '0 0 9px' }}>
+                <div>
+                  <h2 id="attention-heading" style={{ fontSize: '15px' }}>
+                    要注視（{attention.length}件）
+                  </h2>
+                  <p>今日も能動的に確認する理由がある案件。横に並べて1段で表示しています。</p>
+                </div>
+              </div>
+              <ul className="row-single" data-testid="attention-row">
+                {attention.map((item) => (
+                  <li key={item.id}>
+                    <NewsCard
+                      item={item}
+                      settings={settings}
+                      now={now}
+                      showVisibilityNote={!isOnDashboard(item, settings, now)}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {others.length > 0 && (
+            <>
+              {attention.length > 0 && (
+                <div className="section-title" style={{ margin: '22px 0 9px' }}>
+                  <div>
+                    <h2 style={{ fontSize: '15px' }}>その他の案件（{others.length}件）</h2>
+                    <p>新着・続報待ち・解消済・計画停止・沈静化</p>
+                  </div>
+                </div>
+              )}
+              <div
+                className="grid-2"
+                style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(360px,1fr))' }}
+              >
+                {others.map((item) => (
+                  <NewsCard
+                    key={item.id}
+                    item={item}
+                    settings={settings}
+                    now={now}
+                    showVisibilityNote={!isOnDashboard(item, settings, now)}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </>
       )}
 
       <SectionTitle title="世論の表示ルール" />

@@ -209,8 +209,9 @@ describe('ダッシュボードの掲載ルール（画面）', () => {
     unmount();
 
     renderApp(dataset, '/archive');
-    expect(screen.getByText('沈静化ニュース')).toBeInTheDocument();
-    expect(screen.getAllByTestId('visibility-note')[0]).toHaveTextContent('ダッシュボード非表示');
+    const tile = screen.getAllByTestId('archive-tile')[0];
+    expect(tile).toHaveTextContent('沈静化ニュース');
+    expect(within(tile).getByTestId('archive-flow')).toHaveTextContent('沈静化');
   });
 
   it('pinned な古い案件はダッシュボードに残る', () => {
@@ -223,8 +224,8 @@ describe('ダッシュボードの掲載ルール（画面）', () => {
     expect(screen.getByText('沈静化したニュース')).toBeInTheDocument();
   });
 
-  it('非表示理由を文章で説明する', () => {
-    renderApp(makeFullDataset(), '/archive');
+  it('詳細ページで非表示理由を文章で説明する', () => {
+    renderApp(makeFullDataset(), '/news');
     expect(screen.getAllByTestId('visibility-note')[0]).toHaveTextContent(/基準7日/);
   });
 });
@@ -258,7 +259,8 @@ describe('空データ時の表示', () => {
 
   it('アーカイブが空でも案内文を出す', () => {
     renderApp(empty, '/archive');
-    expect(screen.getByText('該当する日別レポートはありません。')).toBeInTheDocument();
+    expect(screen.getByText(/該当する案件はありません/)).toBeInTheDocument();
+    expect(screen.getByText('記録された炎上タイムラインはありません。')).toBeInTheDocument();
     expect(screen.getByText('記録された訂正はありません。')).toBeInTheDocument();
   });
 });
@@ -510,6 +512,145 @@ describe('状態ラベル', () => {
     for (const element of container.querySelectorAll('.tag, h1, h2, h3, h4')) {
       expect(element.textContent ?? '').not.toContain('継続');
     }
+  });
+});
+
+describe('要注視の最上段表示', () => {
+  const dataset = makeDataset({
+    news: [
+      makeNews({ id: 'n1', title: '新着の記事', status: 'new' }),
+      makeNews({ id: 'a1', title: '要注視の記事A', status: 'attention' }),
+      makeNews({ id: 'f1', title: '続報待ちの記事', status: 'follow_up' }),
+      makeNews({ id: 'a2', title: '要注視の記事B', status: 'attention' }),
+    ],
+  });
+
+  it('要注視だけを最上段の1段に切り出す', () => {
+    renderApp(dataset, '/news');
+
+    const band = screen.getByTestId('attention-band');
+    expect(band).toHaveTextContent('要注視（2件）');
+
+    const row = screen.getByTestId('attention-row');
+    const cards = within(row).getAllByTestId('news-card');
+    expect(cards.map((c) => c.dataset.itemId)).toEqual(['a1', 'a2']);
+  });
+
+  it('要注視の段はグリッドではなく1段レイアウトになる', () => {
+    renderApp(dataset, '/news');
+    expect(screen.getByTestId('attention-row')).toHaveClass('row-single');
+  });
+
+  it('要注視の段はその他の案件より前に描画される', () => {
+    const { container } = renderApp(dataset, '/news');
+    const band = screen.getByTestId('attention-band');
+    const others = container.querySelector('.grid-2')!;
+    expect(band.compareDocumentPosition(others) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it('要注視の案件はその他の段に重複して出ない', () => {
+    renderApp(dataset, '/news');
+    const all = screen.getAllByTestId('news-card');
+    expect(all).toHaveLength(4);
+    expect(all.filter((c) => c.dataset.itemId === 'a1')).toHaveLength(1);
+  });
+
+  it('要注視が無ければ最上段の段自体を出さない', () => {
+    renderApp(makeDataset({ news: [makeNews({ status: 'new' })] }), '/news');
+    expect(screen.queryByTestId('attention-band')).not.toBeInTheDocument();
+  });
+
+  it('ダッシュボードでも要注視が先頭に並ぶ', () => {
+    renderApp(dataset, '/');
+    const cards = screen.getAllByTestId('news-card');
+    expect(cards[0].dataset.itemId).toMatch(/^a/);
+    expect(cards[1].dataset.itemId).toMatch(/^a/);
+  });
+});
+
+describe('アーカイブのタイル表示', () => {
+  it('JSONへのリンクを出さない', () => {
+    const { container } = renderApp(makeFullDataset(), '/archive');
+
+    expect(screen.queryByText('日別レポート')).not.toBeInTheDocument();
+    for (const anchor of container.querySelectorAll('a')) {
+      expect(anchor.getAttribute('href') ?? '').not.toMatch(/\.json/);
+    }
+    expect(container.textContent).not.toContain('日次データを開く');
+  });
+
+  it('アーカイブ案件をタイルで並べ、発覚から沈静化の流れを1行で出す', () => {
+    const dataset = makeDataset({
+      incidents: [
+        makeIncident({
+          id: 'archived-incident',
+          title: '沈静化した不具合',
+          status: 'follow_up',
+          occurredAt: '2026-08-01T00:00:00+09:00',
+          recoveryAt: '2026-08-07T00:00:00+09:00',
+          lastMaterialUpdateAt: daysAgo(9),
+        }),
+      ],
+    });
+    renderApp(dataset, '/archive');
+
+    const tiles = screen.getAllByTestId('archive-tile');
+    expect(tiles).toHaveLength(1);
+    expect(tiles[0]).toHaveTextContent('沈静化した不具合');
+
+    const flow = within(tiles[0]).getByTestId('archive-flow');
+    expect(flow).toHaveTextContent('8/1 発覚');
+    expect(flow).toHaveTextContent('8/7 復旧');
+    expect(flow).toHaveTextContent('9日間更新なしで沈静化');
+  });
+
+  it('タイルに出典リンクを出す（新しいタブ属性つき）', () => {
+    renderApp(makeFullDataset(), '/archive');
+    const tile = screen.getAllByTestId('archive-tile')[0];
+    const link = within(tile).getAllByTestId('external-link')[0];
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  it('系統名と状態バッジをタイルに出す', () => {
+    const dataset = makeDataset({
+      incidents: [
+        makeIncident({
+          id: 'i',
+          incidentCategory: 'medical_it_cyber',
+          status: 'follow_up',
+          lastMaterialUpdateAt: daysAgo(10),
+        }),
+      ],
+    });
+    renderApp(dataset, '/archive');
+    const tile = screen.getAllByTestId('archive-tile')[0];
+    expect(tile).toHaveTextContent('医療IT・サイバー');
+    expect(within(tile).getByTestId('status-badge')).toHaveAttribute('data-status', 'quiet');
+  });
+
+  it('アーカイブ案件が無ければ案内文を出す', () => {
+    renderApp(makeDataset({ news: [makeNews({ lastMaterialUpdateAt: daysAgo(0) })] }), '/archive');
+    expect(screen.queryAllByTestId('archive-tile')).toHaveLength(0);
+    expect(screen.getByText(/該当する案件はありません/)).toBeInTheDocument();
+  });
+
+  it('アーカイブ内検索で絞り込める', async () => {
+    const user = userEvent.setup();
+    const dataset = makeDataset({
+      news: [
+        makeNews({ id: 'a', title: '堺市の案件', lastMaterialUpdateAt: daysAgo(10) }),
+        makeNews({ id: 'b', title: '弘前市の案件', lastMaterialUpdateAt: daysAgo(10) }),
+      ],
+    });
+    renderApp(dataset, '/archive');
+    expect(screen.getAllByTestId('archive-tile')).toHaveLength(2);
+
+    await user.type(screen.getByLabelText('アーカイブ内検索'), '堺市');
+
+    const tiles = screen.getAllByTestId('archive-tile');
+    expect(tiles).toHaveLength(1);
+    expect(tiles[0]).toHaveAttribute('data-item-id', 'a');
   });
 });
 

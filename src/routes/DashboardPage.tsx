@@ -28,9 +28,18 @@ export function DashboardPage({ dataset, now, query }: DashboardPageProps) {
   const { settings } = dataset;
   const counts = computeDashboardCounts(dataset, now);
 
-  const news = selectDashboardItems<NewsItem>(dataset.news, settings, now).filter((item) =>
-    matchesQuery(item, query),
-  );
+  // 「要注視」を先頭に寄せる。次に新着、続報待ち、その他。
+  const statusRank = (item: NewsItem): number => {
+    const status = effectiveStatus(item, settings, now);
+    if (status === 'attention') return 0;
+    if (status === 'new') return 1;
+    if (status === 'follow_up') return 2;
+    return 3;
+  };
+
+  const news = selectDashboardItems<NewsItem>(dataset.news, settings, now)
+    .filter((item) => matchesQuery(item, query))
+    .sort((a, b) => statusRank(a) - statusRank(b));
   const incidents = selectDashboardItems<Incident>(dataset.incidents, settings, now);
   const prItems = selectDashboardItems<PRItem>(dataset.prItems, settings, now).filter((item) =>
     matchesQuery(item, query),
