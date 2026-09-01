@@ -1,0 +1,163 @@
+{
+  "dataset": "sample",
+  "generatedAt": "2026-08-31T11:20:00+09:00",
+  "reportDate": "2026-08-31",
+  "settings": {
+    "dashboardQuietDays": 7,
+    "newItemHours": 48,
+    "timezone": "Asia/Tokyo",
+    "organizationLabel": "行政・マイナ関連モニタリング"
+  },
+  "dataUpdate": {
+    "state": "ok",
+    "lastSuccessfulUpdateAt": "2026-08-31T11:20:00+09:00"
+  },
+  "headline": {
+    "title": "2026/08/31 朝レポート",
+    "description": "公金受取口座 新聞広告の掲載開始と、Android搭載に向けた制度整備が主な動き。"
+  },
+  "news": [
+    {
+      "id": "news-public-account-ad-20260831",
+      "title": "公金受取口座「手続き不要」広告の掲載開始",
+      "category": "public_communication",
+      "polarity": "negative_watch",
+      "status": "new",
+      "severity": "high",
+      "detectedAt": "2026-08-31T07:00:00+09:00",
+      "publishedAt": "2026-08-31T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-31T07:00:00+09:00",
+      "summary": "全国紙朝刊に公金受取口座の広告が掲載開始。既存のオプトアウト批判との接続を監視対象に追加した。",
+      "whatIsNew": "広告の掲載が本日開始された。",
+      "dailyDiff": "新規検知。",
+      "publicVoices": [
+        {
+          "channel": "x",
+          "sentiment": "concern",
+          "summary": "不同意を返送しないと登録されるという趣旨の投稿が既に拡散していた。",
+          "representative": true,
+          "url": "https://x.com/himuroReborn398/status/2071871729765638367",
+          "repostCount": 4820,
+          "likeCount": 12010
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "政府広報",
+          "url": "https://www.gov-online.go.jp/newspaper/tsukidashi/202608/newspaper-2051.html",
+          "linkText": "広告の一次情報を開く",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "news-android-mdoc-20260831",
+      "title": "Androidへの基本4情報等搭載に向け制度整備",
+      "category": "policy",
+      "polarity": "positive",
+      "status": "new",
+      "severity": "high",
+      "detectedAt": "2026-08-31T18:00:00+09:00",
+      "publishedAt": "2026-08-31T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-31T18:00:00+09:00",
+      "summary": "カード代替電磁的記録の省令・技術基準改正案について意見募集を開始。",
+      "dailyDiff": "新規検知。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/news/8f0fb90c-f2d2-49d3-a5a4-d2b0f2293e31",
+          "linkText": "一次情報を開く",
+          "active": true
+        }
+      ]
+    }
+  ],
+  "incidents": [
+    {
+      "id": "incident-joetsu-20260804",
+      "incidentCategory": "local_government_insurer",
+      "title": "2割→3割表示等、限度額区分の誤表示可能性",
+      "entityName": "上越市",
+      "region": "新潟県",
+      "status": "attention",
+      "severity": "high",
+      "occurredAt": "2026-08-04T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-30T09:00:00+09:00",
+      "affectedCount": 9955,
+      "affectedCountNote": "最大27,745人に影響が及ぶ可能性",
+      "summary": "負担割合・限度額区分の誤表示可能性について市が調査中。",
+      "cause": "年度切替処理・区分設定に起因する可能性（調査中）",
+      "dailyDiff": "8/30に調査状況が更新された。",
+      "sources": [
+        {
+          "type": "media",
+          "label": "上越タウンジャーナル",
+          "url": "https://joetsu.yukiguni.town/l-news/332845/",
+          "linkText": "報道記事を開く",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-myna-app-20260827",
+      "incidentCategory": "common_system",
+      "title": "一部端末・環境で認証／ログインが完了しない",
+      "entityName": "デジタル庁",
+      "systemName": "マイナアプリ",
+      "status": "follow_up",
+      "severity": "medium",
+      "lastMaterialUpdateAt": "2026-08-27T10:00:00+09:00",
+      "summary": "認証・ログインが完了しない事象。公式の全面解消発表を待つ状態。",
+      "dailyDiff": "前日から変化なし。",
+      "sources": [
+        {
+          "type": "media",
+          "label": "ITmedia NEWS",
+          "url": "https://www.itmedia.co.jp/news/article/2608/27/2000000833/",
+          "linkText": "報道記事を開く",
+          "active": true
+        }
+      ]
+    }
+  ],
+  "prItems": [
+    {
+      "id": "pr-public-account-ad",
+      "ministry": "政府広報・デジタル庁",
+      "campaignName": "公金受取口座 新聞広告",
+      "title": "公金受取口座 新聞広告",
+      "prClassification": "active_watch",
+      "status": "new",
+      "severity": "high",
+      "startAt": "2026-08-31",
+      "lastMaterialUpdateAt": "2026-08-31T07:00:00+09:00",
+      "summary": "掲載開始。既存批判との結び付きを監視対象に追加。",
+      "message": "手続きは不要です。",
+      "riskFactors": ["オプトアウト", "切り抜き"],
+      "dailyDiff": "新規検知。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "政府広報",
+          "url": "https://www.gov-online.go.jp/newspaper/tsukidashi/202608/newspaper-2051.html",
+          "linkText": "広告の一次情報を開く",
+          "active": true
+        }
+      ]
+    }
+  ],
+  "surveys": [],
+  "pulses": [
+    {
+      "id": "pulse-public-account-optout",
+      "title": "公金受取口座：オプトアウトへの違和感",
+      "description": "広告掲載開始により、既存の批判論点が再浮上する可能性がある。",
+      "scaleNote": "代表投稿 4,820RP"
+    }
+  ],
+  "archive": [],
+  "timeline": [],
+  "corrections": []
+}

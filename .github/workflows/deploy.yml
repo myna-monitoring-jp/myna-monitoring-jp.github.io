@@ -1,0 +1,75 @@
+name: Deploy to GitHub Pages
+
+# main への push で自動デプロイします。
+# データを更新したい場合は data/current.json を更新して push するだけです。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      data_source:
+        description: 'どのデータを公開するか（sample=デモ / live=本番）'
+        required: true
+        default: sample
+        type: choice
+        options: [sample, live]
+
+# GitHub Pages への公開に必要な最小権限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時デプロイを1本に制限（後発を優先し、進行中は完了させる）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - run: npm ci
+
+      # 公開前にデータの整合性を検査する。壊れたデータは公開しない。
+      - name: Validate data
+        run: |
+          node scripts/validate-data.mjs public/data
+          node scripts/validate-data.mjs public/sample-data
+
+      - name: Typecheck and test
+        run: |
+          npm run typecheck
+          npm test
+
+      - uses: actions/configure-pages@v5
+        id: pages
+
+      - name: Build
+        env:
+          # configure-pages が算出したベースパスを使う。
+          # <org>.github.io なら "/"、プロジェクトページなら "/<repo>/" になる。
+          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          VITE_DATA_SOURCE: ${{ inputs.data_source || vars.DATA_SOURCE || 'sample' }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

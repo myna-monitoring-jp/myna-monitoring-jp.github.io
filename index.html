@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!--
+      検索エンジンにインデックスさせない設定。
+      サンプルデータを公開している間は有効にしておき、本番データに切り替えて
+      検索流入も受け入れる段階でこの1行を削除してください（README 3.2 参照）。
+    -->
+    <meta name="robots" content="noindex,nofollow" />
+    <!--
+      Baseline CSP. `frame-ancestors` and `X-Frame-Options` cannot be set from a
+      <meta> element — configure them on the hosting server (see README, security).
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'none'"
+    />
+    <title>行政・マイナ関連 モニタリングポータル</title>
+    <meta
+      name="description"
+      content="マイナ保険証・マイナンバー制度関連のトップニュース、不具合、行政広報を一つの固定URLで横断監視するポータル"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>このサイトの表示にはJavaScriptが必要です。</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

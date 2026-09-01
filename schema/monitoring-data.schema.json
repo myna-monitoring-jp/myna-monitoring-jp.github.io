@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.internal/schema/monitoring-data.schema.json",
+  "title": "MonitoringDataset",
+  "description": "data/current.json および data/archive/YYYY-MM-DD.json のスキーマ。src/types/monitoring.ts と対応する。",
+  "type": "object",
+  "required": ["dataset", "generatedAt", "settings", "dataUpdate", "news", "incidents", "prItems"],
+  "additionalProperties": true,
+  "properties": {
+    "dataset": {
+      "description": "sample = デモ用、live = 本番。混在させない。",
+      "enum": ["sample", "live"]
+    },
+    "generatedAt": { "type": "string", "description": "ISO 8601。データ生成時刻。" },
+    "reportDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "settings": { "$ref": "#/$defs/appSettings" },
+    "dataUpdate": { "$ref": "#/$defs/dataUpdateStatus" },
+    "headline": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "news": { "type": "array", "items": { "$ref": "#/$defs/newsItem" } },
+    "incidents": { "type": "array", "items": { "$ref": "#/$defs/incident" } },
+    "prItems": { "type": "array", "items": { "$ref": "#/$defs/prItem" } },
+    "surveys": { "type": "array", "items": { "$ref": "#/$defs/survey" } },
+    "pulses": { "type": "array", "items": { "$ref": "#/$defs/pulseItem" } },
+    "archive": { "type": "array", "items": { "$ref": "#/$defs/archiveEntry" } },
+    "timeline": { "type": "array", "items": { "$ref": "#/$defs/timelineEntry" } },
+    "corrections": { "type": "array", "items": { "$ref": "#/$defs/correction" } }
+  },
+  "$defs": {
+    "appSettings": {
+      "type": "object",
+      "required": ["dashboardQuietDays", "newItemHours", "timezone"],
+      "properties": {
+        "dashboardQuietDays": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "7日ルールのN。初期値7。"
+        },
+        "newItemHours": { "type": "integer", "minimum": 1, "description": "「新着」とみなす時間。初期値48。" },
+        "timezone": { "type": "string" },
+        "organizationLabel": { "type": "string" }
+      }
+    },
+    "dataUpdateStatus": {
+      "type": "object",
+      "required": ["state"],
+      "properties": {
+        "state": { "enum": ["ok", "stale", "failed", "never_updated"] },
+        "lastSuccessfulUpdateAt": { "type": "string" },
+        "attemptedAt": { "type": "string" },
+        "message": { "type": "string" }
+      }
+    },
+    "itemStatus": {
+      "description": "曖昧な WATCH / 継続 は使用しない。",
+      "enum": ["new", "attention", "follow_up", "resolved", "planned_outage", "quiet", "archived"]
+    },
+    "severity": { "enum": ["high", "medium", "low"] },
+    "polarity": { "enum": ["positive", "neutral", "negative_watch", "negative"] },
+    "source": {
+      "type": "object",
+      "required": ["type", "label", "url"],
+      "properties": {
+        "type": { "enum": ["primary", "media", "social", "survey"] },
+        "label": { "type": "string", "minLength": 1 },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://",
+          "description": "絶対URLのみ。空文字・# ・javascript: は不可。"
+        },
+        "linkText": { "type": "string", "description": "「一次情報を開く」等の明示的な文言。" },
+        "publisher": { "type": "string" },
+        "publishedAt": { "type": "string" },
+        "verifiedAt": { "type": "string" },
+        "active": { "type": "boolean", "description": "false = リンク切れ。リンクではなく注記として表示。" },
+        "note": { "type": "string" }
+      }
+    },
+    "publicVoice": {
+      "type": "object",
+      "required": ["summary", "representative"],
+      "description": "実際に観測された反応のみ。予測される批判は communicationRisks に入れる。",
+      "properties": {
+        "id": { "type": "string" },
+        "channel": { "enum": ["x", "yahoo_comment", "app_store", "medical_professional", "social", "other"] },
+        "type": { "type": "string", "description": "channel の別名（旧サンプル互換）。" },
+        "sentiment": { "enum": ["supportive", "concern", "complaint", "misunderstanding", "field_impact"] },
+        "summary": { "type": "string" },
+        "representative": { "type": "boolean" },
+        "url": { "type": "string" },
+        "observedAt": { "type": "string" },
+        "replyCount": { "type": "integer", "minimum": 0 },
+        "repostCount": { "type": "integer", "minimum": 0 },
+        "likeCount": { "type": "integer", "minimum": 0 },
+        "impressionCount": { "type": "integer", "minimum": 0 },
+        "commentCount": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "factCheck": {
+      "type": "object",
+      "required": ["claim", "assessment", "explanation"],
+      "properties": {
+        "claim": { "type": "string" },
+        "assessment": {
+          "enum": ["fact", "misunderstanding", "overstatement", "legitimate_debate", "scope_separation"]
+        },
+        "explanation": { "type": "string" },
+        "sourceUrls": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "quantitativeMetric": {
+      "type": "object",
+      "required": ["label", "value"],
+      "properties": {
+        "label": { "type": "string" },
+        "value": { "type": ["string", "number"] },
+        "unit": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "correction": {
+      "type": "object",
+      "required": ["correctedAt", "reason"],
+      "properties": {
+        "correctedAt": { "type": "string" },
+        "itemId": { "type": "string" },
+        "field": { "type": "string" },
+        "before": { "type": "string" },
+        "after": { "type": "string" },
+        "reason": { "type": "string" },
+        "editor": { "type": "string" }
+      }
+    },
+    "baseItem": {
+      "type": "object",
+      "required": ["id", "title", "status", "severity", "lastMaterialUpdateAt", "summary", "sources"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "category": { "type": "string" },
+        "polarity": { "$ref": "#/$defs/polarity" },
+        "status": { "$ref": "#/$defs/itemStatus" },
+        "severity": { "$ref": "#/$defs/severity" },
+        "detectedAt": { "type": "string" },
+        "occurredAt": { "type": "string" },
+        "publishedAt": { "type": "string" },
+        "lastMaterialUpdateAt": {
+          "type": "string",
+          "description": "7日ルールの基準。重要更新（公式発表・独立報道・反応量の有意増・影響規模変更・復旧/原因確定/謝罪/削除/中止）でのみ更新する。"
+        },
+        "dashboardVisible": { "type": ["boolean", "null"] },
+        "pinned": { "type": "boolean", "description": "true でダッシュボード表示を継続。" },
+        "summary": { "type": "string" },
+        "whatIsNew": { "type": "string" },
+        "audience": { "type": "string" },
+        "quantitativeMetrics": { "type": "array", "items": { "$ref": "#/$defs/quantitativeMetric" } },
+        "dailyDiff": { "type": "string" },
+        "publicVoices": { "type": "array", "items": { "$ref": "#/$defs/publicVoice" } },
+        "factChecks": { "type": "array", "items": { "$ref": "#/$defs/factCheck" } },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
+        "relatedIds": { "type": "array", "items": { "type": "string" } },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "communicationRisks": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "まだ観測されていない予測リスク。国民の声とは分けて表示する。"
+        },
+        "corrections": { "type": "array", "items": { "$ref": "#/$defs/correction" } }
+      }
+    },
+    "newsItem": {
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        {
+          "type": "object",
+          "properties": {
+            "category": { "enum": ["policy", "public_communication", "incident", "survey", "other"] }
+          }
+        }
+      ]
+    },
+    "incident": {
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        {
+          "type": "object",
+          "required": ["incidentCategory", "entityName"],
+          "properties": {
+            "incidentCategory": {
+              "enum": ["local_government_insurer", "common_system", "medical_it_cyber"]
+            },
+            "subcategory": { "type": "string" },
+            "entityName": { "type": "string" },
+            "region": { "type": "string" },
+            "systemName": { "type": "string" },
+            "affectedCount": {
+              "type": ["integer", "null"],
+              "minimum": 0,
+              "description": "null = 未公表。0 と区別する。"
+            },
+            "affectedCountNote": { "type": "string" },
+            "symptoms": { "type": "string" },
+            "cause": { "type": "string" },
+            "workaround": { "type": "string" },
+            "recoveryAt": { "type": "string" },
+            "medicalImpact": { "type": "string" },
+            "personalDataImpact": { "type": "string" },
+            "cyberAttack": { "type": "boolean" },
+            "officialStatus": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "prItem": {
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        {
+          "type": "object",
+          "required": ["ministry", "campaignName", "prClassification"],
+          "properties": {
+            "ministry": { "type": "string" },
+            "campaignName": { "type": "string" },
+            "medium": {
+              "enum": ["newspaper_ad", "tv", "web_ad", "sns", "video", "event", "tie_up", "poster", "other"]
+            },
+            "startAt": { "type": "string" },
+            "endAt": { "type": "string" },
+            "targetAudience": { "type": "string" },
+            "message": { "type": "string" },
+            "creative": { "type": "string" },
+            "placement": { "type": "string" },
+            "partner": { "type": "string" },
+            "controversyLevel": { "type": "integer", "minimum": 0, "maximum": 3 },
+            "mediaPickupCount": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "独立媒体数。同一通信社・系列の転載は重複計上しない。"
+            },
+            "officialAction": { "type": "string" },
+            "effectMetrics": { "type": "array", "items": { "$ref": "#/$defs/quantitativeMetric" } },
+            "prClassification": { "enum": ["reported_backlash", "active_watch", "active_stable"] },
+            "stableSubtype": {
+              "enum": ["quiet", "positive"],
+              "description": "active_stable で必須。quiet = 反応未検知、positive = 好意的反応・効果を確認。"
+            },
+            "riskFactors": { "type": "array", "items": { "type": "string" } }
+          },
+          "if": {
+            "properties": { "prClassification": { "const": "active_stable" } },
+            "required": ["prClassification"]
+          },
+          "then": { "required": ["stableSubtype"] }
+        }
+      ]
+    },
+    "survey": {
+      "type": "object",
+      "required": ["id", "title", "organization", "method", "sampleSize", "questionText"],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "organization": { "type": "string" },
+        "method": { "type": "string" },
+        "sampleSize": { "type": "integer", "minimum": 0 },
+        "fieldworkPeriod": { "type": "string" },
+        "questionText": { "type": "string" },
+        "summary": { "type": "string" },
+        "publishedAt": { "type": "string" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } }
+      }
+    },
+    "pulseItem": {
+      "type": "object",
+      "required": ["id", "title", "description"],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "scaleNote": { "type": "string" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } }
+      }
+    },
+    "archiveEntry": {
+      "type": "object",
+      "required": ["date", "title"],
+      "properties": {
+        "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "dataPath": { "type": "string" },
+        "htmlUrl": { "type": "string" }
+      }
+    },
+    "timelineEntry": {
+      "type": "object",
+      "required": ["date", "title"],
+      "properties": {
+        "date": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "relatedId": { "type": "string" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } }
+      }
+    }
+  }
+}

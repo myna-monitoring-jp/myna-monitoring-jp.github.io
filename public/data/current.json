@@ -1,0 +1,24 @@
+{
+  "_comment": "本番データの配置場所です。日次更新フローがこのファイルを上書きします。サンプルは public/sample-data/ にあり、混在させないでください。",
+  "dataset": "live",
+  "generatedAt": "",
+  "reportDate": "",
+  "settings": {
+    "dashboardQuietDays": 7,
+    "newItemHours": 48,
+    "timezone": "Asia/Tokyo",
+    "organizationLabel": "行政・マイナ関連モニタリング"
+  },
+  "dataUpdate": {
+    "state": "never_updated",
+    "message": "本番データが未投入です。日次更新フローを実行してください。"
+  },
+  "news": [],
+  "incidents": [],
+  "prItems": [],
+  "surveys": [],
+  "pulses": [],
+  "archive": [],
+  "timeline": [],
+  "corrections": []
+}

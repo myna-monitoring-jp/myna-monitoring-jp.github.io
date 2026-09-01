@@ -1,0 +1,6 @@
+# リポジトリ内の改行はLFに統一する（Windows/macOS/Linux/GitHub Actions で差分が出ないようにする）
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.pdf binary
