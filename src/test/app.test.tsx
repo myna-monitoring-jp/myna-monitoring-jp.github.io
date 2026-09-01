@@ -654,6 +654,106 @@ describe('アーカイブのタイル表示', () => {
   });
 });
 
+describe('改修要望ボタン', () => {
+  it('全画面の左下にボタンが出る', () => {
+    for (const route of ['/', '/news', '/incidents', '/pr', '/archive']) {
+      const { unmount } = renderApp(makeFullDataset(), route);
+      expect(screen.getByTestId('feedback-fab')).toBeInTheDocument();
+      unmount();
+    }
+  });
+
+  it('押すとフォームが開き、対象画面が自動で選ばれる', async () => {
+    const user = userEvent.setup();
+    renderApp(makeFullDataset(), '/incidents');
+
+    await user.click(screen.getByTestId('feedback-fab'));
+
+    const dialog = screen.getByTestId('feedback-dialog');
+    expect(dialog).toHaveAttribute('role', 'dialog');
+    expect(dialog).toHaveAttribute('aria-modal', 'true');
+    expect(screen.getByLabelText('対象画面')).toHaveValue('不具合・エラー詳細');
+  });
+
+  it('「こうしたい」が空のうちは投稿リンクを出さない', async () => {
+    const user = userEvent.setup();
+    renderApp(makeFullDataset(), '/');
+
+    await user.click(screen.getByTestId('feedback-fab'));
+
+    expect(screen.queryByTestId('feedback-submit')).not.toBeInTheDocument();
+    expect(screen.getByTestId('feedback-submit-disabled')).toHaveTextContent(
+      '「こうしたい」を入力すると投稿できます',
+    );
+  });
+
+  it('入力するとGitHub Issueの投稿リンクになる（新しいタブ属性つき）', async () => {
+    const user = userEvent.setup();
+    renderApp(makeFullDataset(), '/news');
+
+    await user.click(screen.getByTestId('feedback-fab'));
+    await user.type(screen.getByLabelText(/こうしたい/), '要注視をもっと目立たせたい');
+
+    const submit = screen.getByTestId('feedback-submit');
+    expect(submit).toHaveAttribute('target', '_blank');
+    expect(submit).toHaveAttribute('rel', 'noopener noreferrer');
+
+    const href = submit.getAttribute('href')!;
+    expect(href.startsWith('https://github.com/')).toBe(true);
+    const url = new URL(href);
+    expect(url.searchParams.get('title')).toContain('[改修要望]');
+    expect(url.searchParams.get('body')).toContain('要注視をもっと目立たせたい');
+    expect(url.searchParams.get('body')).toContain('対象画面：トップニュース・世論');
+  });
+
+  it('投稿画面を開いたら完了案内を出す', async () => {
+    const user = userEvent.setup();
+    renderApp(makeFullDataset(), '/');
+
+    await user.click(screen.getByTestId('feedback-fab'));
+    await user.type(screen.getByLabelText(/こうしたい/), 'テスト要望');
+    await user.click(screen.getByTestId('feedback-submit'));
+
+    expect(screen.getByTestId('feedback-done')).toHaveTextContent('Submit new issue');
+  });
+
+  it('書きかけを保存し、閉じて開き直しても残る', async () => {
+    const user = userEvent.setup();
+    renderApp(makeFullDataset(), '/');
+
+    await user.click(screen.getByTestId('feedback-fab'));
+    await user.type(screen.getByLabelText(/こうしたい/), '途中まで書いた要望');
+    await user.click(screen.getByRole('button', { name: '閉じる' }));
+    expect(screen.queryByTestId('feedback-dialog')).not.toBeInTheDocument();
+
+    await user.click(screen.getByTestId('feedback-fab'));
+    expect(screen.getByLabelText(/こうしたい/)).toHaveValue('途中まで書いた要望');
+  });
+
+  it('Escapeと背景クリックで閉じられる', async () => {
+    const user = userEvent.setup();
+    renderApp(makeFullDataset(), '/');
+
+    await user.click(screen.getByTestId('feedback-fab'));
+    await user.keyboard('{Escape}');
+    expect(screen.queryByTestId('feedback-dialog')).not.toBeInTheDocument();
+
+    await user.click(screen.getByTestId('feedback-fab'));
+    await user.click(screen.getByTestId('feedback-overlay'));
+    expect(screen.queryByTestId('feedback-dialog')).not.toBeInTheDocument();
+  });
+
+  it('要望一覧へのリンクを持つ', async () => {
+    const user = userEvent.setup();
+    renderApp(makeFullDataset(), '/');
+
+    await user.click(screen.getByTestId('feedback-fab'));
+    const link = screen.getByTestId('feedback-list-link');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(decodeURIComponent(link.getAttribute('href')!)).toContain('label:改修要望');
+  });
+});
+
 describe('404の扱い', () => {
   it('未定義のパスでも操作可能な画面を返す', () => {
     renderApp(makeFullDataset(), '/does-not-exist');

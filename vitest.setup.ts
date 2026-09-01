@@ -21,6 +21,12 @@ afterEach(async () => {
   if (hasDom) {
     const { cleanup } = await import('@testing-library/react');
     cleanup();
+    // 改修要望フォームの下書きが次のテストへ漏れないようにする
+    try {
+      localStorage.clear();
+    } catch {
+      // localStorage が使えない環境では無視してよい
+    }
   }
   vi.restoreAllMocks();
 });

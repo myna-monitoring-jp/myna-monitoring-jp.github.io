@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
 import type { MonitoringDataset } from '@/types/monitoring';
 import { ShareActions } from '@/components/common/ShareActions';
+import { FeedbackButton } from '@/components/common/FeedbackButton';
 import { SITE_TITLE, SNS_DISCLAIMER } from '@/config/appConfig';
 import { formatDateTime } from '@/lib/format';
 import type { ViewKey } from '@/lib/teamsSummary';
@@ -107,6 +108,9 @@ export function Layout({ dataset, now, view, query, onQueryChange, children }: L
           </footer>
         </div>
       </div>
+
+      {/* 左下固定。トースト（右下）と重ならない位置に置く。 */}
+      <FeedbackButton generatedAt={dataset.generatedAt} />
     </>
   );
 }

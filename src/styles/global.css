@@ -825,22 +825,51 @@ button.action .external-mark {
   margin-bottom: 10px;
 }
 .category-tab {
+  position: relative;
   border: 1px solid #d0d5dd;
   background: #fff;
   border-radius: 9px;
-  padding: 8px 11px;
-  font-size: 10px;
+  padding: 9px 13px;
+  font-size: 10.5px;
   font-weight: 800;
-  color: #475467;
+  color: #667085;
+  transition: 0.12s;
 }
+.category-tab:hover {
+  border-color: #b9a6ea;
+  color: #344054;
+}
+
+/*
+ * 選択中のタブは「今どこを見ているか」の唯一の手掛かりなので強く出す。
+ * 色だけに頼らないよう、チェック記号も併記する（aria-selected も付いている）。
+ */
 .category-tab[aria-selected='true'] {
-  background: #332458;
+  background: #5d3fc1;
   color: #fff;
-  border-color: #332458;
+  border-color: #4a2fa8;
+  padding-left: 27px;
+  box-shadow: 0 4px 14px rgba(93, 63, 193, 0.34);
+}
+.category-tab[aria-selected='true']::before {
+  content: '✓';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  font-weight: 900;
 }
 .category-tab .tab-count {
   margin-left: 5px;
   opacity: 0.75;
+}
+.category-tab[aria-selected='true'] .tab-count {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 1px 7px;
+  margin-left: 7px;
 }
 
 .group-header {
@@ -1144,6 +1173,92 @@ td .actionrow {
   padding: 9px 13px;
 }
 
+/* ------------------------------------------------------- 改修要望ボタン */
+
+/*
+ * 左下固定。トースト（右下）と重ならない位置に置く。
+ * 本文の上に浮くが、カードを覆うリンクではないのでクリック妨害はしない。
+ */
+.feedback-fab {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 10px 15px;
+  border-radius: 999px;
+  border: 1px solid #4a2fa8;
+  background: #5d3fc1;
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(29, 41, 57, 0.22);
+}
+.feedback-fab:hover {
+  background: #4a2fa8;
+}
+
+.feedback-dialog {
+  width: min(760px, 100%);
+}
+.feedback-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 11px;
+}
+.feedback-field {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.feedback-field.feedback-wide {
+  grid-column: 1 / -1;
+}
+.feedback-field > label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #344054;
+}
+.feedback-field textarea,
+.feedback-field input,
+.feedback-field select {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 8px 9px;
+  font-size: 11.5px;
+  background: #fff;
+  color: var(--ink);
+  width: 100%;
+  resize: vertical;
+}
+.feedback-required {
+  background: var(--red-bg);
+  color: var(--red);
+  border-radius: 999px;
+  padding: 1px 6px;
+  font-size: 8.5px;
+  margin-left: 4px;
+}
+.feedback-submit {
+  background: #5d3fc1 !important;
+  border-color: #5d3fc1 !important;
+  color: #fff !important;
+}
+.feedback-done {
+  margin: 10px 0 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--green-bg);
+  border: 1px solid #b7ebcd;
+  color: var(--green);
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
 .corrections-table th,
 .corrections-table td {
   font-size: 10px;
@@ -1237,6 +1352,15 @@ td .actionrow {
   .timeline-item {
     grid-template-columns: 64px 1fr;
   }
+  .feedback-grid {
+    grid-template-columns: 1fr;
+  }
+  .feedback-fab {
+    left: 12px;
+    bottom: 12px;
+    font-size: 10.5px;
+    padding: 9px 13px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1263,7 +1387,8 @@ td .actionrow {
   .category-tabs,
   .toast,
   .skip-link,
-  .copy-overlay {
+  .copy-overlay,
+  .feedback-fab {
     display: none !important;
   }
   body {

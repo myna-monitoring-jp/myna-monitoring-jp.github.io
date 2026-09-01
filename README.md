@@ -393,6 +393,33 @@ node scripts/validate-data.mjs public/sample-data
 - `CopyPanel` は `document.body` へポータルします。`.topbar` の `backdrop-filter` が `position: fixed` の包含ブロックを作るため、トップバー内に描画するとオーバーレイがトップバーの矩形に閉じ込められます。
 - Clipboard API は reject せずハングすることがあるため、1.5秒のタイムアウトを入れています。
 
+### 改修要望の受け付け
+
+画面左下に **「✎ 改修要望」** ボタンがあります。閲覧者が「ここが見にくい」「この情報が欲しい」を気軽に投稿するための導線です。
+
+静的サイトには投稿を受けるサーバがないため、**GitHub Issue を受け皿**にしています。
+
+```
+左下のボタン → 画面内フォームに記入 → 「この内容で投稿画面を開く」
+  → GitHub の新規Issue画面が開く（タイトル・本文は自動入力済み）
+  → 投稿者は緑の「Submit new issue」を押すだけ
+```
+
+| 項目 | 内容 |
+|---|---|
+| フォームの項目 | こうしたい（必須）／対象画面／種別／今どうなっているか／理由／優先度／お名前（任意） |
+| 自動記録 | URL、データ基準時刻、画面幅、投稿日時（表示崩れの再現に使う） |
+| タイトル | `[改修要望] <対象画面>：<要望の先頭60字>` |
+| ラベル | `改修要望` |
+| 書きかけ | `localStorage` に自動保存。誤って閉じても消えない |
+| 対象画面 | 開いている画面が自動で選ばれる（書きかけ復元時も現在の画面を優先） |
+
+**投稿者にはGitHubアカウントが必要です。** アカウントを持たない方にも投稿してもらう場合は、`src/lib/feedback.ts` に `mailto:` 生成やテキストコピーの導線を足せます（`CopyPanel` が再利用できます）。
+
+要望一覧：<https://github.com/myna-monitoring-jp/myna-monitoring-jp.github.io/issues?q=label%3A%E6%94%B9%E4%BF%AE%E8%A6%81%E6%9C%9B>
+
+投稿先リポジトリは `VITE_FEEDBACK_REPO` で変更できます。
+
 ### Teamsへの自動投稿
 
 MVPでは **行いません**。公開バンドルに認証情報を置けないためです。境界は [`src/integrations/notifier.ts`](src/integrations/notifier.ts) の `NotificationGateway` インターフェースとして切ってあり、将来、組織で承認されたワークフロー（資格情報はバックエンド側で保持）を実装して差し替えられます。
@@ -405,7 +432,7 @@ MVPでは **行いません**。公開バンドルに認証情報を置けない
 npm test
 ```
 
-Vitest + Testing Library。171件。
+Vitest + Testing Library。210件。
 
 | # | 要件のテスト項目 | ファイル |
 |---|---|---|

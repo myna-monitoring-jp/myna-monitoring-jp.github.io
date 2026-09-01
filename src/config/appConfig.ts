@@ -42,6 +42,13 @@ export const STALE_DATA_HOURS = readNumber(env.VITE_STALE_DATA_HOURS, 26);
 
 export const SITE_TITLE = '行政・マイナ関連 モニタリングポータル';
 
+/**
+ * 改修要望の投稿先リポジトリ（`owner/repo`）。
+ * 静的サイトには投稿を受けるサーバがないため、GitHub Issue を受け皿にしている。
+ */
+export const FEEDBACK_REPO =
+  env.VITE_FEEDBACK_REPO ?? 'myna-monitoring-jp/myna-monitoring-jp.github.io';
+
 /** Notice repeated wherever SNS reactions are displayed. */
 export const SNS_DISCLAIMER =
   'SNSは全国世論を代表するものではありません。目立つ論点と拡散規模を測る非代表サンプルとして表示しています。';
