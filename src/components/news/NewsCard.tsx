@@ -92,6 +92,16 @@ export function NewsCard({
         {item.pinned && ' ／ ピン留め'}
       </p>
 
+      {item.reviewState === 'unreviewed' && (
+        <p className="unreviewed" data-testid="unreviewed-note">
+          <span aria-hidden="true">⚑</span> 自動収集・未レビュー
+          <span className="note">
+            {' '}
+            重要度・状態・事実関係の切り分けは未確定です。出典を確認してください。
+          </span>
+        </p>
+      )}
+
       <p className="summary">{item.summary}</p>
 
       {item.whatIsNew && (

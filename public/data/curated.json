@@ -1,16 +1,10 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-01T17:54:47.515+09:00",
-  "reportDate": "2026-09-01",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
     "timezone": "Asia/Tokyo",
     "organizationLabel": "行政・マイナ関連モニタリング"
-  },
-  "dataUpdate": {
-    "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-01T17:54:47.515+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -76,8 +70,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "news-public-account-ad-20260831",
@@ -190,8 +183,7 @@
           "reason": "引用RPを重複計上していたため、実数に訂正。",
           "editor": "モニタリング担当"
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "news-myna-app-auth-20260827",
@@ -250,8 +242,7 @@
       ],
       "relatedIds": [
         "incident-myna-app-20260827"
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "news-aya-tieup-20260824",
@@ -282,158 +273,7 @@
       ],
       "relatedIds": [
         "pr-aya-film-20260824"
-      ],
-      "reviewState": "reviewed"
-    },
-    {
-      "title": "デジタル庁設立5年 ～デジタルで変わる、一人ひとりの暮らし～",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-01T17:54:47.515+09:00",
-      "publishedAt": "2026-09-01T09:59:46+09:00",
-      "lastMaterialUpdateAt": "2026-09-01T09:59:46+09:00",
-      "summary": "※本稿は、JBpress Innovation Review主催の「行政イノベーションフォーラム」における「基調講演：人口減少時代における行政DX／デジタル庁デジタル監 三角育生氏」（2026年3月に配信）を基に制作しています。 社会環境の変化を受け「ガバメントAI」基盤の構築 ...",
-      "dailyDiff": "2026-09-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WNVFZSzlma0lhSWxmZ0NsZEFtVkVfckR6dDdCb0tyYldJZUZJc0Nkd3VwSGp6YXI4VVFEa2FhS2FTZ1MzcXhNMUVXbTgybVBZZEhFZDBPcUJaZw?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-09-01T09:59:46+09:00",
-          "verifiedAt": "2026-09-01T17:54:47.515+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260901-4e5gwo",
-      "category": "other"
-    },
-    {
-      "title": "「先進企業に学ぶ！マイナンバーカード友の会ミートアップ！！」を開催しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-01T17:54:47.515+09:00",
-      "publishedAt": "2026-09-01T09:57:10+09:00",
-      "lastMaterialUpdateAt": "2026-09-01T09:57:10+09:00",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/news/0f95a36a-87fe-4e04-b232-f1960f63ea96",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-09-01T09:57:10+09:00",
-          "verifiedAt": "2026-09-01T17:54:47.515+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260901-4ee8s8",
-      "category": "other"
-    },
-    {
-      "title": "マイナンバーカードの一体化による利便性についてどう思いますか？",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-01T17:54:47.515+09:00",
-      "publishedAt": "2026-09-01T00:00:57+09:00",
-      "lastMaterialUpdateAt": "2026-09-01T00:00:57+09:00",
-      "summary": "出入国在留管理庁は6月14日、在留カードとマイナンバーカードの機能を1枚にまとめたICカード「特定在留カード」の運用を始めた。両カードに関わる手続きを一元化し、外国人の利便性向上と行政の効率化を図る。取得は義務ではなく任意。 一体化された ...",
-      "dailyDiff": "2026-09-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBjbVROY0ZBUVlHaG1ncXgzUk9KZ3VLOU1zVUNXLWlYNUVJV3Z4UDdGcmtQNXVMOEtkLWxEQk1sU3hDaHpLZFEtbTZEeTc?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-09-01T00:00:57+09:00",
-          "verifiedAt": "2026-09-01T17:54:47.515+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260901-p1wgkz",
-      "category": "other"
-    },
-    {
-      "title": "マイナ保険証時代でも医療費の領収書を必ず保管！医療費控除で「マイナポータル連携」は絶対やめた方がいい【確定申告準備】",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-01T17:54:47.515+09:00",
-      "publishedAt": "2026-08-31T06:04:50+09:00",
-      "lastMaterialUpdateAt": "2026-08-31T06:04:50+09:00",
-      "summary": "日本は国民皆保険制度を採用しています。私たちは、公的医療保険（国民健康保険、協会けんぽ、健康保険組合、共済組合など）に加入し、保険料を支払う義務を負っています。これによって、医療機関などの窓口で利用者が支払う自己負担額は大幅に軽減 ...",
-      "dailyDiff": "2026-09-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "FP Cafe",
-          "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5PZVR1cmpaQmR2MklqY1VFeU1XVDROUmQzMUcyRjVhM0xLeHM0WFRWeTU3ZU5tOHZabExIQ09zOThVUQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "FP Cafe",
-          "publishedAt": "2026-08-31T06:04:50+09:00",
-          "verifiedAt": "2026-09-01T17:54:47.515+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260831-zc08vm",
-      "category": "other"
-    },
-    {
-      "title": "【後期高齢者】マイナ保険証を使わない派「紙の保険証廃止後」はどう受診する?「資格確認書」の交付ルールは85歳以上と84歳以下で異なります",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-01T17:54:47.515+09:00",
-      "publishedAt": "2026-08-30T21:22:00+09:00",
-      "lastMaterialUpdateAt": "2026-08-30T21:22:00+09:00",
-      "summary": "「マイナンバーカードは作らない」「マイナ保険証は使わない」と決めているご高齢の方やそのご家族は、紙の健康保険証がなくなってしまったら、病院にどうやってかかればいいのだろうと心配になったことがあるかもしれません。",
-      "dailyDiff": "2026-09-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "LIMO | くらしとお金の経済メディア",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9IeExtTWpVYlkwQTVkMEx6S1JYM19PUFZ6Q3JadTZWRDI2ZV9kTk9sRGMzZlhVU2dZS0RFX2Y1Vy0wd3NMNGlscE5Nb2w?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "LIMO | くらしとお金の経済メディア",
-          "publishedAt": "2026-08-30T21:22:00+09:00",
-          "verifiedAt": "2026-09-01T17:54:47.515+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260830-tx9f6g",
-      "category": "other"
+      ]
     }
   ],
   "incidents": [
@@ -477,8 +317,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-sakai-20260801",
@@ -512,8 +351,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-hirosaki-20260801",
@@ -542,8 +380,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-yoshikawa-monitor",
@@ -570,8 +407,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-hekinan-monitor",
@@ -596,8 +432,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-kanoya-monitor",
@@ -623,8 +458,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-myna-app-20260827",
@@ -658,8 +492,7 @@
       ],
       "relatedIds": [
         "news-myna-app-auth-20260827"
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-mynaportal-api-status",
@@ -687,8 +520,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-riyoutouroku-maint",
@@ -728,8 +560,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-toranomon-20260827",
@@ -759,8 +590,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "incident-medi-face-20260812",
@@ -802,8 +632,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     }
   ],
   "prItems": [
@@ -872,8 +701,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "pr-moj-love-20260821",
@@ -934,8 +762,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "pr-public-account-ad",
@@ -1002,8 +829,7 @@
       ],
       "relatedIds": [
         "news-public-account-ad-20260831"
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "pr-bousai-week-2026",
@@ -1034,8 +860,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     },
     {
       "id": "pr-disaster-myna-notice",
@@ -1097,8 +922,7 @@
           "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
-      ],
-      "reviewState": "reviewed"
+      ]
     }
   ],
   "surveys": [],
@@ -1131,18 +955,6 @@
       "scaleNote": "アプリレビュー 48件"
     }
   ],
-  "archive": [
-    {
-      "date": "2026-08-31",
-      "title": "日次レポート",
-      "dataPath": "archive/2026-08-31.json"
-    },
-    {
-      "date": "2026-08-26",
-      "title": "日次レポート",
-      "dataPath": "archive/2026-08-26.json"
-    }
-  ],
   "timeline": [
     {
       "date": "2026-08-21",
@@ -1172,5 +984,6 @@
       "reason": "確定値と可能性のある最大値を分けて表記するよう訂正。",
       "editor": "モニタリング担当"
     }
-  ]
+  ],
+  "_comment": "人が判断して書くファイル。自動処理はこのファイルを読むだけで、書き換えません。current.json はこれと自動収集結果のマージ結果（生成物）です。"
 }

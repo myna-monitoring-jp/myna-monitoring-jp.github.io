@@ -621,6 +621,23 @@ button.action .external-mark {
   color: var(--muted);
 }
 
+/* 自動収集で追加され、まだ人のレビューを受けていない項目の明示 */
+.unreviewed {
+  display: block;
+  margin: 7px 0 0;
+  padding: 5px 8px;
+  border-radius: 7px;
+  border: 1px dashed #fedf89;
+  background: var(--amber-bg);
+  color: var(--amber);
+  font-size: 9.8px;
+  font-weight: 800;
+}
+.unreviewed .note {
+  font-weight: 400;
+  color: #93370d;
+}
+
 /* ----------------------------------------------------------------- cards */
 
 .news-card {

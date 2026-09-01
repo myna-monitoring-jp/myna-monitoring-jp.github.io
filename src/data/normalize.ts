@@ -247,6 +247,9 @@ function normalizeBase(raw: Json, path: string, issues: NormalizeIssue[]) {
     tags: asStringArray(raw.tags),
     communicationRisks: asStringArray(raw.communicationRisks),
     corrections: normalizeCorrections(raw.corrections, id),
+    // 明示されていなければ「レビュー済」として扱う（手書きデータの既定）
+    reviewState: raw.reviewState === 'unreviewed' ? ('unreviewed' as const) : ('reviewed' as const),
+    matchKeywords: asStringArray(raw.matchKeywords),
   };
 }
 

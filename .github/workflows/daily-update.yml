@@ -1,0 +1,123 @@
+name: Daily update and deploy
+
+# 毎朝 7:00 JST（= 22:00 UTC 前日）に自動実行し、最新状態を公開する。
+# 人の作業は不要。URLを踏めば常に最新が見える状態になる。
+on:
+  schedule:
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'true にすると差分を表示するだけでコミット・デプロイしない'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+
+permissions:
+  contents: write # current.json のコミットに必要
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      # 収集元(myna-news-jp)の取得に失敗しても current.json は生成され、
+      # 画面に「データ更新に失敗しています／最終正常更新」が表示される。
+      # ここでは失敗を記録しつつ後続を続行する。
+      - name: Update data
+        id: update
+        continue-on-error: true
+        run: node scripts/update-data.mjs
+
+      - name: Validate data
+        run: |
+          node scripts/validate-data.mjs public/data
+          node scripts/validate-data.mjs public/sample-data
+
+      - name: Typecheck and test
+        run: |
+          npm run typecheck
+          npm test
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet -- public/data; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "データに変化はありませんでした。"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- public/data
+          fi
+
+      - name: Commit updated data
+        if: steps.diff.outputs.changed == 'true' && inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          git commit -m "data: $(TZ=Asia/Tokyo date +%Y-%m-%d) 自動更新"
+          git push
+
+      - name: Report update step result
+        if: steps.update.outcome == 'failure'
+        run: |
+          echo "::warning::収集元の取得に失敗しました。サイトには最終正常更新時刻が表示されます。"
+
+  build:
+    needs: update
+    if: inputs.dry_run != 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # update ジョブが push したコミットを取得する
+          ref: main
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - uses: actions/configure-pages@v5
+        id: pages
+
+      - name: Build
+        env:
+          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          VITE_DATA_SOURCE: ${{ vars.DATA_SOURCE || 'live' }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    if: inputs.dry_run != 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

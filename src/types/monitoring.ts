@@ -181,7 +181,23 @@ export interface BaseItem {
    */
   communicationRisks?: string[];
   corrections?: Correction[];
+  /**
+   * レビュー状態（要件 9「レビュー」）。
+   * 日次の自動収集で追加された項目は `unreviewed`。重要度・状態・事実関係の
+   * 切り分けは判断が必要なため自動では確定させず、画面に「未レビュー」と明示する。
+   * 編集者が `curated.json` に書き起こした項目は `reviewed`。
+   */
+  reviewState?: ReviewState;
+  /**
+   * この案件に紐づく追加報道を自動検知するためのキーワード（AND条件）。
+   * `curated.json` で人が指定する。日次処理はこれに一致した記事だけを出典に追記し、
+   * 独立媒体が増えた場合に限り `lastMaterialUpdateAt` を進める。
+   */
+  matchKeywords?: string[];
 }
+
+/** 未レビュー = 自動収集のまま。レビュー済 = 人が判断を書いた。 */
+export type ReviewState = 'unreviewed' | 'reviewed';
 
 /* -------------------------------------------------------------- news items */
 
