@@ -45,11 +45,47 @@ describe('クリップボードコピー', () => {
     expect(execCommand).toHaveBeenCalledWith('copy');
   });
 
-  it('どちらも失敗したら failed を返す', async () => {
+  it('どちらも失敗したら failed を返す（例外は投げない）', async () => {
     stubClipboard(vi.fn().mockRejectedValue(new Error('denied')));
     stubExecCommand(false);
 
     await expect(copyToClipboard('テキスト')).resolves.toBe('failed');
+  });
+
+  it('Clipboard APIが解決しない場合もタイムアウトして failed を返す', async () => {
+    vi.useFakeTimers();
+    try {
+      // 永久に解決しないPromiseを返すブラウザ実装を模す
+      stubClipboard(vi.fn().mockReturnValue(new Promise(() => undefined)));
+      stubExecCommand(false);
+
+      const promise = copyToClipboard('テキスト');
+      await vi.advanceTimersByTimeAsync(2000);
+      await expect(promise).resolves.toBe('failed');
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('フォールバックのtextareaを opacity:0 や display:none にしない（Chromeがコピーを拒否するため）', async () => {
+    removeClipboard();
+    let captured: { opacity: string; display: string } | null = null;
+    Object.defineProperty(document, 'execCommand', {
+      value: vi.fn(() => {
+        const node = document.querySelector('textarea');
+        if (node) {
+          captured = { opacity: node.style.opacity, display: node.style.display };
+        }
+        return true;
+      }),
+      configurable: true,
+      writable: true,
+    });
+
+    await copyToClipboard('テキスト');
+    expect(captured).not.toBeNull();
+    expect(captured!.opacity).not.toBe('0');
+    expect(captured!.display).not.toBe('none');
   });
 
   it('フォールバック時にDOMへtextareaを残さない', async () => {

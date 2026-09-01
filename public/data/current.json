@@ -1,8 +1,7 @@
 {
-  "_comment": "本番データの配置場所です。日次更新フローがこのファイルを上書きします。サンプルは public/sample-data/ にあり、混在させないでください。",
   "dataset": "live",
-  "generatedAt": "",
-  "reportDate": "",
+  "generatedAt": "2026-09-01T11:25:00+09:00",
+  "reportDate": "2026-09-01",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,15 +9,1000 @@
     "organizationLabel": "行政・マイナ関連モニタリング"
   },
   "dataUpdate": {
-    "state": "never_updated",
-    "message": "本番データが未投入です。日次更新フローを実行してください。"
+    "state": "ok",
+    "lastSuccessfulUpdateAt": "2026-09-01T11:25:00+09:00"
   },
-  "news": [],
-  "incidents": [],
-  "prItems": [],
+  "headline": {
+    "title": "今日の全体像",
+    "description": "トップニュース・世論、自治体／共通システム／医療機関の不具合、行政広報の炎上・掲載中・好反応を一つの固定URLで共有します。"
+  },
+  "news": [
+    {
+      "id": "news-android-mdoc-20260831",
+      "title": "Androidへの基本4情報等搭載に向け制度整備",
+      "category": "policy",
+      "polarity": "positive",
+      "status": "new",
+      "severity": "high",
+      "detectedAt": "2026-08-31T18:00:00+09:00",
+      "publishedAt": "2026-08-31T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-31T18:00:00+09:00",
+      "pinned": false,
+      "summary": "カード代替電磁的記録の省令・技術基準改正案について意見募集を開始。2026年秋頃の実装を目指す段階。",
+      "whatIsNew": "8/31にパブリックコメントが開始され、Android搭載の技術基準案が公開された。",
+      "audience": "Androidでマイナンバーカード機能を利用する国民、対応事業者",
+      "quantitativeMetrics": [
+        {
+          "label": "意見募集期間",
+          "value": "30",
+          "unit": "日間"
+        },
+        {
+          "label": "改正対象",
+          "value": "2",
+          "unit": "件",
+          "note": "省令・技術基準"
+        }
+      ],
+      "dailyDiff": "前日に公示。本日時点で追加の公式発表・独立報道は確認できず。",
+      "tags": [
+        "制度変更",
+        "デジタル庁",
+        "Android"
+      ],
+      "publicVoices": [
+        {
+          "channel": "social",
+          "sentiment": "concern",
+          "summary": "公示翌朝のため、有意な反応はまだ確認できず。",
+          "representative": false,
+          "observedAt": "2026-09-01T08:30:00+09:00"
+        }
+      ],
+      "factChecks": [
+        {
+          "claim": "パブコメ開始と同時にAndroidで新機能が使える",
+          "assessment": "misunderstanding",
+          "explanation": "制度整備（省令・技術基準の改正手続き）の段階であり、即日で利用開始になるものではない。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/news/8f0fb90c-f2d2-49d3-a5a4-d2b0f2293e31",
+          "linkText": "一次情報を開く",
+          "publisher": "デジタル庁",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "news-public-account-ad-20260831",
+      "title": "公金受取口座「手続き不要」広告の露出拡大",
+      "category": "public_communication",
+      "polarity": "negative_watch",
+      "status": "attention",
+      "severity": "high",
+      "detectedAt": "2026-08-31T07:00:00+09:00",
+      "publishedAt": "2026-08-31T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-09-01T08:30:00+09:00",
+      "pinned": true,
+      "summary": "新聞広告の掲載が拡大。既存のオプトアウト批判と広告コピーが結び付いて再燃するかを監視している。広告起点の大規模炎上は現時点で未確認。",
+      "whatIsNew": "9/1朝に代表投稿の引用RPが増加。掲載紙面が追加された。",
+      "audience": "公金受取口座の登録対象となる国民、特に高齢者層",
+      "quantitativeMetrics": [
+        {
+          "label": "代表投稿RP",
+          "value": 5029,
+          "unit": "件"
+        },
+        {
+          "label": "代表投稿いいね",
+          "value": 12728,
+          "unit": "件"
+        },
+        {
+          "label": "報道化",
+          "value": 0,
+          "unit": "件",
+          "note": "独立媒体による記事化は未確認"
+        }
+      ],
+      "dailyDiff": "引用RPが前日比で増加。公式の追加説明・修正は確認できず。",
+      "tags": [
+        "既存批判あり",
+        "広告掲載中",
+        "オプトアウト"
+      ],
+      "communicationRisks": [
+        "「手続きは不要です」というコピーだけが切り抜かれ、同意なく登録されると受け取られる可能性",
+        "高齢者向け紙面のため、返送手続きの説明が届かない層が生じる可能性"
+      ],
+      "publicVoices": [
+        {
+          "channel": "x",
+          "sentiment": "concern",
+          "summary": "不同意を返送しないと勝手に登録される、という趣旨の投稿が拡散している。",
+          "representative": true,
+          "url": "https://x.com/himuroReborn398/status/2071871729765638367",
+          "observedAt": "2026-09-01T08:30:00+09:00",
+          "replyCount": 136,
+          "repostCount": 5029,
+          "likeCount": 12728
+        },
+        {
+          "channel": "yahoo_comment",
+          "sentiment": "supportive",
+          "summary": "登録済み口座を給付でより広く活用し、申請手続きを減らしてほしいという声も一定数ある。",
+          "representative": false,
+          "observedAt": "2026-09-01T08:30:00+09:00",
+          "commentCount": 214
+        }
+      ],
+      "factChecks": [
+        {
+          "claim": "不同意を返さなければ既存の年金口座が公金受取口座として登録される",
+          "assessment": "fact",
+          "explanation": "書留通知に対して期限内に不同意の意思表示がない場合に登録される仕組みは制度上そのとおり。"
+        },
+        {
+          "claim": "全高齢者が自動登録される",
+          "assessment": "overstatement",
+          "explanation": "対象は年金受給者のうち通知を受けた者に限られ、全高齢者ではない。"
+        },
+        {
+          "claim": "行政が口座残高を把握できるようになる",
+          "assessment": "misunderstanding",
+          "explanation": "登録されるのは受取口座情報であり、残高の照会権限が付与されるものではない。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "政府広報 新聞広告",
+          "url": "https://www.gov-online.go.jp/newspaper/tsukidashi/202608/newspaper-2051.html",
+          "linkText": "広告の一次情報を開く",
+          "publisher": "内閣府政府広報室",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        },
+        {
+          "type": "social",
+          "label": "代表的な批判投稿",
+          "url": "https://x.com/himuroReborn398/status/2071871729765638367",
+          "linkText": "X投稿を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ],
+      "relatedIds": [
+        "pr-public-account-ad"
+      ],
+      "corrections": [
+        {
+          "correctedAt": "2026-09-01T10:10:00+09:00",
+          "field": "quantitativeMetrics.代表投稿RP",
+          "before": "5,300件",
+          "after": "5,029件",
+          "reason": "引用RPを重複計上していたため、実数に訂正。",
+          "editor": "モニタリング担当"
+        }
+      ]
+    },
+    {
+      "id": "news-myna-app-auth-20260827",
+      "title": "マイナアプリの認証・ログイン問題",
+      "category": "incident",
+      "polarity": "neutral",
+      "status": "follow_up",
+      "severity": "medium",
+      "detectedAt": "2026-08-27T10:00:00+09:00",
+      "publishedAt": "2026-08-27T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-27T10:00:00+09:00",
+      "summary": "一部端末・利用環境でログインが完了しない事象。直近では新たな大規模波及は確認できず、公式の明確な続報を待つ状態。",
+      "whatIsNew": "8/27の報道以降、追加の公式発表は確認できていない。",
+      "audience": "マイナアプリで初回利用登録・認証を行う利用者",
+      "dailyDiff": "前日から変化なし。",
+      "tags": [
+        "全面解消の明示なし",
+        "オン資とは別"
+      ],
+      "publicVoices": [
+        {
+          "channel": "app_store",
+          "sentiment": "complaint",
+          "summary": "ログイン後にブラウザへ遷移する導線が分かりにくい、旧アプリとの関係が不明という不満。",
+          "representative": false,
+          "observedAt": "2026-08-28T09:00:00+09:00",
+          "commentCount": 48
+        }
+      ],
+      "factChecks": [
+        {
+          "claim": "マイナアプリの障害でオンライン資格確認が全国的に止まっている",
+          "assessment": "scope_separation",
+          "explanation": "マイナアプリの認証・ログイン事象と、医療機関のオンライン資格確認は別系統。オン資の全国障害は確認されていない。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "media",
+          "label": "ITmedia NEWS",
+          "url": "https://www.itmedia.co.jp/news/article/2608/27/2000000833/",
+          "linkText": "報道記事を開く",
+          "publisher": "ITmedia",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        },
+        {
+          "type": "media",
+          "label": "ケータイ Watch",
+          "url": "https://k-tai.watch.impress.co.jp/docs/news/2135458.html",
+          "linkText": "初回利用登録の報道記事を開く",
+          "publisher": "Impress",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ],
+      "relatedIds": [
+        "incident-myna-app-20260827"
+      ]
+    },
+    {
+      "id": "news-aya-tieup-20260824",
+      "title": "AYA世代がん支援タイアップの中止（経緯記録）",
+      "category": "public_communication",
+      "polarity": "negative",
+      "status": "resolved",
+      "severity": "high",
+      "publishedAt": "2026-08-24T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-24T00:00:00+09:00",
+      "summary": "当事者配慮への批判が報道化し、8/24にタイアップ中止・ポスター回収・特設ページ削除が実施された。事例としてアーカイブに保持する。",
+      "dailyDiff": "前日から変化なし。",
+      "tags": [
+        "報道化炎上",
+        "公式対応済み"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "厚生労働省",
+          "url": "https://www.mhlw.go.jp/stf/houdou/tie-up_00001.html",
+          "linkText": "公式対応を開く",
+          "verifiedAt": "2026-08-25T09:00:00+09:00",
+          "active": true
+        }
+      ],
+      "relatedIds": [
+        "pr-aya-film-20260824"
+      ]
+    }
+  ],
+  "incidents": [
+    {
+      "id": "incident-joetsu-20260804",
+      "incidentCategory": "local_government_insurer",
+      "title": "2割→3割表示等、限度額区分の誤表示可能性",
+      "entityName": "上越市",
+      "region": "新潟県",
+      "status": "attention",
+      "severity": "high",
+      "occurredAt": "2026-08-04T00:00:00+09:00",
+      "publishedAt": "2026-08-04T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-30T09:00:00+09:00",
+      "affectedCount": 9955,
+      "affectedCountNote": "最大27,745人に影響が及ぶ可能性",
+      "symptoms": "負担割合が2割の対象者に3割と表示される、限度額適用区分が誤って表示される。",
+      "cause": "年度切替処理・区分設定に起因する可能性（調査中）",
+      "medicalImpact": "窓口で過大な自己負担が発生する可能性。",
+      "officialStatus": "報道先行。市の詳細公表を待つ状態。",
+      "cyberAttack": false,
+      "dailyDiff": "8/30に市が調査状況を更新。対象人数の確定は未了。",
+      "tags": [
+        "負担割合",
+        "限度額区分"
+      ],
+      "publicVoices": [],
+      "factChecks": [
+        {
+          "claim": "全国的に負担割合が誤表示されている",
+          "assessment": "scope_separation",
+          "explanation": "本件は当該自治体の資格情報処理に起因する事象であり、全国共通システムの障害ではない。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "media",
+          "label": "上越タウンジャーナル",
+          "url": "https://joetsu.yukiguni.town/l-news/332845/",
+          "linkText": "報道記事を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-sakai-20260801",
+      "incidentCategory": "local_government_insurer",
+      "title": "有効な国保資格が「資格（無効）」等と表示",
+      "entityName": "堺市",
+      "region": "大阪府",
+      "status": "resolved",
+      "severity": "high",
+      "occurredAt": "2026-08-01T00:00:00+09:00",
+      "publishedAt": "2026-08-07T00:00:00+09:00",
+      "recoveryAt": "2026-08-07T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-07T00:00:00+09:00",
+      "affectedCount": 1500,
+      "symptoms": "有効な国民健康保険の資格が「資格（無効）」「資格なし」と表示された。",
+      "cause": "資格情報連携データの一部不備",
+      "medicalImpact": "医療機関受付での資格確認に支障。",
+      "officialStatus": "8/7に最終報を公表。",
+      "cyberAttack": false,
+      "dailyDiff": "前日から変化なし。",
+      "tags": [
+        "資格無効表示",
+        "解消済み"
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "堺市",
+          "url": "https://www.city.sakai.lg.jp/kurashi/honen/kokuho/oshirase/shikaku.html",
+          "linkText": "市公式の一次情報を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-hirosaki-20260801",
+      "incidentCategory": "local_government_insurer",
+      "title": "70〜74歳の負担割合・自己負担限度額区分に不具合",
+      "entityName": "弘前市",
+      "region": "青森県",
+      "status": "resolved",
+      "severity": "medium",
+      "occurredAt": "2026-08-01T00:00:00+09:00",
+      "publishedAt": "2026-08-04T00:00:00+09:00",
+      "recoveryAt": "2026-08-06T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-06T00:00:00+09:00",
+      "affectedCount": null,
+      "affectedCountNote": "人数の明示なし",
+      "cause": "新しい資格情報が一部反映されなかった。",
+      "medicalImpact": "窓口負担・高額療養費の確認に影響。",
+      "cyberAttack": false,
+      "dailyDiff": "前日から変化なし。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "弘前市",
+          "url": "https://www.city.hirosaki.aomori.jp/oshirase/fukushi/2026-0804.html",
+          "linkText": "市公式の一次情報を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-yoshikawa-monitor",
+      "incidentCategory": "local_government_insurer",
+      "title": "資格・システム関連の既知事象を定期確認",
+      "entityName": "吉川市",
+      "region": "埼玉県",
+      "status": "follow_up",
+      "severity": "low",
+      "lastMaterialUpdateAt": "2026-08-20T00:00:00+09:00",
+      "affectedCount": null,
+      "affectedCountNote": "更新待ち",
+      "cause": "標準化・資格変更処理を重点確認中。",
+      "medicalImpact": "資格反映の遅延が生じる可能性。",
+      "officialStatus": "公式の追加公表なし。",
+      "cyberAttack": false,
+      "dailyDiff": "前日から変化なし。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "吉川市",
+          "url": "https://www.city.yoshikawa.saitama.jp/",
+          "linkText": "市公式サイトを開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-hekinan-monitor",
+      "incidentCategory": "local_government_insurer",
+      "title": "過年度を含むデータ連携・資格反映事象を定期確認",
+      "entityName": "碧南市",
+      "region": "愛知県",
+      "status": "follow_up",
+      "severity": "low",
+      "lastMaterialUpdateAt": "2026-08-18T00:00:00+09:00",
+      "affectedCount": null,
+      "affectedCountNote": "更新待ち",
+      "cause": "連携工程を確認中。",
+      "cyberAttack": false,
+      "dailyDiff": "前日から変化なし。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "碧南市",
+          "url": "https://www.city.hekinan.lg.jp/",
+          "linkText": "市公式サイトを開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-kanoya-monitor",
+      "incidentCategory": "local_government_insurer",
+      "title": "資格連携漏れ等の既知事象を定期確認",
+      "entityName": "鹿屋市",
+      "region": "鹿児島県",
+      "status": "follow_up",
+      "severity": "low",
+      "lastMaterialUpdateAt": "2026-08-15T00:00:00+09:00",
+      "affectedCount": null,
+      "affectedCountNote": "更新待ち",
+      "cause": "資格登録・連携工程を確認中。",
+      "medicalImpact": "資格確認ができない可能性。",
+      "cyberAttack": false,
+      "dailyDiff": "前日から変化なし。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "鹿屋市",
+          "url": "https://www.city.kanoya.lg.jp/",
+          "linkText": "市公式サイトを開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-myna-app-20260827",
+      "incidentCategory": "common_system",
+      "title": "一部端末・環境で認証／ログインが完了しない",
+      "entityName": "デジタル庁",
+      "systemName": "マイナアプリ",
+      "status": "follow_up",
+      "severity": "medium",
+      "occurredAt": "2026-08-27T00:00:00+09:00",
+      "publishedAt": "2026-08-27T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-27T10:00:00+09:00",
+      "affectedCount": null,
+      "affectedCountNote": "影響人数未公表",
+      "symptoms": "認証後にログインが完了しない、旧デジタル認証アプリとの併存で導線が途切れる。",
+      "cause": "ブラウザ設定・旧アプリとの関係が要因として挙げられている。",
+      "workaround": "既定ブラウザの設定確認、旧アプリの更新。",
+      "medicalImpact": "利用登録・認証導線に影響。オンライン資格確認自体への波及は確認されていない。",
+      "officialStatus": "全面解消の明示なし。",
+      "cyberAttack": false,
+      "dailyDiff": "前日から変化なし。",
+      "sources": [
+        {
+          "type": "media",
+          "label": "ITmedia NEWS",
+          "url": "https://www.itmedia.co.jp/news/article/2608/27/2000000833/",
+          "linkText": "報道記事を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ],
+      "relatedIds": [
+        "news-myna-app-auth-20260827"
+      ]
+    },
+    {
+      "id": "incident-mynaportal-api-status",
+      "incidentCategory": "common_system",
+      "title": "マイナポータルAPI 稼働状況は正常表示",
+      "entityName": "デジタル庁",
+      "systemName": "マイナポータルAPI",
+      "status": "resolved",
+      "severity": "low",
+      "lastMaterialUpdateAt": "2026-09-01T08:00:00+09:00",
+      "affectedCount": null,
+      "affectedCountNote": "―",
+      "symptoms": "公式稼働ページは正常表示。",
+      "cause": "計画メンテナンスの予定あり。",
+      "medicalImpact": "API利用事業者への影響なし。",
+      "officialStatus": "正常稼働として公表。",
+      "cyberAttack": false,
+      "dailyDiff": "本日8:00時点でも正常を確認。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "デジタル庁 開発者向けサイト",
+          "url": "https://developers.digital.go.jp/documents/mynaportal-api/maintenance/",
+          "linkText": "稼働状況の一次情報を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-riyoutouroku-maint",
+      "incidentCategory": "common_system",
+      "title": "計画メンテナンスにより新規の健康保険証利用登録が不可",
+      "entityName": "社会保険診療報酬支払基金",
+      "systemName": "マイナ保険証 利用登録",
+      "status": "planned_outage",
+      "severity": "medium",
+      "occurredAt": "2026-08-30T22:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-30T22:00:00+09:00",
+      "affectedCount": null,
+      "affectedCountNote": "全国の利用登録機能",
+      "symptoms": "メンテナンス中は顔認証付きカードリーダー・マイナポータル等で新規利用登録ができない。",
+      "cause": "事前公表済みの計画作業。",
+      "medicalImpact": "オンライン資格確認自体は通常どおり利用可能。",
+      "officialStatus": "事前公表済み。",
+      "cyberAttack": false,
+      "dailyDiff": "前日から変化なし。",
+      "tags": [
+        "計画停止",
+        "障害ではない"
+      ],
+      "factChecks": [
+        {
+          "claim": "マイナ保険証が使えなくなっている",
+          "assessment": "scope_separation",
+          "explanation": "停止しているのは新規の利用登録機能であり、既に登録済みの保険証利用・オンライン資格確認は継続して利用できる。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "医療機関等向け総合ポータルサイト",
+          "url": "https://iryohokenjyoho.service-now.com/csm?id=kb_article_view",
+          "linkText": "公式案内を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-toranomon-20260827",
+      "incidentCategory": "medical_it_cyber",
+      "title": "通信障害により連携医療機関から検査結果を参照できない",
+      "entityName": "虎の門病院",
+      "systemName": "MINT",
+      "region": "東京都",
+      "status": "follow_up",
+      "severity": "medium",
+      "occurredAt": "2026-08-27T00:00:00+09:00",
+      "publishedAt": "2026-08-27T09:05:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-27T09:05:00+09:00",
+      "affectedCount": null,
+      "affectedCountNote": "連携医療機関",
+      "symptoms": "地域連携システム経由での検査結果参照ができない。",
+      "cause": "通信障害",
+      "medicalImpact": "連携医療機関における検査結果参照に支障。",
+      "cyberAttack": false,
+      "dailyDiff": "前日から変化なし。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "虎の門病院",
+          "url": "https://toranomon.kkr.or.jp/cms/info/202608270905.html",
+          "linkText": "病院公式の一次情報を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "incident-medi-face-20260812",
+      "incidentCategory": "medical_it_cyber",
+      "title": "Webインフラ侵害・SEOポイズニング",
+      "entityName": "医療法人鳳應会 / Medi Face",
+      "status": "attention",
+      "severity": "high",
+      "occurredAt": "2026-08-12T00:00:00+09:00",
+      "publishedAt": "2026-08-14T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-28T00:00:00+09:00",
+      "affectedCount": null,
+      "affectedCountNote": "Web／検索インフラ",
+      "symptoms": "Webインフラの侵害、権限奪取、ブランド詐称、検索結果の汚染。",
+      "cause": "組織的サイバー攻撃と事業者が公表。",
+      "personalDataImpact": "個人情報流出は現時点で確認されていないと公表。",
+      "medicalImpact": "医療機関ブランドと検索流入の信頼性に影響。",
+      "cyberAttack": true,
+      "officialStatus": "事業者が経緯を公表、調査中。",
+      "dailyDiff": "前日から変化なし。",
+      "tags": [
+        "サイバー攻撃",
+        "SEOポイズニング"
+      ],
+      "sources": [
+        {
+          "type": "media",
+          "label": "＠IT",
+          "url": "https://atmarkit.itmedia.co.jp/ait/spv/2608/18/news043.html",
+          "linkText": "報道記事を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        },
+        {
+          "type": "primary",
+          "label": "事業者発表（PR TIMES）",
+          "url": "https://prtimes.jp/main/html/rd/p/000000017.000080422.html",
+          "linkText": "事業者発表を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    }
+  ],
+  "prItems": [
+    {
+      "id": "pr-aya-film-20260824",
+      "ministry": "厚生労働省",
+      "campaignName": "AYA世代がん支援 × 映画タイアップ",
+      "title": "AYA世代がん支援 × 映画タイアップ",
+      "prClassification": "reported_backlash",
+      "status": "resolved",
+      "severity": "high",
+      "medium": "tie_up",
+      "startAt": "2026-08-01",
+      "endAt": "2026-08-24",
+      "publishedAt": "2026-08-01T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-24T00:00:00+09:00",
+      "summary": "当事者配慮への批判がSNSから主要メディア報道へ波及し、8/24にタイアップ中止・ポスター回収・特設ページとSNSの削除が実施された。",
+      "message": "AYA世代のがん患者支援の周知",
+      "placement": "駅貼りポスター、特設サイト、SNS",
+      "partner": "映画配給会社",
+      "controversyLevel": 3,
+      "mediaPickupCount": 4,
+      "officialAction": "8/24中止、特設ページ・SNS削除、ポスター回収",
+      "riskFactors": [
+        "当事者配慮",
+        "接触場所",
+        "センシティブ表現"
+      ],
+      "dailyDiff": "前日から変化なし。",
+      "tags": [
+        "タイアップ中止",
+        "ポスター回収"
+      ],
+      "publicVoices": [
+        {
+          "channel": "x",
+          "sentiment": "complaint",
+          "summary": "治療中の当事者が避けにくい場所で重い作品表現に接触させる設計への批判。",
+          "representative": true,
+          "observedAt": "2026-08-22T12:00:00+09:00",
+          "repostCount": 18400,
+          "likeCount": 42100
+        }
+      ],
+      "factChecks": [
+        {
+          "claim": "政策目的そのものが不適切だった",
+          "assessment": "legitimate_debate",
+          "explanation": "AYA世代支援という政策目的への批判ではなく、接触設計と表現手法に批判が集中した。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "厚生労働省",
+          "url": "https://www.mhlw.go.jp/stf/houdou/tie-up_00001.html",
+          "linkText": "公式対応を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        },
+        {
+          "type": "media",
+          "label": "TBS NEWS DIG",
+          "url": "https://newsdig.tbs.co.jp/articles/-/2893184?display=1",
+          "linkText": "報道記事を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "pr-moj-love-20260821",
+      "ministry": "法務省",
+      "campaignName": "Netflix「ラヴ上等」× 更生保護",
+      "title": "Netflix「ラヴ上等」× 更生保護タイアップ",
+      "prClassification": "reported_backlash",
+      "status": "resolved",
+      "severity": "high",
+      "medium": "tie_up",
+      "startAt": "2026-08-10",
+      "endAt": "2026-08-21",
+      "lastMaterialUpdateAt": "2026-08-21T00:00:00+09:00",
+      "summary": "犯罪被害者への配慮や公的機関の見せ方への批判が報道化し、8/21に今後のタイアップ取りやめが公表された。",
+      "controversyLevel": 3,
+      "mediaPickupCount": 3,
+      "officialAction": "8/21に今後のタイアップを取りやめ",
+      "riskFactors": [
+        "被害者感情",
+        "作品文脈との不整合"
+      ],
+      "dailyDiff": "前日から変化なし。",
+      "tags": [
+        "タイアップ取りやめ"
+      ],
+      "publicVoices": [
+        {
+          "channel": "x",
+          "sentiment": "complaint",
+          "summary": "犯罪被害者の心情に対する配慮を欠くという批判。",
+          "representative": true,
+          "observedAt": "2026-08-19T18:00:00+09:00",
+          "repostCount": 9600,
+          "likeCount": 21500
+        }
+      ],
+      "factChecks": [
+        {
+          "claim": "更生保護の広報自体が不適切",
+          "assessment": "legitimate_debate",
+          "explanation": "政策目的の妥当性ではなく、タイアップ作品の文脈と政策メッセージの整合が論点となった。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "法務省",
+          "url": "https://www.moj.go.jp/hogo1/soumu/hogo01_00066.html",
+          "linkText": "取りやめ発表を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        },
+        {
+          "type": "media",
+          "label": "テレビ朝日",
+          "url": "https://news.tv-asahi.co.jp/news_society/articles/900197491.html",
+          "linkText": "報道記事を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "pr-public-account-ad",
+      "ministry": "政府広報・デジタル庁",
+      "campaignName": "公金受取口座 新聞広告",
+      "title": "公金受取口座 新聞広告",
+      "prClassification": "active_watch",
+      "status": "attention",
+      "severity": "high",
+      "medium": "newspaper_ad",
+      "startAt": "2026-08-31",
+      "lastMaterialUpdateAt": "2026-09-01T08:30:00+09:00",
+      "pinned": true,
+      "summary": "掲載中。既存のオプトアウト批判と広告コピーの結び付き、スクリーンショット転載、Yahoo!ニュース化を監視している。",
+      "message": "手続きは不要です。",
+      "creative": "年金受給者向け新聞広告",
+      "placement": "全国紙 朝刊",
+      "targetAudience": "年金受給者",
+      "controversyLevel": 1,
+      "mediaPickupCount": 0,
+      "riskFactors": [
+        "オプトアウト",
+        "切り抜き",
+        "既存批判"
+      ],
+      "communicationRisks": [
+        "「手続き不要」コピーのみが切り抜かれ、同意なく登録されると受け取られる可能性",
+        "紙面の注記が小さく、返送期限が伝わらない可能性"
+      ],
+      "dailyDiff": "代表投稿の引用RPが増加。公式の追加説明・修正は確認できず。",
+      "tags": [
+        "掲載中"
+      ],
+      "publicVoices": [
+        {
+          "channel": "x",
+          "sentiment": "concern",
+          "summary": "不同意を返送しないと登録される点への警戒が続いている。",
+          "representative": true,
+          "url": "https://x.com/himuroReborn398/status/2071871729765638367",
+          "observedAt": "2026-09-01T08:30:00+09:00",
+          "replyCount": 136,
+          "repostCount": 5029,
+          "likeCount": 12728
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "政府広報",
+          "url": "https://www.gov-online.go.jp/newspaper/tsukidashi/202608/newspaper-2051.html",
+          "linkText": "広告の一次情報を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        },
+        {
+          "type": "social",
+          "label": "既存の批判投稿",
+          "url": "https://x.com/himuroReborn398/status/2071871729765638367",
+          "linkText": "X投稿を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ],
+      "relatedIds": [
+        "news-public-account-ad-20260831"
+      ]
+    },
+    {
+      "id": "pr-bousai-week-2026",
+      "ministry": "内閣府政府広報室",
+      "campaignName": "防災週間 / NIPPON防災資産",
+      "title": "政府広報 防災週間",
+      "prClassification": "active_stable",
+      "stableSubtype": "quiet",
+      "status": "follow_up",
+      "severity": "low",
+      "medium": "web_ad",
+      "startAt": "2026-08-30",
+      "lastMaterialUpdateAt": "2026-08-30T00:00:00+09:00",
+      "summary": "掲載中だが大規模な否定的反応は確認していない。好意的反応や効果が定量確認できた場合に「ポジティブ」へ切り替える。",
+      "controversyLevel": 0,
+      "mediaPickupCount": 0,
+      "dailyDiff": "前日から変化なし。",
+      "tags": [
+        "掲載中"
+      ],
+      "publicVoices": [],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "政府広報オンライン",
+          "url": "https://www.gov-online.go.jp/data_room/calendar/202608/event-4396.html",
+          "linkText": "広報の一次情報を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "pr-disaster-myna-notice",
+      "ministry": "厚生労働省",
+      "campaignName": "災害時はマイナ保険証が手元になくても受診可能",
+      "title": "災害時の受診に関する周知",
+      "prClassification": "active_stable",
+      "stableSubtype": "positive",
+      "status": "attention",
+      "severity": "medium",
+      "medium": "sns",
+      "startAt": "2026-08-28",
+      "lastMaterialUpdateAt": "2026-08-31T12:00:00+09:00",
+      "summary": "「カードがないと受診できない」という誤解を打ち消す周知。参照数と好意的反応が定量的に確認できたため、ポジティブとして掲載する。",
+      "message": "マイナ保険証が手元になくても受診できます。",
+      "controversyLevel": 0,
+      "mediaPickupCount": 1,
+      "effectMetrics": [
+        {
+          "label": "通知集約ページ参照数",
+          "value": 38200,
+          "unit": "PV"
+        },
+        {
+          "label": "好意的な引用投稿",
+          "value": 412,
+          "unit": "件"
+        }
+      ],
+      "dailyDiff": "8/31に参照数が前日比+21%。",
+      "tags": [
+        "実務的安心材料",
+        "効果確認済み"
+      ],
+      "publicVoices": [
+        {
+          "channel": "medical_professional",
+          "sentiment": "supportive",
+          "summary": "窓口説明に使いやすいという医療機関側の反応。",
+          "representative": true,
+          "observedAt": "2026-08-31T12:00:00+09:00",
+          "likeCount": 1840,
+          "repostCount": 412
+        }
+      ],
+      "factChecks": [
+        {
+          "claim": "災害時はマイナ保険証がないと受診できない",
+          "assessment": "misunderstanding",
+          "explanation": "災害時には氏名・生年月日等の申告により受診できる取扱いが示されている。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "国民健康保険中央会",
+          "url": "https://www.kokuho.or.jp/disaster/notice/R8ameyuki.html",
+          "linkText": "通知集約の一次情報を開く",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
+          "active": true
+        }
+      ]
+    }
+  ],
   "surveys": [],
-  "pulses": [],
-  "archive": [],
-  "timeline": [],
-  "corrections": []
+  "pulses": [
+    {
+      "id": "pulse-public-account-optout",
+      "title": "公金受取口座：オプトアウトへの違和感",
+      "description": "不同意を返送しなければ登録されることへの警戒が続いている。制度上の事実と「残高を把握される」という誤解が混在している。",
+      "scaleNote": "代表投稿 5,029RP／12,728いいね",
+      "sources": [
+        {
+          "type": "social",
+          "label": "代表投稿",
+          "url": "https://x.com/himuroReborn398/status/2071871729765638367",
+          "linkText": "X投稿を開く",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "pulse-public-account-positive",
+      "title": "利便性を評価する反対方向の声も存在",
+      "description": "登録済み口座を給付でより広く活用し、申請手続きを減らしてほしいという声も一定量ある。",
+      "scaleNote": "Yahoo!コメント 214件中の一定割合"
+    },
+    {
+      "id": "pulse-myna-app-onboarding",
+      "title": "マイナアプリ：移行導線への不満",
+      "description": "ログイン、ブラウザ遷移、旧アプリとの関係など説明設計への不満が出やすい。障害そのものより導線の分かりにくさが論点。",
+      "scaleNote": "アプリレビュー 48件"
+    }
+  ],
+  "archive": [
+    {
+      "date": "2026-08-31",
+      "title": "朝レポート",
+      "description": "公金受取口座広告ほか",
+      "dataPath": "archive/2026-08-31.json"
+    },
+    {
+      "date": "2026-08-26",
+      "title": "朝レポート",
+      "description": "マイナアプリ初期動向ほか",
+      "dataPath": "archive/2026-08-26.json"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-21",
+      "title": "法務省「ラヴ上等」タイアップ取りやめ",
+      "description": "批判・懸念の拡大を受け公式対応。",
+      "relatedId": "pr-moj-love-20260821"
+    },
+    {
+      "date": "2026-08-24",
+      "title": "厚労省 AYA世代がん支援 × 映画タイアップ中止",
+      "description": "ポスター回収・SNS削除等。",
+      "relatedId": "pr-aya-film-20260824"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "公金受取口座 新聞広告開始",
+      "description": "既存批判との接続を監視中。",
+      "relatedId": "pr-public-account-ad"
+    }
+  ],
+  "corrections": [
+    {
+      "correctedAt": "2026-08-30T14:00:00+09:00",
+      "field": "incidents.上越市.affectedCount",
+      "before": "27,745人",
+      "after": "9,955人（最大27,745人の可能性）",
+      "reason": "確定値と可能性のある最大値を分けて表記するよう訂正。",
+      "editor": "モニタリング担当"
+    }
+  ]
 }

@@ -1,0 +1,115 @@
+{
+  "dataset": "live",
+  "generatedAt": "2026-08-26T11:15:00+09:00",
+  "reportDate": "2026-08-26",
+  "settings": {
+    "dashboardQuietDays": 7,
+    "newItemHours": 48,
+    "timezone": "Asia/Tokyo",
+    "organizationLabel": "行政・マイナ関連モニタリング"
+  },
+  "dataUpdate": {
+    "state": "ok",
+    "lastSuccessfulUpdateAt": "2026-08-26T11:15:00+09:00"
+  },
+  "headline": {
+    "title": "2026/08/26 朝レポート",
+    "description": "マイナアプリの初期動向と、自治体の資格情報不具合の解消状況が中心。"
+  },
+  "news": [
+    {
+      "id": "news-myna-app-initial-20260826",
+      "title": "マイナアプリの初期動向：利用登録の導線に関する指摘",
+      "category": "incident",
+      "polarity": "neutral",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-08-26T09:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-26T09:00:00+09:00",
+      "summary": "初回利用登録の導線が分かりにくいという指摘がアプリレビューを中心に出ている。障害としての公式発表はこの時点ではない。",
+      "dailyDiff": "新規検知。",
+      "publicVoices": [
+        {
+          "channel": "app_store",
+          "sentiment": "complaint",
+          "summary": "旧デジタル認証アプリとの関係が分かりにくいという指摘。",
+          "representative": false,
+          "commentCount": 21
+        }
+      ],
+      "factChecks": [
+        {
+          "claim": "マイナアプリの不具合でオンライン資格確認が停止している",
+          "assessment": "scope_separation",
+          "explanation": "アプリの導線に関する指摘であり、オンライン資格確認の稼働とは無関係。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "media",
+          "label": "ケータイ Watch",
+          "url": "https://k-tai.watch.impress.co.jp/docs/news/2135458.html",
+          "linkText": "報道記事を開く",
+          "active": true
+        }
+      ]
+    }
+  ],
+  "incidents": [
+    {
+      "id": "incident-sakai-20260801",
+      "incidentCategory": "local_government_insurer",
+      "title": "有効な国保資格が「資格（無効）」等と表示",
+      "entityName": "堺市",
+      "region": "大阪府",
+      "status": "resolved",
+      "severity": "high",
+      "occurredAt": "2026-08-01T00:00:00+09:00",
+      "recoveryAt": "2026-08-07T00:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-07T00:00:00+09:00",
+      "affectedCount": 1500,
+      "summary": "8/7に解消を確認。",
+      "cause": "資格情報連携データの一部不備",
+      "dailyDiff": "前日から変化なし。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "堺市",
+          "url": "https://www.city.sakai.lg.jp/kurashi/honen/kokuho/oshirase/shikaku.html",
+          "linkText": "市公式の一次情報を開く",
+          "active": true
+        }
+      ]
+    }
+  ],
+  "prItems": [
+    {
+      "id": "pr-moj-love-20260821",
+      "ministry": "法務省",
+      "campaignName": "Netflix「ラヴ上等」× 更生保護",
+      "title": "Netflix「ラヴ上等」× 更生保護タイアップ",
+      "prClassification": "reported_backlash",
+      "status": "resolved",
+      "severity": "high",
+      "lastMaterialUpdateAt": "2026-08-21T00:00:00+09:00",
+      "summary": "8/21に今後のタイアップ取りやめが公表された。",
+      "officialAction": "今後のタイアップを取りやめ",
+      "mediaPickupCount": 3,
+      "dailyDiff": "前日から変化なし。",
+      "sources": [
+        {
+          "type": "primary",
+          "label": "法務省",
+          "url": "https://www.moj.go.jp/hogo1/soumu/hogo01_00066.html",
+          "linkText": "取りやめ発表を開く",
+          "active": true
+        }
+      ]
+    }
+  ],
+  "surveys": [],
+  "pulses": [],
+  "archive": [],
+  "timeline": [],
+  "corrections": []
+}

@@ -344,7 +344,7 @@ describe('共有アクション', () => {
     expect(screen.getByTestId('toast')).toHaveTextContent('自動投稿は行いません');
   });
 
-  it('コピー失敗時は手動コピーを促す', async () => {
+  it('クリップボードが拒否された場合、共有URLを選択可能なパネルに表示する', async () => {
     const user = userEvent.setup();
     stubClipboard(vi.fn().mockRejectedValue(new Error('denied')));
     stubExecCommand(false);
@@ -352,7 +352,72 @@ describe('共有アクション', () => {
     renderApp(makeFullDataset(), '/');
     await user.click(screen.getByRole('button', { name: '共有URLをコピー' }));
 
-    expect(screen.getByTestId('toast')).toHaveTextContent('手動でコピー');
+    const panel = screen.getByTestId('copy-panel');
+    expect(panel).toHaveAttribute('role', 'dialog');
+    expect(panel).toHaveAttribute('aria-modal', 'true');
+    expect(screen.getByTestId('copy-text')).toHaveValue(window.location.href);
+    expect(panel).toHaveTextContent('選択してコピー');
+  });
+
+  it('クリップボードが拒否された場合、Teams投稿文をパネルに表示する', async () => {
+    const user = userEvent.setup();
+    stubClipboard(vi.fn().mockRejectedValue(new Error('denied')));
+    stubExecCommand(false);
+
+    renderApp(makeFullDataset(), '/');
+    await user.click(screen.getByRole('button', { name: 'Teams投稿文をコピー' }));
+
+    const text = screen.getByTestId('copy-text') as HTMLTextAreaElement;
+    expect(text.value).toContain('2026/09/01');
+    expect(text.value).toContain('詳細（ダッシュボード）：');
+    expect(text).toHaveAttribute('readonly');
+    expect(screen.getByTestId('copy-panel')).toHaveTextContent('自動投稿は行いません');
+  });
+
+  it('パネルのテキストは開いた時点で全選択されている（Ctrl+Cで即コピーできる）', async () => {
+    const user = userEvent.setup();
+    stubClipboard(vi.fn().mockRejectedValue(new Error('denied')));
+    stubExecCommand(false);
+
+    renderApp(makeFullDataset(), '/');
+    await user.click(screen.getByRole('button', { name: '共有URLをコピー' }));
+
+    const text = screen.getByTestId('copy-text') as HTMLTextAreaElement;
+    expect(document.activeElement).toBe(text);
+    expect(text.selectionStart).toBe(0);
+    expect(text.selectionEnd).toBe(text.value.length);
+  });
+
+  it('パネルは閉じるボタン・Escape・背景クリックで閉じられる', async () => {
+    const user = userEvent.setup();
+    stubClipboard(vi.fn().mockRejectedValue(new Error('denied')));
+    stubExecCommand(false);
+    renderApp(makeFullDataset(), '/');
+
+    const open = () => user.click(screen.getByRole('button', { name: '共有URLをコピー' }));
+
+    await open();
+    await user.click(screen.getByRole('button', { name: '閉じる' }));
+    expect(screen.queryByTestId('copy-panel')).not.toBeInTheDocument();
+
+    await open();
+    await user.keyboard('{Escape}');
+    expect(screen.queryByTestId('copy-panel')).not.toBeInTheDocument();
+
+    await open();
+    await user.click(screen.getByTestId('copy-overlay'));
+    expect(screen.queryByTestId('copy-panel')).not.toBeInTheDocument();
+  });
+
+  it('コピー成功時はパネルを出さない', async () => {
+    const user = userEvent.setup();
+    stubClipboard(vi.fn().mockResolvedValue(undefined));
+
+    renderApp(makeFullDataset(), '/');
+    await user.click(screen.getByRole('button', { name: '共有URLをコピー' }));
+
+    expect(screen.queryByTestId('copy-panel')).not.toBeInTheDocument();
+    expect(screen.getByTestId('toast')).toHaveTextContent('共有URLをコピーしました');
   });
 });
 
