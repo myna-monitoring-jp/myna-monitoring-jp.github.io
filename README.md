@@ -106,16 +106,20 @@ VITE_DATA_SOURCE=live VITE_BASE_PATH=/monitoring/ npm run build
 
 #### 公開するデータの切り替え
 
-既定では **サンプルデータ** を公開します（サイト上部に紫のバナーが出ます）。本番データに切り替える方法は2つあります。
+**現在の公開設定は `live`（本番データ）です。** リポジトリ変数 `DATA_SOURCE=live` が設定済みで、`public/data/` の内容が公開されます。
 
-- 恒久的に切り替える：リポジトリの **Settings → Secrets and variables → Actions → Variables** で `DATA_SOURCE` = `live` を追加
-- 1回だけ試す：**Actions → Deploy to GitHub Pages → Run workflow** で `data_source` に `live` を選択
+切り替えたい場合：
+
+- 恒久的に変更：リポジトリの **Settings → Secrets and variables → Actions → Variables** で `DATA_SOURCE` を `live` / `sample` に変更
+- 1回だけ試す：**Actions → Deploy to GitHub Pages → Run workflow** で `data_source` を選択
+
+`sample` にするとサイト上部に紫のバナーが出て、Teams投稿文にも「サンプルデータでの出力です」が入ります。
 
 #### 検索エンジンへのインデックス
 
 `index.html` に `<meta name="robots" content="noindex,nofollow">` を入れてあります。**URLを知っている人は誰でも閲覧できますが、検索結果には出ません。**
 
-サンプルデータを公開している間はこのままにしてください。本番データに切り替えて検索流入も受け入れる段階になったら、この1行を削除して push すれば反映されます。
+本番データの公開に切り替えた現在も、既定では **検索非対象のまま** にしています。掲載内容には実在の自治体名・医療機関名・SNS投稿URLが含まれるため、検索流入を受け入れるかは掲載方針を決めてから判断してください。受け入れる場合はこの1行を削除して push すれば反映されます。
 
 #### 公開前の確認事項
 
@@ -155,7 +159,7 @@ Cache-Control: no-cache        # data/current.json に対して
 
 ```
 public/
-  data/                  ← 本番データ。日次フローがここを上書きする
+  data/                  ← 本番データ（公開中）。日次フローがここを上書きする
     current.json
     archive/YYYY-MM-DD.json
   sample-data/           ← サンプル。動作確認・デモ専用。本番共有には使わない
@@ -311,7 +315,19 @@ node scripts/validate-data.mjs public/sample-data
 - **共有URLをコピー** … 現在のハッシュURLをコピー（画面・タブ・絞り込みを含む）
 - **Teams投稿文をコピー** … 日付・状態別の要点・データ基準時刻・固定URLを含む短いサマリを生成
 
-MVPでは **Teamsへの自動投稿は行いません**。公開バンドルに認証情報を置けないためです。境界は [`src/integrations/notifier.ts`](src/integrations/notifier.ts) の `NotificationGateway` インターフェースとして切ってあり、将来、組織で承認されたワークフロー（資格情報はバックエンド側で保持）を実装して差し替えられます。
+### クリップボードが使えない環境への対応
+
+企業の管理ブラウザでは `clipboard-write` がポリシーで拒否されることがあり、その場合はレガシーな `document.execCommand('copy')` も同時に失敗します。**コピー失敗は異常ではなく想定される結果**として扱い、失敗時は投稿文／URLを選択可能なダイアログ（[`CopyPanel`](src/components/common/CopyPanel.tsx)）で表示します。開いた時点で全選択されているため、そのまま `Ctrl+C` でコピーできます。
+
+実装上の注意点（いずれも実機で踏んだ問題です）：
+
+- フォールバック用の `<textarea>` に `opacity: 0` や `display: none` を付けると、Chrome は選択範囲のコピーを拒否します。画面上は目立たないが「描画されている」状態にする必要があります。
+- `CopyPanel` は `document.body` へポータルします。`.topbar` の `backdrop-filter` が `position: fixed` の包含ブロックを作るため、トップバー内に描画するとオーバーレイがトップバーの矩形に閉じ込められます。
+- Clipboard API は reject せずハングすることがあるため、1.5秒のタイムアウトを入れています。
+
+### Teamsへの自動投稿
+
+MVPでは **行いません**。公開バンドルに認証情報を置けないためです。境界は [`src/integrations/notifier.ts`](src/integrations/notifier.ts) の `NotificationGateway` インターフェースとして切ってあり、将来、組織で承認されたワークフロー（資格情報はバックエンド側で保持）を実装して差し替えられます。
 
 ---
 
@@ -321,7 +337,7 @@ MVPでは **Teamsへの自動投稿は行いません**。公開バンドルに�
 npm test
 ```
 
-Vitest + Testing Library。152件。
+Vitest + Testing Library。158件。
 
 | # | 要件のテスト項目 | ファイル |
 |---|---|---|
@@ -331,7 +347,7 @@ Vitest + Testing Library。152件。
 | 4 | 3カテゴリー切替 | `src/test/app.test.tsx` |
 | 5 | 広報3分類（反応未検知／ポジティブの区別を含む） | `src/test/app.test.tsx` |
 | 6 | 外部リンクの href / target / rel | `src/test/externalLinks.test.tsx`, `e2e/external-links.spec.ts` |
-| 7 | URLコピー | `src/test/share.test.ts`, `src/test/app.test.tsx` |
+| 7 | URLコピー（成功時・拒否時のフォールバック表示を含む） | `src/test/share.test.ts`, `src/test/app.test.tsx` |
 | 8 | Teamsサマリ生成 | `src/test/teamsSummary.test.ts` |
 | 9 | 空データ時表示 | `src/test/app.test.tsx` |
 | 10 | 訂正履歴表示 | `src/test/app.test.tsx` |
