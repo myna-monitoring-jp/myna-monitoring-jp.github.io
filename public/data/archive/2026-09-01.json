@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-02T07:04:12.709+09:00",
-  "reportDate": "2026-09-02",
+  "generatedAt": "2026-09-01T19:08:08.351+09:00",
+  "reportDate": "2026-09-01",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-02T07:04:12.709+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-01T19:08:08.351+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -433,96 +433,6 @@
         }
       ],
       "id": "news-auto-20260830-tx9f6g",
-      "category": "other"
-    },
-    {
-      "title": "（導入準備中）マイナ保険証をこども医療費受給資格者証として使えるようになります！",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-02T07:04:12.709+09:00",
-      "publishedAt": "2026-09-01T19:18:45+09:00",
-      "lastMaterialUpdateAt": "2026-09-01T19:18:45+09:00",
-      "summary": "医療機関で子どもの医療費助成などを受ける際に、マイナンバーカードに健康保険証機能を持たせた「マイナ保険証」の提示だけで済む自治体が、今年度末に1400超に増える見通しであることがデジタル庁のまとめでわかった。医療機関側にも利点が ...",
-      "dailyDiff": "2026-09-02の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "佐野市",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVFRHMHlEc3BEMFBjb1JSVnNLODRNeFN6NFFkR0dOUHY5ajNHc3FYZE9iNkw4c0diTzVDRGloY3BObU5mVDV1bWI0SkpTSDdHRkIycnBkYXhYMTZrQUJ4V3J2emVrWTllZmVsN0w4a2NMLXpscWlQcVdFcGRfTDNkSEhiWThYYnByaFBZQllTd09YbVpvQUQ4?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "佐野市",
-          "publishedAt": "2026-09-01T19:18:45+09:00",
-          "verifiedAt": "2026-09-02T07:04:12.709+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260901-rptihs",
-      "category": "other"
-    },
-    {
-      "title": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催について",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-02T07:04:12.709+09:00",
-      "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-01T14:00:00+09:00",
-      "summary": "厚生労働省は6月18日、マイナ保険証の受付に使う「第2世代（次期）顔認証付きカードリーダー」の販売が2026年度から順次始まったことを、社会保障審議会医療保険部会の資料で明らかにした。最大の特徴は、本体だけでスマートフォンのマイナ保険証を ...",
-      "dailyDiff": "2026-09-02の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "厚生労働省",
-          "url": "https://www.mhlw.go.jp/stf/newpage_75881.html",
-          "linkText": "報道記事を開く",
-          "publisher": "厚生労働省",
-          "publishedAt": "2026-09-01T14:00:00+09:00",
-          "verifiedAt": "2026-09-02T07:04:12.709+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260901-oectol",
-      "category": "other"
-    },
-    {
-      "title": "デジタル庁、発足5年 その成果とは マイナンバーカードの普及に貢献",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-02T07:04:12.709+09:00",
-      "publishedAt": "2026-09-01T11:20:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-01T11:20:00+09:00",
-      "summary": "松本尚デジタル大臣は13日の記者会見で、16日開始の確定申告について、iPhoneのマイナンバーカードだけで完了できるようになったことを案内した。あわせて、デジタル庁のGSS（Government Solution Service）班が人事院総裁賞を受賞したことを紹介した。 iPhoneだけ ...",
-      "dailyDiff": "2026-09-02の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9uM0NTdnh2bldlSncxUExUWVhJemRDZWd4eXdQY2tYN2hIallVcW5yLUxCb0NLaG03Y2JqX3UzQk12WWU3dFNyQTlvbXZ5RVdTcThRWXdCNVpzWmRLVHJHOWVwbEM0REtaY2M1VEZfS0F4a0NpOE9rWE9lRXBMQkE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-09-01T11:20:00+09:00",
-          "verifiedAt": "2026-09-02T07:04:12.709+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260901-v5gbab",
       "category": "other"
     }
   ],
@@ -1222,11 +1132,6 @@
     }
   ],
   "archive": [
-    {
-      "date": "2026-09-01",
-      "title": "日次レポート",
-      "dataPath": "archive/2026-09-01.json"
-    },
     {
       "date": "2026-08-31",
       "title": "日次レポート",
