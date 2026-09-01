@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-01T18:29:50.009+09:00",
+  "generatedAt": "2026-09-01T19:08:08.351+09:00",
   "reportDate": "2026-09-01",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-01T18:29:50.009+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-01T19:08:08.351+09:00"
   },
   "headline": {
     "title": "今日の全体像",
