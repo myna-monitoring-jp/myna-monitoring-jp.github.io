@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-03T07:04:48.582+09:00",
-  "reportDate": "2026-09-03",
+  "generatedAt": "2026-09-02T11:34:26.637+09:00",
+  "reportDate": "2026-09-02",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-03T07:04:48.582+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-02T11:34:26.637+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -345,11 +345,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-03T07:04:48.582+09:00",
+      "lastMaterialUpdateAt": "2026-09-02T11:34:26.637+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "独立媒体1件の追加報道を自動検知（2026-09-03）。",
+      "dailyDiff": "独立媒体1件の追加報道を自動検知（2026-09-02）。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -382,7 +382,7 @@
           "linkText": "報道記事を開く",
           "publisher": "パナソニック コネクト",
           "publishedAt": "2026-08-24T23:30:13+09:00",
-          "verifiedAt": "2026-09-03T07:04:48.582+09:00",
+          "verifiedAt": "2026-09-02T11:34:26.637+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -570,37 +570,6 @@
         }
       ],
       "id": "news-auto-20260901-p1wgkz",
-      "category": "commentary",
-      "polarity": "positive"
-    },
-    {
-      "title": "デジタル庁5年、マイナカード1億枚超 三角デジタル監がAIエージェント活用を提起",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-03T07:04:48.582+09:00",
-      "publishedAt": "2026-09-02T08:05:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-02T08:05:00+09:00",
-      "summary": "2021年（令和3年）は、前年から引き続き、新型コロナウイルス感染症（COVID-19）の影響を大きく受けた1年となった。外出の自粛も引き続き呼びかけられ、「おうち時間」を楽しむためのコンテンツが話題になったほか、自宅で業務を行うテレワークも定着し ...",
-      "dailyDiff": "2026-09-03の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "BigGo ファイナンス",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9OWTB2aTJiM3MtZlQtalNTa3JRMl9YN3h5c19zZWlxU0JOTGJ4em94ZVM5eEJTcy1vRlYzeGJMOXltbDBtV050VEl5X3RQZnhRVVJrNXVVeGpzZzJHUm9DU3pzNnM1MHFkYUtMaXdrVkdXSW92?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "BigGo ファイナンス",
-          "publishedAt": "2026-09-02T08:05:00+09:00",
-          "verifiedAt": "2026-09-03T07:04:48.582+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260902-l4g8ow",
       "category": "commentary",
       "polarity": "positive"
     }
@@ -1301,11 +1270,6 @@
     }
   ],
   "archive": [
-    {
-      "date": "2026-09-02",
-      "title": "日次レポート",
-      "dataPath": "archive/2026-09-02.json"
-    },
     {
       "date": "2026-09-01",
       "title": "日次レポート",
