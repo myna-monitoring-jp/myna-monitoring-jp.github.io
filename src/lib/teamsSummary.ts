@@ -58,7 +58,7 @@ export function buildTeamsSummary(options: TeamsSummaryOptions): string {
 
   // 解説記事・二次情報は監視対象の事象ではないためサマリに含めない
   const visibleNews = selectDashboardItems<NewsItem>(dataset.news, settings, now).filter(
-    (item) => item.category !== 'commentary',
+    (item) => item.category !== 'commentary' && item.category !== 'reference',
   );
   const visibleIncidents = selectDashboardItems<Incident>(dataset.incidents, settings, now);
   const visiblePr = selectDashboardItems<PRItem>(dataset.prItems, settings, now);
@@ -128,7 +128,7 @@ export function computeDashboardCounts(dataset: MonitoringDataset, now: Date): D
   const prItems = selectDashboardItems<PRItem>(dataset.prItems, settings, now);
   return {
     news: selectDashboardItems<NewsItem>(dataset.news, settings, now).filter(
-      (item) => item.category !== 'commentary',
+      (item) => item.category !== 'commentary' && item.category !== 'reference',
     ).length,
     localGovernment: incidents.filter((i) => i.incidentCategory === 'local_government_insurer').length,
     commonSystem: incidents.filter((i) => i.incidentCategory === 'common_system').length,

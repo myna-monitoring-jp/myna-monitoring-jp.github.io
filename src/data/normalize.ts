@@ -261,6 +261,7 @@ const NEWS_CATEGORIES = [
   'incident',
   'survey',
   'commentary',
+  'reference',
   'other',
 ] as const;
 const INCIDENT_CATEGORIES = [

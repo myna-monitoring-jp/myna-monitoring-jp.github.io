@@ -46,7 +46,11 @@ export function NewsPage({ dataset, now, query }: NewsPageProps) {
 
   // 解説記事・二次情報は本文の一覧に混ぜず、画面下部の小タイル欄へ回す。
   const commentary = useMemo(() => items.filter((item) => item.category === 'commentary'), [items]);
-  const mainItems = useMemo(() => items.filter((item) => item.category !== 'commentary'), [items]);
+  // 参考情報はダッシュボード下部に集約するので、ここでは扱わない
+  const mainItems = useMemo(
+    () => items.filter((item) => item.category !== 'commentary' && item.category !== 'reference'),
+    [items],
+  );
 
   // 「要注視」は最上段に1段で切り出す。今日確認すべき案件を探させないため。
   const attention = useMemo(

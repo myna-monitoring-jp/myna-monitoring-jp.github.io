@@ -1077,11 +1077,6 @@
     }
   ],
   "_comment": "人が判断して書くファイル。自動処理はこのファイルを読むだけで、書き換えません。current.json はこれと自動収集結果のマージ結果（生成物）です。",
-  "dismissedIds": [
-    "news-auto-20260901-4e5gwo",
-    "news-auto-20260901-4ee8s8",
-    "news-auto-20260901-p1wgkz",
-    "news-auto-20260901-v5gbab"
-  ],
+  "dismissedIds": [],
   "_dismissedIdsHint": "却下した自動収集項目のidをここに並べると、以後ずっと表示されません。idは画面のカードのdata-item-id、またはcurrent.jsonで確認できます。"
 }

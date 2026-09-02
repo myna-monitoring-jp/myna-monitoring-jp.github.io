@@ -1251,6 +1251,15 @@ td .actionrow {
   color: var(--red);
   border-color: #ffd0cb;
 }
+.commentary-tone-blue {
+  background: var(--blue-bg);
+  color: var(--blue);
+  border-color: #b2ddff;
+}
+/* 参考情報は一次情報なので左に青のアクセントを付けて解説記事と区別する。 */
+.reference-tile {
+  border-left: 3px solid #b2ddff;
+}
 /* ------------------------------------------------------- 改修要望ボタン */
 
 /*

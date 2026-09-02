@@ -406,16 +406,16 @@ describe('日次自動更新パイプライン', () => {
     expect(dataset.dataUpdate.state).toBe('ok');
   });
 
-  it('公式ソース（go.jp / lg.jp / 省庁名）は本文一覧に残す', async () => {
+  it('公式ソース（go.jp / lg.jp / 省庁名）で監視対象外なら参考情報にする', async () => {
     feedPayload = {
       articles: [
         article({
-          title: '第214回社会保障審議会医療保険部会の開催について - 厚生労働省',
-          _resolved_url: 'https://www.mhlw.go.jp/stf/newpage_00001.html',
-          source: '厚生労働省',
+          title: 'デジタル庁設立5年 その歩み - デジタル庁',
+          _resolved_url: 'https://www.digital.go.jp/news/anniversary',
+          source: 'デジタル庁',
         }),
         article({
-          title: '市からのお知らせ - 佐野市',
+          title: 'ミートアップを開催しました - 佐野市',
           _resolved_url: 'https://www.city.sano.lg.jp/news/1.html',
           source: '佐野市',
         }),
@@ -424,7 +424,9 @@ describe('日次自動更新パイプライン', () => {
     const { dataset } = await runPipeline();
     const auto = dataset.news.filter((n: { reviewState: string }) => n.reviewState === 'unreviewed');
     expect(auto).toHaveLength(2);
-    expect(auto.every((n: { category: string }) => n.category !== 'commentary')).toBe(true);
+    expect(auto.every((n: { category: string }) => n.category === 'reference')).toBe(true);
+    // 参考情報に論調は付けない
+    expect(auto.every((n: { polarity?: string }) => n.polarity === undefined)).toBe(true);
   });
 
   it('二次転載・解説記事は解説記事欄（commentary）へ回す', async () => {

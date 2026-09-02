@@ -212,6 +212,12 @@ export type NewsCategory =
    * 小タイル欄に論調（ポジティブ／中立／ネガティブ）を添えて並べる。
    */
   | 'commentary'
+  /**
+   * 参考情報。官公庁・自治体の一次情報だが、不具合・障害・炎上のような
+   * 監視対象の事象ではないもの（例：省庁の周年発表、イベント開催報告）。
+   * 押さえておくと役に立つのでダッシュボード下部に小さく残す。
+   */
+  | 'reference'
   | 'other';
 
 export interface NewsItem extends BaseItem {

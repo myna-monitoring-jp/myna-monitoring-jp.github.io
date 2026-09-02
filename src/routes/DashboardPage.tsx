@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { Incident, MonitoringDataset, NewsItem, PRItem } from '@/types/monitoring';
 import { NewsCard } from '@/components/news/NewsCard';
+import { ReferenceTiles } from '@/components/news/ReferenceTiles';
 import { PRItemCard } from '@/components/pr/PRItemCard';
 import { StatusBadge } from '@/components/common/StatusBadge';
 import { EmptyState, SectionTitle } from '@/components/common/Primitives';
@@ -37,11 +38,17 @@ export function DashboardPage({ dataset, now, query }: DashboardPageProps) {
     return 3;
   };
 
-  const news = selectDashboardItems<NewsItem>(dataset.news, settings, now)
-    // 解説記事・二次情報はダッシュボードに出さない（トップニュース画面の下部に集約）
-    .filter((item) => item.category !== 'commentary')
-    .filter((item) => matchesQuery(item, query))
+  const dashboardNews = selectDashboardItems<NewsItem>(dataset.news, settings, now).filter((item) =>
+    matchesQuery(item, query),
+  );
+
+  const news = dashboardNews
+    // 解説記事はトップニュース画面の下部、参考情報はこの画面の下部にまとめる
+    .filter((item) => item.category !== 'commentary' && item.category !== 'reference')
     .sort((a, b) => statusRank(a) - statusRank(b));
+
+  // 参考情報：一次情報だが監視対象の事象ではないもの。不具合の下に小さく置く。
+  const reference = dashboardNews.filter((item) => item.category === 'reference');
   const incidents = selectDashboardItems<Incident>(dataset.incidents, settings, now);
   const prItems = selectDashboardItems<PRItem>(dataset.prItems, settings, now).filter((item) =>
     matchesQuery(item, query),
@@ -167,6 +174,16 @@ export function DashboardPage({ dataset, now, query }: DashboardPageProps) {
               />
             ))}
           </div>
+        </>
+      )}
+
+      {reference.length > 0 && (
+        <>
+          <SectionTitle
+            title={`参考情報（${reference.length}件）`}
+            description="官公庁・自治体の一次情報のうち、不具合・炎上ではないもの。押さえておくと役に立つ動き。"
+          />
+          <ReferenceTiles items={reference} />
         </>
       )}
 

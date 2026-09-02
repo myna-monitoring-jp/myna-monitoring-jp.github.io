@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-02T10:52:33.238+09:00",
+  "generatedAt": "2026-09-02T11:34:26.637+09:00",
   "reportDate": "2026-09-02",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-02T10:52:33.238+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-02T11:34:26.637+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -345,7 +345,7 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-02T10:52:33.238+09:00",
+      "lastMaterialUpdateAt": "2026-09-02T11:34:26.637+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
@@ -382,7 +382,7 @@
           "linkText": "報道記事を開く",
           "publisher": "パナソニック コネクト",
           "publishedAt": "2026-08-24T23:30:13+09:00",
-          "verifiedAt": "2026-09-02T10:52:33.238+09:00",
+          "verifiedAt": "2026-09-02T11:34:26.637+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -450,6 +450,128 @@
       "id": "news-auto-20260830-tx9f6g",
       "category": "commentary",
       "polarity": "neutral"
+    },
+    {
+      "title": "デジタル庁、発足5年 その成果とは マイナンバーカードの普及に貢献",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-02T11:34:26.637+09:00",
+      "publishedAt": "2026-09-01T11:20:00+09:00",
+      "lastMaterialUpdateAt": "2026-09-01T11:20:00+09:00",
+      "summary": "松本尚デジタル大臣は13日の記者会見で、16日開始の確定申告について、iPhoneのマイナンバーカードだけで完了できるようになったことを案内した。あわせて、デジタル庁のGSS（Government Solution Service）班が人事院総裁賞を受賞したことを紹介した。 iPhoneだけ ...",
+      "dailyDiff": "2026-09-02の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9uM0NTdnh2bldlSncxUExUWVhJemRDZWd4eXdQY2tYN2hIallVcW5yLUxCb0NLaG03Y2JqX3UzQk12WWU3dFNyQTlvbXZ5RVdTcThRWXdCNVpzWmRLVHJHOWVwbEM0REtaY2M1VEZfS0F4a0NpOE9rWE9lRXBMQkE?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-09-01T11:20:00+09:00",
+          "verifiedAt": "2026-09-02T11:34:26.637+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260901-v5gbab",
+      "category": "commentary",
+      "polarity": "positive"
+    },
+    {
+      "title": "デジタル庁設立5年 ～デジタルで変わる、一人ひとりの暮らし～",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-02T11:34:26.637+09:00",
+      "publishedAt": "2026-09-01T09:59:46+09:00",
+      "lastMaterialUpdateAt": "2026-09-01T09:59:46+09:00",
+      "summary": "※本稿は、JBpress Innovation Review主催の「行政イノベーションフォーラム」における「基調講演：人口減少時代における行政DX／デジタル庁デジタル監 三角育生氏」（2026年3月に配信）を基に制作しています。 社会環境の変化を受け「ガバメントAI」基盤の構築 ...",
+      "dailyDiff": "2026-09-02の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WNVFZSzlma0lhSWxmZ0NsZEFtVkVfckR6dDdCb0tyYldJZUZJc0Nkd3VwSGp6YXI4VVFEa2FhS2FTZ1MzcXhNMUVXbTgybVBZZEhFZDBPcUJaZw?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-09-01T09:59:46+09:00",
+          "verifiedAt": "2026-09-02T11:34:26.637+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260901-4e5gwo",
+      "category": "reference"
+    },
+    {
+      "title": "「先進企業に学ぶ！マイナンバーカード友の会ミートアップ！！」を開催しました",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-02T11:34:26.637+09:00",
+      "publishedAt": "2026-09-01T09:57:10+09:00",
+      "lastMaterialUpdateAt": "2026-09-01T09:57:10+09:00",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-09-02の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/news/0f95a36a-87fe-4e04-b232-f1960f63ea96",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-09-01T09:57:10+09:00",
+          "verifiedAt": "2026-09-02T11:34:26.637+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260901-4ee8s8",
+      "category": "reference"
+    },
+    {
+      "title": "マイナンバーカードの一体化による利便性についてどう思いますか？",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-02T11:34:26.637+09:00",
+      "publishedAt": "2026-09-01T00:00:57+09:00",
+      "lastMaterialUpdateAt": "2026-09-01T00:00:57+09:00",
+      "summary": "出入国在留管理庁は6月14日、在留カードとマイナンバーカードの機能を1枚にまとめたICカード「特定在留カード」の運用を始めた。両カードに関わる手続きを一元化し、外国人の利便性向上と行政の効率化を図る。取得は義務ではなく任意。 一体化された ...",
+      "dailyDiff": "2026-09-02の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBjbVROY0ZBUVlHaG1ncXgzUk9KZ3VLOU1zVUNXLWlYNUVJV3Z4UDdGcmtQNXVMOEtkLWxEQk1sU3hDaHpLZFEtbTZEeTc?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-09-01T00:00:57+09:00",
+          "verifiedAt": "2026-09-02T11:34:26.637+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260901-p1wgkz",
+      "category": "commentary",
+      "polarity": "positive"
     }
   ],
   "incidents": [

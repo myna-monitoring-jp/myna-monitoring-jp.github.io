@@ -745,6 +745,94 @@ describe('解説記事・二次情報の欄', () => {
   });
 });
 
+describe('参考情報の欄（ダッシュボード）', () => {
+  const referenceDataset = makeDataset({
+    news: [
+      makeNews({ id: 'main', title: '監視対象のニュース', category: 'policy' }),
+      makeNews({
+        id: 'ref-1',
+        title: 'デジタル庁設立5年',
+        category: 'reference',
+        reviewState: 'unreviewed',
+      }),
+      makeNews({
+        id: 'ref-2',
+        title: 'ミートアップを開催しました',
+        category: 'reference',
+        reviewState: 'unreviewed',
+      }),
+      makeNews({
+        id: 'com-1',
+        title: '解説記事です',
+        category: 'commentary',
+        polarity: 'neutral',
+        reviewState: 'unreviewed',
+      }),
+    ],
+    incidents: [makeIncident({ id: 'inc', status: 'follow_up' })],
+  });
+
+  it('ダッシュボードの不具合セクションより後ろに置く', () => {
+    const { container } = renderApp(referenceDataset, '/');
+
+    const tiles = container.querySelector('[data-testid="reference-tiles"]')!;
+    const incidents = container.querySelector('.incident-summary')!;
+    expect(tiles).toBeInTheDocument();
+    expect(incidents.compareDocumentPosition(tiles) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it('参考情報だけを小タイルで並べる', () => {
+    renderApp(referenceDataset, '/');
+    const tiles = screen.getAllByTestId('reference-tile');
+    expect(tiles.map((t) => t.dataset.itemId)).toEqual(['ref-1', 'ref-2']);
+    expect(screen.getByText(/参考情報（2件）/)).toBeInTheDocument();
+  });
+
+  it('参考情報はトップニュースの本文一覧に混ぜない', () => {
+    renderApp(referenceDataset, '/');
+    const cards = screen.getAllByTestId('news-card');
+    expect(cards.map((c) => c.dataset.itemId)).toEqual(['main']);
+  });
+
+  it('トップニュース画面にも本文一覧としては出さない', () => {
+    renderApp(referenceDataset, '/news');
+    const cards = screen.getAllByTestId('news-card');
+    expect(cards.map((c) => c.dataset.itemId)).toEqual(['main']);
+    expect(screen.queryAllByTestId('reference-tile')).toHaveLength(0);
+  });
+
+  it('出典リンクを新しいタブ属性つきで出す', () => {
+    renderApp(referenceDataset, '/');
+    const link = within(screen.getAllByTestId('reference-tile')[0]).getByTestId('external-link');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  it('未レビューバッジは出さず、欄の注記で説明する', () => {
+    renderApp(referenceDataset, '/');
+    for (const tile of screen.getAllByTestId('reference-tile')) {
+      expect(within(tile).queryByTestId('unreviewed-note')).not.toBeInTheDocument();
+    }
+    expect(screen.getByText(/監視対象ではありませんが、把握しておくと役に立つ/)).toBeInTheDocument();
+  });
+
+  it('KPIとTeams投稿文には数えない', async () => {
+    const user = userEvent.setup();
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    stubClipboard(writeText);
+
+    renderApp(referenceDataset, '/');
+    // 掲載中トップニュースは main の1件だけ（参考情報・解説記事は数えない）
+    const kpi = screen.getByText('掲載中トップニュース').closest('.kpi')!;
+    expect(within(kpi as HTMLElement).getByText('1件')).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Teams投稿文をコピー' }));
+    const text = writeText.mock.calls[0][0] as string;
+    expect(text).toContain('監視対象のニュース');
+    expect(text).not.toContain('デジタル庁設立5年');
+  });
+});
+
 describe('改修要望ボタン', () => {
   it('全画面の左下にボタンが出る', () => {
     for (const route of ['/', '/news', '/incidents', '/pr', '/archive']) {

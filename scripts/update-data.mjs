@@ -212,15 +212,17 @@ function toneOf(article) {
 }
 
 /**
- * 解説記事欄に入れるか。
+ * 自動収集した記事をどの枠に置くか決める。
  *
- * 一次情報（官公庁・自治体）と、不具合・広報の候補タグが付いた記事は本文の
- * 一覧に残す。それ以外の二次転載・解説・ハウツー記事は解説記事欄へ回す。
+ * - `other`      … 不具合・広報の候補タグが付いた記事。本文の一覧に残して人が確認する
+ * - `reference`  … 官公庁・自治体の一次情報だが監視対象の事象ではないもの。
+ *                  ダッシュボード下部の「参考情報」へ（例：省庁の周年発表、イベント報告）
+ * - `commentary` … 一次情報でも独自報道でもない解説・ハウツー・二次転載。
+ *                  トップニュース画面下部の「解説記事・二次情報」へ
  */
-function isCommentary(article, tags) {
-  if (tags.length > 0) return false;
-  if (isOfficialSource(article)) return false;
-  return true;
+function laneFor(article, tags) {
+  if (tags.length > 0) return 'other';
+  return isOfficialSource(article) ? 'reference' : 'commentary';
 }
 
 function severityOf(article) {
@@ -249,13 +251,13 @@ function reclassifyCarriedItem(item) {
   };
 
   const tags = candidateTags(pseudoArticle);
-  if (!isCommentary(pseudoArticle, tags)) {
-    // 解説記事から本文一覧へ戻す場合は論調を落とす
-    return item.category === 'commentary'
-      ? { ...item, category: 'other', polarity: undefined }
-      : item;
-  }
-  return { ...item, category: 'commentary', polarity: toneOf(pseudoArticle) };
+  const lane = laneFor(pseudoArticle, tags);
+  // 論調は解説記事欄でしか使わない。他の枠へ移る場合は落とす。
+  return {
+    ...item,
+    category: lane,
+    polarity: lane === 'commentary' ? toneOf(pseudoArticle) : undefined,
+  };
 }
 
 /* -------------------------------------------------------------- 記事取得 */
@@ -518,6 +520,7 @@ async function main() {
   let addedCount = 0;
   let candidateCount = 0;
   let commentaryCount = 0;
+  let referenceCount = 0;
   const skipped = { duplicate: 0, tooOld: 0, overLimit: 0 };
 
   for (const article of feed.articles) {
@@ -545,17 +548,18 @@ async function main() {
     }
 
     const tags = candidateTags(article);
-    const commentary = isCommentary(article, tags);
-    // 自動項目は必ずニュースレーン。不具合・広報レーンは人が検証したものだけ。
-    // 二次転載・解説記事は category=commentary にして画面下部の小タイル欄へ。
+    const lane = laneFor(article, tags);
+    // 自動項目は必ずニュース配列に入れる。不具合・広報レーンは人が検証したものだけ。
+    // category で「本文一覧 / 参考情報 / 解説記事」の置き場所を分ける。
     autoNews.push({
       ...baseAutoItem(article, now, tags),
       id,
-      category: commentary ? 'commentary' : 'other',
-      ...(commentary ? { polarity: toneOf(article) } : {}),
+      category: lane,
+      ...(lane === 'commentary' ? { polarity: toneOf(article) } : {}),
     });
     if (tags.length > 0) candidateCount += 1;
-    if (commentary) commentaryCount += 1;
+    if (lane === 'commentary') commentaryCount += 1;
+    if (lane === 'reference') referenceCount += 1;
 
     knownUrls.add(url);
     knownTitles.add(normalized);
@@ -603,6 +607,7 @@ async function main() {
   log(`  新規追加: ${addedCount}件（重複除外 ${skipped.duplicate} / 古い ${skipped.tooOld} / 上限超過 ${skipped.overLimit}）`);
   log(`  うち不具合・広報の候補タグ付き: ${candidateCount}件（レーン移動は人が curated.json で行う）`);
   log(`  うち解説記事・二次情報として下部へ: ${commentaryCount}件`);
+  log(`  うち参考情報（一次情報だが監視対象外）: ${referenceCount}件`);
   log(`  curated項目への追加報道: ${coverageAdded}件（うち重要更新扱い ${coverageBumped}件）`);
   log(
     `  未レビューから外れた項目: 昇格 ${dropped.promoted} / 却下 ${dropped.dismissed} / ${AUTO_ITEM_RETENTION_DAYS}日経過 ${dropped.expired}`,
