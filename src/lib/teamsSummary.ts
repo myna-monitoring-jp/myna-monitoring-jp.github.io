@@ -56,7 +56,10 @@ export function buildTeamsSummary(options: TeamsSummaryOptions): string {
     );
   }
 
-  const visibleNews = selectDashboardItems<NewsItem>(dataset.news, settings, now);
+  // 解説記事・二次情報は監視対象の事象ではないためサマリに含めない
+  const visibleNews = selectDashboardItems<NewsItem>(dataset.news, settings, now).filter(
+    (item) => item.category !== 'commentary',
+  );
   const visibleIncidents = selectDashboardItems<Incident>(dataset.incidents, settings, now);
   const visiblePr = selectDashboardItems<PRItem>(dataset.prItems, settings, now);
 
@@ -124,7 +127,9 @@ export function computeDashboardCounts(dataset: MonitoringDataset, now: Date): D
   const incidents = selectDashboardItems<Incident>(dataset.incidents, settings, now);
   const prItems = selectDashboardItems<PRItem>(dataset.prItems, settings, now);
   return {
-    news: selectDashboardItems<NewsItem>(dataset.news, settings, now).length,
+    news: selectDashboardItems<NewsItem>(dataset.news, settings, now).filter(
+      (item) => item.category !== 'commentary',
+    ).length,
     localGovernment: incidents.filter((i) => i.incidentCategory === 'local_government_insurer').length,
     commonSystem: incidents.filter((i) => i.incidentCategory === 'common_system').length,
     medicalItCyber: incidents.filter((i) => i.incidentCategory === 'medical_it_cyber').length,

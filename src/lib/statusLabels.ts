@@ -101,6 +101,44 @@ export const SEVERITY_LABEL: Record<Severity, string> = {
 
 export const SEVERITY_ORDER: Severity[] = ['high', 'medium', 'low'];
 
+/**
+ * 解説記事欄の論調バッジ。
+ * ポジティブ＝制度に肯定的で使い方などを解説、ネガティブ＝批判的な論調、
+ * 中立＝方法や制度を中立的に説明しているだけ。
+ */
+export const COMMENTARY_TONE_META: Record<
+  CommentaryTone,
+  { label: string; tone: 'green' | 'gray' | 'red'; symbol: string; description: string }
+> = {
+  positive: {
+    label: 'ポジティブ',
+    tone: 'green',
+    symbol: '＋',
+    description: '制度に肯定的で、使い方やメリットを解説する論調',
+  },
+  neutral: {
+    label: '中立',
+    tone: 'gray',
+    symbol: '＝',
+    description: '方法や制度を中立的に説明しているだけの論調',
+  },
+  negative: {
+    label: 'ネガティブ',
+    tone: 'red',
+    symbol: '－',
+    description: '批判的・否定的な論調',
+  },
+};
+
+export type CommentaryTone = 'positive' | 'neutral' | 'negative';
+
+/** 解説記事の論調を Polarity から3値へ丸める。 */
+export function commentaryTone(polarity?: Polarity): CommentaryTone {
+  if (polarity === 'positive') return 'positive';
+  if (polarity === 'negative' || polarity === 'negative_watch') return 'negative';
+  return 'neutral';
+}
+
 export const POLARITY_LABEL: Record<Polarity, string> = {
   positive: 'ポジティブ',
   neutral: '中立',

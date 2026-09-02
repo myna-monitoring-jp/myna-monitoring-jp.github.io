@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import type { ItemStatus, MonitoringDataset, NewsItem, Severity } from '@/types/monitoring';
 import { NewsCard } from '@/components/news/NewsCard';
+import { CommentaryTiles } from '@/components/news/CommentaryTiles';
 import { EmptyState, SectionTitle } from '@/components/common/Primitives';
 import { ExternalLinkButton } from '@/components/common/ExternalLinkButton';
 import { FilterToolbar } from '@/components/common/FilterToolbar';
@@ -43,14 +44,18 @@ export function NewsPage({ dataset, now, query }: NewsPageProps) {
     return sortItems(filtered, sort);
   }, [dataset.news, effectiveQuery, status, severity, sort, settings, now]);
 
+  // 解説記事・二次情報は本文の一覧に混ぜず、画面下部の小タイル欄へ回す。
+  const commentary = useMemo(() => items.filter((item) => item.category === 'commentary'), [items]);
+  const mainItems = useMemo(() => items.filter((item) => item.category !== 'commentary'), [items]);
+
   // 「要注視」は最上段に1段で切り出す。今日確認すべき案件を探させないため。
   const attention = useMemo(
-    () => items.filter((item) => effectiveStatus(item, settings, now) === 'attention'),
-    [items, settings, now],
+    () => mainItems.filter((item) => effectiveStatus(item, settings, now) === 'attention'),
+    [mainItems, settings, now],
   );
   const others = useMemo(
-    () => items.filter((item) => effectiveStatus(item, settings, now) !== 'attention'),
-    [items, settings, now],
+    () => mainItems.filter((item) => effectiveStatus(item, settings, now) !== 'attention'),
+    [mainItems, settings, now],
   );
 
   const reset = () => {
@@ -82,7 +87,7 @@ export function NewsPage({ dataset, now, query }: NewsPageProps) {
         resultCount={items.length}
       />
 
-      {items.length === 0 ? (
+      {mainItems.length === 0 && commentary.length === 0 ? (
         <EmptyState>条件に一致するニュースはありません。絞り込みを解除してください。</EmptyState>
       ) : (
         <>
@@ -137,6 +142,16 @@ export function NewsPage({ dataset, now, query }: NewsPageProps) {
               </div>
             </>
           )}
+        </>
+      )}
+
+      {commentary.length > 0 && (
+        <>
+          <SectionTitle
+            title={`解説記事・二次情報（${commentary.length}件）`}
+            description="一次情報でも独自報道でもない、制度の解説・ハウツー・二次転載。監視対象の事象ではないため小さく並べています。"
+          />
+          <CommentaryTiles items={commentary} />
         </>
       )}
 

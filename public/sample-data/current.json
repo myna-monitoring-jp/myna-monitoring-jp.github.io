@@ -32,11 +32,24 @@
       "whatIsNew": "8/31にパブリックコメントが開始され、Android搭載の技術基準案が公開された。",
       "audience": "Androidでマイナンバーカード機能を利用する国民、対応事業者",
       "quantitativeMetrics": [
-        { "label": "意見募集期間", "value": "30", "unit": "日間" },
-        { "label": "改正対象", "value": "2", "unit": "件", "note": "省令・技術基準" }
+        {
+          "label": "意見募集期間",
+          "value": "30",
+          "unit": "日間"
+        },
+        {
+          "label": "改正対象",
+          "value": "2",
+          "unit": "件",
+          "note": "省令・技術基準"
+        }
       ],
       "dailyDiff": "前日に公示。本日時点で追加の公式発表・独立報道は確認できず。",
-      "tags": ["制度変更", "デジタル庁", "Android"],
+      "tags": [
+        "制度変更",
+        "デジタル庁",
+        "Android"
+      ],
       "publicVoices": [
         {
           "channel": "social",
@@ -80,12 +93,29 @@
       "whatIsNew": "9/1朝に代表投稿の引用RPが増加。掲載紙面が追加された。",
       "audience": "公金受取口座の登録対象となる国民、特に高齢者層",
       "quantitativeMetrics": [
-        { "label": "代表投稿RP", "value": 5029, "unit": "件" },
-        { "label": "代表投稿いいね", "value": 12728, "unit": "件" },
-        { "label": "報道化", "value": 0, "unit": "件", "note": "独立媒体による記事化は未確認" }
+        {
+          "label": "代表投稿RP",
+          "value": 5029,
+          "unit": "件"
+        },
+        {
+          "label": "代表投稿いいね",
+          "value": 12728,
+          "unit": "件"
+        },
+        {
+          "label": "報道化",
+          "value": 0,
+          "unit": "件",
+          "note": "独立媒体による記事化は未確認"
+        }
       ],
       "dailyDiff": "引用RPが前日比で増加。公式の追加説明・修正は確認できず。",
-      "tags": ["既存批判あり", "広告掲載中", "オプトアウト"],
+      "tags": [
+        "既存批判あり",
+        "広告掲載中",
+        "オプトアウト"
+      ],
       "communicationRisks": [
         "「手続きは不要です」というコピーだけが切り抜かれ、同意なく登録されると受け取られる可能性",
         "高齢者向け紙面のため、返送手続きの説明が届かない層が生じる可能性"
@@ -147,7 +177,9 @@
           "active": true
         }
       ],
-      "relatedIds": ["pr-public-account-ad"],
+      "relatedIds": [
+        "pr-public-account-ad"
+      ],
       "corrections": [
         {
           "correctedAt": "2026-09-01T10:10:00+09:00",
@@ -173,7 +205,10 @@
       "whatIsNew": "8/27の報道以降、追加の公式発表は確認できていない。",
       "audience": "マイナアプリで初回利用登録・認証を行う利用者",
       "dailyDiff": "前日から変化なし。",
-      "tags": ["全面解消の明示なし", "オン資とは別"],
+      "tags": [
+        "全面解消の明示なし",
+        "オン資とは別"
+      ],
       "publicVoices": [
         {
           "channel": "app_store",
@@ -211,7 +246,9 @@
           "active": true
         }
       ],
-      "relatedIds": ["incident-myna-app-20260827"]
+      "relatedIds": [
+        "incident-myna-app-20260827"
+      ]
     },
     {
       "id": "news-aya-tieup-20260824",
@@ -224,7 +261,10 @@
       "lastMaterialUpdateAt": "2026-08-24T00:00:00+09:00",
       "summary": "当事者配慮への批判が報道化し、8/24にタイアップ中止・ポスター回収・特設ページ削除が実施された。事例としてアーカイブに保持する。",
       "dailyDiff": "前日から変化なし。",
-      "tags": ["報道化炎上", "公式対応済み"],
+      "tags": [
+        "報道化炎上",
+        "公式対応済み"
+      ],
       "publicVoices": [],
       "factChecks": [],
       "sources": [
@@ -237,7 +277,71 @@
           "active": true
         }
       ],
-      "relatedIds": ["pr-aya-film-20260824"]
+      "relatedIds": [
+        "pr-aya-film-20260824"
+      ]
+    },
+    {
+      "title": "マイナ保険証時代でも医療費の領収書を必ず保管！医療費控除で「マイナポータル連携」は絶対やめた方がいい【確定申告準備】",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-01T17:54:47.515+09:00",
+      "publishedAt": "2026-08-31T06:04:50+09:00",
+      "lastMaterialUpdateAt": "2026-08-31T06:04:50+09:00",
+      "summary": "日本は国民皆保険制度を採用しています。私たちは、公的医療保険（国民健康保険、協会けんぽ、健康保険組合、共済組合など）に加入し、保険料を支払う義務を負っています。これによって、医療機関などの窓口で利用者が支払う自己負担額は大幅に軽減 ...",
+      "dailyDiff": "2026-09-01の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "FP Cafe",
+          "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5PZVR1cmpaQmR2MklqY1VFeU1XVDROUmQzMUcyRjVhM0xLeHM0WFRWeTU3ZU5tOHZabExIQ09zOThVUQ?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "FP Cafe",
+          "publishedAt": "2026-08-31T06:04:50+09:00",
+          "verifiedAt": "2026-09-01T17:54:47.515+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260831-zc08vm",
+      "category": "commentary",
+      "polarity": "negative"
+    },
+    {
+      "title": "【後期高齢者】マイナ保険証を使わない派「紙の保険証廃止後」はどう受診する?「資格確認書」の交付ルールは85歳以上と84歳以下で異なります",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-01T17:54:47.515+09:00",
+      "publishedAt": "2026-08-30T21:22:00+09:00",
+      "lastMaterialUpdateAt": "2026-08-30T21:22:00+09:00",
+      "summary": "「マイナンバーカードは作らない」「マイナ保険証は使わない」と決めているご高齢の方やそのご家族は、紙の健康保険証がなくなってしまったら、病院にどうやってかかればいいのだろうと心配になったことがあるかもしれません。",
+      "dailyDiff": "2026-09-01の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "LIMO | くらしとお金の経済メディア",
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9IeExtTWpVYlkwQTVkMEx6S1JYM19PUFZ6Q3JadTZWRDI2ZV9kTk9sRGMzZlhVU2dZS0RFX2Y1Vy0wd3NMNGlscE5Nb2w?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "LIMO | くらしとお金の経済メディア",
+          "publishedAt": "2026-08-30T21:22:00+09:00",
+          "verifiedAt": "2026-09-01T17:54:47.515+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260830-tx9f6g",
+      "category": "commentary",
+      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -260,7 +364,10 @@
       "officialStatus": "報道先行。市の詳細公表を待つ状態。",
       "cyberAttack": false,
       "dailyDiff": "8/30に市が調査状況を更新。対象人数の確定は未了。",
-      "tags": ["負担割合", "限度額区分"],
+      "tags": [
+        "負担割合",
+        "限度額区分"
+      ],
       "publicVoices": [],
       "factChecks": [
         {
@@ -299,7 +406,10 @@
       "officialStatus": "8/7に最終報を公表。",
       "cyberAttack": false,
       "dailyDiff": "前日から変化なし。",
-      "tags": ["資格無効表示", "解消済み"],
+      "tags": [
+        "資格無効表示",
+        "解消済み"
+      ],
       "sources": [
         {
           "type": "primary",
@@ -448,7 +558,9 @@
           "active": true
         }
       ],
-      "relatedIds": ["news-myna-app-auth-20260827"]
+      "relatedIds": [
+        "news-myna-app-auth-20260827"
+      ]
     },
     {
       "id": "incident-mynaportal-api-status",
@@ -496,7 +608,10 @@
       "officialStatus": "事前公表済み。",
       "cyberAttack": false,
       "dailyDiff": "前日から変化なし。",
-      "tags": ["計画停止", "障害ではない"],
+      "tags": [
+        "計画停止",
+        "障害ではない"
+      ],
       "factChecks": [
         {
           "claim": "マイナ保険証が使えなくなっている",
@@ -564,7 +679,10 @@
       "cyberAttack": true,
       "officialStatus": "事業者が経緯を公表、調査中。",
       "dailyDiff": "前日から変化なし。",
-      "tags": ["サイバー攻撃", "SEOポイズニング"],
+      "tags": [
+        "サイバー攻撃",
+        "SEOポイズニング"
+      ],
       "sources": [
         {
           "type": "media",
@@ -606,9 +724,16 @@
       "controversyLevel": 3,
       "mediaPickupCount": 4,
       "officialAction": "8/24中止、特設ページ・SNS削除、ポスター回収",
-      "riskFactors": ["当事者配慮", "接触場所", "センシティブ表現"],
+      "riskFactors": [
+        "当事者配慮",
+        "接触場所",
+        "センシティブ表現"
+      ],
       "dailyDiff": "前日から変化なし。",
-      "tags": ["タイアップ中止", "ポスター回収"],
+      "tags": [
+        "タイアップ中止",
+        "ポスター回収"
+      ],
       "publicVoices": [
         {
           "channel": "x",
@@ -662,9 +787,14 @@
       "controversyLevel": 3,
       "mediaPickupCount": 3,
       "officialAction": "8/21に今後のタイアップを取りやめ",
-      "riskFactors": ["被害者感情", "作品文脈との不整合"],
+      "riskFactors": [
+        "被害者感情",
+        "作品文脈との不整合"
+      ],
       "dailyDiff": "前日から変化なし。",
-      "tags": ["タイアップ取りやめ"],
+      "tags": [
+        "タイアップ取りやめ"
+      ],
       "publicVoices": [
         {
           "channel": "x",
@@ -721,13 +851,19 @@
       "targetAudience": "年金受給者",
       "controversyLevel": 1,
       "mediaPickupCount": 0,
-      "riskFactors": ["オプトアウト", "切り抜き", "既存批判"],
+      "riskFactors": [
+        "オプトアウト",
+        "切り抜き",
+        "既存批判"
+      ],
       "communicationRisks": [
         "「手続き不要」コピーのみが切り抜かれ、同意なく登録されると受け取られる可能性",
         "紙面の注記が小さく、返送期限が伝わらない可能性"
       ],
       "dailyDiff": "代表投稿の引用RPが増加。公式の追加説明・修正は確認できず。",
-      "tags": ["掲載中"],
+      "tags": [
+        "掲載中"
+      ],
       "publicVoices": [
         {
           "channel": "x",
@@ -759,7 +895,9 @@
           "active": true
         }
       ],
-      "relatedIds": ["news-public-account-ad-20260831"]
+      "relatedIds": [
+        "news-public-account-ad-20260831"
+      ]
     },
     {
       "id": "pr-bousai-week-2026",
@@ -777,7 +915,9 @@
       "controversyLevel": 0,
       "mediaPickupCount": 0,
       "dailyDiff": "前日から変化なし。",
-      "tags": ["掲載中"],
+      "tags": [
+        "掲載中"
+      ],
       "publicVoices": [],
       "sources": [
         {
@@ -807,11 +947,22 @@
       "controversyLevel": 0,
       "mediaPickupCount": 1,
       "effectMetrics": [
-        { "label": "通知集約ページ参照数", "value": 38200, "unit": "PV" },
-        { "label": "好意的な引用投稿", "value": 412, "unit": "件" }
+        {
+          "label": "通知集約ページ参照数",
+          "value": 38200,
+          "unit": "PV"
+        },
+        {
+          "label": "好意的な引用投稿",
+          "value": 412,
+          "unit": "件"
+        }
       ],
       "dailyDiff": "8/31に参照数が前日比+21%。",
-      "tags": ["実務的安心材料", "効果確認済み"],
+      "tags": [
+        "実務的安心材料",
+        "効果確認済み"
+      ],
       "publicVoices": [
         {
           "channel": "medical_professional",

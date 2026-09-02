@@ -255,7 +255,14 @@ function normalizeBase(raw: Json, path: string, issues: NormalizeIssue[]) {
 
 /* -------------------------------------------------------------- collections */
 
-const NEWS_CATEGORIES = ['policy', 'public_communication', 'incident', 'survey', 'other'] as const;
+const NEWS_CATEGORIES = [
+  'policy',
+  'public_communication',
+  'incident',
+  'survey',
+  'commentary',
+  'other',
+] as const;
 const INCIDENT_CATEGORIES = [
   'local_government_insurer',
   'common_system',

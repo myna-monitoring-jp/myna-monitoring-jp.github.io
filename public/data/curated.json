@@ -274,6 +274,97 @@
       "relatedIds": [
         "pr-aya-film-20260824"
       ]
+    },
+    {
+      "id": "news-auto-20260901-rptihs",
+      "title": "マイナ保険証をこども医療費受給資格者証として利用可能に（佐野市は導入準備中）",
+      "category": "policy",
+      "polarity": "positive",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-01T19:18:45+09:00",
+      "publishedAt": "2026-09-01T19:18:45+09:00",
+      "lastMaterialUpdateAt": "2026-09-01T19:18:45+09:00",
+      "summary": "医療費助成の受給資格者証をマイナ保険証で代替できる自治体が、今年度末に1,400超へ拡大する見通し（デジタル庁まとめ）。佐野市は導入準備中と公表。",
+      "whatIsNew": "佐野市が導入準備中であることを公表した。",
+      "audience": "こども医療費助成の対象世帯、受け入れる医療機関の窓口",
+      "quantitativeMetrics": [
+        {
+          "label": "対応自治体の見込み",
+          "value": "1,400超",
+          "note": "今年度末時点・デジタル庁まとめ"
+        }
+      ],
+      "dailyDiff": "新規に確認。",
+      "tags": [
+        "制度拡大",
+        "自治体"
+      ],
+      "matchKeywords": [
+        "こども医療費",
+        "マイナ保険証"
+      ],
+      "publicVoices": [],
+      "factChecks": [
+        {
+          "claim": "全国どこの自治体でも今すぐマイナ保険証だけで受給できる",
+          "assessment": "misunderstanding",
+          "explanation": "導入時期は自治体ごとに異なる。佐野市は「導入準備中」であり、開始日は各自治体の公表を確認する必要がある。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "media",
+          "label": "佐野市（Googleニュース経由）",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVFRHMHlEc3BEMFBjb1JSVnNLODRNeFN6NFFkR0dOUHY5ajNHc3FYZE9iNkw4c0diTzVDRGloY3BObU5mVDV1bWI0SkpTSDdHRkIycnBkYXhYMTZrQUJ4V3J2emVrWTllZmVsN0w4a2NMLXpscWlQcVdFcGRfTDNkSEhiWThYYnByaFBZQllTd09YbVpvQUQ4?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "佐野市",
+          "publishedAt": "2026-09-01T19:18:45+09:00",
+          "note": "Googleニュース経由のため、市の公式ページURLは要確認",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "news-auto-20260901-oectol",
+      "title": "社会保障審議会医療保険部会の開催（第2世代 顔認証付きカードリーダー）",
+      "category": "policy",
+      "polarity": "neutral",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-09-01T14:00:00+09:00",
+      "publishedAt": "2026-09-01T14:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-09-01T14:00:00+09:00",
+      "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
+      "whatIsNew": "部会の開催が公表された。",
+      "audience": "医療機関、医療システムベンダー",
+      "dailyDiff": "新規に確認。",
+      "tags": [
+        "審議会",
+        "顔認証付きカードリーダー"
+      ],
+      "matchKeywords": [
+        "顔認証付きカードリーダー"
+      ],
+      "publicVoices": [],
+      "factChecks": [
+        {
+          "claim": "部会の開催案内をもって新しい方針が決定した",
+          "assessment": "scope_separation",
+          "explanation": "公表されたのは開催の案内であり、決定事項の発表ではない。内容は当日の資料・議事録で確認する必要がある。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "厚生労働省",
+          "url": "https://www.mhlw.go.jp/stf/newpage_75881.html",
+          "linkText": "一次情報を開く",
+          "publisher": "厚生労働省",
+          "publishedAt": "2026-09-01T14:00:00+09:00",
+          "active": true
+        }
+      ]
     }
   ],
   "incidents": [
@@ -986,6 +1077,11 @@
     }
   ],
   "_comment": "人が判断して書くファイル。自動処理はこのファイルを読むだけで、書き換えません。current.json はこれと自動収集結果のマージ結果（生成物）です。",
-  "dismissedIds": [],
+  "dismissedIds": [
+    "news-auto-20260901-4e5gwo",
+    "news-auto-20260901-4ee8s8",
+    "news-auto-20260901-p1wgkz",
+    "news-auto-20260901-v5gbab"
+  ],
   "_dismissedIdsHint": "却下した自動収集項目のidをここに並べると、以後ずっと表示されません。idは画面のカードのdata-item-id、またはcurrent.jsonで確認できます。"
 }

@@ -38,6 +38,8 @@ export function DashboardPage({ dataset, now, query }: DashboardPageProps) {
   };
 
   const news = selectDashboardItems<NewsItem>(dataset.news, settings, now)
+    // 解説記事・二次情報はダッシュボードに出さない（トップニュース画面の下部に集約）
+    .filter((item) => item.category !== 'commentary')
     .filter((item) => matchesQuery(item, query))
     .sort((a, b) => statusRank(a) - statusRank(b));
   const incidents = selectDashboardItems<Incident>(dataset.incidents, settings, now);

@@ -654,6 +654,97 @@ describe('アーカイブのタイル表示', () => {
   });
 });
 
+describe('解説記事・二次情報の欄', () => {
+  const commentaryDataset = makeDataset({
+    news: [
+      makeNews({ id: 'main', title: '本来のニュース', category: 'policy' }),
+      makeNews({
+        id: 'c-neg',
+        title: 'マイナポータル連携はやめた方がいい',
+        category: 'commentary',
+        polarity: 'negative',
+        reviewState: 'unreviewed',
+      }),
+      makeNews({
+        id: 'c-neu',
+        title: '資格確認書の交付ルールを整理',
+        category: 'commentary',
+        polarity: 'neutral',
+        reviewState: 'unreviewed',
+      }),
+      makeNews({
+        id: 'c-pos',
+        title: 'マイナ保険証の便利な使い方',
+        category: 'commentary',
+        polarity: 'positive',
+        reviewState: 'unreviewed',
+      }),
+    ],
+  });
+
+  it('本文一覧に混ぜず、下部の小タイル欄にまとめる', () => {
+    renderApp(commentaryDataset, '/news');
+
+    const cards = screen.getAllByTestId('news-card');
+    expect(cards.map((c) => c.dataset.itemId)).toEqual(['main']);
+
+    const tiles = screen.getAllByTestId('commentary-tile');
+    expect(tiles.map((t) => t.dataset.itemId)).toEqual(['c-neg', 'c-neu', 'c-pos']);
+  });
+
+  it('論調バッジをポジティブ／中立／ネガティブで出す', () => {
+    renderApp(commentaryDataset, '/news');
+    const tiles = screen.getAllByTestId('commentary-tile');
+
+    expect(tiles[0]).toHaveAttribute('data-tone', 'negative');
+    expect(within(tiles[0]).getByTestId('commentary-tone')).toHaveTextContent('ネガティブ');
+    expect(within(tiles[1]).getByTestId('commentary-tone')).toHaveTextContent('中立');
+    expect(within(tiles[2]).getByTestId('commentary-tone')).toHaveTextContent('ポジティブ');
+  });
+
+  it('解説記事欄は本文一覧より後ろに描画される', () => {
+    const { container } = renderApp(commentaryDataset, '/news');
+    const main = screen.getByTestId('news-card');
+    const tiles = container.querySelector('[data-testid="commentary-tiles"]')!;
+    expect(main.compareDocumentPosition(tiles) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it('解説記事には未レビューバッジを出さない（欄自体が注記を持つ）', () => {
+    renderApp(commentaryDataset, '/news');
+    for (const tile of screen.getAllByTestId('commentary-tile')) {
+      expect(within(tile).queryByTestId('unreviewed-note')).not.toBeInTheDocument();
+    }
+    expect(screen.getByText(/論調の判定は自動です/)).toBeInTheDocument();
+  });
+
+  it('出典リンクを新しいタブ属性つきで出す', () => {
+    renderApp(commentaryDataset, '/news');
+    const link = within(screen.getAllByTestId('commentary-tile')[0]).getByTestId('external-link');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  it('ダッシュボードには出さない', () => {
+    renderApp(commentaryDataset, '/');
+    const cards = screen.getAllByTestId('news-card');
+    expect(cards.map((c) => c.dataset.itemId)).toEqual(['main']);
+    expect(screen.queryAllByTestId('commentary-tile')).toHaveLength(0);
+  });
+
+  it('Teams投稿文にも含めない', async () => {
+    const user = userEvent.setup();
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    stubClipboard(writeText);
+
+    renderApp(commentaryDataset, '/');
+    await user.click(screen.getByRole('button', { name: 'Teams投稿文をコピー' }));
+
+    const text = writeText.mock.calls[0][0] as string;
+    expect(text).toContain('本来のニュース');
+    expect(text).not.toContain('やめた方がいい');
+  });
+});
+
 describe('改修要望ボタン', () => {
   it('全画面の左下にボタンが出る', () => {
     for (const route of ['/', '/news', '/incidents', '/pr', '/archive']) {

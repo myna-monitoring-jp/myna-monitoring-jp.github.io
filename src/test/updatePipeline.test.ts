@@ -405,4 +405,127 @@ describe('日次自動更新パイプライン', () => {
     expect(dataset.reportDate).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     expect(dataset.dataUpdate.state).toBe('ok');
   });
+
+  it('公式ソース（go.jp / lg.jp / 省庁名）は本文一覧に残す', async () => {
+    feedPayload = {
+      articles: [
+        article({
+          title: '第214回社会保障審議会医療保険部会の開催について - 厚生労働省',
+          _resolved_url: 'https://www.mhlw.go.jp/stf/newpage_00001.html',
+          source: '厚生労働省',
+        }),
+        article({
+          title: '市からのお知らせ - 佐野市',
+          _resolved_url: 'https://www.city.sano.lg.jp/news/1.html',
+          source: '佐野市',
+        }),
+      ],
+    };
+    const { dataset } = await runPipeline();
+    const auto = dataset.news.filter((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+    expect(auto).toHaveLength(2);
+    expect(auto.every((n: { category: string }) => n.category !== 'commentary')).toBe(true);
+  });
+
+  it('二次転載・解説記事は解説記事欄（commentary）へ回す', async () => {
+    feedPayload = {
+      articles: [
+        article({
+          title: 'マイナ保険証の使い方をやさしく解説 - どこかの経済メディア',
+          _resolved_url: 'https://example.com/media/explainer',
+          source: 'どこかの経済メディア',
+        }),
+      ],
+    };
+    const { dataset } = await runPipeline();
+    const auto = dataset.news.find((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+    expect(auto.category).toBe('commentary');
+  });
+
+  it('論調を自動判定する（ネガティブ／ポジティブ／中立）', async () => {
+    feedPayload = {
+      articles: [
+        article({
+          title: 'マイナポータル連携は絶対やめた方がいい - FP系メディア',
+          _resolved_url: 'https://example.com/media/neg',
+          source: 'FP系メディア',
+          description: 'デメリットが大きい。',
+        }),
+        article({
+          title: 'マイナ保険証はこんなに便利 メリットまとめ - 生活メディア',
+          _resolved_url: 'https://example.com/media/pos',
+          source: '生活メディア',
+          description: 'おすすめの活用法。',
+        }),
+        article({
+          title: '資格確認書の交付ルールを整理 - 解説メディア',
+          _resolved_url: 'https://example.com/media/neu',
+          source: '解説メディア',
+          description: '制度の内容を説明します。',
+        }),
+      ],
+    };
+    const { dataset } = await runPipeline();
+    const byUrl = (u: string) =>
+      dataset.news.find((n: { sources: { url: string }[] }) => n.sources[0].url === u);
+
+    expect(byUrl('https://example.com/media/neg').polarity).toBe('negative');
+    expect(byUrl('https://example.com/media/pos').polarity).toBe('positive');
+    expect(byUrl('https://example.com/media/neu').polarity).toBe('neutral');
+  });
+
+  it('「廃止」など制度上の事実語だけではネガティブ判定にしない', async () => {
+    feedPayload = {
+      articles: [
+        article({
+          title: '紙の保険証廃止後はどう受診する? - 解説メディア',
+          _resolved_url: 'https://example.com/media/abolish',
+          source: '解説メディア',
+          description: '資格確認書の交付ルールを説明します。',
+        }),
+      ],
+    };
+    const { dataset } = await runPipeline();
+    const auto = dataset.news.find((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+    expect(auto.polarity).toBe('neutral');
+  });
+
+  it('引き継いだ項目にも分類ルールを再適用する', async () => {
+    feedPayload = {
+      articles: [
+        article({
+          title: 'マイナ保険証の使い方を解説 - 一般メディア',
+          _resolved_url: 'https://example.com/media/carry',
+          source: '一般メディア',
+        }),
+      ],
+    };
+    const first = await runPipeline();
+    const id = first.dataset.news.find(
+      (n: { reviewState: string }) => n.reviewState === 'unreviewed',
+    ).id;
+    expect(first.dataset.news.find((n: { id: string }) => n.id === id).category).toBe('commentary');
+
+    // 収集元が空になっても、引き継ぎ時に再分類されて commentary のまま
+    feedPayload = { articles: [] };
+    const second = await runPipeline();
+    expect(second.dataset.news.find((n: { id: string }) => n.id === id).category).toBe('commentary');
+  });
+
+  it('不具合候補タグが付く記事は解説記事欄に落とさない', async () => {
+    feedPayload = {
+      articles: [
+        article({
+          title: '○○市で資格が無効と誤表示 - 地方紙',
+          _resolved_url: 'https://example.com/media/incident',
+          source: '地方紙',
+          description: '国民健康保険の資格が誤表示された。',
+        }),
+      ],
+    };
+    const { dataset } = await runPipeline();
+    const auto = dataset.news.find((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+    expect(auto.category).not.toBe('commentary');
+    expect(auto.tags).toContain('不具合候補（自治体・保険者）');
+  });
 });

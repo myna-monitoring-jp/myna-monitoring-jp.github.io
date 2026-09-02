@@ -175,10 +175,87 @@ function candidateTags(article) {
   return tags;
 }
 
+/* ------------------------------------------------ 解説記事・二次情報の判定 */
+
+/** 官公庁・自治体の公式ドメイン。 */
+const OFFICIAL_DOMAIN = /(^|\.)(go\.jp|lg\.jp)$/i;
+
+/** 媒体名が官公庁・自治体らしいか。Google News 経由でURLが公式でない場合の補助。 */
+const OFFICIAL_PUBLISHER =
+  /デジタル庁|厚生労働省|総務省|法務省|内閣府|政府広報|こども家庭庁|支払基金|国保中央会|J-LIS|(市|町|村|区|都|道|府|県)$/;
+
+function isOfficialSource(article) {
+  let host = '';
+  try {
+    host = new URL(articleUrl(article)).hostname;
+  } catch {
+    host = '';
+  }
+  if (OFFICIAL_DOMAIN.test(host)) return true;
+  return OFFICIAL_PUBLISHER.test(String(article.source ?? '').trim());
+}
+
+/**
+ * 論調の自動判定。
+ * 「廃止」のような制度上の事実語は否定語に含めない（誤判定するため）。
+ */
+const TONE_NEGATIVE =
+  /批判|反対|やめた方|やめたほうが|使うな|危険|強制|懸念|デメリット|トラブル|使えない|不便|反発|怒り|不満|落とし穴|問題点|失敗|後悔|要注意/;
+const TONE_POSITIVE =
+  /便利|メリット|おすすめ|お得|安心|活用|使いこなす|向上|できるように|楽に|簡単に|快適|よかった|良かった|助かる/;
+
+function toneOf(article) {
+  const text = `${article.title ?? ''} ${article.description ?? ''}`;
+  if (TONE_NEGATIVE.test(text)) return 'negative';
+  if (TONE_POSITIVE.test(text)) return 'positive';
+  return 'neutral';
+}
+
+/**
+ * 解説記事欄に入れるか。
+ *
+ * 一次情報（官公庁・自治体）と、不具合・広報の候補タグが付いた記事は本文の
+ * 一覧に残す。それ以外の二次転載・解説・ハウツー記事は解説記事欄へ回す。
+ */
+function isCommentary(article, tags) {
+  if (tags.length > 0) return false;
+  if (isOfficialSource(article)) return false;
+  return true;
+}
+
 function severityOf(article) {
   const text = `${article.title ?? ''} ${article.description ?? ''}`;
   // 未レビュー項目に「大」を自動で付けると誤警報になるため、上限は「中」。
   return HIGH_SEVERITY.test(text) ? 'medium' : 'low';
+}
+
+/**
+ * 引き継いだ未レビュー項目を、現在の分類ルールで再判定する。
+ *
+ * 分類は新規追加時だけでなく毎回かけ直す。そうしないとルールを直しても
+ * 既に取り込み済みの項目が古い分類のまま画面に残り続ける。
+ * curated（レビュー済）項目には触れない。
+ */
+function reclassifyCarriedItem(item) {
+  if (item.reviewState !== 'unreviewed') return item;
+
+  const source = (item.sources ?? [])[0] ?? {};
+  const pseudoArticle = {
+    title: item.title,
+    description: item.summary,
+    source: source.publisher ?? source.label,
+    _resolved_url: source.url,
+    link: source.url,
+  };
+
+  const tags = candidateTags(pseudoArticle);
+  if (!isCommentary(pseudoArticle, tags)) {
+    // 解説記事から本文一覧へ戻す場合は論調を落とす
+    return item.category === 'commentary'
+      ? { ...item, category: 'other', polarity: undefined }
+      : item;
+  }
+  return { ...item, category: 'commentary', polarity: toneOf(pseudoArticle) };
 }
 
 /* -------------------------------------------------------------- 記事取得 */
@@ -428,7 +505,9 @@ async function main() {
         return false;
       }
       return true;
-    });
+    })
+      // 分類ルールを毎回かけ直す（ルール変更が既存項目にも反映されるように）
+      .map(reclassifyCarriedItem);
 
   const autoNews = carryOver(previous?.news);
   const autoIncidents = carryOver(previous?.incidents);
@@ -438,6 +517,7 @@ async function main() {
   const ageCutoff = new Date(now.getTime() - MAX_ARTICLE_AGE_DAYS * 24 * 60 * 60 * 1000);
   let addedCount = 0;
   let candidateCount = 0;
+  let commentaryCount = 0;
   const skipped = { duplicate: 0, tooOld: 0, overLimit: 0 };
 
   for (const article of feed.articles) {
@@ -465,13 +545,17 @@ async function main() {
     }
 
     const tags = candidateTags(article);
+    const commentary = isCommentary(article, tags);
     // 自動項目は必ずニュースレーン。不具合・広報レーンは人が検証したものだけ。
+    // 二次転載・解説記事は category=commentary にして画面下部の小タイル欄へ。
     autoNews.push({
       ...baseAutoItem(article, now, tags),
       id,
-      category: 'other',
+      category: commentary ? 'commentary' : 'other',
+      ...(commentary ? { polarity: toneOf(article) } : {}),
     });
     if (tags.length > 0) candidateCount += 1;
+    if (commentary) commentaryCount += 1;
 
     knownUrls.add(url);
     knownTitles.add(normalized);
@@ -518,6 +602,7 @@ async function main() {
   log(`  収集元の記事: ${feed.articles.length}件`);
   log(`  新規追加: ${addedCount}件（重複除外 ${skipped.duplicate} / 古い ${skipped.tooOld} / 上限超過 ${skipped.overLimit}）`);
   log(`  うち不具合・広報の候補タグ付き: ${candidateCount}件（レーン移動は人が curated.json で行う）`);
+  log(`  うち解説記事・二次情報として下部へ: ${commentaryCount}件`);
   log(`  curated項目への追加報道: ${coverageAdded}件（うち重要更新扱い ${coverageBumped}件）`);
   log(
     `  未レビューから外れた項目: 昇格 ${dropped.promoted} / 却下 ${dropped.dismissed} / ${AUTO_ITEM_RETENTION_DAYS}日経過 ${dropped.expired}`,

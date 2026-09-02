@@ -206,6 +206,12 @@ export type NewsCategory =
   | 'public_communication'
   | 'incident'
   | 'survey'
+  /**
+   * 解説記事・二次情報。一次情報でも独自報道でもない、制度の解説・ハウツー・
+   * まとめ記事。監視対象の事象ではないため本文の一覧には混ぜず、画面下部の
+   * 小タイル欄に論調（ポジティブ／中立／ネガティブ）を添えて並べる。
+   */
+  | 'commentary'
   | 'other';
 
 export interface NewsItem extends BaseItem {
