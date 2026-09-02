@@ -334,6 +334,71 @@ describe('日次自動更新パイプライン', () => {
     expect(dataset.archive.some((a: { date: string }) => a.date === '2026-08-31')).toBe(true);
   });
 
+  it('curated.json に同じ id で書き起こすと未レビュー版が消える（昇格）', async () => {
+    // 1回目：自動収集で未レビュー項目ができる
+    const first = await runPipeline();
+    const auto = first.dataset.news.find((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+    expect(auto).toBeDefined();
+
+    // その id で curated.json に書き起こす
+    const curated = JSON.parse(readFileSync(join(workDir, 'curated.json'), 'utf8'));
+    curated.news.push({
+      id: auto.id,
+      title: '人が判断を書いた版',
+      status: 'attention',
+      severity: 'high',
+      lastMaterialUpdateAt: new Date().toISOString(),
+      summary: '検証済み。',
+      sources: [{ type: 'primary', label: '公式', url: 'https://example.com/verified', active: true }],
+    });
+    writeFileSync(join(workDir, 'curated.json'), JSON.stringify(curated), 'utf8');
+
+    const second = await runPipeline();
+    const same = second.dataset.news.filter((n: { id: string }) => n.id === auto.id);
+    expect(same).toHaveLength(1);
+    expect(same[0].reviewState).toBe('reviewed');
+    expect(same[0].title).toBe('人が判断を書いた版');
+  });
+
+  it('dismissedIds に入れた項目は表示されず、再収集でも復活しない', async () => {
+    const first = await runPipeline();
+    const auto = first.dataset.news.find((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+
+    const curated = JSON.parse(readFileSync(join(workDir, 'curated.json'), 'utf8'));
+    curated.dismissedIds = [auto.id];
+    writeFileSync(join(workDir, 'curated.json'), JSON.stringify(curated), 'utf8');
+
+    const second = await runPipeline();
+    expect(second.dataset.news.some((n: { id: string }) => n.id === auto.id)).toBe(false);
+
+    // 同じ記事が収集元に残っていても再追加しない
+    const third = await runPipeline();
+    expect(third.dataset.news.some((n: { id: string }) => n.id === auto.id)).toBe(false);
+  });
+
+  it('未レビューのまま保持期間を過ぎた項目は落とす', async () => {
+    const first = await runPipeline();
+    const auto = first.dataset.news.find((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+    expect(auto).toBeDefined();
+
+    // 保持期間を0日にすると、次回実行で落ちる
+    // （収集元からも消えた状態にして、再追加ではなく引き継ぎ判定を見る）
+    feedPayload = { articles: [] };
+    const second = await runPipeline({ AUTO_ITEM_RETENTION_DAYS: '0' });
+    expect(second.dataset.news.some((n: { id: string }) => n.id === auto.id)).toBe(false);
+    // curated 由来の項目は落ちない
+    expect(second.dataset.news.some((n: { id: string }) => n.id === 'curated-news')).toBe(true);
+  });
+
+  it('保持期間内なら未レビューのまま引き継ぐ', async () => {
+    const first = await runPipeline();
+    const auto = first.dataset.news.find((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+
+    feedPayload = { articles: [] };
+    const second = await runPipeline({ AUTO_ITEM_RETENTION_DAYS: '14' });
+    expect(second.dataset.news.some((n: { id: string }) => n.id === auto.id)).toBe(true);
+  });
+
   it('dataset は live、reportDate は当日になる', async () => {
     const { dataset } = await runPipeline();
     expect(dataset.dataset).toBe('live');

@@ -43,6 +43,13 @@ const MAX_ARTICLE_AGE_DAYS = Number(process.env.MAX_ARTICLE_AGE_DAYS ?? 3);
 /** アーカイブの保持日数。0 で無制限。 */
 const ARCHIVE_RETENTION_DAYS = Number(process.env.ARCHIVE_RETENTION_DAYS ?? 400);
 
+/**
+ * 未レビューの自動収集項目を画面に残す日数。
+ * これを過ぎたものは current.json から落とす（その日のアーカイブには残る）。
+ * 放置された「未レビュー」が無限に積み上がるのを防ぐため。
+ */
+const AUTO_ITEM_RETENTION_DAYS = Number(process.env.AUTO_ITEM_RETENTION_DAYS ?? 14);
+
 const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
 
 /* ---------------------------------------------------------------- 小道具 */
@@ -392,12 +399,36 @@ async function main() {
   const incidents = markReviewed(withCoverage(curated.incidents));
   const prItems = markReviewed(withCoverage(curated.prItems));
 
-  /* --- 前日までに自動追加した項目を引き継ぐ（curated に昇格したものは除く） --- */
+  /* --- 前日までに自動追加した項目の引き継ぎ --- */
   const curatedIds = new Set([...news, ...incidents, ...prItems].map((i) => i.id));
+  // curated.json の dismissedIds に入れた項目は二度と表示しない（却下）
+  const dismissedIds = new Set(
+    Array.isArray(curated.dismissedIds)
+      ? curated.dismissedIds.filter((id) => typeof id === 'string')
+      : [],
+  );
+  const retentionCutoff = now.getTime() - AUTO_ITEM_RETENTION_DAYS * 24 * 60 * 60 * 1000;
+  const dropped = { promoted: 0, dismissed: 0, expired: 0 };
+
   const carryOver = (previousItems) =>
-    (previousItems ?? []).filter(
-      (item) => item.reviewState === 'unreviewed' && !curatedIds.has(item.id),
-    );
+    (previousItems ?? []).filter((item) => {
+      if (item.reviewState !== 'unreviewed') return false;
+      // curated.json に同じ id で書き起こされた＝昇格済み。curated 版に置き換わる。
+      if (curatedIds.has(item.id)) {
+        dropped.promoted += 1;
+        return false;
+      }
+      if (dismissedIds.has(item.id)) {
+        dropped.dismissed += 1;
+        return false;
+      }
+      const detectedAt = Date.parse(item.detectedAt ?? item.lastMaterialUpdateAt ?? '');
+      if (Number.isFinite(detectedAt) && detectedAt < retentionCutoff) {
+        dropped.expired += 1;
+        return false;
+      }
+      return true;
+    });
 
   const autoNews = carryOver(previous?.news);
   const autoIncidents = carryOver(previous?.incidents);
@@ -426,11 +457,18 @@ async function main() {
       continue;
     }
 
+    const id = autoIdFor(article, 'news');
+    // 却下済みの記事は再収集しても復活させない
+    if (dismissedIds.has(id) || curatedIds.has(id)) {
+      skipped.duplicate += 1;
+      continue;
+    }
+
     const tags = candidateTags(article);
     // 自動項目は必ずニュースレーン。不具合・広報レーンは人が検証したものだけ。
     autoNews.push({
       ...baseAutoItem(article, now, tags),
-      id: autoIdFor(article, 'news'),
+      id,
       category: 'other',
     });
     if (tags.length > 0) candidateCount += 1;
@@ -481,6 +519,10 @@ async function main() {
   log(`  新規追加: ${addedCount}件（重複除外 ${skipped.duplicate} / 古い ${skipped.tooOld} / 上限超過 ${skipped.overLimit}）`);
   log(`  うち不具合・広報の候補タグ付き: ${candidateCount}件（レーン移動は人が curated.json で行う）`);
   log(`  curated項目への追加報道: ${coverageAdded}件（うち重要更新扱い ${coverageBumped}件）`);
+  log(
+    `  未レビューから外れた項目: 昇格 ${dropped.promoted} / 却下 ${dropped.dismissed} / ${AUTO_ITEM_RETENTION_DAYS}日経過 ${dropped.expired}`,
+  );
+  log(`  残っている未レビュー: ${autoNews.length + autoIncidents.length + autoPr.length}件`);
   log(`  合計: ニュース ${dataset.news.length} / 不具合 ${dataset.incidents.length} / 広報 ${dataset.prItems.length}`);
   log(`  アーカイブ: ${archive.length}日分`);
   log(`  更新状態: ${dataUpdate.state}`);
