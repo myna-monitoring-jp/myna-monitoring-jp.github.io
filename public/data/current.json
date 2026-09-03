@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-03T15:15:28.015+09:00",
+  "generatedAt": "2026-09-03T15:23:51.315+09:00",
   "reportDate": "2026-09-03",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-03T15:15:28.015+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-03T15:23:51.315+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -382,7 +382,7 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-03T15:15:28.015+09:00",
+      "lastMaterialUpdateAt": "2026-09-03T15:23:51.315+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
@@ -419,7 +419,7 @@
           "linkText": "報道記事を開く",
           "publisher": "パナソニック コネクト",
           "publishedAt": "2026-08-24T23:30:13+09:00",
-          "verifiedAt": "2026-09-03T15:15:28.015+09:00",
+          "verifiedAt": "2026-09-03T15:23:51.315+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -1360,7 +1360,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-03T15:15:28.015+09:00",
+      "lastMaterialUpdateAt": "2026-09-03T15:23:51.315+09:00",
       "affectedCount": null,
       "affectedCountNote": "更新期限を迎える保有者。人数は自治体別に未公表",
       "symptoms": "立川市は9/2更新の案内で、カード交付に加え電子証明書の更新・新規発行、暗証番号再設定が混雑し待ち時間が60分以上となることが多いと明記。姫路市はマイナンバーコールセンターへの問い合わせ集中で電話がつながりにくい状態が続くと案内。広島市中区は夜間・休日の予約窓口を案内。",
@@ -1446,7 +1446,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁",
           "publishedAt": "2026-08-28T15:00:00+09:00",
-          "verifiedAt": "2026-09-03T15:15:28.015+09:00",
+          "verifiedAt": "2026-09-03T15:23:51.315+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -1457,7 +1457,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁 ウェブサービス・アプリケーション",
           "publishedAt": "2026-08-25T19:50:56+09:00",
-          "verifiedAt": "2026-09-03T15:15:28.015+09:00",
+          "verifiedAt": "2026-09-03T15:23:51.315+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -1621,7 +1621,8 @@
       "_origin": "status:mynaportal-api",
       "detectedAt": "2026-09-03T15:15:28.015+09:00",
       "lastMaterialUpdateAt": "2026-09-03T15:15:28.015+09:00",
-      "dailyDiff": "2026-09-03に公式稼働状況ページを自動確認して検知。"
+      "dailyDiff": "2026-09-03に公式稼働状況ページを自動確認して検知。",
+      "category": "other"
     }
   ],
   "prItems": [
