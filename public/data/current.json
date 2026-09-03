@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-03T14:00:40.717+09:00",
+  "generatedAt": "2026-09-03T15:15:28.015+09:00",
   "reportDate": "2026-09-03",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-03T14:00:40.717+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-03T15:15:28.015+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -382,7 +382,7 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-03T14:00:40.717+09:00",
+      "lastMaterialUpdateAt": "2026-09-03T15:15:28.015+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
@@ -419,7 +419,7 @@
           "linkText": "報道記事を開く",
           "publisher": "パナソニック コネクト",
           "publishedAt": "2026-08-24T23:30:13+09:00",
-          "verifiedAt": "2026-09-03T14:00:40.717+09:00",
+          "verifiedAt": "2026-09-03T15:15:28.015+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -853,6 +853,36 @@
       "id": "news-auto-20260902-l4g8ow",
       "category": "commentary",
       "polarity": "positive"
+    },
+    {
+      "title": "マイナンバーカードを用いた公的個人認証サービス（JPKI）導入事業者及び事例一覧を更新しました",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-03T15:04:23.003+09:00",
+      "publishedAt": "2026-09-03T06:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-09-03T06:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-09-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/policies/mynumber/private-business/jpki-introduction/mynumbercard-user-list",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-09-03T06:00:00.000Z",
+          "verifiedAt": "2026-09-03T15:04:23.003+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260903-teuymn",
+      "category": "reference"
     }
   ],
   "incidents": [
@@ -1330,7 +1360,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-03T14:00:40.717+09:00",
+      "lastMaterialUpdateAt": "2026-09-03T15:15:28.015+09:00",
       "affectedCount": null,
       "affectedCountNote": "更新期限を迎える保有者。人数は自治体別に未公表",
       "symptoms": "立川市は9/2更新の案内で、カード交付に加え電子証明書の更新・新規発行、暗証番号再設定が混雑し待ち時間が60分以上となることが多いと明記。姫路市はマイナンバーコールセンターへの問い合わせ集中で電話がつながりにくい状態が続くと案内。広島市中区は夜間・休日の予約窓口を案内。",
@@ -1416,7 +1446,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁",
           "publishedAt": "2026-08-28T15:00:00+09:00",
-          "verifiedAt": "2026-09-03T14:00:40.717+09:00",
+          "verifiedAt": "2026-09-03T15:15:28.015+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -1427,7 +1457,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁 ウェブサービス・アプリケーション",
           "publishedAt": "2026-08-25T19:50:56+09:00",
-          "verifiedAt": "2026-09-03T14:00:40.717+09:00",
+          "verifiedAt": "2026-09-03T15:15:28.015+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -1547,6 +1577,51 @@
         }
       ],
       "reviewState": "reviewed"
+    },
+    {
+      "id": "incident-status-mynaportal-api-ny3k7w",
+      "incidentCategory": "common_system",
+      "entityName": "デジタル庁",
+      "systemName": "マイナポータルAPI",
+      "title": "マイナポータルAPI：自己情報取得APIで情報取得ができない事象が発生していました 詳細：2026/8/31(月)17 :00頃 ～1",
+      "status": "resolved",
+      "severity": "medium",
+      "symptoms": "【解消済】自己情報取得APIで情報取得ができない事象が発生していました 詳細：2026/8/31(月)17 :00頃 ～18 :40頃にデジタル庁所管の公共サービスメッシュの障害に伴い 、自己情報取得APIの情報が取得できない事象が発生していました。現在は解消しております。 メンテナンス情報 システムメンテナンスのため、以下の期間で対象のAPIを利用できません。 自己情報取得API 8月24日(月) 22 :00 ～ 8月25日(火) 8 :00 8月29日(土) 17 :00 ～ 8月30日(日) 7 :00 (一部の取得先からは、情報取得が可能な場合があります。) 9月5日(土) 0 :00 ～ 9月7日(月) 0 :00 (戸籍関係情報が取得できません。) 9月5日(土) 21 :00 ～ 9月6日(日) 8 :00 (特定個人情報番号31番と87番が取得できません。) 9月12日(土) 21 :00 ～ 9月13日(日) 8 :00 (特定個人情報番号31番と87番が取得できません。) 9月19日(土) 9 :00 ～ 9月21日(月) 0 :00 (戸籍関係情報が取得できませ",
+      "officialStatus": "公式の稼働状況ページに記載あり。",
+      "affectedCount": null,
+      "affectedCountNote": "影響件数は未公表",
+      "cyberAttack": false,
+      "summary": "【解消済】自己情報取得APIで情報取得ができない事象が発生していました 詳細：2026/8/31(月)17 :00頃 ～18 :40頃にデジタル庁所管の公共サービスメッシュの障害に伴い 、自己情報取得APIの情報が取得できない事象が発生していました。現在は解消しております。 メンテナンス情報 システムメンテナンスのため、以下の期間で対象のAPIを利用できません。 自己情報取得API 8月24日(月) 22 :00 ～ 8月25日(火) 8 :00 8月29日(土) 17 :00 ～ 8月30日(日) 7 :00 (一部の取得先からは、情報取得が可能な場合があります。) 9月5日(土) 0 :0",
+      "whatIsNew": "公式の稼働状況ページを自動確認して検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "公式稼働状況",
+        "解消済み"
+      ],
+      "publicVoices": [],
+      "factChecks": [
+        {
+          "claim": "オンライン資格確認が全国的に停止している",
+          "assessment": "scope_separation",
+          "explanation": "このAPIの障害・制限と、医療機関のオンライン資格確認の全国停止は別事象。公式ページの記載範囲を確認すること。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "マイナポータルAPI 稼働状況",
+          "url": "https://developers.digital.go.jp/documents/mynaportal-api/maintenance/",
+          "linkText": "一次情報を開く",
+          "publisher": "デジタル庁",
+          "verifiedAt": "2026-09-03T06:15:28.015Z",
+          "active": true
+        }
+      ],
+      "_origin": "status:mynaportal-api",
+      "detectedAt": "2026-09-03T15:15:28.015+09:00",
+      "lastMaterialUpdateAt": "2026-09-03T15:15:28.015+09:00",
+      "dailyDiff": "2026-09-03に公式稼働状況ページを自動確認して検知。"
     }
   ],
   "prItems": [

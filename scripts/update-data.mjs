@@ -22,6 +22,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { collectOfficialSources } from './collect-official.mjs';
 
 /* ------------------------------------------------------------------ 設定 */
 
@@ -49,6 +50,13 @@ const ARCHIVE_RETENTION_DAYS = Number(process.env.ARCHIVE_RETENTION_DAYS ?? 400)
  * 放置された「未レビュー」が無限に積み上がるのを防ぐため。
  */
 const AUTO_ITEM_RETENTION_DAYS = Number(process.env.AUTO_ITEM_RETENTION_DAYS ?? 14);
+
+/**
+ * 官公庁の公式情報源の定義。空文字を渡すと直接収集をスキップする（テスト用）。
+ * 既定では有効で、GitHub Actions から毎朝実行される。
+ */
+const OFFICIAL_SOURCES =
+  process.env.OFFICIAL_SOURCES === undefined ? 'scripts/sources.json' : process.env.OFFICIAL_SOURCES;
 
 const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
 
@@ -442,6 +450,24 @@ async function main() {
     warn(`収集元を取得できませんでした: ${feedError}`);
   }
 
+  /* --- 官公庁の公式情報源を直接収集（見出しフィードに入らないものを取る） --- */
+  let official = { articles: [], statusIncidents: [], errors: [] };
+  if (OFFICIAL_SOURCES) {
+    log(`公式情報源を直接収集: ${OFFICIAL_SOURCES}`);
+    official = await collectOfficialSources({
+      sourcesPath: OFFICIAL_SOURCES,
+      statePath: join(DATA_DIR, 'source-state.json'),
+      now,
+      maxAgeDays: MAX_ARTICLE_AGE_DAYS,
+    });
+    log(
+      `  公式RSS・独自検索: ${official.articles.length}件 / 稼働状況ページ由来: ${official.statusIncidents.length}件`,
+    );
+    for (const message of official.errors) warn(`公式情報源: ${message}`);
+    // 見出しフィードの後ろに足す。重複はURL・タイトルで後段が弾く。
+    feed.articles = [...feed.articles, ...official.articles];
+  }
+
   /* --- 既知URLの集合（重複追加を防ぐ） --- */
   const knownUrls = new Set();
   const knownTitles = new Set();
@@ -566,6 +592,25 @@ async function main() {
     addedCount += 1;
   }
 
+  /* --- 稼働状況ページ由来の不具合 --- */
+  /*
+   * 例外的に、公式の稼働状況ページ由来のものだけは自動でも不具合レーンに入れる。
+   * 見出しの推測ではなく「公式が障害と書いている」一次情報であり、誤って
+   * 不具合を掲載するリスクが無いため。curated に同じ id があれば人の版を優先。
+   */
+  let statusAdded = 0;
+  for (const incident of official.statusIncidents) {
+    if (curatedIds.has(incident.id) || dismissedIds.has(incident.id)) continue;
+    if (autoIncidents.some((x) => x.id === incident.id)) continue;
+    autoIncidents.push({
+      ...incident,
+      detectedAt: jstIso(now),
+      lastMaterialUpdateAt: jstIso(now),
+      dailyDiff: `${jstDate(now)}に公式稼働状況ページを自動確認して検知。`,
+    });
+    statusAdded += 1;
+  }
+
   /* --- アーカイブ --- */
   archivePreviousDay(previous, today);
   const archive = listArchive(now);
@@ -608,6 +653,7 @@ async function main() {
   log(`  うち不具合・広報の候補タグ付き: ${candidateCount}件（レーン移動は人が curated.json で行う）`);
   log(`  うち解説記事・二次情報として下部へ: ${commentaryCount}件`);
   log(`  うち参考情報（一次情報だが監視対象外）: ${referenceCount}件`);
+  log(`  公式稼働状況ページ由来の不具合: ${statusAdded}件`);
   log(`  curated項目への追加報道: ${coverageAdded}件（うち重要更新扱い ${coverageBumped}件）`);
   log(
     `  未レビューから外れた項目: 昇格 ${dropped.promoted} / 却下 ${dropped.dismissed} / ${AUTO_ITEM_RETENTION_DAYS}日経過 ${dropped.expired}`,

@@ -177,14 +177,32 @@ public/
 `.github/workflows/daily-update.yml` が `cron: '0 22 * * *'`（22:00 UTC = 翌 7:00 JST）で動きます。
 
 ```
-① myna-news-jp が公開している news_latest.json を取得
+① myna-news-jp が公開している news_latest.json を取得（一般ニュースの見出し）
      https://myna-news-jp.github.io/news_latest.json
-     ※収集そのものは myna-news-jp に任せ、ここでは新たなスクレイパを作らない
-② curated.json を読み、新着記事とマージ
-③ 前日分を archive/ へ退避、generatedAt / reportDate を更新
-④ データ検証 → 型チェック → テスト（失敗したらデプロイしない）
-⑤ current.json をコミットし、ビルドして GitHub Pages へデプロイ
+② scripts/sources.json に定義した公式情報源を直接取得
+     ・デジタル庁 新着RSS / 厚生労働省 新着RSS（キーワードで絞る）
+     ・マイナポータルAPI 稼働状況ページ（【解消済】等の記載から障害を抽出）
+     ・事故・障害に絞った独自のニュース検索クエリ8本
+③ curated.json を読み、①②とマージ
+④ 前日分を archive/ へ退避、generatedAt / reportDate を更新
+⑤ データ検証 → 型チェック → テスト（失敗したらデプロイしない）
+⑥ current.json をコミットし、ビルドして GitHub Pages へデプロイ
 ```
+
+**②はクラウド（GitHub Actions）で動くため、PCの電源が入っていなくても実行されます。**
+
+見出しフィードだけに頼っていた当初の設計では、外務省の旅券申請停止・自治体の窓口混雑・
+宮城県の実証開始などが1件も取れませんでした（2026-09-03に判明）。②はその穴を埋めるものです。
+
+情報源を追加・変更するときは `scripts/sources.json` を編集してください。コードの変更は不要です。
+
+| 種別 | 用途 | 備考 |
+|---|---|---|
+| `rss` | 官公庁の新着RSS | `keywordFilter` の正規表現で絞る |
+| `statusPages` | 稼働状況・障害情報ページ | `【】` の記載を1件ずつ抽出。障害語を含むものだけ採用 |
+| `newsQueries` | 事故・障害に絞った検索 | Google News RSS。1クエリ最大10件 |
+
+**取得できない情報源**：外務省（`mofa.go.jp`）はUAを付けても403を返すため直接取得できません。旅券関連は `newsQueries` の報道経由で拾います。
 
 手動実行もできます（**Actions → Daily update and deploy → Run workflow**）。`dry_run` に `true` を選ぶと差分表示だけでコミット・デプロイしません。
 

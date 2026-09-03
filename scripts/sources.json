@@ -1,0 +1,45 @@
+{
+  "_comment": "クラウド（GitHub Actions）から直接取得する情報源。PCの電源に依存せず毎朝走る。外務省(mofa.go.jp)はUA付きでも403を返すため直接取得できず、newsQueries 経由で報道を拾う。",
+
+  "keywordFilter": "マイナ|保険証|オンライン資格確認|マイナポータル|公金受取口座|電子証明書|資格確認書|PMH|電子処方箋|マイナンバー",
+
+  "rss": [
+    {
+      "id": "digital-agency",
+      "label": "デジタル庁 新着",
+      "url": "https://www.digital.go.jp/rss/news.xml",
+      "publisher": "デジタル庁"
+    },
+    {
+      "id": "mhlw",
+      "label": "厚生労働省 新着",
+      "url": "https://www.mhlw.go.jp/stf/news.rdf",
+      "publisher": "厚生労働省"
+    }
+  ],
+
+  "statusPages": [
+    {
+      "id": "mynaportal-api",
+      "label": "マイナポータルAPI 稼働状況",
+      "url": "https://developers.digital.go.jp/documents/mynaportal-api/maintenance/",
+      "publisher": "デジタル庁",
+      "entityName": "デジタル庁",
+      "systemName": "マイナポータルAPI",
+      "incidentCategory": "common_system",
+      "sectionStart": "稼働状況",
+      "sectionEnd": "メンテナンス情報"
+    }
+  ],
+
+  "newsQueries": [
+    "マイナ保険証 資格 誤表示",
+    "オンライン資格確認 障害",
+    "マイナンバーカード 誤交付 誤送付",
+    "病院 ランサムウェア 電子カルテ 障害",
+    "マイナポータル 障害 停止",
+    "資格確認書 誤り 保険者",
+    "旅券 オンライン申請 停止 マイナポータル",
+    "電子証明書 更新 窓口 混雑"
+  ]
+}

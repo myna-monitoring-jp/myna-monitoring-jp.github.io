@@ -114,7 +114,14 @@ async function runPipeline(env: Record<string, string> = {}) {
       cwd: process.cwd(),
       encoding: 'utf8',
       timeout: 20_000,
-      env: { ...process.env, DATA_DIR: workDir, NEWS_FEED_URL: feedUrl, ...env },
+      env: {
+        ...process.env,
+        DATA_DIR: workDir,
+        NEWS_FEED_URL: feedUrl,
+        // テストは外部ネットワークに出ない。公式情報源の直接収集は無効化する。
+        OFFICIAL_SOURCES: '',
+        ...env,
+      },
     });
     stdout = result.stdout;
   } catch (error) {

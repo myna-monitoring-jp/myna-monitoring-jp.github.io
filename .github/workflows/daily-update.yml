@@ -38,7 +38,10 @@ jobs:
 
       - run: npm ci
 
-      # 収集元(myna-news-jp)の取得に失敗しても current.json は生成され、
+      # myna-news-jp の見出しフィードに加えて、scripts/sources.json に定義した
+      # 官公庁の公式RSS・稼働状況ページ・独自ニュース検索も直接取得する。
+      # PCの電源に依存せずクラウドで実行される。
+      # 収集元の取得に失敗しても current.json は生成され、
       # 画面に「データ更新に失敗しています／最終正常更新」が表示される。
       # ここでは失敗を記録しつつ後続を続行する。
       - name: Update data
