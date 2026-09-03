@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-03T15:23:51.315+09:00",
+  "generatedAt": "2026-09-03T15:56:04.640+09:00",
   "reportDate": "2026-09-03",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-03T15:23:51.315+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-03T15:56:04.640+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -382,7 +382,7 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-03T15:23:51.315+09:00",
+      "lastMaterialUpdateAt": "2026-09-03T15:56:04.640+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
@@ -419,7 +419,7 @@
           "linkText": "報道記事を開く",
           "publisher": "パナソニック コネクト",
           "publishedAt": "2026-08-24T23:30:13+09:00",
-          "verifiedAt": "2026-09-03T15:23:51.315+09:00",
+          "verifiedAt": "2026-09-03T15:56:04.640+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -882,6 +882,96 @@
         }
       ],
       "id": "news-auto-20260903-teuymn",
+      "category": "reference"
+    },
+    {
+      "title": "個人番号カード（マイナンバーカード）申請等の休日窓口の開設について",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-03T15:56:04.640+09:00",
+      "publishedAt": "2026-08-24T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-08-24T07:00:00.000Z",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQM0E5bUJVMEEtdkhHWGt1Z3ZPNVkzZWhhZ2pmR0EzdGVuUXJRcDhNaENhVkpMbEQxaDhkNE5LZ1FpaG01bUVTNUoyWnkzcXN5bmRMREs4b2RPc2ZVeGZyRU95MVdkREFfbjdmR2pzVlV3ODVvY0RkbDJSWUtqQllVaVpjaTF4ZzhZZW9LR01B?oc=5\" target=\"_blank\">個人番号カード（マイナンバーカード）申請等の休日窓口の開設について</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.osaka-izumi.lg.jp</font>",
+      "dailyDiff": "2026-09-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "city.osaka-izumi.lg.jp",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQM0E5bUJVMEEtdkhHWGt1Z3ZPNVkzZWhhZ2pmR0EzdGVuUXJRcDhNaENhVkpMbEQxaDhkNE5LZ1FpaG01bUVTNUoyWnkzcXN5bmRMREs4b2RPc2ZVeGZyRU95MVdkREFfbjdmR2pzVlV3ODVvY0RkbDJSWUtqQllVaVpjaTF4ZzhZZW9LR01B?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "city.osaka-izumi.lg.jp",
+          "publishedAt": "2026-08-24T07:00:00.000Z",
+          "verifiedAt": "2026-09-03T15:56:04.640+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260824-dx2qhj",
+      "category": "reference"
+    },
+    {
+      "title": "マイナンバーカード・電子証明書の有効期限通知書について",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-03T15:56:04.640+09:00",
+      "publishedAt": "2026-08-18T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-08-18T07:00:00.000Z",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQc3ZFNVpQYjI4d19VQk1BVS1CUm83OGl1VUQwZzBybGtrNGd0aXB3YVp2RDduMWN4MnBOZ3JiZkN0VUNrUlMzSHJMZ1NzTGlrZDEwa2pzdzdNYWNJWDNpeUdPUW5VREY0NzBIWXlydEVZNDB1ZkkxM2pYeUFKSkMyVEFBazhqdnJfam1ETFYyTFRyNUItQUtCNTFZTmFqT0k?oc=5\" target=\"_blank\">マイナンバーカード・電子証明書の有効期限通知書について</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.tokorozawa.saitama.jp</font>",
+      "dailyDiff": "2026-09-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "city.tokorozawa.saitama.jp",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQc3ZFNVpQYjI4d19VQk1BVS1CUm83OGl1VUQwZzBybGtrNGd0aXB3YVp2RDduMWN4MnBOZ3JiZkN0VUNrUlMzSHJMZ1NzTGlrZDEwa2pzdzdNYWNJWDNpeUdPUW5VREY0NzBIWXlydEVZNDB1ZkkxM2pYeUFKSkMyVEFBazhqdnJfam1ETFYyTFRyNUItQUtCNTFZTmFqT0k?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "city.tokorozawa.saitama.jp",
+          "publishedAt": "2026-08-18T07:00:00.000Z",
+          "verifiedAt": "2026-09-03T15:56:04.640+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260818-fvkiim",
+      "category": "reference"
+    },
+    {
+      "title": "マイナンバーカードセンター予約ページ",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-03T15:56:04.640+09:00",
+      "publishedAt": "2026-08-17T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-08-17T07:00:00.000Z",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNZ2lnbEIteFEwSnVtZGNUN2l1QmJHRFh4V1QtRnJQQXktdE5XeExmdGplTERMN2J3d1NsQUQ1Q2JJN2hMZUpNaXVhOTUzejYyeFd6ZFltRjd6aWRQOWN4aWlLcU82N1J6TWl3MnIxQmJ0MnBuVjNONnhRZE1VbjREdG4yZlYzMkh1VVU3TTBBcWdBc2lRejZaeFA5YTNCTkNwNGgtZE4tT05mSXp4eFBiVmtOb3AwRzYzYmdnVndpRmM5R3F1NHlz?oc=5\" target=\"_blank\">マイナンバーカードセンター予約ページ</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.kakogawa.lg.jp</font>",
+      "dailyDiff": "2026-09-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "city.kakogawa.lg.jp",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZ2lnbEIteFEwSnVtZGNUN2l1QmJHRFh4V1QtRnJQQXktdE5XeExmdGplTERMN2J3d1NsQUQ1Q2JJN2hMZUpNaXVhOTUzejYyeFd6ZFltRjd6aWRQOWN4aWlLcU82N1J6TWl3MnIxQmJ0MnBuVjNONnhRZE1VbjREdG4yZlYzMkh1VVU3TTBBcWdBc2lRejZaeFA5YTNCTkNwNGgtZE4tT05mSXp4eFBiVmtOb3AwRzYzYmdnVndpRmM5R3F1NHlz?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "city.kakogawa.lg.jp",
+          "publishedAt": "2026-08-17T07:00:00.000Z",
+          "verifiedAt": "2026-09-03T15:56:04.640+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260817-t3z19v",
       "category": "reference"
     }
   ],
@@ -1360,7 +1450,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-03T15:23:51.315+09:00",
+      "lastMaterialUpdateAt": "2026-09-03T15:56:04.640+09:00",
       "affectedCount": null,
       "affectedCountNote": "更新期限を迎える保有者。人数は自治体別に未公表",
       "symptoms": "立川市は9/2更新の案内で、カード交付に加え電子証明書の更新・新規発行、暗証番号再設定が混雑し待ち時間が60分以上となることが多いと明記。姫路市はマイナンバーコールセンターへの問い合わせ集中で電話がつながりにくい状態が続くと案内。広島市中区は夜間・休日の予約窓口を案内。",
@@ -1446,7 +1536,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁",
           "publishedAt": "2026-08-28T15:00:00+09:00",
-          "verifiedAt": "2026-09-03T15:23:51.315+09:00",
+          "verifiedAt": "2026-09-03T15:56:04.640+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -1457,7 +1547,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁 ウェブサービス・アプリケーション",
           "publishedAt": "2026-08-25T19:50:56+09:00",
-          "verifiedAt": "2026-09-03T15:23:51.315+09:00",
+          "verifiedAt": "2026-09-03T15:56:04.640+09:00",
           "active": true,
           "note": "自動収集"
         }
