@@ -185,6 +185,41 @@ describe('公式情報源の直接収集', () => {
     expect(result.articles).toHaveLength(0);
   });
 
+  it('情報源ごとに取得期間を延ばせる（自治体の周知はGoogle Newsの索引が遅い）', async () => {
+    const old = new Date(NOW.getTime() - 18 * 86400000).toUTCString();
+    routes['/short'] = {
+      body: RSS([{ title: 'マイナ／既定の3日窓では落ちる記事', link: 'https://example.lg.jp/a', date: old }]),
+      type: 'application/rss+xml',
+    };
+    routes['/long'] = {
+      body: RSS([{ title: 'マイナ／30日窓なら通る記事', link: 'https://example.lg.jp/b', date: old }]),
+      type: 'application/rss+xml',
+    };
+
+    const result = await run({
+      keywordFilter: 'マイナ',
+      rss: [
+        { id: 'short', label: '既定の窓', url: `${base}/short` },
+        { id: 'long', label: '長い窓', url: `${base}/long`, maxAgeDays: 30 },
+      ],
+    });
+
+    expect(result.errors).toEqual([]);
+    expect(result.articles.map((a: { title: string }) => a.title)).toEqual(['マイナ／30日窓なら通る記事']);
+  });
+
+  it('収集した記事には期間判定済みの印を付ける（後段で二重に落とさないため）', async () => {
+    routes['/rss'] = {
+      body: RSS([{ title: 'マイナンバーカードの新着', link: 'https://www.digital.go.jp/a', date: NOW.toUTCString() }]),
+      type: 'application/rss+xml',
+    };
+    const result = await run({
+      keywordFilter: 'マイナ',
+      rss: [{ id: 'da', label: 'デジタル庁', url: `${base}/rss` }],
+    });
+    expect(result.articles[0]._ageChecked).toBe(true);
+  });
+
   it('1つの情報源が落ちても他を止めない', async () => {
     routes['/rss'] = {
       body: RSS([{ title: 'マイナンバーカードの新着', link: 'https://www.digital.go.jp/a', date: NOW.toUTCString() }]),

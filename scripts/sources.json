@@ -1,5 +1,14 @@
 {
-  "_comment": "クラウド（GitHub Actions）から直接取得する情報源。PCの電源に依存せず毎朝走る。外務省(mofa.go.jp)はUA付きでも403を返すため直接取得できず、newsQueries 経由で報道を拾う。",
+  "_comment": "クラウド（GitHub Actions）から直接取得する情報源。PCの電源に依存せず毎朝走る。取得可否は 2026-09-03 に実測して確認した。",
+
+  "_取得できないと確認済みの情報源": {
+    "外務省 (mofa.go.jp)": "UAを付けても403。旅券関連は newsQueries の報道経由で拾う",
+    "医療機関等向け総合ポータル": "ServiceNowのSPAで本文がJavaScript描画。HTML本文は110字（ロード中…）のみ",
+    "政府広報オンライン / 個人情報保護委員会": "RSSが404",
+    "J-LIS": "403",
+    "自治体サイト (lg.jp)": "RSSを持たない。newsQueries 経由でGoogle Newsの索引から拾う",
+    "App Store レビュー": "Appleのレビューフィードは0件返却で実質廃止。X・Yahoo!コメントもAPIなし"
+  },
 
   "keywordFilter": "マイナ|保険証|オンライン資格確認|マイナポータル|公金受取口座|電子証明書|資格確認書|PMH|電子処方箋|マイナンバー",
 
@@ -15,6 +24,12 @@
       "label": "厚生労働省 新着",
       "url": "https://www.mhlw.go.jp/stf/news.rdf",
       "publisher": "厚生労働省"
+    },
+    {
+      "id": "soumu",
+      "label": "総務省 新着",
+      "url": "https://www.soumu.go.jp/news.rdf",
+      "publisher": "総務省"
     }
   ],
 
@@ -26,20 +41,26 @@
       "publisher": "デジタル庁",
       "entityName": "デジタル庁",
       "systemName": "マイナポータルAPI",
-      "incidentCategory": "common_system",
-      "sectionStart": "稼働状況",
-      "sectionEnd": "メンテナンス情報"
+      "incidentCategory": "common_system"
     }
   ],
 
+  "_newsQueries_note": "報道は3日で十分だが、自治体の周知ページはGoogle Newsの索引が遅く10〜85日前として出てくる。同じ窓では1件も通らないため maxAgeDays を分けている。",
+
   "newsQueries": [
-    "マイナ保険証 資格 誤表示",
-    "オンライン資格確認 障害",
-    "マイナンバーカード 誤交付 誤送付",
-    "病院 ランサムウェア 電子カルテ 障害",
-    "マイナポータル 障害 停止",
-    "資格確認書 誤り 保険者",
-    "旅券 オンライン申請 停止 マイナポータル",
-    "電子証明書 更新 窓口 混雑"
+    { "q": "マイナ保険証 資格 誤表示", "maxAgeDays": 5 },
+    { "q": "オンライン資格確認 障害", "maxAgeDays": 5 },
+    { "q": "マイナンバーカード 誤交付 誤送付", "maxAgeDays": 5 },
+    { "q": "病院 ランサムウェア 電子カルテ 障害", "maxAgeDays": 5 },
+    { "q": "マイナポータル 障害 停止", "maxAgeDays": 5 },
+    { "q": "資格確認書 誤り 保険者", "maxAgeDays": 5 },
+    { "q": "旅券 オンライン申請 停止 マイナポータル", "maxAgeDays": 7 },
+    { "q": "マイナンバーカード 個人情報 漏えい 自治体", "maxAgeDays": 7 },
+
+    { "q": "資格確認書 交付 お知らせ 市", "maxAgeDays": 21, "limit": 15 },
+    { "q": "マイナンバーカード 電子証明書 更新 窓口 市", "maxAgeDays": 21, "limit": 15 },
+    { "q": "マイナ保険証 利用登録 自治体 お知らせ", "maxAgeDays": 21, "limit": 15 },
+    { "q": "こども医療費 マイナ保険証 受給資格者証", "maxAgeDays": 30, "limit": 10 },
+    { "q": "PMH 医療費助成 オンライン資格確認 自治体", "maxAgeDays": 30, "limit": 10 }
   ]
 }

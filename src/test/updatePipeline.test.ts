@@ -303,6 +303,23 @@ describe('日次自動更新パイプライン', () => {
     expect(dataset.news.filter((n: { reviewState: string }) => n.reviewState === 'unreviewed')).toHaveLength(0);
   });
 
+  it('収集器が期間を判定済みの記事は3日を超えていても追加する（自治体の周知は索引が遅い）', async () => {
+    feedPayload = {
+      articles: [
+        article({
+          title: '資格確認書の交付についてのお知らせ - 〇〇市',
+          _resolved_url: 'https://www.city.example.lg.jp/kokuho/shikaku.html',
+          pub_date: new Date(Date.now() - 18 * 24 * 60 * 60 * 1000).toISOString(),
+          _ageChecked: true,
+        }),
+      ],
+    };
+    const { dataset } = await runPipeline();
+    const added = [...dataset.news].filter((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+    expect(added).toHaveLength(1);
+    expect(added[0].title).toContain('資格確認書の交付');
+  });
+
   it('追加件数の上限を守る', async () => {
     feedPayload = {
       articles: Array.from({ length: 30 }, (_, index) =>
@@ -434,6 +451,30 @@ describe('日次自動更新パイプライン', () => {
     expect(auto.every((n: { category: string }) => n.category === 'reference')).toBe(true);
     // 参考情報に論調は付けない
     expect(auto.every((n: { polarity?: string }) => n.polarity === undefined)).toBe(true);
+  });
+
+  it('Google News 経由でも自治体の周知は参考情報にする（lg.jp を持たない自治体を含む）', async () => {
+    feedPayload = {
+      articles: [
+        article({
+          // リンクは Google News のリダイレクト。ホスト名では公式と判定できない
+          title: 'マイナンバーカード・電子証明書の有効期限通知書について - city.tokorozawa.saitama.jp',
+          _resolved_url: 'https://news.google.com/rss/articles/CBMiaAFo',
+          source: 'city.tokorozawa.saitama.jp',
+          _ageChecked: true,
+        }),
+        article({
+          title: 'マイナンバーカードセンター予約ページ - city.kakogawa.lg.jp',
+          _resolved_url: 'https://news.google.com/rss/articles/CBMiaAFq',
+          source: 'city.kakogawa.lg.jp',
+          _ageChecked: true,
+        }),
+      ],
+    };
+    const { dataset } = await runPipeline();
+    const auto = dataset.news.filter((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+    expect(auto).toHaveLength(2);
+    expect(auto.map((n: { category: string }) => n.category)).toEqual(['reference', 'reference']);
   });
 
   it('二次転載・解説記事は解説記事欄（commentary）へ回す', async () => {

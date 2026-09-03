@@ -180,9 +180,9 @@ public/
 ① myna-news-jp が公開している news_latest.json を取得（一般ニュースの見出し）
      https://myna-news-jp.github.io/news_latest.json
 ② scripts/sources.json に定義した公式情報源を直接取得
-     ・デジタル庁 新着RSS / 厚生労働省 新着RSS（キーワードで絞る）
+     ・デジタル庁 / 厚生労働省 / 総務省 の新着RSS（キーワードで絞る）
      ・マイナポータルAPI 稼働状況ページ（【解消済】等の記載から障害を抽出）
-     ・事故・障害に絞った独自のニュース検索クエリ8本
+     ・独自のニュース検索クエリ13本（不具合8本＋自治体の周知5本）
 ③ curated.json を読み、①②とマージ
 ④ 前日分を archive/ へ退避、generatedAt / reportDate を更新
 ⑤ データ検証 → 型チェック → テスト（失敗したらデプロイしない）
@@ -200,9 +200,35 @@ public/
 |---|---|---|
 | `rss` | 官公庁の新着RSS | `keywordFilter` の正規表現で絞る |
 | `statusPages` | 稼働状況・障害情報ページ | `【】` の記載を1件ずつ抽出。障害語を含むものだけ採用 |
-| `newsQueries` | 事故・障害に絞った検索 | Google News RSS。1クエリ最大10件 |
+| `newsQueries` | 不具合・自治体周知の検索 | Google News RSS。`{ "q": …, "maxAgeDays": …, "limit": … }` |
 
-**取得できない情報源**：外務省（`mofa.go.jp`）はUAを付けても403を返すため直接取得できません。旅券関連は `newsQueries` の報道経由で拾います。
+#### 取得期間は情報源ごとに変えられる
+
+報道は3日窓で十分ですが、**自治体の周知ページは Google News の索引が遅く、10〜85日前のものとして出てきます**。
+報道と同じ窓では1件も通りませんでした（2026-09-03に実測）。そのため `rss` の各要素と
+`newsQueries` の各要素に `maxAgeDays` を書けるようにしています（既定は3日）。
+
+| 用途 | maxAgeDays |
+|---|---|
+| 不具合・障害の報道 | 5〜7日 |
+| 自治体の周知・お知らせ | 21〜30日 |
+
+収集器が期間を判定した記事には `_ageChecked` の印が付き、`update-data.mjs` 側の3日フィルタを飛ばします
+（二重に落とさないため）。
+
+#### 取得できないと確認済みの情報源
+
+`scripts/sources.json` の `_取得できないと確認済みの情報源` に実測結果を記録しています。
+同じ調査を繰り返さないためのものなので、追加調査をしたら追記してください。
+
+| 情報源 | 結果 |
+|---|---|
+| 外務省（`mofa.go.jp`） | UAを付けても403。旅券関連は `newsQueries` の報道経由で拾う |
+| 医療機関等向け総合ポータル | ServiceNowのSPAで本文がJavaScript描画。HTML本文は110字のみ |
+| 政府広報オンライン / 個人情報保護委員会 | RSSが404 |
+| J-LIS | 403 |
+| 自治体サイト（`lg.jp`） | RSSを持たない。`newsQueries` 経由でGoogle Newsの索引から拾う |
+| **国民の声** | **自動取得の手段がない。** App Storeレビューフィードは0件返却で実質廃止、X・Yahoo!コメントはAPIなし。`publicVoices` は人が書く前提 |
 
 手動実行もできます（**Actions → Daily update and deploy → Run workflow**）。`dry_run` に `true` を選ぶと差分表示だけでコミット・デプロイしません。
 

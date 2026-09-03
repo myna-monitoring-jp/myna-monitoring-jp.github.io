@@ -11,6 +11,8 @@ export interface CollectedArticle {
   pub_date: string | null;
   source: string;
   description: string;
+  /** 収集器側で情報源ごとの期間を判定済み。後段の3日フィルタを飛ばす印。 */
+  _ageChecked: true;
   _origin: string;
 }
 

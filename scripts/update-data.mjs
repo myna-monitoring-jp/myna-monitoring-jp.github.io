@@ -36,7 +36,7 @@ const NEWS_FEED_URL =
   process.env.NEWS_FEED_URL ?? 'https://myna-news-jp.github.io/news_latest.json';
 
 /** 自動追加する記事の上限。ダッシュボードが未レビュー項目で埋まるのを防ぐ。 */
-const MAX_AUTO_ITEMS = Number(process.env.MAX_AUTO_ITEMS ?? 12);
+const MAX_AUTO_ITEMS = Number(process.env.MAX_AUTO_ITEMS ?? 20);
 
 /** これより古い記事は新規追加しない（日数）。 */
 const MAX_ARTICLE_AGE_DAYS = Number(process.env.MAX_ARTICLE_AGE_DAYS ?? 3);
@@ -192,6 +192,15 @@ const OFFICIAL_DOMAIN = /(^|\.)(go\.jp|lg\.jp)$/i;
 const OFFICIAL_PUBLISHER =
   /デジタル庁|厚生労働省|総務省|法務省|内閣府|政府広報|こども家庭庁|支払基金|国保中央会|J-LIS|(市|町|村|区|都|道|府|県)$/;
 
+/**
+ * 自治体サイトの慣行的なホスト名。
+ * `lg.jp` を持たない自治体は多い（例：所沢市は city.tokorozawa.saitama.jp）ため、
+ * ドメイン末尾だけでは公式と判定できない。
+ */
+const MUNICIPAL_HOST = /^(www\.)?(city|town|vill|pref|metro)\./i;
+
+const looksOfficialHost = (host) => OFFICIAL_DOMAIN.test(host) || MUNICIPAL_HOST.test(host);
+
 function isOfficialSource(article) {
   let host = '';
   try {
@@ -199,8 +208,15 @@ function isOfficialSource(article) {
   } catch {
     host = '';
   }
-  if (OFFICIAL_DOMAIN.test(host)) return true;
-  return OFFICIAL_PUBLISHER.test(String(article.source ?? '').trim());
+  if (looksOfficialHost(host)) return true;
+
+  /*
+   * Google News 経由の記事はリンクが news.google.com のリダイレクトになるため、
+   * ホスト名では判定できない。この場合 Google News は媒体名の位置に元のドメインを
+   * 入れてくることがあるので、媒体名もホスト名として見る。
+   */
+  const source = String(article.source ?? '').trim();
+  return looksOfficialHost(source) || OFFICIAL_PUBLISHER.test(source);
 }
 
 /**
@@ -549,7 +565,24 @@ async function main() {
   let referenceCount = 0;
   const skipped = { duplicate: 0, tooOld: 0, overLimit: 0 };
 
-  for (const article of feed.articles) {
+  /*
+   * 追加の優先順位。情報源を増やしたため、上限に達したときに何が残るかが
+   * 重要になった。不具合・広報の候補（＝監視対象そのもの）を最優先し、
+   * 次に官公庁の一次情報、最後に解説記事という順で詰める。
+   */
+  const priority = (article) => {
+    const tags = candidateTags(article);
+    if (tags.length > 0) return 0;
+    return isOfficialSource(article) ? 1 : 2;
+  };
+  const sortedArticles = [...feed.articles].sort((a, b) => {
+    const diff = priority(a) - priority(b);
+    if (diff !== 0) return diff;
+    // 同じ優先度なら新しい記事から
+    return Date.parse(b.pub_date ?? 0) - Date.parse(a.pub_date ?? 0);
+  });
+
+  for (const article of sortedArticles) {
     if (addedCount >= MAX_AUTO_ITEMS) {
       skipped.overLimit += 1;
       continue;
@@ -560,10 +593,15 @@ async function main() {
       skipped.duplicate += 1;
       continue;
     }
-    const published = article.pub_date ? new Date(article.pub_date) : null;
-    if (published && !Number.isNaN(published.getTime()) && published < ageCutoff) {
-      skipped.tooOld += 1;
-      continue;
+    // 公式情報源の収集器は情報源ごとに期間を判定している（自治体の周知ページは
+    // Google News の索引が遅く、報道と同じ3日窓では1件も通らない）。
+    // 判定済みの記事にここで再度3日フィルタをかけると二重に落ちてしまう。
+    if (!article._ageChecked) {
+      const published = article.pub_date ? new Date(article.pub_date) : null;
+      if (published && !Number.isNaN(published.getTime()) && published < ageCutoff) {
+        skipped.tooOld += 1;
+        continue;
+      }
     }
 
     const id = autoIdFor(article, 'news');

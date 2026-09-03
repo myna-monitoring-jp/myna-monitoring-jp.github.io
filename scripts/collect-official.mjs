@@ -114,12 +114,17 @@ export async function collectOfficialSources({ sourcesPath, statePath, now, maxA
   const state = { ...previousState };
 
   const keyword = config.keywordFilter ? new RegExp(config.keywordFilter) : null;
-  const ageCutoff = now.getTime() - maxAgeDays * 24 * 60 * 60 * 1000;
 
-  const withinAge = (iso) => {
+  /**
+   * 取得期間は情報源ごとに変えられる。
+   * 報道は3日で十分だが、自治体の周知ページは Google News の索引が遅く、
+   * 10〜80日前のものとして出てくる。同じ窓では1件も通らない。
+   */
+  const withinAge = (iso, days = maxAgeDays) => {
     if (!iso) return true; // 日付が取れないものは落とさない（判断は後段に任せる）
     const t = Date.parse(iso);
-    return !Number.isFinite(t) || t >= ageCutoff;
+    if (!Number.isFinite(t)) return true;
+    return t >= now.getTime() - days * 24 * 60 * 60 * 1000;
   };
 
   /* --- 1. 官公庁の新着RSS --- */
@@ -128,7 +133,7 @@ export async function collectOfficialSources({ sourcesPath, statePath, now, maxA
       const items = parseFeed(await fetchText(source.url));
       for (const item of items) {
         if (keyword && !keyword.test(`${item.title} ${item.description}`)) continue;
-        if (!withinAge(item.pubDate)) continue;
+        if (!withinAge(item.pubDate, source.maxAgeDays)) continue;
         result.articles.push({
           title: item.title,
           link: item.link,
@@ -136,6 +141,8 @@ export async function collectOfficialSources({ sourcesPath, statePath, now, maxA
           pub_date: item.pubDate,
           source: source.publisher ?? source.label,
           description: item.description,
+          // 収集器側で期間を判定済み。後段で3日フィルタを再適用させない。
+          _ageChecked: true,
           _origin: `rss:${source.id}`,
         });
       }
@@ -227,11 +234,15 @@ export async function collectOfficialSources({ sourcesPath, statePath, now, maxA
   }
 
   /* --- 3. 事故・障害に絞った独自ニュース検索 --- */
-  for (const query of config.newsQueries ?? []) {
+  for (const entry of config.newsQueries ?? []) {
+    // 文字列でもオブジェクト（期間・件数の指定つき）でも書ける
+    const query = typeof entry === 'string' ? entry : entry.q;
+    const limit = (typeof entry === 'object' && entry.limit) || 10;
+    const ageDays = typeof entry === 'object' ? entry.maxAgeDays : undefined;
     try {
       const items = parseFeed(await fetchText(googleNewsUrl(query)));
-      for (const item of items.slice(0, 10)) {
-        if (!withinAge(item.pubDate)) continue;
+      for (const item of items.slice(0, limit)) {
+        if (!withinAge(item.pubDate, ageDays)) continue;
         result.articles.push({
           title: item.title,
           link: item.link,
@@ -240,6 +251,7 @@ export async function collectOfficialSources({ sourcesPath, statePath, now, maxA
           // Google News のタイトル末尾「 - 媒体名」から媒体を拾う
           source: (item.title.split(' - ').pop() ?? '報道').trim(),
           description: item.description,
+          _ageChecked: true,
           _origin: `query:${query}`,
         });
       }
