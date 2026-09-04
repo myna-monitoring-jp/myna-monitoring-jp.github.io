@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-05T07:04:18.066+09:00",
-  "reportDate": "2026-09-05",
+  "generatedAt": "2026-09-04T07:05:07.819+09:00",
+  "reportDate": "2026-09-04",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-05T07:04:18.066+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-04T07:05:07.819+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -382,11 +382,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-05T07:04:18.066+09:00",
+      "lastMaterialUpdateAt": "2026-09-04T07:05:07.819+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "独立媒体1件の追加報道を自動検知（2026-09-05）。",
+      "dailyDiff": "独立媒体1件の追加報道を自動検知（2026-09-04）。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -419,7 +419,7 @@
           "linkText": "報道記事を開く",
           "publisher": "パナソニック コネクト",
           "publishedAt": "2026-08-24T23:30:13+09:00",
-          "verifiedAt": "2026-09-05T07:04:18.066+09:00",
+          "verifiedAt": "2026-09-04T07:05:07.819+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -973,66 +973,6 @@
       ],
       "id": "news-auto-20260817-t3z19v",
       "category": "reference"
-    },
-    {
-      "title": "マイナンバーカードの申請ができます！",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-05T07:04:18.066+09:00",
-      "publishedAt": "2026-09-01T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-01T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTFB4VzRhNENRYm5ZeGJjOWp4d20yaXVjRlhSc1k1VkJ0VHpBZHNiQmJ3c01NM3Z3OXd1N0FmRkk5NFVoOXlZdHpueXhSSnpjc053Yldsb01QOFpULURKXzM3UVc4czU3eFJBMU5QUGtKdC12Zk0?oc=5\" target=\"_blank\">マイナンバーカードの申請ができます！</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.kawaguchi.lg.jp</font>",
-      "dailyDiff": "2026-09-05の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "city.kawaguchi.lg.jp",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB4VzRhNENRYm5ZeGJjOWp4d20yaXVjRlhSc1k1VkJ0VHpBZHNiQmJ3c01NM3Z3OXd1N0FmRkk5NFVoOXlZdHpueXhSSnpjc053Yldsb01QOFpULURKXzM3UVc4czU3eFJBMU5QUGtKdC12Zk0?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "city.kawaguchi.lg.jp",
-          "publishedAt": "2026-09-01T07:00:00.000Z",
-          "verifiedAt": "2026-09-05T07:04:18.066+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260901-lbzidu",
-      "category": "reference"
-    },
-    {
-      "title": "マイナンバーカードの申請から受け取りまで",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-05T07:04:18.066+09:00",
-      "publishedAt": "2026-09-01T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-01T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTFBxRW1fSl9RUF9nQjNpNVdILUU2UTdJZ19sMzFhcnRaMGhacXZyejAxZ2dmbVZNS0FlakFZUXZnZFhfclptSXpKTjJYMnZOR1NWUkFTTkp0dkFDMTYyRGhDZXJrOGxlNzIyVktqVkJWRG1IdlE?oc=5\" target=\"_blank\">マイナンバーカードの申請から受け取りまで</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.kisarazu.lg.jp</font>",
-      "dailyDiff": "2026-09-05の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "city.kisarazu.lg.jp",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBxRW1fSl9RUF9nQjNpNVdILUU2UTdJZ19sMzFhcnRaMGhacXZyejAxZ2dmbVZNS0FlakFZUXZnZFhfclptSXpKTjJYMnZOR1NWUkFTTkp0dkFDMTYyRGhDZXJrOGxlNzIyVktqVkJWRG1IdlE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "city.kisarazu.lg.jp",
-          "publishedAt": "2026-09-01T07:00:00.000Z",
-          "verifiedAt": "2026-09-05T07:04:18.066+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260901-t6fw9j",
-      "category": "reference"
     }
   ],
   "incidents": [
@@ -1510,7 +1450,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-05T07:04:18.066+09:00",
+      "lastMaterialUpdateAt": "2026-09-04T07:05:07.819+09:00",
       "affectedCount": null,
       "affectedCountNote": "更新期限を迎える保有者。人数は自治体別に未公表",
       "symptoms": "立川市は9/2更新の案内で、カード交付に加え電子証明書の更新・新規発行、暗証番号再設定が混雑し待ち時間が60分以上となることが多いと明記。姫路市はマイナンバーコールセンターへの問い合わせ集中で電話がつながりにくい状態が続くと案内。広島市中区は夜間・休日の予約窓口を案内。",
@@ -1522,7 +1462,7 @@
       "summary": "電子証明書の更新需要により自治体窓口の負荷が継続。立川市は「60分以上待つことが多い」と明記し、姫路市は電話混雑を案内している。SNSの反応ではなく自治体公式の一次情報として確認。",
       "whatIsNew": "立川市が9/2に待ち時間「60分以上」を明記。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体2件の追加報道を自動検知（2026-09-05）。",
+      "dailyDiff": "独立媒体2件の追加報道を自動検知（2026-09-04）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -1596,7 +1536,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁",
           "publishedAt": "2026-08-28T15:00:00+09:00",
-          "verifiedAt": "2026-09-05T07:04:18.066+09:00",
+          "verifiedAt": "2026-09-04T07:05:07.819+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -1607,7 +1547,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁 ウェブサービス・アプリケーション",
           "publishedAt": "2026-08-25T19:50:56+09:00",
-          "verifiedAt": "2026-09-05T07:04:18.066+09:00",
+          "verifiedAt": "2026-09-04T07:05:07.819+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -2102,11 +2042,6 @@
     }
   ],
   "archive": [
-    {
-      "date": "2026-09-04",
-      "title": "日次レポート",
-      "dataPath": "archive/2026-09-04.json"
-    },
     {
       "date": "2026-09-03",
       "title": "日次レポート",
