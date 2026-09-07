@@ -453,6 +453,28 @@ describe('日次自動更新パイプライン', () => {
     expect(auto.every((n: { polarity?: string }) => n.polarity === undefined)).toBe(true);
   });
 
+  it('政府広報の掲載物は媒体名から広報候補と判定し、参考情報に埋もれさせない', async () => {
+    feedPayload = {
+      articles: [
+        article({
+          // 表題に「広報」「広告」の語が無い。媒体名を見ないと拾えない
+          title: 'マイナ救急（令和8年（2026年）9月掲載） - 政府広報オンライン',
+          _resolved_url: 'https://news.google.com/rss/articles/CBMiZ2Fk',
+          source: '政府広報オンライン',
+          _ageChecked: true,
+        }),
+      ],
+    };
+    const { dataset } = await runPipeline();
+    const auto = dataset.news.filter((n: { reviewState: string }) => n.reviewState === 'unreviewed');
+    expect(auto).toHaveLength(1);
+    expect(auto[0].tags).toContain('広報候補');
+    // 官公庁ドメインだが、候補タグが付くので参考情報ではなく本文の一覧に残る
+    expect(auto[0].category).toBe('other');
+    // 自動では広報レーンに入れない（判断は人が curated.json で行う）
+    expect(dataset.prItems.some((p: { title: string }) => p.title.includes('マイナ救急'))).toBe(false);
+  });
+
   it('Google News 経由でも自治体の周知は参考情報にする（lg.jp を持たない自治体を含む）', async () => {
     feedPayload = {
       articles: [

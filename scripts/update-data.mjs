@@ -180,7 +180,13 @@ const HIGH_SEVERITY = /全国|ランサム|漏えい|漏洩|流出|中止|謝罪
  * 解説記事と判定した場合は候補タグを付けない（誤って不具合に見せないため）。
  */
 function candidateTags(article) {
-  const text = `${article.title ?? ''} ${article.description ?? ''}`;
+  /*
+   * 媒体名も判定に含める。
+   * 政府広報の掲載物は表題が「マイナ救急（2026年9月掲載）」のように事業名だけで、
+   * 「広報」「広告」の語が入らない。媒体名（政府広報オンライン）を見ないと
+   * 広報候補として拾えず、官公庁ドメインのため参考情報に埋もれていた。
+   */
+  const text = `${article.title ?? ''} ${article.description ?? ''} ${article.source ?? ''}`;
   if (EXPLAINER.test(article.title ?? '')) return [];
 
   const tags = [];
