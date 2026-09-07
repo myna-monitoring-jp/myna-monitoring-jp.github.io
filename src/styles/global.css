@@ -2123,3 +2123,37 @@ td .actionrow {
     align-items: stretch;
   }
 }
+/* -------------------------------------------------- 日別レポートへの導線 */
+
+.reportlink {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--purple);
+  border-radius: 12px;
+  padding: 13px 16px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+.reportlink-title {
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0 0 3px;
+}
+.reportlink .note {
+  margin: 0;
+  max-width: 760px;
+}
+.reportlink .action {
+  flex: none;
+}
+
+@media (max-width: 900px) {
+  .reportlink {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -5,6 +5,13 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    # 生成物のコミットではデプロイしない。
+    # daily-monitoring.yml が自前で build/deploy まで行うため、
+    # ここで発火すると同一内容のデプロイが二重に走る。
+    paths-ignore:
+      - 'public/data/**'
+      - 'public/reports/**'
+      - 'data/**'
   workflow_dispatch:
     inputs:
       data_source:
@@ -59,6 +66,12 @@ jobs:
           VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
           VITE_DATA_SOURCE: ${{ inputs.data_source || vars.DATA_SOURCE || 'sample' }}
         run: npm run build
+
+      # 日別レポートは Vite の対象外なので、ビルド後に dist へ複製する
+      - name: Copy daily reports
+        run: |
+          mkdir -p dist/reports
+          if [ -d public/reports ]; then cp -r public/reports/. dist/reports/; fi
 
       - uses: actions/upload-pages-artifact@v4
         with:

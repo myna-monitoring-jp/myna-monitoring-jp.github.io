@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { Incident, MonitoringDataset, NewsItem, PRItem } from '@/types/monitoring';
 import { MorningBriefing } from '@/components/briefing/MorningBriefing';
+import { DailyReportLink } from '@/components/common/DailyReportLink';
 import { NewsCard } from '@/components/news/NewsCard';
 import { ReferenceTiles } from '@/components/news/ReferenceTiles';
 import { PRItemCard } from '@/components/pr/PRItemCard';
@@ -114,6 +115,13 @@ export function DashboardPage({ dataset, now, query }: DashboardPageProps) {
         確認できなかったこと）を持つため、一覧より先に置く。
       */}
       <MorningBriefing briefing={dataset.briefing} />
+
+      {/*
+        日別レポートへの導線。
+        調査パイプラインが生成する単一HTMLで、A/B/C/Dブロックと検索ログの件数を持つ。
+        Vite の管理外に置いているため、SPA内リンクではなく通常のリンクで開く。
+      */}
+      <DailyReportLink reportDate={dataset.reportDate} />
 
       <ul className="legend" aria-label="状態ラベルの説明">
         {STATUS_ORDER.map((status) => (

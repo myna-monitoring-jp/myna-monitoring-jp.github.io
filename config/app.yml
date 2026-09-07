@@ -1,0 +1,87 @@
+# 調査パイプラインとサイトの設定
+#
+# 仕様で数値が指定されているものはその値を使い、指定がないものは
+# docs/IMPLEMENTATION_PLAN.md §9 の初期値を置いている。
+# ハードコードせずここで変えられるようにするのが目的。
+
+version: 1
+timezone: Asia/Tokyo
+
+dashboard:
+  # 7日ルール。lastMaterialUpdateAt からこの日数、重要更新がなければ
+  # ダッシュボードから外す（詳細・アーカイブには残す）。pinned=true は例外。
+  quiet_days: 7
+  # 「新着」と表示する時間
+  new_item_hours: 48
+
+research:
+  # 一次情報を必須とする影響度の閾値（query_catalog.yml の指定に一致）
+  primary_source_required_impact: 60
+  # 反応の深掘りを行う上位件数
+  reaction_top_events: 8
+  # 検索停止条件：重要な新規事象が出ないパスがこの回数続いたら止める
+  stop_after_barren_passes: 2
+
+fetch:
+  # 本文取得の同時実行数。相手先へ負荷をかけないため小さくする
+  concurrency: 4
+  timeout_seconds: 20
+  # 取得失敗時の再試行
+  retries: 2
+  retry_delay_ms: 1500
+  # 同一URLの再取得を避ける保持時間
+  cache_hours: 72
+  # 本文として保存する最大文字数（トークン節約と保存量の抑制）
+  max_body_chars: 20000
+  user_agent: 'Mozilla/5.0 (compatible; myna-monitoring-portal/2.0; +https://myna-monitoring-jp.github.io/)'
+  # robots.txt で拒否されているパスは取得しない
+  respect_robots: true
+
+extract:
+  # LLM抽出を使うか。ANTHROPIC_API_KEY が無い場合は自動的に決定論的抽出になる。
+  # provider: none を指定すると、キーがあっても使わない。
+  provider: auto # auto | none | anthropic
+  anthropic_model: claude-sonnet-4-5
+  # 記事がこの日数より古い場合、当日の新規として扱わず追補扱いにする
+  primary_window_hours: 24
+  backfill_window_hours: 72
+
+scoring:
+  # impactScore の配点（仕様§9.1）
+  impact_weights:
+    scope: 25
+    essentiality: 20
+    data_sensitivity: 20
+    duration: 15
+    affected_count: 10
+    official_escalation: 10
+  # attentionScore の配点（仕様§9.2）
+  attention_weights:
+    independent_media: 25
+    major_media: 20
+    social_volume: 25
+    official_response: 15
+    growth_rate: 15
+
+retention:
+  # 日別レポートと run ログの保持日数
+  reports_days: 400
+  runs_days: 60
+  archive_days: 400
+  # 未レビューの自動収集項目を表示に残す日数
+  unreviewed_days: 14
+
+review:
+  # ここに該当する事象は自動公開せずレビュー待ちへ入れる（仕様§17）
+  require_review_when:
+    - impact_score_at_least: 60
+    - security_incident: true
+    - backlash_recognized: true
+    - source_conflict: true
+    - primary_source_missing_and_high_impact: true
+
+publish:
+  site_url: 'https://myna-monitoring-jp.github.io/'
+  report_dir: 'public/reports'
+  # QAでブロッキングエラーが出たら公開しない
+  block_on_qa_error: true

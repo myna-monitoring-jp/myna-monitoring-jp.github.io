@@ -1,0 +1,178 @@
+version: 1
+
+# fetchable_feeds / watch_urls / _unfetchable は実装側の追記。
+# 渡された Tier 定義はそのまま維持している。
+#
+# 追記した理由：
+# Google News RSS の記事リンクは news.google.com のリダイレクトで、
+#   1) robots.txt が全エージェントに Disallow: / を指定している
+#   2) 記事IDは不透明なトークンで、元URLを復元できない
+# ため本文を取得できない（2026-09-07 実測）。
+# したがって Google News は「発見」専用とし、事実確定に使う本文は
+# 実URLを持つ下記の情報源から取る。仕様§3の一次情報優先と同じ結論。
+
+# 本文を取得できる情報源。ここが事実確定の材料になる。
+fetchable_feeds:
+  - id: digital-agency-news
+    label: デジタル庁 新着
+    url: https://www.digital.go.jp/rss/news.xml
+    publisher: デジタル庁
+    tier: 0
+  - id: mhlw-news
+    label: 厚生労働省 新着
+    url: https://www.mhlw.go.jp/stf/news.rdf
+    publisher: 厚生労働省
+    tier: 0
+  - id: soumu-news
+    label: 総務省 新着
+    url: https://www.soumu.go.jp/news.rdf
+    publisher: 総務省
+    tier: 0
+
+# 定点観測する個別ページ。RSSを持たないが重要なもの。
+watch_urls:
+  - id: mynaportal-api-status
+    label: マイナポータルAPI 稼働状況・メンテナンス情報
+    url: https://developers.digital.go.jp/documents/mynaportal-api/maintenance/
+    publisher: デジタル庁
+    tier: 0
+    system_layer: マイナポータルAPI（自己情報取得）
+
+# 実測で取得できないと確認済み。同じ調査を繰り返さないための記録。
+_unfetchable:
+  news_google: 'robots.txt が Disallow: / 。記事IDから元URLも復元できない。発見専用'
+  mofa_go_jp: 'ブラウザUAでも403'
+  iryohokenjyoho_portal: 'ServiceNow SPA。HTML本文は110字のみ'
+  gov_online_rss: 'RSSは404。ただしGoogle Newsには索引されているため発見は可能'
+  ppc_rss: 'RSSは404'
+  j_lis: '403'
+  lg_jp: 'RSSを持たない。Google News経由で発見のみ'
+  app_store_reviews: '0件返却。実質廃止'
+  x_and_yahoo_comments: '無料のAPIなし。反応の自動取得は不可能'
+
+source_tiers:
+  tier_0_primary:
+    description: 制度、稼働状況、事故、対象人数、復旧、公式対応の確定に使う
+    domains:
+      digital_go_jp:
+        domain: digital.go.jp
+        categories: [policy, mynumber, mynaportal, jpki, pr, incident]
+      digital_developers:
+        domain: developers.digital.go.jp
+        categories: [api_status, planned_maintenance, specifications]
+      mhlw:
+        domain: mhlw.go.jp
+        categories: [myna_insurance, online_eligibility, medical_dx, disaster, pr]
+      myna_portal:
+        domain: myna.go.jp
+        categories: [service_status, procedures]
+      jlis_card:
+        domain: kojinbango-card.go.jp
+        categories: [card, certificate, operations]
+      pension:
+        domain: nenkin.go.jp
+        categories: [pension, public_money_account, integration]
+      ssk:
+        domain: ssk.or.jp
+        categories: [online_eligibility, disaster, payer_operations]
+      kokuho:
+        domain: kokuho.or.jp
+        categories: [national_health_insurance, disaster]
+      ppc:
+        domain: ppc.go.jp
+        categories: [privacy, mynumber_incidents]
+      gov_online:
+        domain: gov-online.go.jp
+        categories: [advertising, campaigns, explainer]
+      e_gov:
+        domain: public-comment.e-gov.go.jp
+        categories: [public_comment, regulation]
+      mofa:
+        domain: mofa.go.jp
+        categories: [passport]
+      fdma:
+        domain: fdma.go.jp
+        categories: [ambulance, disaster, myna_emergency]
+      moj:
+        domain: moj.go.jp
+        categories: [residence_card, pr]
+      local_government:
+        domain_pattern: '*.lg.jp'
+        categories: [local_incident, card_operations, insurance]
+      municipalities:
+        domain_patterns:
+          - 'city.*.jp'
+          - 'pref.*.jp'
+          - 'town.*.jp'
+          - 'vill.*.jp'
+        categories: [local_incident, local_operations]
+
+  tier_1_major_media:
+    description: 発見、独立取材、社会的文脈、主要媒体波及の確認に使う
+    domains:
+      - nhk.or.jp
+      - asahi.com
+      - yomiuri.co.jp
+      - mainichi.jp
+      - nikkei.com
+      - sankei.com
+      - kyodonews.jp
+      - jiji.com
+      - news.tv-asahi.co.jp
+      - newsdig.tbs.co.jp
+      - fnn.jp
+      - news.ntv.co.jp
+      - mbc.co.jp
+      - mbs.jp
+
+  tier_2_specialist:
+    description: 医療、IT、セキュリティ、自治体の技術・現場詳細に使う
+    domains:
+      - itmedia.co.jp
+      - internet.watch.impress.co.jp
+      - k-tai.watch.impress.co.jp
+      - atmarkit.itmedia.co.jp
+      - scan.netsecurity.ne.jp
+      - jpcert.or.jp
+      - ipa.go.jp
+      - mf.jiho.jp
+      - medical-saponet.mynavi.jp
+
+  tier_3_reaction:
+    description: 事実確定には使わず、論点・拡散規模・利用者体験に限定
+    domains:
+      - x.com
+      - search.yahoo.co.jp
+      - news.yahoo.co.jp
+      - apps.apple.com
+      - play.google.com
+
+source_rules:
+  current_service_status:
+    preferred_tier: tier_0_primary
+  affected_count:
+    preferred_tier: tier_0_primary
+    fallback: tier_1_major_media
+    fallback_label: 報道によると
+  incident_cause:
+    preferred_tier: tier_0_primary
+  public_reaction:
+    preferred_tier: tier_3_reaction
+  media_reach:
+    use_independent_outlets_only: true
+  press_release_reprints:
+    count_as_independent_media: false
+  syndicated_articles:
+    count_as_independent_media: false
+  social_claim_as_incident_fact:
+    allowed: false
+
+link_validation:
+  timeout_seconds: 15
+  follow_redirects: true
+  allowed_status_codes: [200, 201, 202, 204, 301, 302, 303, 307, 308]
+  flag_login_wall: true
+  flag_deleted_social_post: true
+  verify_title_matches_event: true
+  external_target: _blank
+  external_rel: noopener noreferrer

@@ -81,12 +81,31 @@ describe.each(ROUTES)('外部リンクの契約（%s）', (route) => {
 
   it('内部ナビゲーションは新しいタブを開かない', () => {
     const { container } = renderRoute(route);
-    const internal = anchorsOf(container).filter(
-      (a) => !/^https?:\/\//i.test(a.getAttribute('href') ?? ''),
-    );
+    const internal = anchorsOf(container).filter((a) => {
+      const href = a.getAttribute('href') ?? '';
+      if (/^https?:\/\//i.test(href)) return false;
+      /*
+       * 日別レポートは例外。
+       * SPA内の画面遷移ではなく、調査パイプラインが生成する別の静的HTML文書で、
+       * 印刷や添付に使う。別タブで開くのが正しい挙動。
+       */
+      if (/reports\/myna_news_\d{4}-\d{2}-\d{2}\.html$/.test(href)) return false;
+      return true;
+    });
     for (const anchor of internal) {
       expect(anchor).not.toHaveAttribute('target', '_blank');
     }
+  });
+
+  it('日別レポートは別タブで開き、rel も付ける', () => {
+    const { container } = renderRoute(route);
+    const report = anchorsOf(container).find((a) =>
+      /reports\/myna_news_\d{4}-\d{2}-\d{2}\.html$/.test(a.getAttribute('href') ?? ''),
+    );
+    // 導線はダッシュボードにだけあるので、存在するときだけ検査する
+    if (!report) return;
+    expect(report).toHaveAttribute('target', '_blank');
+    expect(report).toHaveAttribute('rel', 'noopener noreferrer');
   });
 });
 

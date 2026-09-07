@@ -10,3 +10,11 @@ Thumbs.db
 playwright-report/
 test-results/
 .vite/
+
+# 調査パイプラインの中間生成物
+# fetched.jsonl / extracted.jsonl は日々数百件でリポジトリが膨らむため追跡しない。
+# 実行の記録は GitHub Actions の Artifact に30日保持している。
+# 検索ログ（search-log.jsonl）と事象台帳は追跡する（前日状態として必要）。
+data/runs/*/fetched.jsonl
+data/runs/*/extracted.jsonl
+data/backup/

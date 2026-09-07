@@ -10,6 +10,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    // src/pipeline/*.mjs から型を推論させる。
+    // 宣言ファイルを別に持つと実装と乖離するので、実装から推論する。
+    // checkJs は付けない（.mjs 内部の型エラーは報告させない）。
+    "allowJs": true,
+    "checkJs": false,
     "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": true,

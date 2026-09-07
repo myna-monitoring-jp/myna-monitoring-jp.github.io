@@ -1,0 +1,210 @@
+version: 1
+locale: ja-JP
+timezone: Asia/Tokyo
+windows:
+  primary_hours: 24
+  backfill_hours: 72
+  trend_days: 7
+  history_days: 30
+
+common_terms:
+  systems:
+    - マイナ保険証
+    - オンライン資格確認
+    - マイナンバーカード
+    - 電子証明書
+    - マイナポータル
+    - マイナアプリ
+    - 公金受取口座
+    - 資格確認書
+    - 資格情報のお知らせ
+    - PMH
+    - 電子処方箋
+  incident_terms:
+    - 障害
+    - 不具合
+    - エラー
+    - 誤表示
+    - 資格無効
+    - 資格なし
+    - 復旧
+    - メンテナンス
+    - お詫び
+    - 訂正
+    - 誤送付
+    - 漏えい
+    - 不正アクセス
+  pr_terms:
+    - 広告
+    - CM
+    - 動画
+    - キャンペーン
+    - タイアップ
+    - ポスター
+    - リーフレット
+    - SNS
+  backlash_terms:
+    - 批判
+    - 炎上
+    - 不適切
+    - 配慮に欠ける
+    - 削除
+    - 撤回
+    - 中止
+    - 謝罪
+    - 誤解
+    - 反発
+
+query_groups:
+  broad_discovery:
+    cadence: daily
+    priority: high
+    queries:
+      - '"マイナ保険証" 最新'
+      - '"マイナ保険証" (障害 OR 不具合 OR エラー OR 使えない OR 誤表示 OR 資格無効)'
+      - '"オンライン資格確認" (障害 OR 復旧 OR メンテナンス OR 影響 OR 誤表示)'
+      - '"資格確認書" (誤送付 OR 未着 OR 誤記 OR 交付停止 OR 混乱)'
+      - '"資格情報のお知らせ" (受診 OR 混乱 OR 使えない OR 誤解)'
+      - '"マイナンバーカード" (更新 OR 電子証明書 OR 混雑 OR 予約 OR 期限切れ)'
+      - '"マイナポータル" (障害 OR メンテナンス OR 申請できない OR ログイン)'
+      - '"マイナアプリ" (ログイン OR 認証 OR 初回利用登録 OR エラー OR 評価)'
+      - '"公金受取口座" (不同意 OR 自動登録 OR 勝手に OR 45日 OR 批判)'
+      - '"PMH" (医療費助成 OR オンライン資格確認 OR 負担金 OR 障害)'
+
+  official_sources:
+    cadence: daily
+    priority: critical
+    templates:
+      - 'site:digital.go.jp {keyword}'
+      - 'site:developers.digital.go.jp {keyword}'
+      - 'site:mhlw.go.jp {keyword}'
+      - 'site:gov-online.go.jp {keyword}'
+      - 'site:nenkin.go.jp {keyword}'
+      - 'site:ssk.or.jp {keyword}'
+      - 'site:kokuho.or.jp {keyword}'
+      - 'site:ppc.go.jp {keyword}'
+      - 'site:public-comment.e-gov.go.jp {keyword}'
+      - 'site:mofa.go.jp {keyword}'
+      - 'site:fdma.go.jp {keyword}'
+      - 'site:moj.go.jp {keyword}'
+
+  local_government_incidents:
+    cadence: four_times_daily
+    priority: critical
+    queries:
+      - 'site:lg.jp (マイナ保険証 OR オンライン資格確認 OR 資格確認書) (不具合 OR 誤り OR お詫び OR 復旧)'
+      - 'site:lg.jp (国民健康保険 OR 後期高齢者) (資格無効 OR 負担割合 OR 限度額 OR データ連携)'
+      - 'site:lg.jp マイナンバーカード (誤交付 OR 誤送付 OR 個人情報 OR 更新 OR 混雑)'
+      - 'site:lg.jp (マイナンバー OR 個人番号) (漏えい OR 不適切 OR 画像 OR 裏面)'
+    municipality_template:
+      - '"{municipality}" (マイナ保険証 OR オンライン資格確認 OR 資格確認書)'
+      - '"{municipality}" (資格無効 OR 負担割合 OR 限度額 OR 連携漏れ)'
+      - 'site:{municipality_domain} (お詫び OR 不具合 OR 復旧)'
+
+  online_eligibility:
+    cadence: daily
+    priority: critical
+    queries:
+      - '"オンライン資格確認" 全国 障害'
+      - '"顔認証付きカードリーダー" (障害 OR エラー OR 読み取れない)'
+      - '"資格（無効）" マイナ保険証'
+      - '"負担割合" "オンライン資格確認" 誤り'
+      - '"限度額区分" "オンライン資格確認" 不具合'
+      - '"マイナ保険証" 10割 後日精算'
+      - '"緊急時医療情報・資格確認機能"'
+
+  portal_and_app:
+    cadence: daily
+    priority: high
+    queries:
+      - '"マイナポータルAPI" 稼働状況'
+      - '"医療保険情報取得API" (停止 OR メンテナンス OR 障害)'
+      - '"PMH情報連携API" (停止 OR メンテナンス OR 障害)'
+      - '"マイナアプリ" (EDZ OR ログインできない OR 電子署名 OR 認証ループ)'
+      - '"初回利用登録" マイナアプリ'
+      - 'site:apps.apple.com/jp/app マイナアプリ'
+      - 'site:play.google.com マイナアプリ'
+
+  card_and_certificate:
+    cadence: daily
+    priority: high
+    queries:
+      - '"電子証明書" 更新 窓口 混雑'
+      - '"マイナンバーカード" 更新 予約 休日窓口'
+      - '"電子証明書" 60分 待ち時間'
+      - '"マイナポイント" 電子証明書 更新'
+      - '"電子証明書" 期限切れ マイナ保険証 3か月'
+      - '"マイナンバーカード" 出張申請 更新サポート'
+
+  public_money_account:
+    cadence: daily
+    priority: high
+    queries:
+      - '"公金受取口座" "手続きは不要です"'
+      - '"公金受取口座" (不同意 OR 勝手に OR 自動登録 OR オプトアウト)'
+      - '"年金口座" "公金受取口座" 45日'
+      - '"公金受取口座" (便利 OR 助かった OR 給付 OR 自動振込)'
+
+  medical_it_cyber:
+    cadence: daily
+    priority: critical
+    queries:
+      - '(病院 OR 医療法人 OR 健康保険組合) (システム障害 OR 電子カルテ OR 通信障害)'
+      - '(病院 OR 医療法人 OR 健康保険組合) (サイバー攻撃 OR ランサムウェア OR 不正アクセス OR 情報漏えい)'
+      - '(特定保健指導 OR 健診情報 OR 疾患情報) (生成AI OR 誤アップロード OR 漏えい)'
+      - '(医療機関 OR 健保) (シャドーAI OR 外部AI OR 生成AI) 個人情報'
+      - '(病院 OR 医療法人) (Web改ざん OR SEOポイズニング OR ブランド詐称)'
+      - 'site:ppc.go.jp (医療 OR 健康保険 OR マイナンバー) 漏えい'
+      - 'site:jpcert.or.jp 医療'
+      - 'site:ipa.go.jp 医療 サイバー'
+
+  public_relations:
+    cadence: daily
+    priority: high
+    queries:
+      - '(厚生労働省 OR デジタル庁 OR 政府広報) (広告 OR CM OR 動画 OR キャンペーン OR タイアップ OR ポスター)'
+      - '(厚生労働省 OR デジタル庁 OR 政府広報) (批判 OR 炎上 OR 不適切 OR 削除 OR 撤回 OR 中止 OR 謝罪)'
+      - 'site:gov-online.go.jp/media/ マイナ'
+      - 'site:gov-online.go.jp/newspaper/ マイナ'
+      - 'site:mhlw.go.jp タイアップ'
+      - 'site:digital.go.jp/news キャンペーン'
+      - 'site:fdma.go.jp マイナ救急'
+
+  sentiment_and_reaction:
+    cadence: top_items_only
+    priority: medium
+    templates:
+      - '"{campaign_copy}"'
+      - '"{campaign_name}" (批判 OR 炎上 OR 不適切 OR 削除 OR 謝罪)'
+      - '"{campaign_name}" (便利 OR 分かりやすい OR 助かった OR 期待)'
+      - '"{official_post_url}"'
+      - '"{event_name}" Yahoo コメント'
+
+  follow_up:
+    cadence: every_run
+    priority: critical
+    templates:
+      - '"{event_name}" 復旧'
+      - '"{event_name}" 解消'
+      - '"{event_name}" 続報'
+      - '"{event_name}" 原因'
+      - '"{event_name}" 影響人数'
+      - '"{event_name}" 再発防止'
+      - '"{event_name}" 訂正'
+      - '"{event_name}" 延長'
+      - '"{event_name}" 削除'
+      - '"{event_name}" 中止'
+
+negative_queries:
+  # Search patterns that should not be used as the sole basis for a factual claim.
+  - generic_social_only
+  - anonymous_blog_only
+  - search_snippet_without_page_fetch
+
+selection_rules:
+  max_broad_results_per_query: 20
+  fetch_top_results_per_query: 8
+  mandatory_primary_source_for_impact_score_at_least: 60
+  reaction_analysis_top_event_count: 8
+  max_social_examples_per_event: 5
+  stop_after_consecutive_passes_without_material_new_event: 2

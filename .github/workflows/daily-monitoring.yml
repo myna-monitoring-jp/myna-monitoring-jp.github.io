@@ -1,0 +1,178 @@
+name: Daily monitoring
+
+# 毎朝 7:00 JST に調査パイプラインを回し、サイトへ反映する。
+#
+# 既存の daily-update.yml（curated + 機械収集のマージ）と統合し、
+# 二重デプロイを避けるためデプロイはこのワークフローだけが行う。
+#
+# 失敗時の方針：
+#   - 調査（run-research）が失敗しても、既存の公開サイトは壊さない
+#   - QAでブロッキングエラーが出た場合は日別レポートを書かず、その日は反映しない
+#   - どちらの場合も直前の公開内容が残り、画面に最終正常更新が出る
+on:
+  schedule:
+    - cron: '0 22 * * *' # 22:00 UTC = 07:00 JST
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'true にすると差分表示だけでコミット・デプロイしない'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+      max_fetch:
+        description: '本文を取得するページ数の上限'
+        required: false
+        default: '80'
+
+permissions:
+  contents: write # 生成データのコミットに必要
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+      qa_passed: ${{ steps.research.outcome == 'success' }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      # 調査パイプライン。discover → fetch → extract → cluster → verify
+      #                  → score → diff → reaction → compose → qa → render
+      #
+      # 本文取得を伴うため既定の6分では足りない。
+      # QAでブロッキングエラーが出ると終了コード1で止まり、レポートは書かれない。
+      - name: Run research pipeline
+        id: research
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          MAX_FETCH: ${{ inputs.max_fetch || '80' }}
+          # 抽出にLLMを使う場合のみ設定する。無くても決定論的抽出で動く
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/run-research.mjs
+
+      - name: Validate event schema
+        if: steps.research.outcome == 'success'
+        run: node scripts/validate-events.mjs
+
+      # 既存の表示用データ（curated + 機械収集）も更新する。
+      # 調査パイプラインとは独立に動くので、片方が落ちても他方は反映される。
+      - name: Update site data
+        id: update
+        continue-on-error: true
+        timeout-minutes: 20
+        run: node scripts/update-data.mjs
+
+      - name: Validate site data
+        run: |
+          node scripts/validate-data.mjs public/data
+          node scripts/validate-data.mjs public/sample-data
+
+      - name: Typecheck and test
+        run: |
+          npm run typecheck
+          npm test
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet -- public/data public/reports data; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "データに変化はありませんでした。"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- public/data public/reports data
+          fi
+
+      - name: Commit generated data
+        if: steps.diff.outputs.changed == 'true' && inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data public/reports data
+          git commit -m "data: $(TZ=Asia/Tokyo date +%Y-%m-%d) 調査パイプライン自動更新"
+          git push
+
+      # 実行の記録を残す。取りこぼしを後から追跡できるようにするため
+      - name: Upload run logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-run-${{ github.run_number }}
+          path: |
+            data/runs/
+            data/review_queue.json
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Report failures
+        if: always()
+        run: |
+          if [ "${{ steps.research.outcome }}" != "success" ]; then
+            echo "::warning::調査パイプラインが失敗またはQA不合格でした。前回の公開内容が残ります。"
+          fi
+          if [ "${{ steps.update.outcome }}" != "success" ]; then
+            echo "::warning::表示用データの更新に失敗しました。サイトには最終正常更新時刻が表示されます。"
+          fi
+
+  build:
+    needs: research
+    if: inputs.dry_run != 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # research ジョブが push したコミットを取得する
+          ref: main
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - uses: actions/configure-pages@v5
+        id: pages
+
+      - name: Build
+        env:
+          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          VITE_DATA_SOURCE: ${{ vars.DATA_SOURCE || 'live' }}
+        run: npm run build
+
+      # 日別レポートは Vite の対象外なので、ビルド後に dist へ複製する
+      - name: Copy daily reports
+        run: |
+          mkdir -p dist/reports
+          if [ -d public/reports ]; then cp -r public/reports/. dist/reports/; fi
+          ls -1 dist/reports | tail -5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    if: inputs.dry_run != 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

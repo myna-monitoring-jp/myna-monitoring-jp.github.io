@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://myna-monitoring-jp.github.io/schema/event_schema.json",
+  "title": "Myna Monitoring Daily Research Data",
+  "type": "object",
+  "required": ["run", "events", "report"],
+  "properties": {
+    "run": {"$ref": "#/$defs/researchRun"},
+    "events": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/event"}
+    },
+    "report": {"$ref": "#/$defs/report"}
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["id", "type", "label", "url", "publisher", "verifiedAt"],
+      "properties": {
+        "id": {"type": "string"},
+        "type": {"enum": ["primary", "major_media", "specialist_media", "social", "survey", "app_store"]},
+        "tier": {"enum": [0, 1, 2, 3]},
+        "label": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "publisher": {"type": "string"},
+        "publishedAt": {"type": ["string", "null"], "format": "date-time"},
+        "updatedAt": {"type": ["string", "null"], "format": "date-time"},
+        "verifiedAt": {"type": "string", "format": "date-time"},
+        "httpStatus": {"type": ["integer", "null"]},
+        "finalUrl": {"type": ["string", "null"], "format": "uri"},
+        "independentReporting": {"type": "boolean", "default": false},
+        "syndicationGroup": {"type": ["string", "null"]},
+        "contentHash": {"type": ["string", "null"]},
+        "note": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "publicVoice": {
+      "type": "object",
+      "required": ["id", "platform", "summary", "observedAt", "representativeOfPopulation"],
+      "properties": {
+        "id": {"type": "string"},
+        "platform": {"enum": ["x", "yahoo_comments", "yahoo_realtime", "app_store", "google_play", "professional_comment", "survey"]},
+        "url": {"type": ["string", "null"], "format": "uri"},
+        "postedAt": {"type": ["string", "null"], "format": "date-time"},
+        "observedAt": {"type": "string", "format": "date-time"},
+        "summary": {"type": "string"},
+        "stance": {"enum": ["support", "expectation", "convenience", "concern", "dissatisfaction", "legitimate_objection", "misunderstanding", "overstatement", "field_report", "mixed"]},
+        "replyCount": {"type": ["integer", "null"], "minimum": 0},
+        "repostCount": {"type": ["integer", "null"], "minimum": 0},
+        "quoteCount": {"type": ["integer", "null"], "minimum": 0},
+        "likeCount": {"type": ["integer", "null"], "minimum": 0},
+        "viewCount": {"type": ["integer", "null"], "minimum": 0},
+        "commentCount": {"type": ["integer", "null"], "minimum": 0},
+        "beforeCampaign": {"type": ["boolean", "null"]},
+        "directReactionToCampaign": {"type": ["boolean", "null"]},
+        "representativeOfPopulation": {"const": false},
+        "sourceId": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "survey": {
+      "type": "object",
+      "required": ["organization", "fieldworkStart", "fieldworkEnd", "method", "sampleSize", "question", "results"],
+      "properties": {
+        "organization": {"type": "string"},
+        "fieldworkStart": {"type": "string", "format": "date"},
+        "fieldworkEnd": {"type": "string", "format": "date"},
+        "method": {"type": "string"},
+        "sampleSize": {"type": "integer", "minimum": 1},
+        "population": {"type": "string"},
+        "question": {"type": "string"},
+        "choices": {"type": "array", "items": {"type": "string"}},
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "percent"],
+            "properties": {
+              "label": {"type": "string"},
+              "percent": {"type": "number", "minimum": 0, "maximum": 100}
+            }
+          }
+        },
+        "sourceId": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "factCheck": {
+      "type": "object",
+      "required": ["claim", "assessment", "explanation", "supportingSourceIds", "confidence"],
+      "properties": {
+        "claim": {"type": "string"},
+        "assessment": {"enum": ["confirmed", "partly_true", "misunderstanding", "overstatement", "legitimate_policy_concern", "unverified", "source_conflict"]},
+        "explanation": {"type": "string"},
+        "supportingSourceIds": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": false
+    },
+    "metric": {
+      "type": "object",
+      "required": ["key", "label", "value", "observedAt"],
+      "properties": {
+        "key": {"type": "string"},
+        "label": {"type": "string"},
+        "value": {},
+        "unit": {"type": ["string", "null"]},
+        "scope": {"type": ["string", "null"]},
+        "denominator": {"type": ["string", "null"]},
+        "observedAt": {"type": "string", "format": "date-time"},
+        "sourceId": {"type": ["string", "null"]},
+        "qualifier": {"enum": ["exact", "about", "maximum", "minimum", "possible", "reported", "unknown"]}
+      },
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "required": ["id", "canonicalKey", "title", "eventClass", "status", "severity", "detectedAt", "lastMaterialUpdateAt", "summary", "sources"],
+      "properties": {
+        "id": {"type": "string"},
+        "canonicalKey": {"type": "string"},
+        "title": {"type": "string"},
+        "entity": {"type": ["string", "null"]},
+        "eventClass": {"enum": ["outage", "planned_maintenance", "operational_load", "policy_change", "security_incident", "public_communication", "positive_service_update", "survey"]},
+        "domain": {"enum": ["myna_insurance", "online_eligibility", "myna_card", "electronic_certificate", "myna_portal", "myna_app", "public_money_account", "pmh", "e_prescription", "local_government", "medical_it", "cybersecurity", "public_relations", "other"]},
+        "systemLayer": {"type": ["string", "null"]},
+        "polarity": {"enum": ["negative", "positive", "neutral_watch", "mixed"]},
+        "status": {"enum": ["new", "attention", "follow_up", "planned", "improving", "resolved", "quiet", "archived"]},
+        "deltaStatus": {"enum": ["new", "expanded", "material_update", "improving", "resolved", "unchanged", "reignited", "correction", "backfill"]},
+        "severity": {"enum": ["critical", "high", "medium", "low", "reference"]},
+        "impactScore": {"type": "integer", "minimum": 0, "maximum": 100},
+        "attentionScore": {"type": "integer", "minimum": 0, "maximum": 100},
+        "occurredAt": {"type": ["string", "null"], "format": "date-time"},
+        "detectedAt": {"type": "string", "format": "date-time"},
+        "publishedAt": {"type": ["string", "null"], "format": "date-time"},
+        "updatedAt": {"type": ["string", "null"], "format": "date-time"},
+        "lastMaterialUpdateAt": {"type": "string", "format": "date-time"},
+        "summary": {"type": "string"},
+        "whatIsNew": {"type": ["string", "null"]},
+        "affectedWho": {"type": "array", "items": {"type": "string"}},
+        "affectedRegions": {"type": "array", "items": {"type": "string"}},
+        "symptoms": {"type": "array", "items": {"type": "string"}},
+        "cause": {"type": ["string", "null"]},
+        "workaround": {"type": ["string", "null"]},
+        "recoveryAt": {"type": ["string", "null"], "format": "date-time"},
+        "officialAction": {"type": "array", "items": {"type": "string"}},
+        "medicalImpact": {"type": ["string", "null"]},
+        "personalDataTypes": {"type": "array", "items": {"type": "string"}},
+        "metrics": {"type": "array", "items": {"$ref": "#/$defs/metric"}},
+        "publicVoices": {"type": "array", "items": {"$ref": "#/$defs/publicVoice"}},
+        "surveys": {"type": "array", "items": {"$ref": "#/$defs/survey"}},
+        "factChecks": {"type": "array", "items": {"$ref": "#/$defs/factCheck"}},
+        "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+        "rawArticleCount": {"type": "integer", "minimum": 0},
+        "independentMediaCount": {"type": "integer", "minimum": 0},
+        "majorMediaCount": {"type": "integer", "minimum": 0},
+        "syndicatedCount": {"type": "integer", "minimum": 0},
+        "primarySourceConfirmed": {"type": "boolean"},
+        "unknowns": {"type": "array", "items": {"type": "string"}},
+        "dashboardVisible": {"type": "boolean"},
+        "pinned": {"type": "boolean"},
+        "reviewStatus": {"enum": ["unreviewed", "review_required", "reviewed", "rejected"]},
+        "corrections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["correctedAt", "field", "before", "after", "reason"],
+            "properties": {
+              "correctedAt": {"type": "string", "format": "date-time"},
+              "field": {"type": "string"},
+              "before": {},
+              "after": {},
+              "reason": {"type": "string"},
+              "sourceIds": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "queryLog": {
+      "type": "object",
+      "required": ["query", "purpose", "provider", "executedAt", "resultCount"],
+      "properties": {
+        "query": {"type": "string"},
+        "purpose": {"type": "string"},
+        "provider": {"type": "string"},
+        "executedAt": {"type": "string", "format": "date-time"},
+        "resultCount": {"type": "integer", "minimum": 0},
+        "selectedUrls": {"type": "array", "items": {"type": "string", "format": "uri"}},
+        "newMaterialEventCount": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "researchRun": {
+      "type": "object",
+      "required": ["runId", "startedAt", "timezone", "primaryWindowStart", "primaryWindowEnd", "queries", "qa"],
+      "properties": {
+        "runId": {"type": "string"},
+        "startedAt": {"type": "string", "format": "date-time"},
+        "completedAt": {"type": ["string", "null"], "format": "date-time"},
+        "timezone": {"const": "Asia/Tokyo"},
+        "primaryWindowStart": {"type": "string", "format": "date-time"},
+        "primaryWindowEnd": {"type": "string", "format": "date-time"},
+        "queries": {"type": "array", "items": {"$ref": "#/$defs/queryLog"}},
+        "providerVersions": {"type": "object"},
+        "lastSuccessfulRunAt": {"type": ["string", "null"], "format": "date-time"},
+        "qa": {
+          "type": "object",
+          "required": ["passed", "blockingErrors", "warnings"],
+          "properties": {
+            "passed": {"type": "boolean"},
+            "blockingErrors": {"type": "array", "items": {"type": "string"}},
+            "warnings": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "report": {
+      "type": "object",
+      "required": ["reportDate", "generatedAt", "summary", "negativeEventIds", "positiveEventIds", "prEventIds", "watchEventIds"],
+      "properties": {
+        "reportDate": {"type": "string", "format": "date"},
+        "generatedAt": {"type": "string", "format": "date-time"},
+        "summary": {"type": "string"},
+        "noMajorChange": {"type": "boolean"},
+        "negativeEventIds": {"type": "array", "items": {"type": "string"}},
+        "positiveEventIds": {"type": "array", "items": {"type": "string"}},
+        "prEventIds": {"type": "array", "items": {"type": "string"}},
+        "watchEventIds": {"type": "array", "items": {"type": "string"}},
+        "htmlPath": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    }
+  }
+}
