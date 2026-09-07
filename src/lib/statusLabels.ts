@@ -265,6 +265,8 @@ export const FACT_ASSESSMENT_META: Record<
   overstatement: { label: '言い過ぎ', tone: 'amber' },
   legitimate_debate: { label: '正当な制度論点', tone: 'blue' },
   scope_separation: { label: '影響範囲の切り分け', tone: 'purple' },
+  // 「否定できた」ではなく「確認できていない」。断定を避けるための判定。
+  unconfirmed: { label: '確認されず', tone: 'amber' },
 };
 
 /** Shown when an item has no observed reaction at all. */

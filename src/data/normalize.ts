@@ -8,6 +8,9 @@ import type {
   BriefingDiff,
   BriefingJudgment,
   BriefingMetric,
+  BriefingNewsItem,
+  BriefingPRItem,
+  BriefingSentimentRow,
   BriefingWatch,
   Correction,
   DataUpdateStatus,
@@ -139,6 +142,7 @@ const FACT_ASSESSMENTS = [
   'overstatement',
   'legitimate_debate',
   'scope_separation',
+  'unconfirmed',
 ] as const;
 
 function normalizeCorrections(value: unknown, itemId?: string): Correction[] {
@@ -552,6 +556,81 @@ function normalizeBriefing(value: unknown, issues: NormalizeIssue[]): Briefing |
   const overview = strings(value.overview);
   const caveats = strings(value.caveats);
 
+  const newsItems: BriefingNewsItem[] = asArray(value.newsItems).flatMap((raw, index) => {
+    if (!isObject(raw)) return [];
+    const headline = asString(raw.headline);
+    const body = strings(raw.body);
+    const sources = normalizeSources(raw.sources, `$.briefing.newsItems[${index}].sources`, issues);
+    // 出典が1件も無い書き起こしは載せない。裏の取れていないものを出す方が有害。
+    if (!headline || body.length === 0 || sources.every((source) => !source.active)) {
+      issues.push({
+        path: `$.briefing.newsItems[${index}]`,
+        message: '見出し・本文・有効な出典のいずれかが欠けているため表示しません。',
+      });
+      return [];
+    }
+    const publicVoice = asString(raw.publicVoice) ?? '';
+    return [
+      {
+        id: asString(raw.id) ?? `briefing-news-${index + 1}`,
+        headline,
+        severity: oneOf(raw.severity, SEVERITIES, 'medium'),
+        tone: raw.tone === 'positive' ? ('positive' as const) : ('negative' as const),
+        topicTags: strings(raw.topicTags),
+        body,
+        facts: asArray(raw.facts).flatMap((fact) => {
+          if (!isObject(fact)) return [];
+          const label = asString(fact.label);
+          const factValue = asString(fact.value);
+          return label && factValue ? [{ label, value: factValue }] : [];
+        }),
+        publicVoice,
+        // 文章が空なのに観測済みとは言わせない
+        voiceObserved: raw.voiceObserved === true && Boolean(publicVoice),
+        claims: asArray(raw.claims).flatMap((claim) => {
+          if (!isObject(claim)) return [];
+          const text = asString(claim.claim);
+          const assessment = optionalOneOf(claim.assessment, FACT_ASSESSMENTS);
+          if (!text || !assessment) return [];
+          return [{ claim: text, assessment, note: asString(claim.note) ?? '' }];
+        }),
+        sources,
+      },
+    ];
+  });
+
+  const briefingPrItems: BriefingPRItem[] = asArray(value.prItems).flatMap((raw, index) => {
+    if (!isObject(raw)) return [];
+    const headline = asString(raw.headline);
+    const origin = asString(raw.origin);
+    if (!headline || !origin) return [];
+    return [
+      {
+        id: asString(raw.id) ?? `briefing-pr-${index + 1}`,
+        headline,
+        heatLevel: oneOf(raw.heatLevel, SEVERITIES, 'low'),
+        badges: strings(raw.badges),
+        origin,
+        intent: asString(raw.intent) ?? '',
+        observedCriticism: asString(raw.observedCriticism) ?? '',
+        potentialIssues: asString(raw.potentialIssues) ?? '',
+        separation: asString(raw.separation) ?? '',
+        officialNote: asString(raw.officialNote) ?? '',
+        secondarySpread: asString(raw.secondarySpread) ?? '',
+        communicationNote: asString(raw.communicationNote) ?? '',
+        sources: normalizeSources(raw.sources, `$.briefing.prItems[${index}].sources`, issues),
+      },
+    ];
+  });
+
+  const sentimentRows: BriefingSentimentRow[] = asArray(value.sentimentRows).flatMap((raw) => {
+    if (!isObject(raw)) return [];
+    const channel = asString(raw.channel);
+    const situation = asString(raw.situation);
+    if (!channel || !situation) return [];
+    return [{ channel, situation, reading: asString(raw.reading) ?? '' }];
+  });
+
   // 空の枠を画面に出さない。どれか欠けたら「生成できなかった」扱いにする。
   if (
     metrics.length === 0 ||
@@ -575,6 +654,9 @@ function normalizeBriefing(value: unknown, issues: NormalizeIssue[]): Briefing |
     highlights: strings(value.highlights),
     judgments,
     diffs,
+    newsItems,
+    prItems: briefingPrItems,
+    sentimentRows,
     watchlist,
     caveats,
     // 出典は表示時にそのままリンクになるため、既存の出典正規化を通す

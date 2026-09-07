@@ -46,6 +46,17 @@ export function DashboardPage({ dataset, now, query }: DashboardPageProps) {
   const news = dashboardNews
     // 解説記事はトップニュース画面の下部、参考情報はこの画面の下部にまとめる
     .filter((item) => item.category !== 'commentary' && item.category !== 'reference')
+    /*
+     * 機械収集した見出しは本線の一覧に出さない。
+     *
+     * 見出しをそのまま並べたカードは表題以上の情報を持たず、書き起こされた
+     * 案件と同じ見た目で並ぶと報告の質が見分けられなくなる。
+     * 全量は「収集一覧」画面に置き、朝の状況判断がそこから選んで書き起こす。
+     *
+     * 解説記事欄と参考情報欄はここでは除かない。小タイルの別枠であり、
+     * 本線と混ざらないことが分かる形で置いてある。
+     */
+    .filter((item) => item.reviewState !== 'unreviewed')
     .sort((a, b) => statusRank(a) - statusRank(b));
 
   // 参考情報：一次情報だが監視対象の事象ではないもの。不具合の下に小さく置く。

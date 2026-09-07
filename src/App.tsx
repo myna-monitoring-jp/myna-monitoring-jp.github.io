@@ -10,6 +10,7 @@ import { DashboardPage } from '@/routes/DashboardPage';
 import { NewsPage } from '@/routes/NewsPage';
 import { IncidentsPage } from '@/routes/IncidentsPage';
 import { PRPage } from '@/routes/PRPage';
+import { CollectedPage } from '@/routes/CollectedPage';
 import { ArchivePage } from '@/routes/ArchivePage';
 import { NotFoundPage } from '@/routes/NotFoundPage';
 import type { ViewKey } from '@/lib/teamsSummary';
@@ -84,6 +85,7 @@ export function App({ initialDataset, initialIssues = [], now: fixedNow }: AppPr
           <Route path="/news" element={<NewsPage dataset={dataset} now={now} query={query} />} />
           <Route path="/incidents" element={<IncidentsPage dataset={dataset} now={now} query={query} />} />
           <Route path="/pr" element={<PRPage dataset={dataset} now={now} query={query} />} />
+          <Route path="/collected" element={<CollectedPage dataset={dataset} query={query} />} />
           <Route path="/archive" element={<ArchivePage dataset={dataset} now={now} query={query} />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

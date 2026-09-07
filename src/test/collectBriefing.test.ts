@@ -45,8 +45,16 @@ const VALID_BRIEFING = {
   watchlist: [{ theme: 'マイナ救急広告', detail: '掲載後のX転載と引用反応。' }],
   caveats: ['SNS・App Storeレビューは全国世論を代表しません。'],
   sources: [
-    { label: 'マイナポータルAPI 稼働状況', url: 'https://developers.digital.go.jp/x', publisher: 'デジタル庁' },
+    {
+      label: 'マイナポータルAPI 稼働状況',
+      url: 'https://developers.digital.go.jp/x',
+      publisher: 'デジタル庁',
+      kind: 'primary',
+    },
   ],
+  newsItems: [],
+  prItems: [],
+  sentimentRows: [],
 };
 
 beforeEach(async () => {

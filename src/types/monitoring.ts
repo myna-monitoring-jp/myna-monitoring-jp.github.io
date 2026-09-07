@@ -108,7 +108,14 @@ export type FactAssessment =
   /** 正当な制度論点 */
   | 'legitimate_debate'
   /** 影響範囲の切り分け（例: マイナアプリ障害 ≠ オン資全国障害） */
-  | 'scope_separation';
+  | 'scope_separation'
+  /**
+   * 確認されず。
+   * 「否定できた」ではなく「確認できていない」。断定を避けるために必要な判定で、
+   * 例えば「AIモデルの学習に利用された」に対して事業者照会の説明はあるが
+   * 第三者による確認がない、という状態をこれで表す。
+   */
+  | 'unconfirmed';
 
 export interface FactCheck {
   claim: string;
@@ -414,6 +421,92 @@ export interface BriefingWatch {
   detail: string;
 }
 
+/** 定量情報の1行。「事案全体：総数未公表」のように、無いことも値として書く。 */
+export interface BriefingFact {
+  label: string;
+  value: string;
+}
+
+/**
+ * 事実関係の切り分け1行。
+ * 世間で言われている論点に対して、どう扱うかを判定する。
+ */
+export interface BriefingClaim {
+  claim: string;
+  assessment: FactAssessment;
+  note: string;
+}
+
+/**
+ * 書き起こされたニュース1件。
+ *
+ * 収集した記事をそのまま並べるのではなく、材料を読んだうえで
+ * 載せる価値のあるものだけを必須項目の形に書き起こしたもの。
+ * 見出しも書き直す（元記事の表題ではなく、何が分かったかを書く）。
+ */
+export interface BriefingNewsItem {
+  id: string;
+  /** 書き直した見出し。 */
+  headline: string;
+  severity: Severity;
+  /** ネガティブ／要注意 と ポジティブ／前進 のどちらの節に置くか。 */
+  tone: 'negative' | 'positive';
+  /** 論点タグ（要配慮個人情報、利用者体験など）。 */
+  topicTags: string[];
+  /** A. ニュース自体。段落ごとの配列。 */
+  body: string[];
+  /** A の定量テーブル。 */
+  facts: BriefingFact[];
+  /** B. 国民の声・現場の声。観測されたものだけ。 */
+  publicVoice: string;
+  /** 観測された声があったか。無い場合は画面に「確認できず」と出す。 */
+  voiceObserved: boolean;
+  /** C. 事実関係・補足。 */
+  claims: BriefingClaim[];
+  /** D. 出典・リンク。 */
+  sources: Source[];
+}
+
+/**
+ * 書き起こされた広報案件1件。
+ *
+ * 添付レポートの8項目に対応する。④は「予測される批判」であり、
+ * 国民の声とは区別して広報上の確認ポイントとして扱う（要件どおり）。
+ */
+export interface BriefingPRItem {
+  id: string;
+  headline: string;
+  /** 炎上度。判定条件を満たさないものを「炎上」と呼ばないため段階で持つ。 */
+  heatLevel: Severity;
+  /** 状態を表す短い札（掲載初日、既存批判あり など）。 */
+  badges: string[];
+  /** ①起点 */
+  origin: string;
+  /** ②訴求意図 */
+  intent: string;
+  /** ③現に確認できる批判 */
+  observedCriticism: string;
+  /** ④想定される論点。国民の声ではなく広報上の確認ポイント。 */
+  potentialIssues: string;
+  /** ⑤切り分け */
+  separation: string;
+  /** ⑥公式補足 */
+  officialNote: string;
+  /** ⑦二次拡散 */
+  secondarySpread: string;
+  /** ⑧広報上の注意 */
+  communicationNote: string;
+  sources: Source[];
+}
+
+/** 「世論・反応の傾向」1行。観測チャネルごとに、状況と読み方を分けて書く。 */
+export interface BriefingSentimentRow {
+  channel: string;
+  situation: string;
+  /** そのチャネルの結果をどう読むか（代表性の扱い）。 */
+  reading: string;
+}
+
 /**
  * 毎朝の状況判断。機械収集（RSS・稼働状況ページ）とは別のレイヤーで、
  * 実際にページを確認した結果と、そこからの判断・留保を持つ。
@@ -435,6 +528,15 @@ export interface Briefing {
   highlights: string[];
   judgments: BriefingJudgment[];
   diffs: BriefingDiff[];
+  /**
+   * 書き起こされたニュース。収集した記事をそのまま並べたものではない。
+   * 材料の大半は捨て、載せる価値のあるものだけがここに来る。
+   */
+  newsItems: BriefingNewsItem[];
+  /** 書き起こされた広報案件。 */
+  prItems: BriefingPRItem[];
+  /** 世論・反応の傾向。チャネルごとの状況と読み方。 */
+  sentimentRows: BriefingSentimentRow[];
   watchlist: BriefingWatch[];
   /** 代表性の留保など、読み方の注意。省略不可。 */
   caveats: string[];

@@ -539,6 +539,8 @@ async function main() {
       now,
       // 前日のブリーフィングを渡す。渡さないと数値の差分（466件→509件）が出せない。
       previous: previous?.briefing ?? null,
+      // 機械収集の結果は「材料」として渡す。載せるものの選定は LLM が行う。
+      materials: feed.articles,
     });
     for (const message of result.errors) warn(message);
     if (result.briefing) {

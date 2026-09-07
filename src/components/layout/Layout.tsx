@@ -18,6 +18,8 @@ const NAV_ITEMS: NavItem[] = [
   { to: '/news', label: 'トップニュース・世論', icon: '◎' },
   { to: '/incidents', label: '不具合・エラー詳細', icon: '⚠' },
   { to: '/pr', label: '広報・広告ウォッチ', icon: '◉' },
+  // 材料置き場。報告ではないため本線の後ろに置く。
+  { to: '/collected', label: '収集一覧', icon: '≡' },
   { to: '/archive', label: 'アーカイブ', icon: '▤' },
 ];
 

@@ -48,7 +48,15 @@ export function NewsPage({ dataset, now, query }: NewsPageProps) {
   const commentary = useMemo(() => items.filter((item) => item.category === 'commentary'), [items]);
   // 参考情報はダッシュボード下部に集約するので、ここでは扱わない
   const mainItems = useMemo(
-    () => items.filter((item) => item.category !== 'commentary' && item.category !== 'reference'),
+    () =>
+      items
+        .filter((item) => item.category !== 'commentary' && item.category !== 'reference')
+        /*
+         * 機械収集した見出しは本線の一覧に出さない。全量は「収集一覧」画面へ。
+         * 表題以上の情報を持たないカードを書き起こしと同じ一覧に混ぜると、
+         * どれが裏を取った案件なのか見分けられなくなる。
+         */
+        .filter((item) => item.reviewState !== 'unreviewed'),
     [items],
   );
 

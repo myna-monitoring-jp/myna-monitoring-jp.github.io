@@ -1,4 +1,6 @@
 import type { Briefing } from '@/types/monitoring';
+import { BriefingNewsCard } from '@/components/briefing/BriefingNewsCard';
+import { BriefingPRCard } from '@/components/briefing/BriefingPRCard';
 import { ExternalLinkButton } from '@/components/common/ExternalLinkButton';
 import { BRIEFING_CHANGE_META } from '@/lib/statusLabels';
 import { formatDateTime } from '@/lib/format';
@@ -31,6 +33,10 @@ export function MorningBriefing({ briefing }: MorningBriefingProps) {
   }
 
   const { linkable } = partitionSources(briefing.sources);
+
+  // 添付レポートと同じ並び：ネガティブ／要注意 を先に、ポジティブ／前進 を後に
+  const negative = briefing.newsItems.filter((item) => item.tone === 'negative');
+  const positive = briefing.newsItems.filter((item) => item.tone === 'positive');
 
   return (
     <section className="briefing" data-testid="briefing" aria-labelledby="briefing-heading">
@@ -121,6 +127,68 @@ export function MorningBriefing({ briefing }: MorningBriefingProps) {
           </tbody>
         </table>
       </div>
+
+      {negative.length > 0 ? (
+        <>
+          <h3 className="briefing-subhead">ネガティブなニュース／要注意</h3>
+          <div className="briefing-items">
+            {negative.map((item, index) => (
+              <BriefingNewsCard item={item} index={index + 1} key={item.id} />
+            ))}
+          </div>
+        </>
+      ) : null}
+
+      {positive.length > 0 ? (
+        <>
+          <h3 className="briefing-subhead">ポジティブなニュース／制度・運用の前進</h3>
+          <div className="briefing-items">
+            {positive.map((item, index) => (
+              <BriefingNewsCard item={item} index={index + 1} key={item.id} />
+            ))}
+          </div>
+        </>
+      ) : null}
+
+      {briefing.prItems.length > 0 ? (
+        <>
+          <h3 className="briefing-subhead">広報・SNS炎上／批判動向</h3>
+          <div className="briefing-items">
+            {briefing.prItems.map((item) => (
+              <BriefingPRCard item={item} key={item.id} />
+            ))}
+          </div>
+        </>
+      ) : null}
+
+      {briefing.sentimentRows.length > 0 ? (
+        <>
+          <h3 className="briefing-subhead">世論・反応の傾向</h3>
+          <div className="tablewrap">
+            <table className="briefing-sentiment" data-testid="briefing-sentiment">
+              <caption className="visually-hidden">
+                観測チャネルごとの今朝の状況と、その結果の読み方
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">観測チャネル</th>
+                  <th scope="col">今朝の状況</th>
+                  <th scope="col">読み方</th>
+                </tr>
+              </thead>
+              <tbody>
+                {briefing.sentimentRows.map((row) => (
+                  <tr key={row.channel} data-testid="briefing-sentiment-row">
+                    <th scope="row">{row.channel}</th>
+                    <td>{row.situation}</td>
+                    <td>{row.reading}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      ) : null}
 
       <h3 className="briefing-subhead">今日の優先ウォッチ</h3>
       <ol className="briefing-watchlist" data-testid="briefing-watchlist">

@@ -35,6 +35,14 @@ const PR_CLASSIFICATIONS = new Set(['reported_backlash', 'active_watch', 'active
 const SOURCE_TYPES = new Set(['primary', 'media', 'social', 'survey']);
 const BANNED_WORDS = ['WATCH', '継続中の案件'];
 const BRIEFING_CHANGES = new Set(['new', 'increased', 'decreased', 'flat', 'scheduled_end', 'resolved']);
+const FACT_ASSESSMENTS = new Set([
+  'fact',
+  'misunderstanding',
+  'overstatement',
+  'legitimate_debate',
+  'scope_separation',
+  'unconfirmed',
+]);
 
 const errors = [];
 const warnings = [];
@@ -196,6 +204,61 @@ function checkBriefing(file, briefing) {
 
   // 出典は表示時にそのままリンクになる。リンク契約を満たせないURLは公開しない
   checkSources(file, `${base}`, briefing.sources ?? []);
+
+  /*
+   * 書き起こし。ここが報告の中身なので検査を厚くする。
+   * 出典の無い書き起こしは公開しない（裏の取れていない記事を報告として
+   * 出す方が、載せないより有害）。
+   */
+  (briefing.newsItems ?? []).forEach((item, index) => {
+    const path = `${base}.newsItems[${index}]`;
+    if (!item.headline) fail(file, path, 'headline は必須です。');
+    if (!Array.isArray(item.body) || item.body.length === 0) {
+      fail(file, path, 'body（ニュース自体の本文）は1件以上必要です。');
+    }
+    if (!SEVERITIES.has(item.severity)) fail(file, path, `severity が不正です: ${item.severity}`);
+    if (item.tone !== 'negative' && item.tone !== 'positive') {
+      fail(file, path, `tone は negative / positive のいずれかです: ${item.tone}`);
+    }
+    const sources = item.sources ?? [];
+    if (sources.length === 0) {
+      fail(file, path, '出典が1件も無い書き起こしは公開できません。');
+    }
+    checkSources(file, path, sources);
+
+    // 声が無いのに観測済みと言わせない
+    if (item.voiceObserved === true && !String(item.publicVoice ?? '').trim()) {
+      fail(file, path, 'voiceObserved が true なのに publicVoice が空です。');
+    }
+
+    (item.claims ?? []).forEach((claim, claimIndex) => {
+      const claimPath = `${path}.claims[${claimIndex}]`;
+      if (!claim.claim) fail(file, claimPath, 'claim は必須です。');
+      if (!FACT_ASSESSMENTS.has(claim.assessment)) {
+        fail(file, claimPath, `assessment が不正です: ${claim.assessment}`);
+      }
+    });
+
+    // Google News のリダイレクトURLは一次情報に到達しないため出典にしない
+    for (const source of sources) {
+      if (String(source.url ?? '').includes('news.google.com')) {
+        fail(file, path, 'Google News のリダイレクトURLは出典に使えません（元の媒体のURLを書いてください）。');
+      }
+    }
+  });
+
+  (briefing.prItems ?? []).forEach((item, index) => {
+    const path = `${base}.prItems[${index}]`;
+    if (!item.headline) fail(file, path, 'headline は必須です。');
+    if (!item.origin) fail(file, path, 'origin（①起点）は必須です。');
+    if (!SEVERITIES.has(item.heatLevel)) fail(file, path, `heatLevel が不正です: ${item.heatLevel}`);
+    /*
+     * 広報案件は出典が無くても正しい場合がある。
+     * 「行政広報の新規大型炎上は確認なし」のように、掲載物が存在しないことを
+     * 記録する項目には開くべきURLが無い。空を警告にしない。
+     */
+    if ((item.sources ?? []).length > 0) checkSources(file, path, item.sources);
+  });
 }
 
 const targetDir = resolve(process.argv[2] ?? 'public/data');
