@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-07T12:37:56.238+09:00",
+  "generatedAt": "2026-09-07T13:18:25.210+09:00",
   "reportDate": "2026-09-07",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-07T12:37:56.238+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-07T13:18:25.210+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -382,7 +382,7 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-07T12:37:56.238+09:00",
+      "lastMaterialUpdateAt": "2026-09-07T13:18:25.210+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
@@ -419,7 +419,7 @@
           "linkText": "報道記事を開く",
           "publisher": "パナソニック コネクト",
           "publishedAt": "2026-08-24T23:30:13+09:00",
-          "verifiedAt": "2026-09-07T12:37:56.238+09:00",
+          "verifiedAt": "2026-09-07T13:18:25.210+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -891,7 +891,7 @@
       "detectedAt": "2026-09-03T15:56:04.640+09:00",
       "publishedAt": "2026-08-24T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-08-24T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQM0E5bUJVMEEtdkhHWGt1Z3ZPNVkzZWhhZ2pmR0EzdGVuUXJRcDhNaENhVkpMbEQxaDhkNE5LZ1FpaG01bUVTNUoyWnkzcXN5bmRMREs4b2RPc2ZVeGZyRU95MVdkREFfbjdmR2pzVlV3ODVvY0RkbDJSWUtqQllVaVpjaTF4ZzhZZW9LR01B?oc=5\" target=\"_blank\">個人番号カード（マイナンバーカード）申請等の休日窓口の開設について</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.osaka-izumi.lg.jp</font>",
+      "summary": "個人番号カード（マイナンバーカード）申請等の休日窓口の開設について city.osaka-izumi.lg.jp",
       "dailyDiff": "2026-09-03の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -921,7 +921,7 @@
       "detectedAt": "2026-09-03T15:56:04.640+09:00",
       "publishedAt": "2026-08-18T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-08-18T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQc3ZFNVpQYjI4d19VQk1BVS1CUm83OGl1VUQwZzBybGtrNGd0aXB3YVp2RDduMWN4MnBOZ3JiZkN0VUNrUlMzSHJMZ1NzTGlrZDEwa2pzdzdNYWNJWDNpeUdPUW5VREY0NzBIWXlydEVZNDB1ZkkxM2pYeUFKSkMyVEFBazhqdnJfam1ETFYyTFRyNUItQUtCNTFZTmFqT0k?oc=5\" target=\"_blank\">マイナンバーカード・電子証明書の有効期限通知書について</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.tokorozawa.saitama.jp</font>",
+      "summary": "マイナンバーカード・電子証明書の有効期限通知書について city.tokorozawa.saitama.jp",
       "dailyDiff": "2026-09-03の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -951,7 +951,7 @@
       "detectedAt": "2026-09-03T15:56:04.640+09:00",
       "publishedAt": "2026-08-17T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-08-17T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNZ2lnbEIteFEwSnVtZGNUN2l1QmJHRFh4V1QtRnJQQXktdE5XeExmdGplTERMN2J3d1NsQUQ1Q2JJN2hMZUpNaXVhOTUzejYyeFd6ZFltRjd6aWRQOWN4aWlLcU82N1J6TWl3MnIxQmJ0MnBuVjNONnhRZE1VbjREdG4yZlYzMkh1VVU3TTBBcWdBc2lRejZaeFA5YTNCTkNwNGgtZE4tT05mSXp4eFBiVmtOb3AwRzYzYmdnVndpRmM5R3F1NHlz?oc=5\" target=\"_blank\">マイナンバーカードセンター予約ページ</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.kakogawa.lg.jp</font>",
+      "summary": "マイナンバーカードセンター予約ページ city.kakogawa.lg.jp",
       "dailyDiff": "2026-09-03の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -981,7 +981,7 @@
       "detectedAt": "2026-09-05T07:04:18.066+09:00",
       "publishedAt": "2026-09-01T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-09-01T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTFB4VzRhNENRYm5ZeGJjOWp4d20yaXVjRlhSc1k1VkJ0VHpBZHNiQmJ3c01NM3Z3OXd1N0FmRkk5NFVoOXlZdHpueXhSSnpjc053Yldsb01QOFpULURKXzM3UVc4czU3eFJBMU5QUGtKdC12Zk0?oc=5\" target=\"_blank\">マイナンバーカードの申請ができます！</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.kawaguchi.lg.jp</font>",
+      "summary": "マイナンバーカードの申請ができます！ city.kawaguchi.lg.jp",
       "dailyDiff": "2026-09-05の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1011,7 +1011,7 @@
       "detectedAt": "2026-09-05T07:04:18.066+09:00",
       "publishedAt": "2026-09-01T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-09-01T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTFBxRW1fSl9RUF9nQjNpNVdILUU2UTdJZ19sMzFhcnRaMGhacXZyejAxZ2dmbVZNS0FlakFZUXZnZFhfclptSXpKTjJYMnZOR1NWUkFTTkp0dkFDMTYyRGhDZXJrOGxlNzIyVktqVkJWRG1IdlE?oc=5\" target=\"_blank\">マイナンバーカードの申請から受け取りまで</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.kisarazu.lg.jp</font>",
+      "summary": "マイナンバーカードの申請から受け取りまで city.kisarazu.lg.jp",
       "dailyDiff": "2026-09-05の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1041,7 +1041,7 @@
       "detectedAt": "2026-09-06T07:04:08.348+09:00",
       "publishedAt": "2026-08-31T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-08-31T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNUUFNODhDQkxMNDBwOTEtX3h6R1R6dFJUWnpUcjZvN24yUmdJSlJVM284eXpxczFwWWFOYXFsOVdmd3d6YnRqc3NsQmc0elFBa3Axa3dpTVdmQzgzd3didjJlUG5ITXhmNWVuRjRXcWZ3dEJZaFU5TG9wUFhWc0NwZmdYLUllN1k2bXJwaDQybDF1OVFmc2VDTHJ0YnV4MVhicmdkWXhR?oc=5\" target=\"_blank\">マイナンバーカード交付臨時窓口を開設します</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.fujiidera.lg.jp</font>",
+      "summary": "マイナンバーカード交付臨時窓口を開設します city.fujiidera.lg.jp",
       "dailyDiff": "2026-09-06の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1071,7 +1071,7 @@
       "detectedAt": "2026-09-07T07:03:55.791+09:00",
       "publishedAt": "2026-08-27T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-08-27T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZWY1SGF4RmxxaFF5RE1MWG5FNVlCRXZfV1VLTDlLQmgwTF9KSnM4RVVRYzl2dWhMTG95TTQybmZtTG5kcU8tUkdvakRPZVhSVUVNSElJSVp4MTh6c3JqRFcyX1RzN2t5N1hzUmg2d190QVBWQ2JORGlGQV85WDEyR0lyZ25XVWhk?oc=5\" target=\"_blank\">マイナンバーカード出張申請会（電子証明書更新手続）のお知らせ</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.niigata.lg.jp</font>",
+      "summary": "マイナンバーカード出張申請会（電子証明書更新手続）のお知らせ city.niigata.lg.jp",
       "dailyDiff": "2026-09-07の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1101,7 +1101,7 @@
       "detectedAt": "2026-09-07T12:13:59.058+09:00",
       "publishedAt": "2026-09-02T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-09-02T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE93U25USzRlR3V0Y0xkOVVhYm1mZnJtVklibGUwZ01WX2NqYnd6LWxDT1BxNHAzRktsTFpGczZVcVZ4NEt1US1BUnVWek9sTDJmTjVseVpGWnlPVS02ZE9ZWEV6anR2dkpKODlic0RR?oc=5\" target=\"_blank\">パスポート（旅券）について</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">pref.niigata.lg.jp</font>",
+      "summary": "パスポート（旅券）について pref.niigata.lg.jp",
       "dailyDiff": "2026-09-07の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1131,7 +1131,7 @@
       "detectedAt": "2026-09-07T12:37:56.238+09:00",
       "publishedAt": "2026-09-06T22:56:53.000Z",
       "lastMaterialUpdateAt": "2026-09-06T22:56:53.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPRHZNeEhjb1pBc2tRQUJJRnBTR2dkczBhNG92NUhXR3NHQ1ZmaU1qQW41Y3J6YkRJOXZvbkJSdmpGVk5xaEFBbnhCM0JubGYyLTdtT21HWWFLQUhfYXlucnR2X1FRa0lDY0UxbkwwRFZWUnlmVEtPRUo5NVFQODJrY0Nn?oc=5\" target=\"_blank\">マイナ救急（令和8年（2026年）9月掲載）</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">政府広報オンライン</font>",
+      "summary": "マイナ救急（令和8年（2026年）9月掲載） 政府広報オンライン",
       "dailyDiff": "2026-09-07の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1162,7 +1162,7 @@
       "detectedAt": "2026-09-07T12:37:56.238+09:00",
       "publishedAt": "2026-09-03T01:35:03.000Z",
       "lastMaterialUpdateAt": "2026-09-03T01:35:03.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFAxOVE0RWpjMF85UVFTTWJneVZpRHV5S3lSdjN4MFF3UjlhdGdCV3ZhWDZTY1ZBRzAtaTdOa2wxbU80VmNZRThlNEU0SmFXank3ZDNNQnd2ckpqR2NsUlZremZoRmkwekI2Yl9VV213QXEzYVBDbUZKaFFJQQ?oc=5\" target=\"_blank\">マイナアプリ</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">政府広報オンライン</font>",
+      "summary": "マイナアプリ 政府広報オンライン",
       "dailyDiff": "2026-09-07の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1193,7 +1193,7 @@
       "detectedAt": "2026-09-07T12:37:56.238+09:00",
       "publishedAt": "2026-09-01T00:07:27.000Z",
       "lastMaterialUpdateAt": "2026-09-01T00:07:27.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE9FV0NnYW9pY2psQTBvQTVTSXd0MGQzN0JidTMwN2xtSzU4cmNqSWNnQktNcFd0Tl9oUmxmTGFnbVRaVEluRjREOGxPNlZzbldqSEtiSDBuSQ?oc=5\" target=\"_blank\">救急の日及び救急医療週間</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.ikoma.lg.jp</font>",
+      "summary": "救急の日及び救急医療週間 city.ikoma.lg.jp",
       "dailyDiff": "2026-09-07の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1223,7 +1223,7 @@
       "detectedAt": "2026-09-07T12:37:56.238+09:00",
       "publishedAt": "2026-08-31T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-08-31T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE5HbU1yQThmNEdScFBiYjRkak9VR0xIdHZuSkw4VEZPck5UN1dkMU91VmdYMVlpNlFlVllvNkp4a0s0dTFtZnJGekdocHBnbEUzc1lsdXFsUEVOZDZaX00zVER0cmUwRHV4TjFOTjVoa3U2RWktMW1oRklB?oc=5\" target=\"_blank\">マイナ救急の本格運用を開始します(令和8年度から）</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.ibaraki.osaka.jp</font>",
+      "summary": "マイナ救急の本格運用を開始します(令和8年度から） city.ibaraki.osaka.jp",
       "dailyDiff": "2026-09-07の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1253,7 +1253,7 @@
       "detectedAt": "2026-09-07T12:37:56.238+09:00",
       "publishedAt": "2026-08-26T07:00:00.000Z",
       "lastMaterialUpdateAt": "2026-08-26T07:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE4wU25nbWJzN2ZXWHJqUHpqMmM0R3E1ZE9WZ2lDWmxoc2psZzM3S0FTYmVCNl9MellGNXBLcE5uX3k5czhvZHB1dUZTbmltS0U2RWJETTE3YXdRTzhlUUs1dFU0cG5ZUnR3eTRlTzFB?oc=5\" target=\"_blank\">うるま市消防本部「救急フェア2026」開催について</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">city.uruma.lg.jp</font>",
+      "summary": "うるま市消防本部「救急フェア2026」開催について city.uruma.lg.jp",
       "dailyDiff": "2026-09-07の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1283,7 +1283,7 @@
       "detectedAt": "2026-09-07T12:37:56.238+09:00",
       "publishedAt": "2026-09-04T20:00:00.000Z",
       "lastMaterialUpdateAt": "2026-09-04T20:00:00.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE44R0dBR216Z255TDhzWUVKb2VHZWhqdU9NNFBkMC1OeGF0MHBHU284cHNWODdza1hvbS1FOGxXY3RFN2tpT1BNcFdjRjM0X19hWGVV?oc=5\" target=\"_blank\">口座の中身は見ません…政府が強調 年金の受取口座を「公金受取」用に自動登録する制度 不安を感じる人も</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">tokyo-np.co.jp</font>",
+      "summary": "口座の中身は見ません…政府が強調 年金の受取口座を「公金受取」用に自動登録する制度 不安を感じる人も tokyo-np.co.jp",
       "dailyDiff": "2026-09-07の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1314,7 +1314,7 @@
       "detectedAt": "2026-09-07T12:37:56.238+09:00",
       "publishedAt": "2026-08-29T02:00:01.000Z",
       "lastMaterialUpdateAt": "2026-08-29T02:00:01.000Z",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE9nN3JwMWRvXzNyUHpLLUthQ3E1YVNncWJXcW1qMHB1NHRPVXBidGQ2M1VxY0YtUHpLUUhneU43dmFxWmQ0N3hFdmc5dDl2VWpkM0JJa0lKNFhTZUIwcTNfRVE2ZDNRVi1wcUprS0VEaXRNZ01oMlpPd243My0tN0U?oc=5\" target=\"_blank\">『マイナ保険証』問題 期限切れ保険証も使える“暫定措置終了”で 患者から「何をもっていけばいいの？」問い合わせ急増 “保険証代わり”「資格確認書」は家族でも「届く・届かない」で大混乱に（関西テレビ）</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.yahoo.co.jp</font>",
+      "summary": "『マイナ保険証』問題 期限切れ保険証も使える“暫定措置終了”で 患者から「何をもっていけばいいの？」問い合わせ急増 “保険証代わり”「資格確認書」は家族でも「届く・届かない」で大混乱に（関西テレビ） news.yahoo.co.jp",
       "dailyDiff": "2026-09-07の自動収集で新規検知。",
       "reviewState": "unreviewed",
       "tags": [
@@ -1814,7 +1814,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-07T12:37:56.238+09:00",
+      "lastMaterialUpdateAt": "2026-09-07T13:18:25.210+09:00",
       "affectedCount": null,
       "affectedCountNote": "更新期限を迎える保有者。人数は自治体別に未公表",
       "symptoms": "立川市は9/2更新の案内で、カード交付に加え電子証明書の更新・新規発行、暗証番号再設定が混雑し待ち時間が60分以上となることが多いと明記。姫路市はマイナンバーコールセンターへの問い合わせ集中で電話がつながりにくい状態が続くと案内。広島市中区は夜間・休日の予約窓口を案内。",
@@ -1900,7 +1900,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁",
           "publishedAt": "2026-08-28T15:00:00+09:00",
-          "verifiedAt": "2026-09-07T12:37:56.238+09:00",
+          "verifiedAt": "2026-09-07T13:18:25.210+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -1911,7 +1911,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁 ウェブサービス・アプリケーション",
           "publishedAt": "2026-08-25T19:50:56+09:00",
-          "verifiedAt": "2026-09-07T12:37:56.238+09:00",
+          "verifiedAt": "2026-09-07T13:18:25.210+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -1922,7 +1922,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.niigata.lg.jp",
           "publishedAt": "2026-08-27T07:00:00.000Z",
-          "verifiedAt": "2026-09-07T12:37:56.238+09:00",
+          "verifiedAt": "2026-09-07T13:18:25.210+09:00",
           "active": true,
           "note": "自動収集"
         }

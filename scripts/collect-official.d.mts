@@ -4,6 +4,18 @@
  * TypeScript から参照するテスト向けに宣言だけを別に置いている。
  */
 
+/** 実体参照を戻す。二重エスケープ（`&amp;nbsp;`）にも対応する。 */
+export function decodeEntities(text: unknown): string;
+
+/** タグと実体参照を落として本文だけにする。 */
+export function toPlainText(html: unknown): string;
+
+/** Google News の「見出し - 媒体名」を分ける。 */
+export function splitGoogleNewsTitle(raw: unknown): { title: string; publisher: string };
+
+/** 概要が表題（＋媒体名）の焼き直しにすぎないか。 */
+export function isEchoOfTitle(description: unknown, title: string, publisher: string): boolean;
+
 export interface CollectedArticle {
   title: string;
   link: string;

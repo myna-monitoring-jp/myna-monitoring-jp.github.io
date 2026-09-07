@@ -22,7 +22,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { collectOfficialSources } from './collect-official.mjs';
+import { collectOfficialSources, toPlainText } from './collect-official.mjs';
 import { collectBriefing } from './collect-briefing.mjs';
 
 /* ------------------------------------------------------------------ 設定 */
@@ -217,6 +217,19 @@ const MUNICIPAL_HOST = /^(www\.)?(city|town|vill|pref|metro)\./i;
 const looksOfficialHost = (host) => OFFICIAL_DOMAIN.test(host) || MUNICIPAL_HOST.test(host);
 
 function isOfficialSource(article) {
+  /*
+   * Google News が <source url> で媒体のトップURLを教えてくれる場合はそれを使う。
+   * 記事リンクは news.google.com のリダイレクトなのでホスト名では判定できず、
+   * 媒体名の当て推量に頼っていた。
+   */
+  if (article._publisher_url) {
+    try {
+      if (looksOfficialHost(new URL(article._publisher_url).hostname)) return true;
+    } catch {
+      // 壊れたURLは無視して以降の判定に任せる
+    }
+  }
+
   let host = '';
   try {
     host = new URL(articleUrl(article)).hostname;
@@ -277,6 +290,19 @@ function severityOf(article) {
  * 既に取り込み済みの項目が古い分類のまま画面に残り続ける。
  * curated（レビュー済）項目には触れない。
  */
+/**
+ * 概要にHTMLが混ざっていたら本文だけにする。
+ *
+ * 実体参照の復元順の誤りで、生の `<a href=...>` が概要に入って画面に出た。
+ * 収集側は直したが、既に取り込み済みの項目は引き継ぎで残る。
+ * current.json は生成物なので、引き継ぐ際に直してよい。
+ */
+function repairSummary(summary) {
+  const text = String(summary ?? '');
+  if (!/<[a-z/!][^>]*>|&lt;|&amp;/i.test(text)) return text;
+  return toPlainText(text);
+}
+
 function reclassifyCarriedItem(item) {
   if (item.reviewState !== 'unreviewed') return item;
 
@@ -294,6 +320,7 @@ function reclassifyCarriedItem(item) {
   // 論調は解説記事欄でしか使わない。他の枠へ移る場合は落とす。
   return {
     ...item,
+    summary: repairSummary(item.summary),
     category: lane,
     polarity: lane === 'commentary' ? toneOf(pseudoArticle) : undefined,
   };

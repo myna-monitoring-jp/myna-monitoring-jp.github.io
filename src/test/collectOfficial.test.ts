@@ -6,7 +6,13 @@ import type { AddressInfo } from 'node:net';
 import { mkdtempSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { collectOfficialSources } from '../../scripts/collect-official.mjs';
+import {
+  collectOfficialSources,
+  toPlainText,
+  decodeEntities,
+  splitGoogleNewsTitle,
+  isEchoOfTitle,
+} from '../../scripts/collect-official.mjs';
 
 /**
  * 公式情報源の直接収集のテスト。
@@ -82,6 +88,63 @@ afterEach(async () => {
   server.closeAllConnections();
   await new Promise<void>((resolve) => server.close(() => resolve()));
   rmSync(workDir, { recursive: true, force: true });
+});
+
+describe('Google News の本文整形', () => {
+  /*
+   * 実際に画面へ生のHTMLが表示された入力。
+   * Google News の description は実体参照で包まれたHTMLで、しかも二重に
+   * エスケープされている（&amp;nbsp;）。
+   */
+  const REAL_BROKEN_INPUT =
+    '&lt;a href=&quot;https://news.google.com/rss/articles/CBMi&quot; target=&quot;_blank&quot;&gt;' +
+    'マイナ救急（令和8年（2026年）9月掲載）&lt;/a&gt;&amp;nbsp;&amp;nbsp;' +
+    '&lt;font color=&quot;#6f6f6f&quot;&gt;政府広報オンライン&lt;/font&gt;';
+
+  it('実体参照で包まれたHTMLを本文だけにする（生のHTMLを画面に出さない）', () => {
+    const plain = toPlainText(REAL_BROKEN_INPUT);
+    expect(plain).not.toContain('<');
+    expect(plain).not.toContain('href');
+    expect(plain).not.toContain('&nbsp;');
+    expect(plain).not.toContain('font');
+    expect(plain).toContain('マイナ救急');
+  });
+
+  it('二重エスケープを安定するまで戻す', () => {
+    expect(decodeEntities('&amp;nbsp;')).toBe(' ');
+    expect(decodeEntities('&amp;amp;lt;')).toBe('<');
+  });
+
+  it('表題から媒体名を分ける', () => {
+    expect(splitGoogleNewsTitle('マイナ救急（令和8年9月掲載） - 政府広報オンライン')).toEqual({
+      title: 'マイナ救急（令和8年9月掲載）',
+      publisher: '政府広報オンライン',
+    });
+  });
+
+  it('区切りが無ければ表題をそのまま残す', () => {
+    expect(splitGoogleNewsTitle('区切りのない見出し')).toEqual({
+      title: '区切りのない見出し',
+      publisher: '報道',
+    });
+  });
+
+  it('媒体名が長すぎる場合は見出しの一部として扱い、分けない', () => {
+    const long = 'ある見出し - ' + 'あ'.repeat(45);
+    expect(splitGoogleNewsTitle(long).title).toBe(long);
+  });
+
+  it('表題の焼き直しにすぎない概要を捨てる', () => {
+    const { title, publisher } = splitGoogleNewsTitle(
+      'マイナ救急（令和8年（2026年）9月掲載） - 政府広報オンライン',
+    );
+    expect(isEchoOfTitle(toPlainText(REAL_BROKEN_INPUT), title, publisher)).toBe(true);
+    expect(isEchoOfTitle('', title, publisher)).toBe(true);
+  });
+
+  it('中身のある概要は残す', () => {
+    expect(isEchoOfTitle('9月7日は朝日・読売、8日は北海道・東京に掲載予定。', '見出し', '媒体')).toBe(false);
+  });
 });
 
 describe('公式情報源の直接収集', () => {

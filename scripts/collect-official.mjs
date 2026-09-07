@@ -38,18 +38,43 @@ async function fetchText(url) {
   }
 }
 
-/** タグを落として本文だけにする。 */
-function toPlainText(html) {
-  return html
-    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+/**
+ * 実体参照を戻す。
+ *
+ * Google News は二重にエスケープしてくる（`&amp;nbsp;`）。1回だけ戻すと
+ * `&nbsp;` が本文に残るため、変化しなくなるまで繰り返す。
+ * `&amp;` を最後に処理するのは、1回の走査内で `&amp;lt;` を `<` に
+ * 早取りしないため。回数は3回で打ち切る（無限ループを避ける）。
+ */
+export function decodeEntities(text) {
+  let current = String(text ?? '');
+  for (let pass = 0; pass < 3; pass += 1) {
+    const next = current
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#0?39;/g, "'")
+      .replace(/&apos;/g, "'")
+      .replace(/&amp;/g, '&');
+    if (next === current) return current;
+    current = next;
+  }
+  return current;
+}
+
+/**
+ * タグを落として本文だけにする。
+ *
+ * 実体参照を戻すのはタグを落とす「前」でなければならない。
+ * Google News の description は実体参照で包まれたHTMLを含んでおり
+ * （`&lt;a href="..."&gt;`）、順序が逆だとタグを落としたあとに
+ * `<a href="...">` が文字列として現れる。実際に画面へ生のHTMLが表示された。
+ */
+export function toPlainText(html) {
+  return decodeEntities(html)
+    .replace(/<(script|style)[\s\S]*?<\/\1>/gi, ' ')
     .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -78,6 +103,12 @@ function parseFeed(xml) {
       link = href ? href[1] : '';
     }
     const date = pick('pubDate') || pick('dc:date') || pick('updated') || pick('published');
+    /*
+     * Google News は媒体のトップURLを <source url="..."> に入れてくる。
+     * 記事そのもののURLは JavaScript 描画で取れないが、これがあれば
+     * 媒体の正体（gov-online.go.jp など）が確実に分かる。
+     */
+    const sourceUrl = block.match(/<source[^>]*url=["']([^"']+)["']/i);
     if (!title || !link) return [];
     const parsed = date ? new Date(date) : null;
     return [
@@ -86,9 +117,32 @@ function parseFeed(xml) {
         link,
         pubDate: parsed && !Number.isNaN(parsed.getTime()) ? parsed.toISOString() : null,
         description: pick('description') || pick('summary'),
+        sourceUrl: sourceUrl ? sourceUrl[1] : '',
       },
     ];
   });
+}
+
+/**
+ * Google News の表題は「見出し - 媒体名」の形。
+ * 媒体名を表題に残すと、画面でも出典表示と二重になる。
+ */
+export function splitGoogleNewsTitle(raw) {
+  const text = String(raw ?? '').trim();
+  const index = text.lastIndexOf(' - ');
+  // 区切りが無い、または媒体名が長すぎる（見出しの一部の可能性）場合は分けない
+  if (index <= 0 || text.length - index - 3 > 40) return { title: text, publisher: '報道' };
+  return { title: text.slice(0, index).trim(), publisher: text.slice(index + 3).trim() || '報道' };
+}
+
+/** 概要が表題（＋媒体名）の焼き直しにすぎないか。 */
+export function isEchoOfTitle(description, title, publisher) {
+  const squash = (value) => String(value ?? '').replace(/\s+/g, '');
+  const body = squash(description);
+  if (!body) return true;
+  const stripped = body.replace(squash(title), '').replace(squash(publisher), '');
+  // 表題と媒体名を取り除いて数文字しか残らないなら情報が無い
+  return stripped.length <= 4;
 }
 
 const googleNewsUrl = (query) =>
@@ -243,14 +297,18 @@ export async function collectOfficialSources({ sourcesPath, statePath, now, maxA
       const items = parseFeed(await fetchText(googleNewsUrl(query)));
       for (const item of items.slice(0, limit)) {
         if (!withinAge(item.pubDate, ageDays)) continue;
+        const { title, publisher } = splitGoogleNewsTitle(item.title);
         result.articles.push({
-          title: item.title,
+          title,
           link: item.link,
           _resolved_url: item.link,
           pub_date: item.pubDate,
-          // Google News のタイトル末尾「 - 媒体名」から媒体を拾う
-          source: (item.title.split(' - ').pop() ?? '報道').trim(),
-          description: item.description,
+          source: publisher,
+          // 媒体の正体。isOfficialSource の判定を媒体名の当て推量に頼らせないため。
+          _publisher_url: item.sourceUrl,
+          // Google News の description は本文ではなく「見出し＋媒体名」の繰り返し。
+          // 表題と同じものを概要として持たせても情報が増えないので落とす。
+          description: isEchoOfTitle(item.description, title, publisher) ? '' : item.description,
           _ageChecked: true,
           _origin: `query:${query}`,
         });
