@@ -1,0 +1,30 @@
+name: Verify OpenAI key
+
+# OPENAI_API_KEY を差し替えたときの確認用。手動実行のみ。
+#
+# 毎朝のパイプラインは数分かかり課金も発生するため、キーの正しさだけを
+# 確かめる手段を分けている。モデル一覧の取得はトークンを消費しない。
+#
+# キーそのものはログに出さない（形式と接頭辞の種類だけを報告する）。
+on:
+  workflow_dispatch:
+
+# 読み取りだけ。コミットもデプロイもしない。
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Verify key
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BRIEFING_MODEL: ${{ vars.BRIEFING_MODEL || 'gpt-6-astra' }}
+        run: node scripts/verify-openai-key.mjs
