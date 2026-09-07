@@ -66,12 +66,51 @@
         このサイトはハッシュルーティング（<code>#/news</code> 形式）で動作しています。
         共有されたリンクが古い、またはパスが直接指定された可能性があります。
       </p>
-      <p>ダッシュボードから各画面へ移動できます。</p>
+      <p>ダッシュボードへ移動します。移動しない場合は下のボタンを押してください。</p>
       <!--
         ルートは相対パスで解決する。<org>.github.io/<repo>/ のようなサブディレクトリ配信でも
         正しくトップへ戻れるようにするため、絶対パスは使わない。
       -->
       <a class="action" href="./">ダッシュボードを開く</a>
     </main>
+
+    <script>
+      /*
+       * 行き止まりを作らないための自動復帰。
+       *
+       * このURLは社内で共有される。実際に、共有文の丸括弧が一緒にコピーされて
+       * `.../github.io/)` になり「開けない」という事故が起きた。1文字で
+       * 行き止まりになるのは共有物として問題があるため、自動でトップへ戻す。
+       *
+       * 併せて、`/news` のようにハッシュを省いたパス指定も該当画面へ振り替える。
+       */
+      /* @testable:start — この関数は src/test/fallbackRoute.test.ts が抜き出して検証する */
+      function resolveFallback(href) {
+        var ROUTES = ['news', 'incidents', 'pr', 'archive'];
+        var current = new URL(href);
+
+        // 末尾に紛れ込んだ記号を落とす（丸括弧・句読点のコピー事故が実際に起きた）
+        var last = current.pathname.split('/').pop().replace(/[)\]}）」』.,、。;:]+$/, '');
+
+        /*
+         * 相対解決に任せる。GitHub Pages は不明なパスに対してサイト直下の
+         * 404.html を返すため、要求URLのディレクトリがサイトのルートになる。
+         * ルート配信（org.github.io/）でもサブディレクトリ配信でも同じ式で済む。
+         */
+        var target = new URL('./', current);
+
+        // 画面名が読み取れる場合はその画面へ、読み取れなければダッシュボードへ
+        if (ROUTES.indexOf(last) !== -1) target.hash = '#/' + last;
+
+        // 元のハッシュが生きている場合はそれを優先する（共有された深いリンク）
+        if (current.hash && current.hash.length > 2) target.hash = current.hash;
+
+        return target.href;
+      }
+      /* @testable:end */
+
+      // 戻るボタンで404に戻らないよう replace を使う
+      location.replace(resolveFallback(location.href));
+    </script>
   </body>
 </html>
