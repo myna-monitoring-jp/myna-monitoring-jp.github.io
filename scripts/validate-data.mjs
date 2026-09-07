@@ -34,6 +34,7 @@ const INCIDENT_CATEGORIES = new Set([
 const PR_CLASSIFICATIONS = new Set(['reported_backlash', 'active_watch', 'active_stable']);
 const SOURCE_TYPES = new Set(['primary', 'media', 'social', 'survey']);
 const BANNED_WORDS = ['WATCH', '継続中の案件'];
+const BRIEFING_CHANGES = new Set(['new', 'increased', 'decreased', 'flat', 'scheduled_end', 'resolved']);
 
 const errors = [];
 const warnings = [];
@@ -148,6 +149,53 @@ function checkFile(filePath) {
       );
     }
   });
+
+  if (data.briefing) checkBriefing(file, data.briefing);
+}
+
+/**
+ * 朝の状況判断の検証。
+ *
+ * 生成物なので人手の校正が入らない。壊れたものを公開しないための最後の関門。
+ * ここを通らなかった日はデプロイしない（ワークフローが止まる）。
+ */
+function checkBriefing(file, briefing) {
+  const base = '$.briefing';
+
+  if (!briefing.confirmedAt) fail(file, `${base}.confirmedAt`, '確認時点は必須です。');
+  if (!briefing.generatedBy) {
+    fail(file, `${base}.generatedBy`, '何が生成したかを画面に出すため、モデル名は必須です。');
+  }
+
+  // 空の枠を画面に出さないため、主要な節は中身があることを求める
+  for (const key of ['metrics', 'overview', 'judgments', 'diffs', 'watchlist', 'caveats']) {
+    if (!Array.isArray(briefing[key]) || briefing[key].length === 0) {
+      fail(file, `${base}.${key}`, '1件以上必要です（空の節を画面に出さないため）。');
+    }
+  }
+
+  // 代表性の留保は要件。落ちていたら公開しない
+  if (Array.isArray(briefing.caveats) && !briefing.caveats.some((c) => /代表|一般化|範囲/.test(String(c)))) {
+    fail(file, `${base}.caveats`, '代表性の留保（SNS等は全国世論を代表しない旨）を必ず含めてください。');
+  }
+
+  (briefing.diffs ?? []).forEach((diff, index) => {
+    const path = `${base}.diffs[${index}]`;
+    if (!BRIEFING_CHANGES.has(diff.change)) fail(file, path, `change が不正です: ${diff.change}`);
+    if (!diff.theme) fail(file, path, 'theme は必須です。');
+    if (!diff.judgment) fail(file, path, 'judgment（その更新をどう読むか）は必須です。');
+  });
+
+  (briefing.metrics ?? []).forEach((metric, index) => {
+    const path = `${base}.metrics[${index}]`;
+    if (!metric.label || !metric.value) fail(file, path, 'label と value は必須です。');
+    for (const word of BANNED_WORDS) {
+      if (String(metric.value) === word) fail(file, path, `禁止語をラベルに使っています: ${word}`);
+    }
+  });
+
+  // 出典は表示時にそのままリンクになる。リンク契約を満たせないURLは公開しない
+  checkSources(file, `${base}`, briefing.sources ?? []);
 }
 
 const targetDir = resolve(process.argv[2] ?? 'public/data');

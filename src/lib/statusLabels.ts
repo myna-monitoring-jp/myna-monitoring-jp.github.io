@@ -1,4 +1,5 @@
 import type {
+  BriefingChange,
   FactAssessment,
   IncidentCategory,
   ItemStatus,
@@ -268,3 +269,19 @@ export const FACT_ASSESSMENT_META: Record<
 
 /** Shown when an item has no observed reaction at all. */
 export const NO_REACTION_TEXT = '新規の有意な反応は確認できず';
+
+/**
+ * 前日差分のラベル。案件の状態（ItemStatus）とは別の語彙で、
+ * 「前日と比べて何が動いたか」だけを表す。ここも「継続」は使わない。
+ */
+export const BRIEFING_CHANGE_META: Record<
+  BriefingChange,
+  { label: string; tone: 'new' | 'up' | 'down' | 'flat' | 'done'; symbol: string }
+> = {
+  new: { label: '新規', tone: 'new', symbol: '＋' },
+  increased: { label: '増加', tone: 'up', symbol: '↑' },
+  decreased: { label: '減少', tone: 'down', symbol: '↓' },
+  flat: { label: '横ばい', tone: 'flat', symbol: '＝' },
+  scheduled_end: { label: '予定終了', tone: 'done', symbol: '■' },
+  resolved: { label: '解消', tone: 'done', symbol: '●' },
+};

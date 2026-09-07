@@ -44,9 +44,16 @@ jobs:
       # 収集元の取得に失敗しても current.json は生成され、
       # 画面に「データ更新に失敗しています／最終正常更新」が表示される。
       # ここでは失敗を記録しつつ後続を続行する。
+      # OPENAI_API_KEY が設定されていれば、朝の状況判断（検索・公式ページ確認・
+      # 前日差分・優先ウォッチ）も生成する。未設定なら機械収集だけで動く。
+      # 調査に web_search を何度も使うため、既定の 6 分では足りない。
       - name: Update data
         id: update
         continue-on-error: true
+        timeout-minutes: 30
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BRIEFING_MODEL: ${{ vars.BRIEFING_MODEL || 'gpt-6-astra' }}
         run: node scripts/update-data.mjs
 
       - name: Validate data

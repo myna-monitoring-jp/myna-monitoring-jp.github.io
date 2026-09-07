@@ -3,6 +3,12 @@ import { isUsableExternalUrl } from '@/lib/links';
 import type {
   AppSettings,
   ArchiveEntry,
+  Briefing,
+  BriefingChange,
+  BriefingDiff,
+  BriefingJudgment,
+  BriefingMetric,
+  BriefingWatch,
   Correction,
   DataUpdateStatus,
   Incident,
@@ -487,6 +493,95 @@ function normalizeDataUpdate(value: unknown, generatedAt: string): DataUpdateSta
   };
 }
 
+const BRIEFING_CHANGES = ['new', 'increased', 'decreased', 'flat', 'scheduled_end', 'resolved'] as const;
+
+/**
+ * 朝の状況判断の正規化。
+ *
+ * 生成物なので、パイプラインの受け入れ検査を通っていても画面側でもう一度絞る。
+ * ここで落ちるもの：主要な節が空、出典がリンク契約を満たさない、差分ラベルが列挙外。
+ * 節が空になった場合は briefing 自体を undefined にして「生成できなかった」表示に倒す。
+ */
+function normalizeBriefing(value: unknown, issues: NormalizeIssue[]): Briefing | undefined {
+  if (!isObject(value)) return undefined;
+
+  const strings = (raw: unknown): string[] =>
+    Array.isArray(raw) ? raw.map((entry) => asString(entry)).filter((entry): entry is string => Boolean(entry)) : [];
+
+  const metrics: BriefingMetric[] = (Array.isArray(value.metrics) ? value.metrics : []).flatMap((raw) => {
+    if (!isObject(raw)) return [];
+    const label = asString(raw.label);
+    const metricValue = asString(raw.value);
+    if (!label || !metricValue) return [];
+    return [{ label, value: metricValue, alert: raw.alert === true }];
+  });
+
+  const judgments: BriefingJudgment[] = (Array.isArray(value.judgments) ? value.judgments : []).flatMap((raw) => {
+    if (!isObject(raw)) return [];
+    const area = asString(raw.area);
+    const text = asString(raw.text);
+    if (!area || !text) return [];
+    return [{ area, text }];
+  });
+
+  const diffs: BriefingDiff[] = (Array.isArray(value.diffs) ? value.diffs : []).flatMap((raw) => {
+    if (!isObject(raw)) return [];
+    const theme = asString(raw.theme);
+    if (!theme) return [];
+    if (!BRIEFING_CHANGES.includes(raw.change as (typeof BRIEFING_CHANGES)[number])) {
+      issues.push({ path: '$.briefing.diffs', message: `差分ラベルが不正です: ${String(raw.change)}` });
+      return [];
+    }
+    return [
+      {
+        change: raw.change as BriefingChange,
+        theme,
+        update: asString(raw.update) ?? '',
+        judgment: asString(raw.judgment) ?? '',
+      },
+    ];
+  });
+
+  const watchlist: BriefingWatch[] = (Array.isArray(value.watchlist) ? value.watchlist : []).flatMap((raw) => {
+    if (!isObject(raw)) return [];
+    const theme = asString(raw.theme);
+    if (!theme) return [];
+    return [{ theme, detail: asString(raw.detail) ?? '' }];
+  });
+
+  const overview = strings(value.overview);
+  const caveats = strings(value.caveats);
+
+  // 空の枠を画面に出さない。どれか欠けたら「生成できなかった」扱いにする。
+  if (
+    metrics.length === 0 ||
+    overview.length === 0 ||
+    judgments.length === 0 ||
+    diffs.length === 0 ||
+    watchlist.length === 0 ||
+    caveats.length === 0
+  ) {
+    issues.push({ path: '$.briefing', message: '朝の状況判断に空の節があるため表示しません。' });
+    return undefined;
+  }
+
+  return {
+    confirmedAt: asString(value.confirmedAt) ?? '',
+    windowFrom: asString(value.windowFrom) ?? '',
+    windowTo: asString(value.windowTo) ?? '',
+    generatedBy: asString(value.generatedBy) ?? '生成元不明',
+    metrics,
+    overview,
+    highlights: strings(value.highlights),
+    judgments,
+    diffs,
+    watchlist,
+    caveats,
+    // 出典は表示時にそのままリンクになるため、既存の出典正規化を通す
+    sources: normalizeSources(value.sources, '$.briefing.sources', issues),
+  };
+}
+
 /* ------------------------------------------------------------------ public */
 
 /** Empty but valid dataset. Used for the 404 / total-failure path. */
@@ -533,6 +628,7 @@ export function normalizeDataset(input: unknown): NormalizeReport {
           description: asString(headlineRaw.description) ?? '',
         }
       : undefined,
+    briefing: normalizeBriefing(input.briefing, issues),
     news: normalizeNews(input.news, issues),
     incidents: normalizeIncidents(input.incidents, issues),
     prItems: normalizePRItems(input.prItems, issues),

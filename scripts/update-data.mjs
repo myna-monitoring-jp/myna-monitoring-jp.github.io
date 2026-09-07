@@ -23,6 +23,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { collectOfficialSources } from './collect-official.mjs';
+import { collectBriefing } from './collect-briefing.mjs';
 
 /* ------------------------------------------------------------------ 設定 */
 
@@ -58,6 +59,13 @@ const AUTO_ITEM_RETENTION_DAYS = Number(process.env.AUTO_ITEM_RETENTION_DAYS ?? 
 const OFFICIAL_SOURCES =
   process.env.OFFICIAL_SOURCES === undefined ? 'scripts/sources.json' : process.env.OFFICIAL_SOURCES;
 
+/**
+ * 朝の状況判断を生成するか。
+ * OPENAI_API_KEY が無い環境（ローカル・テスト）では自動的に無効になるが、
+ * 明示的に切りたい場合は ENABLE_BRIEFING=0 を渡す。
+ */
+const ENABLE_BRIEFING = process.env.ENABLE_BRIEFING !== '0' && Boolean(process.env.OPENAI_API_KEY);
+
 const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
 
 /* ---------------------------------------------------------------- 小道具 */
@@ -89,6 +97,7 @@ function readJson(path, fallback = null) {
 function writeJson(path, value) {
   writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
 }
+
 
 /** 表記ゆれを潰したタイトル。重複判定に使う。 */
 function normalizeTitle(title) {
@@ -484,6 +493,33 @@ async function main() {
     feed.articles = [...feed.articles, ...official.articles];
   }
 
+  /* --- 朝の状況判断（検索とページ確認を伴う調査） --- */
+  /*
+   * 機械収集とは別のレイヤー。ここだけが「公式ページが今どう表示しているか」
+   * 「前日の数値と比べてどう動いたか」「確認できなかったこと」を持てる。
+   * 生成に失敗しても機械収集の結果は公開する（briefing は undefined になる）。
+   */
+  let briefing;
+  if (ENABLE_BRIEFING) {
+    log('朝の状況判断を生成: 検索・ページ確認');
+    const result = await collectBriefing({
+      now,
+      // 前日のブリーフィングを渡す。渡さないと数値の差分（466件→509件）が出せない。
+      previous: previous?.briefing ?? null,
+    });
+    for (const message of result.errors) warn(message);
+    if (result.briefing) {
+      briefing = result.briefing;
+      log(
+        `  指標 ${briefing.metrics.length} / 差分 ${briefing.diffs.length} / ` +
+          `優先ウォッチ ${briefing.watchlist.length} / 出典 ${briefing.sources.length}（モデル: ${briefing.generatedBy}）`,
+      );
+    } else {
+      // 前日分をそのまま流用しない。古い判断を今朝のものとして出す方が有害。
+      log('  生成できなかったため、朝の状況判断なしで出力します');
+    }
+  }
+
   /* --- 既知URLの集合（重複追加を防ぐ） --- */
   const knownUrls = new Set();
   const knownTitles = new Set();
@@ -671,6 +707,7 @@ async function main() {
     settings: curated.settings,
     dataUpdate,
     headline: curated.headline,
+    briefing,
     news: [...news, ...autoNews],
     incidents: [...incidents, ...autoIncidents],
     prItems: [...prItems, ...autoPr],

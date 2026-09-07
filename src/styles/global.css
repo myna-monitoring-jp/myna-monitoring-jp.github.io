@@ -1518,3 +1518,272 @@ td .actionrow {
     min-width: 0;
   }
 }
+
+/* ------------------------------------------------- 朝の状況判断（ブリーフィング） */
+/*
+ * ヘッダーは .hero と同じ紫のグラデーションで、その下に白いカードを重ねる。
+ * 差分ラベルは色だけに頼らず記号（＋↑↓＝■●）も併記する。
+ */
+
+.briefing {
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.briefing-missing {
+  padding: 16px 18px;
+}
+.briefing-missing .note {
+  margin: 0;
+}
+
+.briefing-head {
+  background: linear-gradient(135deg, #1c1730, #4b3189 62%, #886ce0);
+  color: #fff;
+  padding: 22px 26px 20px;
+}
+.briefing-kicker {
+  margin: 0;
+  font-size: 9.5px;
+  letter-spacing: 0.09em;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+.briefing-head h2 {
+  font-size: 26px;
+  margin: 5px 0 6px;
+}
+.briefing-window {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.briefing-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 9px;
+  margin: 15px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.briefing-metric {
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 11px;
+  padding: 9px 10px;
+}
+.briefing-metric-alert {
+  border-color: rgba(255, 214, 214, 0.7);
+  background: rgba(255, 158, 158, 0.18);
+}
+.briefing-metric-label {
+  display: block;
+  font-size: 9.5px;
+  opacity: 0.8;
+  margin-bottom: 3px;
+}
+.briefing-metric-value {
+  display: block;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.briefing-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  padding: 18px 22px 0;
+}
+.briefing-card h3 {
+  font-size: 15px;
+  margin: 0 0 10px;
+}
+.briefing-card p {
+  font-size: 12.5px;
+  margin: 0 0 9px;
+}
+.briefing-judgments {
+  background: var(--gray-bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 15px;
+}
+.briefing-judgment {
+  border-left: 3px solid var(--purple);
+  padding-left: 10px;
+  margin-bottom: 11px;
+}
+.briefing-judgment:last-child {
+  margin-bottom: 0;
+}
+.briefing-judgment-area {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--purple);
+  margin: 0 0 2px;
+}
+.briefing-judgment-text {
+  font-size: 11.5px;
+  color: var(--gray);
+  margin: 0;
+}
+
+.briefing-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.briefing-chip {
+  background: var(--purple-bg);
+  color: var(--purple);
+  border: 1px solid #e4d9ff;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.briefing-subhead {
+  font-size: 15px;
+  margin: 20px 22px 10px;
+}
+
+.briefing-diffs {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.briefing-diffs th,
+.briefing-diffs td {
+  border-bottom: 1px solid var(--line);
+  padding: 9px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.briefing-diffs thead th {
+  background: var(--gray-bg);
+  font-size: 11px;
+  color: var(--gray);
+}
+.briefing-diffs tbody th {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.briefing-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.briefing-change-new {
+  color: var(--red);
+}
+.briefing-change-up {
+  color: var(--amber);
+}
+.briefing-change-down {
+  color: var(--blue);
+}
+.briefing-change-flat {
+  color: var(--gray);
+}
+.briefing-change-done {
+  color: var(--green);
+}
+
+.briefing-watchlist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px;
+  margin: 0 22px;
+  padding: 0;
+  list-style: none;
+}
+.briefing-watch {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fcfcfe;
+}
+.briefing-watch-theme {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0 0 3px;
+}
+.briefing-watch-rank {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: var(--purple);
+  color: #fff;
+  font-size: 10px;
+  flex: none;
+}
+.briefing-watch-detail {
+  font-size: 11.5px;
+  color: var(--gray);
+  margin: 0;
+}
+
+.briefing-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.briefing-caveats {
+  margin: 18px 22px 0;
+  background: var(--amber-bg);
+  border: 1px solid #fde3b0;
+  border-radius: 10px;
+  padding: 11px 14px;
+}
+.briefing-caveats-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--amber);
+  margin: 0 0 5px;
+}
+.briefing-caveats ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.briefing-caveats li {
+  font-size: 11.5px;
+  color: var(--gray);
+}
+
+.briefing > .note {
+  margin: 12px 22px 18px;
+}
+
+@media (max-width: 900px) {
+  .briefing-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .briefing-grid,
+  .briefing-watchlist {
+    grid-template-columns: 1fr;
+  }
+  .briefing-head h2 {
+    font-size: 21px;
+  }
+}

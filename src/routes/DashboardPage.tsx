@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { Incident, MonitoringDataset, NewsItem, PRItem } from '@/types/monitoring';
+import { MorningBriefing } from '@/components/briefing/MorningBriefing';
 import { NewsCard } from '@/components/news/NewsCard';
 import { ReferenceTiles } from '@/components/news/ReferenceTiles';
 import { PRItemCard } from '@/components/pr/PRItemCard';
@@ -96,6 +97,12 @@ export function DashboardPage({ dataset, now, query }: DashboardPageProps) {
           </li>
         </ul>
       </section>
+
+      {/*
+        朝の状況判断。機械収集で取れない層（公式ページの現在の表示、前日との数値差分、
+        確認できなかったこと）を持つため、一覧より先に置く。
+      */}
+      <MorningBriefing briefing={dataset.briefing} />
 
       <ul className="legend" aria-label="状態ラベルの説明">
         {STATUS_ORDER.map((status) => (

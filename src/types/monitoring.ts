@@ -375,6 +375,73 @@ export interface DataUpdateStatus {
 
 export type DatasetKind = 'sample' | 'live';
 
+/* ------------------------------------------------------- 朝のブリーフィング */
+
+/**
+ * 前日差分のラベル。生成側に語彙を発明させないため列挙で固定する。
+ * 状態語彙（ItemStatus）とは別物。案件の状態ではなく「前日と比べて何が動いたか」を表す。
+ */
+export type BriefingChange = 'new' | 'increased' | 'decreased' | 'flat' | 'scheduled_end' | 'resolved';
+
+/** ヘッダーの指標カード。「新規全国オン資障害：確認なし」のように無かったことも書く。 */
+export interface BriefingMetric {
+  label: string;
+  value: string;
+  /** 注意を引く値かどうか。色ではなく記号と文字で区別する。 */
+  alert?: boolean;
+}
+
+/** 「今朝の判断」1件。領域ごとに、確認できた事実と、そこからの判断を分けて書く。 */
+export interface BriefingJudgment {
+  /** 例：医療・システム／広報／セキュリティ */
+  area: string;
+  text: string;
+}
+
+/** 「前日からの差分」1行。 */
+export interface BriefingDiff {
+  change: BriefingChange;
+  theme: string;
+  /** その日に確認できた更新内容。 */
+  update: string;
+  /** その更新をどう読むか。 */
+  judgment: string;
+}
+
+/** 「今日の優先ウォッチ」1件。 */
+export interface BriefingWatch {
+  theme: string;
+  detail: string;
+}
+
+/**
+ * 毎朝の状況判断。機械収集（RSS・稼働状況ページ）とは別のレイヤーで、
+ * 実際にページを確認した結果と、そこからの判断・留保を持つ。
+ *
+ * 生成物であり人手では編集しない。人の判断は curated.json 側に書く。
+ */
+export interface Briefing {
+  /** 確認時点。「9月7日09:51 JST確認」の元。 */
+  confirmedAt: string;
+  /** 主対象期間の開始。通常は24時間前。 */
+  windowFrom: string;
+  windowTo: string;
+  /** 生成に使ったモデル。何が書いたのかを画面に明示するために持つ。 */
+  generatedBy: string;
+  metrics: BriefingMetric[];
+  /** 総括の本文。段落ごとに配列で持つ。 */
+  overview: string[];
+  /** 総括の下に並べる要点チップ。 */
+  highlights: string[];
+  judgments: BriefingJudgment[];
+  diffs: BriefingDiff[];
+  watchlist: BriefingWatch[];
+  /** 代表性の留保など、読み方の注意。省略不可。 */
+  caveats: string[];
+  /** 確認に使った一次情報。リンク契約を通ったものだけが入る。 */
+  sources: Source[];
+}
+
 export interface MonitoringDataset {
   /** Hard separation between demo and production data. Shown as a banner. */
   dataset: DatasetKind;
@@ -388,6 +455,8 @@ export interface MonitoringDataset {
     title: string;
     description: string;
   };
+  /** 朝の状況判断。生成に失敗した日は undefined になり、画面はその旨を出す。 */
+  briefing?: Briefing;
   news: NewsItem[];
   incidents: Incident[];
   prItems: PRItem[];
