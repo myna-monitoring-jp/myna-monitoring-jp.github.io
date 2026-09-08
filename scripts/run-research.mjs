@@ -40,6 +40,7 @@ import { verifyCluster, needsReview } from '../src/pipeline/verify.mjs';
 import { calculateImpactScore, calculateAttentionScore, severityFromImpact, recognizeBacklash } from '../src/pipeline/score.mjs';
 import { indexPrevious, applyDiff, carryForward } from '../src/pipeline/diff.mjs';
 import { loadManualVoices, attachReactions } from '../src/pipeline/reaction.mjs';
+import { collectAppStoreMetrics } from '../src/pipeline/appstore.mjs';
 import { composeReport, bestTitle } from '../src/pipeline/compose.mjs';
 import { runQa } from '../src/pipeline/qa.mjs';
 import { renderDailyReport } from '../src/pipeline/render-report.mjs';
@@ -214,7 +215,21 @@ async function main() {
    * これを台帳に入れると、情報量のない項目が並んで報告の質が見分けられなくなる。
    * 記録は data/runs/<日付>/extracted.jsonl に残るので、取りこぼしの検証はできる。
    */
-  const clusters = allClusters.filter((cluster) => cluster.eventClass !== 'other');
+  const clusters = allClusters
+    .map((cluster) => {
+      if (cluster.eventClass !== 'other') return cluster;
+      /*
+       * 官公庁の一次情報で種別が決まらないものは「制度・運用の情報」として扱う。
+       *
+       * 稼働状況ページやダッシュボードは障害でも広報でもないが、
+       * 落としてしまうと「マイナポータルAPIは正常稼働」「保有率84.3%」のような
+       * 押さえておくべき動きが報告から消える（2026-09-08 に消えていた）。
+       * 添付の参照レポートも、これらをポジティブ／運用の前進側に置いている。
+       */
+      const hasOfficialBody = cluster.records.some((record) => record.official && record.usableForFacts);
+      return hasOfficialBody ? { ...cluster, eventClass: 'positive_service_update' } : cluster;
+    })
+    .filter((cluster) => cluster.eventClass !== 'other');
   const unclassified = allClusters.length - clusters.length;
 
   log(`\n[cluster] ${inScope.length}記事 → ${allClusters.length}事象`);
@@ -222,13 +237,23 @@ async function main() {
   const syndicated = allClusters.reduce((sum, cluster) => sum + (cluster.syndicatedCount ?? 0), 0);
   log(`  転載として除外: ${syndicated}件`);
 
+  /* --- アプリストアの評価。数値の定点観測なので cluster は通さない --- */
+  const appStore = await collectAppStoreMetrics({ registry, now: nowIso, fetchText, previousIndex });
+  for (const message of appStore.errors) warn(`appstore: ${message}`);
+  log(`\n[appstore] 評価を取得: ${appStore.events.length}件`);
+  for (const event of appStore.events) {
+    log(`  ${event.title}`);
+  }
+
   /* --- verify → score → diff --- */
   /*
    * 表題をここで確定させる。
    * スコア算定は表題と本文を見るが、本文が取れない候補では表題が唯一の材料になる。
    * compose まで title を付けていなかったため、スコアが常に0になっていた。
    */
-  let events = clusters.map((cluster) => verifyCluster({ ...cluster, title: bestTitle(cluster) }, { config }));
+  let events = [...clusters, ...appStore.events].map((cluster) =>
+    verifyCluster({ ...cluster, title: cluster.title ?? bestTitle(cluster) }, { config }),
+  );
 
   events = events.map((event) => {
     const impact = calculateImpactScore(event, { config });

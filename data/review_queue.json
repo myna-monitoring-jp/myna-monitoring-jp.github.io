@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T22:09:13.207Z",
+  "generatedAt": "2026-09-08T02:14:44.837Z",
   "items": [
     {
       "eventId": "unknown|security_incident|2026-09-07|nolayer",
@@ -7,7 +7,7 @@
       "reasons": [
         "個人情報・セキュリティ事案"
       ],
-      "queuedAt": "2026-09-07T22:09:13.207Z"
+      "queuedAt": "2026-09-08T02:14:44.837Z"
     },
     {
       "eventId": "unknown|security_incident|2026-09-06|nolayer",
@@ -16,15 +16,15 @@
         "個人情報・セキュリティ事案",
         "炎上認定"
       ],
-      "queuedAt": "2026-09-07T22:09:13.207Z"
+      "queuedAt": "2026-09-08T02:14:44.837Z"
     },
     {
-      "eventId": "unknown|security_incident|2026-09-04|nolayer",
-      "title": "市立奈良病院のシステム障害 「サイバー攻撃ではなくセキュリティ監視装置の不具合が原因」専門家委員会が検証結果を報告",
+      "eventId": "unknown|security_incident|2026-09-08|nolayer",
+      "title": "東京科学大に不正アクセス、個人情報漏えいか 東工大・医科歯科大統合当時の学生・教職員情報も",
       "reasons": [
         "個人情報・セキュリティ事案"
       ],
-      "queuedAt": "2026-09-07T22:09:13.207Z"
+      "queuedAt": "2026-09-08T02:14:44.837Z"
     }
   ]
 }

@@ -116,6 +116,12 @@ const hostOf = (url) => {
  * 一次情報があるかどうかで書き方を変え、無い場合は必ずその旨を書く。
  */
 export function buildSummary(event) {
+  /*
+   * 定点観測の事象（アプリストアの評価など）は、観測した数値そのものが本文になる。
+   * 定型の組み立てより正確なので、用意されている場合はそれを使う。
+   */
+  if (event.summaryOverride) return event.summaryOverride;
+
   const parts = [];
 
   const best = event.records.find((record) => record.usableForFacts && record.official)
@@ -220,7 +226,8 @@ export function composeReport({ clusters, run, reportDate, nowIso, config }) {
         majorMediaCount: cluster.majorMediaCount ?? 0,
         syndicatedCount: cluster.syndicatedCount ?? 0,
         primarySourceConfirmed: Boolean(cluster.primarySourceConfirmed),
-        unknowns: cluster.unknowns ?? [],
+        // 事象固有の留保（代表性の注記など）を足す
+        unknowns: [...(cluster.unknowns ?? []), ...(cluster.unknownsExtra ?? [])],
         dashboardVisible: cluster.status !== 'quiet' && cluster.status !== 'archived',
         pinned: Boolean(cluster.pinned),
         reviewStatus: cluster.reviewStatus ?? 'unreviewed',
@@ -260,6 +267,10 @@ export function bestTitle(cluster) {
 }
 
 function buildMetrics(cluster, nowIso) {
+  // 定点観測で取れた数値がある場合はそれを使う（取得時点付き）
+  if (Array.isArray(cluster.observedMetrics) && cluster.observedMetrics.length > 0) {
+    return cluster.observedMetrics;
+  }
   if (typeof cluster.affectedCount !== 'number') return [];
   return [
     {

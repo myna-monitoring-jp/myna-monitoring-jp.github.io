@@ -10,6 +10,7 @@
  */
 
 import { classifySource } from './config.mjs';
+import { extractIndexLinks } from './feed.mjs';
 
 const GOOGLE_NEWS = 'https://news.google.com/rss/search';
 
@@ -236,26 +237,81 @@ export async function discoverFetchable({ registry, catalog, now, fetchText, par
 
   for (const page of registry.watch_urls ?? []) {
     const executedAt = new Date(now).toISOString();
-    candidates.push({
-      url: page.url,
-      title: page.label,
-      publishedAt: null,
-      publisherUrl: page.url,
-      publisher: page.publisher ?? page.label,
-      snippet: '',
-      tier: page.tier ?? 0,
-      fetchable: true,
-      systemLayerHint: page.system_layer ?? null,
-      discoveredBy: { pass: PASSES.B, purpose: `watch_url:${page.id}`, query: page.url },
-      discoveredAt: executedAt,
-    });
+    const selected = [];
+
+    /*
+     * link_pattern がある場合は一覧ページとして扱い、子リンクを候補にする。
+     *
+     * RSSを持たない重要な情報源が多く、ここを見ていなかったために
+     * 政府広報のCM・新聞広告と、地方厚生局の災害時受診特例の事務連絡を
+     * 丸ごと取りこぼしていた（2026-09-08 に判明）。
+     */
+    if (page.link_pattern) {
+      try {
+        const html = await fetchText(page.url);
+        const pattern = new RegExp(page.link_pattern);
+        /*
+         * キーワードでの絞り込みを件数制限より前に渡す。
+         * 逆にするとページ先頭のナビゲーションで枠を使い切る。
+         */
+        const links = extractIndexLinks(
+          html,
+          page.url,
+          pattern,
+          page.max_links ?? 40,
+          keyword ? (text) => keyword.test(text) : undefined,
+        );
+
+        for (const link of links) {
+          candidates.push({
+            url: link.url,
+            // アンカー文字列を仮の表題にする。取得後にページ側の表題で上書きされる
+            title: link.text || page.label,
+            publishedAt: null,
+            publisherUrl: page.url,
+            publisher: page.publisher ?? page.label,
+            snippet: '',
+            tier: page.tier ?? 0,
+            fetchable: true,
+            systemLayerHint: page.system_layer ?? null,
+            // 情報源が種別を決められる場合の指定（政府広報の掲載物など）
+            eventClassHint: page.event_class ?? null,
+            discoveredBy: { pass: PASSES.B, purpose: `watch_index:${page.id}`, query: page.url },
+            discoveredAt: executedAt,
+          });
+          selected.push(link.url);
+        }
+      } catch (error) {
+        errors.push(`${page.label}（${page.url}）: ${error.message}`);
+      }
+    }
+
+    // 一覧ページ自体も見る場合（稼働状況ページなど、ページそのものが情報）
+    if (page.fetch_self !== false) {
+      candidates.push({
+        url: page.url,
+        title: page.label,
+        publishedAt: null,
+        publisherUrl: page.url,
+        publisher: page.publisher ?? page.label,
+        snippet: '',
+        tier: page.tier ?? 0,
+        fetchable: true,
+        systemLayerHint: page.system_layer ?? null,
+        eventClassHint: page.event_class ?? null,
+        discoveredBy: { pass: PASSES.B, purpose: `watch_url:${page.id}`, query: page.url },
+        discoveredAt: executedAt,
+      });
+      selected.push(page.url);
+    }
+
     const log = {
       query: page.url,
-      purpose: `watch_url:${page.id}`,
+      purpose: page.link_pattern ? `watch_index:${page.id}` : `watch_url:${page.id}`,
       provider: 'watch_url',
       executedAt,
-      resultCount: 1,
-      selectedUrls: [page.url],
+      resultCount: selected.length,
+      selectedUrls: selected,
       newMaterialEventCount: 0,
     };
     queryLogs.push(log);

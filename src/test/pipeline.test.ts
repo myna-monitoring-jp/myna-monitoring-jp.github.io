@@ -5,6 +5,8 @@ import { describe, expect, it } from 'vitest';
 import { classifySource, isIndependentOutlet, syndicationGroupOf, matchesDomainPattern } from '../pipeline/config.mjs';
 import { buildQueries, fillTemplate, googleNewsUrl } from '../pipeline/discover.mjs';
 import { extractBody, extractDates, parseJapaneseDate, parseRobots, decodeEntities } from '../pipeline/fetch.mjs';
+import { extractIndexLinks } from '../pipeline/feed.mjs';
+import { extractAppRating, formatReviewCount } from '../pipeline/appstore.mjs';
 import {
   detectEventClass,
   detectSystemLayer,
@@ -13,6 +15,7 @@ import {
   extractOfficialDenials,
   detectRecoveryStatus,
   isInScope,
+  extractFromPage,
 } from '../pipeline/extract.mjs';
 import { canonicalKeyOf, clusterEvents, countMedia, similarity } from '../pipeline/cluster.mjs';
 import { findPrimarySources, resolveAffectedCount, collectUnknowns, needsReview } from '../pipeline/verify.mjs';
@@ -806,6 +809,148 @@ describe('15. 訂正履歴', () => {
     expect(applied.corrections).toHaveLength(0);
     const changes: { reason: string }[] = applied.materialChanges;
     expect(changes.some((change) => change.reason === '影響人数が判明')).toBe(true);
+  });
+});
+
+/* --------------------------------------------- 一覧ページからの取りこぼし --- */
+
+describe('一覧ページから子リンクを拾う（2026-09-08 の取りこぼし対策）', () => {
+  /**
+   * 実際に起きたこと：政府広報のマイナアプリCM、マイナ救急の新聞広告、
+   * 地方厚生局の災害時受診特例が丸ごと報告に出ていなかった。
+   * いずれもRSSを持たない一覧ページにしか無い。
+   */
+  const INDEX_HTML = `
+    <nav>
+      <a href="/aboutus/sitemap.html">サイトマップ</a>
+      <a href="/otoiawase.html">お問い合わせ</a>
+      <a href="/shinsei/index.html">申請等手続トップへ</a>
+    </nav>
+    <main>
+      <a href="/chugokushikoku/notice_a.pdf">令和8年の大雨に伴う災害の被災者に係るマイナ保険証又は資格確認書等の提示等について</a>
+      <a href="/chugokushikoku/notice_b.pdf">診療報酬の算定方法の一部改正について</a>
+    </main>`;
+
+  it('絞り込みを件数制限より前に適用する（ナビで枠を使い切らない）', () => {
+    const pattern = /example\.jp\/.+\.(html|pdf)$/;
+    // 上限3件。ナビが先に3件あるので、絞り込みが後だと通知に到達しない
+    const withoutFilter = extractIndexLinks(INDEX_HTML, 'https://example.jp/', pattern, 3);
+    expect(withoutFilter.some((link) => /マイナ保険証/.test(link.text))).toBe(false);
+
+    const withFilter = extractIndexLinks(INDEX_HTML, 'https://example.jp/', pattern, 3, (text) =>
+      /マイナ|保険証/.test(text),
+    );
+    expect(withFilter).toHaveLength(1);
+    expect(withFilter[0].text).toContain('資格確認書等の提示等について');
+    expect(withFilter[0].url).toBe('https://example.jp/chugokushikoku/notice_a.pdf');
+  });
+
+  it('相対URLを絶対URLへ解決する', () => {
+    const links = extractIndexLinks(
+      '<a href="/media/commercials/202609/video-313937.html">マイナアプリ</a>',
+      'https://www.gov-online.go.jp/media/commercials/',
+      /\/media\/commercials\/\d{6}\/[\w-]+\.html$/,
+    );
+    expect(links[0].url).toBe('https://www.gov-online.go.jp/media/commercials/202609/video-313937.html');
+  });
+
+  it('同じURLを二重に拾わない', () => {
+    const html = '<a href="/a.html">マイナ 1</a><a href="/a.html">マイナ 2</a>';
+    expect(extractIndexLinks(html, 'https://example.jp/', /\.html$/)).toHaveLength(1);
+  });
+});
+
+describe('官公庁の解説ページを障害と誤判定しない', () => {
+  /**
+   * 実際に起きたこと：政府広報の解説ページが本文中の「紛失」「使えない」を
+   * 拾って security_incident / outage に化けた。
+   */
+  it('情報源が種別を決められる場合はそれに従う', () => {
+    const explainer = '使いこなそう！進化するマイナンバーカード。紛失した場合は利用を一時停止できます。';
+    // 本文だけで見ると事故に見える
+    expect(detectEventClass(explainer)).toBe('security_incident');
+    // 情報源の指定があれば広報物として扱う
+    expect(detectEventClass(explainer, { hint: 'public_communication' })).toBe('public_communication');
+  });
+
+  it('政府広報の掲載物は広報物として分類される（表題に障害語が入っていても）', () => {
+    const record = extractFromPage(
+      {
+        status: 'ok',
+        finalUrl: 'https://www.gov-online.go.jp/media/commercials/202609/video-313937.html',
+        canonicalUrl: 'https://www.gov-online.go.jp/media/commercials/202609/video-313937.html',
+        url: 'https://www.gov-online.go.jp/media/commercials/202609/video-313937.html',
+        title: 'マイナアプリ | 政府広報オンライン',
+        body: 'マイナアプリの紹介。カードを紛失したときの一時停止についても案内しています。'.repeat(4),
+        publishedAt: '2026-09-03T00:00:00.000Z',
+        updatedAt: null,
+        candidate: {
+          title: '00:30 マイナアプリ',
+          publisher: '政府広報オンライン',
+          publisherUrl: 'https://www.gov-online.go.jp/media/commercials/',
+          eventClassHint: 'public_communication',
+          systemLayerHint: null,
+        },
+      },
+      { now: NOW, registry: REGISTRY, sourceInfo: { tier: 0, type: 'primary', official: true } },
+    );
+    expect(record.eventClass).toBe('public_communication');
+    expect(record.usableForFacts).toBe(true);
+  });
+
+  it('指定が無い官公庁ページは表題だけで判定する', () => {
+    const record = extractFromPage(
+      {
+        status: 'ok',
+        finalUrl: 'https://www.digital.go.jp/a',
+        canonicalUrl: 'https://www.digital.go.jp/a',
+        url: 'https://www.digital.go.jp/a',
+        title: 'マイナンバーカードの普及と利活用に関するダッシュボード',
+        // 本文には障害語が入るが、表題は普及状況の話
+        body: 'ダッシュボードでは保有率を公表しています。障害が発生した場合の連絡先も記載。'.repeat(4),
+        publishedAt: '2026-09-07T00:00:00.000Z',
+        updatedAt: null,
+        candidate: { title: 'ダッシュボード', publisher: 'デジタル庁', publisherUrl: 'https://www.digital.go.jp/' },
+      },
+      { now: NOW, registry: REGISTRY, sourceInfo: { tier: 0, type: 'primary', official: true } },
+    );
+    // 表題から障害とは読めないので other（後段で運用情報として扱う）
+    expect(record.eventClass).toBe('other');
+  });
+});
+
+describe('アプリストアの評価', () => {
+  /**
+   * 実際に起きたこと：ページ内に「似たようなアプリ」のJSON-LDが埋まっており、
+   * reviewCount を全部集めたら 1〜7,271件 という無意味な幅になった。
+   */
+  it('このアプリ自身の表示件数を優先し、他アプリのJSON-LDを混ぜない', () => {
+    const html = `
+      <span>2.3</span></span><span> out of 5</span>
+      <span class="multiline-clamp__text">535件の評価</span>
+      <script type="application/ld+json">{"reviewCount":535}</script>
+      <script type="application/ld+json">{"reviewCount":7271}</script>
+      <script type="application/ld+json">{"reviewCount":1}</script>`;
+    const result = extractAppRating(html);
+    expect(result?.rating).toBe(2.3);
+    expect(result?.reviewCountMin).toBe(535);
+    expect(result?.reviewCountMax).toBe(535);
+  });
+
+  it('表示箇所で件数がずれる場合は幅で持つ（推測で丸めない）', () => {
+    const html = '<span>530件の評価</span><span>536件の評価</span>';
+    const result = extractAppRating(html);
+    expect(formatReviewCount(result!.reviewCountMin, result!.reviewCountMax)).toBe('530〜536件');
+  });
+
+  it('何も取れなければ null を返す（推測しない）', () => {
+    expect(extractAppRating('<html><body>評価の表示なし</body></html>')).toBeNull();
+  });
+
+  it('評価値の範囲外は誤抽出として捨てる', () => {
+    const result = extractAppRating('<script type="application/ld+json">{"ratingValue":"98"}</script><span>10件の評価</span>');
+    expect(result?.rating).toBeNull();
+    expect(result?.reviewCountMin).toBe(10);
   });
 });
 

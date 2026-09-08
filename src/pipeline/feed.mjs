@@ -35,6 +35,54 @@ export function isEchoOfTitle(description, title, publisher) {
   return body.replace(squash(title), '').replace(squash(publisher), '').length <= 4;
 }
 
+/**
+ * 一覧ページから子リンクを抽出する。
+ *
+ * RSSを持たないが重要な情報源が多い。実際に取りこぼしていたもの：
+ *  - 政府広報オンラインのCM一覧（マイナアプリCMはここにしか無い）
+ *  - 政府広報オンラインの新聞広告一覧（マイナ救急の新聞広告）
+ *  - 地方厚生局の医療保険関係通知（災害時の受診特例の事務連絡）
+ *
+ * アンカー文字列も一緒に持ち帰る。厚生局の通知はPDFで本文を取れないが、
+ * リンクの文字列自体が「何の通知か」を伝えている。
+ *
+ * 件数制限は**絞り込んだ後**に適用する。
+ * 先に打ち切ると、ページ先頭のナビゲーション（サイトマップ、お問い合わせ等）で
+ * 枠を使い切り、本文中の通知一覧へ到達しない。実際に厚生局の通知が
+ * 1件も取れていなかった原因はこれだった。
+ *
+ * @param {string} html 一覧ページのHTML
+ * @param {string} base 相対URLを解決する基点
+ * @param {RegExp} pattern 子リンクの絶対URLに対する条件
+ * @param {number} [limit] 絞り込み後に残す件数
+ * @param {(text: string) => boolean} [textFilter] アンカー文字列に対する条件
+ * @returns {{url: string, text: string}[]}
+ */
+export function extractIndexLinks(html, base, pattern, limit = 60, textFilter) {
+  const found = [];
+  const seen = new Set();
+
+  for (const match of String(html ?? '').matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    let absolute;
+    try {
+      absolute = new URL(decodeEntities(match[1]), base).toString();
+    } catch {
+      continue;
+    }
+    if (!pattern.test(absolute) || seen.has(absolute)) continue;
+
+    const text = toPlainText(match[2]).slice(0, 120);
+    // 文字列の条件は打ち切りの前に見る
+    if (textFilter && text && !textFilter(text)) continue;
+
+    seen.add(absolute);
+    found.push({ url: absolute, text });
+    if (found.length >= limit) break;
+  }
+
+  return found;
+}
+
 export function parseFeed(xml) {
   const source = String(xml ?? '');
   const blocks =

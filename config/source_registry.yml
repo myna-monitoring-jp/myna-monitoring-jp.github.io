@@ -29,7 +29,16 @@ fetchable_feeds:
     publisher: 総務省
     tier: 0
 
-# 定点観測する個別ページ。RSSを持たないが重要なもの。
+# 定点観測するページ。RSSを持たないが重要なもの。
+#
+# link_pattern を書くと「一覧ページ」として扱い、子リンクを候補にする。
+# ここが1件しか無かったため、2026-09-08 に次を丸ごと取りこぼしていた：
+#   - 政府広報のマイナアプリTVCM（CM一覧にしか無い）
+#   - 政府広報のマイナ救急 新聞広告（新聞広告一覧にしか無い）
+#   - 地方厚生局の災害時受診特例の事務連絡（厚労省本省のRSSには載らない）
+# いずれも 2026-09-08 に robots.txt 許可・HTTP 200・リンク抽出可を実測確認した。
+#
+# fetch_self: false は「一覧ページ自体は事象ではない」ものに付ける。
 watch_urls:
   - id: mynaportal-api-status
     label: マイナポータルAPI 稼働状況・メンテナンス情報
@@ -37,6 +46,83 @@ watch_urls:
     publisher: デジタル庁
     tier: 0
     system_layer: マイナポータルAPI（自己情報取得）
+
+  # 政府広報のCM。マイナアプリCMはここにしか載らない
+  - id: gov-online-commercials
+    label: 政府広報オンライン CM等
+    url: https://www.gov-online.go.jp/media/commercials/
+    publisher: 政府広報オンライン
+    tier: 0
+    # 政府広報の掲載物は必ず広報物。本文に「紛失」「使えない」等の説明が入るため、
+    # 本文判定に任せると障害・セキュリティ事案に化ける（実際に化けた）
+    event_class: public_communication
+    link_pattern: '/media/commercials/\d{6}/[\w-]+\.html$'
+    max_links: 30
+    fetch_self: false
+
+  # 政府広報の新聞広告。マイナ救急の突出し広告はここ
+  - id: gov-online-newspaper
+    label: 政府広報オンライン 新聞広告
+    url: https://www.gov-online.go.jp/media/newspaper_ads/
+    publisher: 政府広報オンライン
+    tier: 0
+    event_class: public_communication
+    link_pattern: '/newspaper/[\w]+/\d{6}/[\w-]+\.html$'
+    max_links: 30
+    fetch_self: false
+
+  # 政府広報のマイナンバー特集。制度解説の更新を拾う
+  - id: gov-online-mynumber
+    label: 政府広報オンライン マイナンバー
+    url: https://www.gov-online.go.jp/it_digital/my_number/
+    publisher: 政府広報オンライン
+    tier: 0
+    event_class: public_communication
+    link_pattern: 'gov-online\.go\.jp/article/\d{6}/[\w-]+\.html$'
+    max_links: 20
+    fetch_self: false
+
+  # デジタル庁の普及・利活用ダッシュボード。保有率・利用率の更新
+  - id: digital-dashboard
+    label: マイナンバーカードの普及と利活用に関するダッシュボード
+    url: https://www.digital.go.jp/resources/govdashboard/mynumber_card_penetration_usage
+    publisher: デジタル庁
+    tier: 0
+    # 普及状況の更新。障害でも広報でもない
+    event_class: positive_service_update
+
+  # 地方厚生局の医療保険関係通知。
+  # 災害時の「マイナ保険証又は資格確認書等の提示等について」はここに出る。
+  # 本省の新着RSSには載らないため、局ごとに見る必要がある。
+  - id: kouseikyoku-chugokushikoku
+    label: 中国四国厚生局 医療保険関係通知
+    url: https://kouseikyoku.mhlw.go.jp/chugokushikoku/newpage_00855.html
+    publisher: 中国四国厚生局
+    tier: 0
+    event_class: policy_change
+    link_pattern: 'kouseikyoku\.mhlw\.go\.jp/.+\.(html|pdf)$'
+    max_links: 40
+    fetch_self: false
+
+  - id: kouseikyoku-kantoshinetsu
+    label: 関東信越厚生局
+    url: https://kouseikyoku.mhlw.go.jp/kantoshinetsu/index.html
+    publisher: 関東信越厚生局
+    tier: 0
+    event_class: policy_change
+    link_pattern: 'kouseikyoku\.mhlw\.go\.jp/kantoshinetsu/.+\.(html|pdf)$'
+    max_links: 40
+    fetch_self: false
+
+# アプリストアの評価。数値だけを定点観測する。
+# レビュー本文（国民の声）は取得しない。個々のレビューを引用すると
+# 非代表サンプルを声として扱うことになるため、数値のみに限る。
+app_store_metrics:
+  - id: myna-app-ios
+    label: マイナアプリ（iOS）
+    url: https://apps.apple.com/jp/app/id1476359069
+    publisher: Apple App Store
+    system_layer: マイナアプリ
 
 # 実測で取得できないと確認済み。同じ調査を繰り返さないための記録。
 _unfetchable:

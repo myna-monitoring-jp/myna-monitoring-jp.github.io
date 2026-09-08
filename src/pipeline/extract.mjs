@@ -53,8 +53,25 @@ export function detectSystemLayer(text) {
 /**
  * 事象種別。仕様§13。ここを混ぜないことが要件。
  * 判定順に意味がある：計画停止は障害語を含むことが多いので先に見る。
+ *
+ * @param {string} text 判定に使う文字列
+ * @param {{hint?: string, titleOnly?: boolean}} [options]
+ *   hint      … 情報源が種別を確定できる場合（政府広報の掲載物は必ず広報物）
+ *   titleOnly … 表題だけで判定する。官公庁の解説ページ対策
  */
-export function detectEventClass(text) {
+export function detectEventClass(text, options = {}) {
+  /*
+   * 情報源が種別を決められる場合はそれに従う。
+   * 政府広報オンラインのCM・新聞広告は、本文に「紛失」「使えない」等の
+   * 説明が入るため本文判定では障害・セキュリティ事案に化ける。
+   * 実際に「使いこなそう！進化するマイナンバーカード」が
+   * security_incident、「マイナ救急…」が outage と判定された。
+   */
+  if (options.hint) return options.hint;
+  return classifyEventText(text);
+}
+
+function classifyEventText(text) {
   // 計画停止。事前告知された停止・制限
   if (/計画(停止|メンテナンス)|定期メンテナンス|メンテナンスのお知らせ|以下の時間.{0,20}(停止|利用できません)/.test(text)) {
     return 'planned_maintenance';
@@ -311,8 +328,26 @@ export function extractFromPage(page, { now, registry, sourceInfo }) {
     detectedAt: nowIso,
 
     entity: usable ? extractEntity(text) : null,
-    systemLayer: detectSystemLayer(text),
-    eventClass: detectEventClass(text),
+    systemLayer: page.candidate?.systemLayerHint ?? detectSystemLayer(text),
+    /*
+     * 種別の判定。
+     *  1. 情報源が種別を決められるならそれに従う（政府広報の掲載物など）
+     *  2. 官公庁の解説ページは表題だけで見る。本文には「紛失」「使えない」等の
+     *     説明が入り、本文判定では障害・セキュリティ事案に化ける
+     *  3. それ以外は表題＋本文で見る
+     */
+    eventClass: (() => {
+      const hint = page.candidate?.eventClassHint;
+      if (hint) return hint;
+      const title = (page.title || page.candidate?.title || '').trim();
+      if (sourceInfo?.official && usable) {
+        const fromTitle = detectEventClass(title);
+        if (fromTitle !== 'other') return fromTitle;
+        // 表題から決まらない官公庁ページは、種別不明のまま返す（後段で扱いを決める）
+        return 'other';
+      }
+      return detectEventClass(text);
+    })(),
     domain: detectDomain(text),
     recoveryStatus: usable ? detectRecoveryStatus(text) : 'unknown',
     counts: usable ? extractCounts(text) : [],
