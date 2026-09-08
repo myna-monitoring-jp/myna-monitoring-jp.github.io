@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "blockingErrors": [],
+  "warnings": [
+    "events[evt-bo9hgp]: 発生日が公開日より後です。抽出誤りの可能性があります。"
+  ]
+}

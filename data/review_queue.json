@@ -1,13 +1,21 @@
 {
-  "generatedAt": "2026-09-08T02:22:29.434Z",
+  "generatedAt": "2026-09-08T22:09:02.268Z",
   "items": [
+    {
+      "eventId": "unknown|security_incident|2026-09-08|nolayer",
+      "title": "たった1社の停止で全米の医療が麻痺…「ハッキングされていない病院」の経営まで止まったサイバー攻撃の戦慄",
+      "reasons": [
+        "個人情報・セキュリティ事案"
+      ],
+      "queuedAt": "2026-09-08T22:09:02.268Z"
+    },
     {
       "eventId": "unknown|security_incident|2026-09-07|nolayer",
       "title": "病院へのサイバー攻撃 対策強化へ",
       "reasons": [
         "個人情報・セキュリティ事案"
       ],
-      "queuedAt": "2026-09-08T02:22:29.434Z"
+      "queuedAt": "2026-09-08T22:09:02.268Z"
     },
     {
       "eventId": "unknown|security_incident|2026-09-06|nolayer",
@@ -16,15 +24,7 @@
         "個人情報・セキュリティ事案",
         "炎上認定"
       ],
-      "queuedAt": "2026-09-08T02:22:29.434Z"
-    },
-    {
-      "eventId": "unknown|security_incident|2026-09-08|nolayer",
-      "title": "東京科学大に不正アクセス、個人情報漏えいか 東工大・医科歯科大統合当時の学生・教職員情報も",
-      "reasons": [
-        "個人情報・セキュリティ事案"
-      ],
-      "queuedAt": "2026-09-08T02:22:29.434Z"
+      "queuedAt": "2026-09-08T22:09:02.268Z"
     }
   ]
 }
