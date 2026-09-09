@@ -139,6 +139,31 @@ export function runQa({ report, events, run, config, html = '' }) {
     if (![...purposes].some((p) => p.startsWith('follow_up'))) {
       warnings.push('前日案件のクローズ確認が記録されていません（前日案件が無い場合は正常）。');
     }
+    /*
+     * 発見系の検索が何本通ったか。
+     * 既知案件の追跡（deep_dive / reaction / follow_up / primary_source_lookup）へ
+     * 予算が偏ると「更新の確認しかしていない」報告になる。
+     * 2026-09-09 の実行は286本のうち213本（74%）が既知案件向けだった。
+     */
+    const discovery = run.queries.filter((query) =>
+      /^(open_discovery|broad_discovery|announcements|local_government|online_eligibility|portal_and_app|card_and_certificate|public_money_account|medical_it_cyber|public_relations)/.test(
+        query.purpose,
+      ),
+    );
+    if (discovery.length === 0) {
+      blockingErrors.push('新規発見のための検索が1本も記録されていません。既知案件の更新確認しかしていません。');
+    } else if (discovery.length < run.queries.length * 0.2) {
+      warnings.push(
+        `新規発見の検索が${discovery.length}本／全${run.queries.length}本で、既知案件の追跡に偏っています。`,
+      );
+    }
+    // 到達できなかった検索の割合。「出なかった」と「見に行けなかった」は別
+    const failed = run.queries.filter((query) => query.error);
+    if (failed.length >= run.queries.length * 0.5) {
+      warnings.push(
+        `${failed.length}本／全${run.queries.length}本の検索が情報源に到達できていません。取りこぼしの可能性が高い状態です。`,
+      );
+    }
   }
 
   /* --- HTML --- */

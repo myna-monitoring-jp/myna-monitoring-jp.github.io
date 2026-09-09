@@ -46,6 +46,8 @@ watch_urls:
     publisher: デジタル庁
     tier: 0
     system_layer: マイナポータルAPI（自己情報取得）
+    # 掲載日を持たないページ。日付が無いことを理由に落とさず毎日見る
+    daily_observation: true
 
   # 政府広報のCM。マイナアプリCMはここにしか載らない
   - id: gov-online-commercials
@@ -90,6 +92,7 @@ watch_urls:
     tier: 0
     # 普及状況の更新。障害でも広報でもない
     event_class: positive_service_update
+    daily_observation: true
 
   # 地方厚生局の医療保険関係通知。
   # 災害時の「マイナ保険証又は資格確認書等の提示等について」はここに出る。

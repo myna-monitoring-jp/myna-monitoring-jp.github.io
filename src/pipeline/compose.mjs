@@ -63,8 +63,11 @@ export function eventIdOf(canonicalKey) {
 /**
  * 出典を `event_schema.json` の `source` 形へ。
  *
- * `news.google.com` のリダイレクトURLは出典にしない。
- * 押しても中間ページに飛ぶだけで一次情報に到達しない。
+ * `news.google.com` のリダイレクトURLも出典として残す。
+ * 機械では元URLを復元できないが（robots.txt 全面拒否・記事IDが不透明トークン）、
+ * ブラウザで押せば記事本文に到達するため、人の確認手段としては有効である。
+ * ただし本文を機械確認していないので `note` に「本文未確認」を必ず付け、
+ * 事実確定には使わせない。
  */
 export function buildSources(records, nowIso) {
   const seen = new Set();
@@ -200,6 +203,13 @@ export function composeReport({ clusters, run, reportDate, nowIso, config }) {
         severity: cluster.severity,
         impactScore: cluster.impactScore ?? 0,
         attentionScore: cluster.attentionScore ?? 0,
+        /*
+         * 影響人数は台帳に必ず書く。書かないと翌日 `undefined` として読まれ、
+         * 差分判定が「影響人数が変更された」＝訂正になる（実際にそうなっていた）。
+         */
+        affectedCount: cluster.affectedCount ?? null,
+        affectedCountUnit: cluster.affectedCountUnit ?? null,
+        affectedCountNote: cluster.affectedCountNote ?? null,
         occurredAt: cluster.occurredAt ?? null,
         detectedAt: cluster.detectedAt,
         publishedAt: cluster.publishedAt ?? null,
@@ -250,6 +260,19 @@ export function composeReport({ clusters, run, reportDate, nowIso, config }) {
     negativeEventIds: visible.filter((e) => e.polarity === 'negative').map((e) => e.id),
     positiveEventIds: visible.filter((e) => e.polarity === 'positive').map((e) => e.id),
     prEventIds: visible.filter((e) => e.eventClass === 'public_communication').map((e) => e.id),
+    /*
+     * 3レーンのどれにも入らない事象。
+     *
+     * ネガ／ポジ／広報の3つしか無かったため、`neutral_watch` で広報でもない
+     * 事象はカードとして一切表示されていなかった。制度変更・世論調査・
+     * 種別未確定の新規報道がここに該当し、黙って消えていた。
+     */
+    otherEventIds: visible
+      .filter(
+        (e) =>
+          e.polarity !== 'negative' && e.polarity !== 'positive' && e.eventClass !== 'public_communication',
+      )
+      .map((e) => e.id),
     watchEventIds: visible
       .filter((e) => e.status === 'attention' || (e.unknowns ?? []).length > 0)
       .slice(0, 8)
@@ -324,6 +347,21 @@ export function buildOverallSummary(events, run) {
   lines.push(
     `この判断は、${run.queries.length}本の検索と取得できた公式情報の範囲によるものです。存在しないことの証明ではありません。`,
   );
+
+  /*
+   * 検索が失敗した本数を必ず書く。
+   *
+   * 検索が到達できなかっただけなのに「新規は確認できませんでした」と読める
+   * のは、この報告で最も避けたい誤りである。失敗が全体の1割を超えたら
+   * 本数を明記して、読み手が「見つからなかった」と「見に行けなかった」を
+   * 区別できるようにする。
+   */
+  const failed = (run.queries ?? []).filter((entry) => entry.error).length;
+  if (failed > 0 && failed >= (run.queries?.length ?? 0) * 0.1) {
+    lines.push(
+      `ただし${failed}本の検索は情報源に到達できず結果を得られていません。この範囲は未確認です。`,
+    );
+  }
 
   return lines.join('');
 }

@@ -39,6 +39,12 @@ import { clusterEvents } from '../src/pipeline/cluster.mjs';
 import { verifyCluster, needsReview } from '../src/pipeline/verify.mjs';
 import { calculateImpactScore, calculateAttentionScore, severityFromImpact, recognizeBacklash } from '../src/pipeline/score.mjs';
 import { indexPrevious, applyDiff, carryForward } from '../src/pipeline/diff.mjs';
+import {
+  judgeNovelty,
+  isLedgerWorthy,
+  noveltySubjectOfCluster,
+  noveltySubjectOfEvent,
+} from '../src/pipeline/novelty.mjs';
 import { loadManualVoices, attachReactions } from '../src/pipeline/reaction.mjs';
 import { collectAppStoreMetrics } from '../src/pipeline/appstore.mjs';
 import { composeReport, bestTitle } from '../src/pipeline/compose.mjs';
@@ -108,9 +114,17 @@ async function main() {
     writeFileSync(searchLogPath, '', 'utf8');
   }
 
+  /*
+   * 発見工程の取得。**必ずタイムアウトを付ける。**
+   * fetchPages は自前でタイムアウトを持つが、こちらは素の fetch だったため、
+   * Google News が応答を返さないとパイプライン全体が無期限に止まった
+   * （2026-09-09 に実際に止まった。毎朝の Actions も同じく止まる）。
+   */
+  const fetchTimeoutMs = (config.fetch?.timeout_seconds ?? 20) * 1000;
   const fetchText = async (url) => {
     const response = await fetch(url, {
       headers: { 'user-agent': config.fetch?.user_agent ?? 'myna-monitoring-portal/2.0', 'accept-language': 'ja' },
+      signal: AbortSignal.timeout(fetchTimeoutMs),
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return response.text();
@@ -209,33 +223,104 @@ async function main() {
   const allClusters = clusterEvents(inScope, { registry });
 
   /*
-   * 事象種別を判定できなかったものは台帳へ入れない。
+   * 台帳に載せるかどうかを決める。
    *
-   * 見出しだけで種別が分からないものは「事象」ではなく材料である。
-   * これを台帳に入れると、情報量のない項目が並んで報告の質が見分けられなくなる。
-   * 記録は data/runs/<日付>/extracted.jsonl に残るので、取りこぼしの検証はできる。
+   * ここは 2026-09-09 に作り直した。従来は「種別を判定できないものは捨てる」
+   * という1本の条件しか無く、次の2つが同時に起きていた。
+   *
+   *   (1) 新規の報道が全部消えていた
+   *       報道候補は news.google.com が robots.txt で全面拒否のため本文が取れず、
+   *       材料は見出し1行だけ。見出しから種別が決まらないと `other` になり捨てられた。
+   *       2026-09-08 は報道136件のうち105件が該当し、マイナアプリ提供開始・
+   *       マイナ救急の全国開始・大雨被災者の受診特例・避難所受付の実証実験・
+   *       カード画像を要求する不審電話が1件も台帳に入らなかった。
+   *
+   *   (2) 逆に常設ページが毎日並んでいた
+   *       政府広報の解説ページ（2024年7月〜2026年3月掲載）が11件残り、
+   *       台帳22件の半分を占めていた。当日の動きではない。
+   *
+   * 直し方は、捨てる基準を「種別」から「日付」に変えることである。
+   *   - 新しい（窓内） → 種別が決まらなくても載せ、要レビューにする
+   *   - 古い・常設     → 種別が決まっていても載せない
+   * 落としたものは reason 付きで screened.jsonl に残す（仕様§18）。
    */
-  const clusters = allClusters
-    .map((cluster) => {
-      if (cluster.eventClass !== 'other') return cluster;
-      /*
-       * 官公庁の一次情報で種別が決まらないものは「制度・運用の情報」として扱う。
-       *
-       * 稼働状況ページやダッシュボードは障害でも広報でもないが、
-       * 落としてしまうと「マイナポータルAPIは正常稼働」「保有率84.3%」のような
-       * 押さえておくべき動きが報告から消える（2026-09-08 に消えていた）。
-       * 添付の参照レポートも、これらをポジティブ／運用の前進側に置いている。
-       */
-      const hasOfficialBody = cluster.records.some((record) => record.official && record.usableForFacts);
-      return hasOfficialBody ? { ...cluster, eventClass: 'positive_service_update' } : cluster;
-    })
-    .filter((cluster) => cluster.eventClass !== 'other');
-  const unclassified = allClusters.length - clusters.length;
+  const noveltyWindowDays = config.dashboard?.quiet_days ?? 7;
+  const dailyObservationUrls = new Set(
+    (registry.watch_urls ?? []).filter((page) => page.daily_observation).map((page) => page.url),
+  );
+
+  const screened = [];
+  const clusters = [];
+  for (const cluster of allClusters) {
+    const novelty = judgeNovelty(noveltySubjectOfCluster(cluster), {
+      nowIso,
+      windowDays: noveltyWindowDays,
+      dailyObservationUrls,
+    });
+
+    /*
+     * 前日の台帳にあることを免除理由にしてはいけない。
+     *
+     * 一度免除すると、政府広報の常設解説ページ（2024年7月〜2026年3月掲載）が
+     * 「既知」として毎日残り続ける。実際に台帳22件のうち11件がこれだった。
+     * 追い続けるべき事象は、当日の続報が付けば publishedAt が更新されて
+     * 窓内に入るので落ちない。続報が7日付かないものは沈静化させる
+     * ——これは7日ルールそのものである（仕様§10）。
+     * 例外は pinned だけ。
+     */
+    const pinned = previousIndex.byKey.get(cluster.canonicalKey)?.pinned === true || cluster.pinned === true;
+
+    if (!pinned && !isLedgerWorthy(novelty.verdict)) {
+      screened.push({
+        title: cluster.title ?? cluster.records?.[0]?.title ?? '',
+        canonicalKey: cluster.canonicalKey,
+        url: cluster.records?.[0]?.finalUrl ?? cluster.records?.[0]?.url ?? '',
+        eventClass: cluster.eventClass,
+        verdict: novelty.verdict,
+        reason: novelty.reason,
+      });
+      continue;
+    }
+
+    if (cluster.eventClass !== 'other') {
+      clusters.push(cluster);
+      continue;
+    }
+
+    /*
+     * 官公庁の一次情報で種別が決まらないものは「制度・運用の情報」として扱う。
+     * 稼働状況ページやダッシュボードは障害でも広報でもないが、落としてしまうと
+     * 「マイナポータルAPIは正常稼働」「保有率84.3%」のような押さえておくべき
+     * 動きが報告から消える。
+     */
+    if (cluster.records.some((record) => record.official && record.usableForFacts)) {
+      clusters.push({ ...cluster, eventClass: 'positive_service_update' });
+      continue;
+    }
+
+    /*
+     * 新しいが種別が決まらないもの。**捨てずに載せて、人の確認に回す。**
+     * 種別を機械が決められないことは、その動きが無いことの根拠にならない。
+     */
+    clusters.push({
+      ...cluster,
+      eventClass: 'uncategorized',
+      classificationPending: true,
+    });
+  }
 
   log(`\n[cluster] ${inScope.length}記事 → ${allClusters.length}事象`);
-  log(`  種別を判定できず台帳へ入れなかったもの: ${unclassified}件（材料として run ログに残る）`);
+  log(`  台帳に載せた: ${clusters.length}件 / 日付を理由に載せなかった: ${screened.length}件`);
+  const screenedByVerdict = screened.reduce((acc, entry) => {
+    acc[entry.verdict] = (acc[entry.verdict] ?? 0) + 1;
+    return acc;
+  }, {});
+  log(`  内訳: ${Object.entries(screenedByVerdict).map(([k, v]) => `${k}=${v}`).join(' / ') || 'なし'}`);
+  const pending = clusters.filter((cluster) => cluster.classificationPending).length;
+  log(`  新規だが種別未確定（要レビューで掲載）: ${pending}件`);
   const syndicated = allClusters.reduce((sum, cluster) => sum + (cluster.syndicatedCount ?? 0), 0);
   log(`  転載として除外: ${syndicated}件`);
+  writeJsonl(join(runDir, 'screened.jsonl'), screened);
 
   /* --- アプリストアの評価。数値の定点観測なので cluster は通さない --- */
   const appStore = await collectAppStoreMetrics({ registry, now: nowIso, fetchText, previousIndex });
@@ -275,6 +360,8 @@ async function main() {
   const reviewQueue = [];
   events = events.map((event) => {
     const reasons = needsReview(event, { config });
+    // 種別を機械が決められなかったものは必ず人が見る
+    if (event.classificationPending) reasons.unshift('見出しだけでは事象種別を判定できませんでした');
     if (reasons.length === 0) return { ...event, reviewStatus: 'unreviewed' };
     reviewQueue.push({ eventId: event.canonicalKey, title: event.title, reasons, queuedAt: nowIso });
     return { ...event, reviewStatus: 'review_required', reviewReasons: reasons };
@@ -285,8 +372,33 @@ async function main() {
   const todayKeys = new Set(events.map((event) => event.canonicalKey));
   const carried = carryForward(previousIndex, todayKeys, { nowIso, config })
     // 引き継ぎ側も同じ基準で絞る。過去の台帳に種別不明が残っていても持ち込まない
-    .filter((event) => event.eventClass && event.eventClass !== 'other');
+    .filter((event) => event.eventClass && event.eventClass !== 'other')
+    /*
+     * 常設ページ・掲載日が古いものは引き継がない。
+     * これを入れないと、政府広報の解説ページ（2024年〜2026年3月掲載）が
+     * 一度台帳に入った後は毎日引き継がれ続ける。pinned は対象外。
+     */
+    .filter((event) => {
+      if (event.pinned) return true;
+      const novelty = judgeNovelty(noveltySubjectOfEvent(event), {
+        nowIso,
+        windowDays: noveltyWindowDays,
+        dailyObservationUrls,
+      });
+      if (isLedgerWorthy(novelty.verdict)) return true;
+      screened.push({
+        title: event.title,
+        canonicalKey: event.canonicalKey,
+        url: event.sources?.[0]?.url ?? '',
+        eventClass: event.eventClass,
+        verdict: novelty.verdict,
+        reason: `引き継ぎ打ち切り：${novelty.reason}`,
+      });
+      return false;
+    });
   log(`[diff] 本日検索に出なかった前日事象 ${carried.length}件を引き継ぎ`);
+  // 引き継ぎ打ち切り分を含めて書き直す
+  writeJsonl(join(runDir, 'screened.jsonl'), screened);
 
   writeJson(join(runDir, 'clusters.json'), { clusters: clusters.length, events: events.length });
 
@@ -313,7 +425,14 @@ async function main() {
   });
 
   log(`\n[compose] 掲載対象 ${composed.report.negativeEventIds.length + composed.report.positiveEventIds.length + composed.report.prEventIds.length}件`);
-  log(`  ネガティブ ${composed.report.negativeEventIds.length} / ポジティブ ${composed.report.positiveEventIds.length} / 広報 ${composed.report.prEventIds.length}`);
+  log(
+    `  ネガティブ ${composed.report.negativeEventIds.length} / ポジティブ ${composed.report.positiveEventIds.length}` +
+      ` / 広報 ${composed.report.prEventIds.length} / その他 ${composed.report.otherEventIds.length}`,
+  );
+  log(`  うち新規（new / backfill）: ${composed.events.filter((e) => e.deltaStatus === 'new' || e.deltaStatus === 'backfill').length}件`);
+  for (const event of composed.events.filter((e) => e.deltaStatus === 'new').slice(0, 12)) {
+    log(`    ＋${event.title}`);
+  }
 
   /* --- render → qa。HTMLを作ってから検査する --- */
   const html = renderDailyReport({ ...composed, siteUrl: config.publish?.site_url });

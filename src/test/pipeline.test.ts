@@ -18,6 +18,7 @@ import {
   extractFromPage,
 } from '../pipeline/extract.mjs';
 import { canonicalKeyOf, clusterEvents, countMedia, similarity } from '../pipeline/cluster.mjs';
+import { judgeNovelty, isLedgerWorthy, urlMonthHint, titleDateHint, reconcilePublishedAt } from '../pipeline/novelty.mjs';
 import { findPrimarySources, resolveAffectedCount, collectUnknowns, needsReview } from '../pipeline/verify.mjs';
 import { calculateImpactScore, calculateAttentionScore, recognizeBacklash, severityFromImpact } from '../pipeline/score.mjs';
 import { classifyDelta, classifyStatus, detectMaterialChanges, indexPrevious, applyDiff, DELTA } from '../pipeline/diff.mjs';
@@ -984,5 +985,230 @@ describe('掲載順とネガティブ／ポジティブの振り分け', () => {
     const summary = buildOverallSummary([], { queries: [{ purpose: 'broad_discovery_24h' }] });
     expect(summary).toContain('確認できませんでした');
     expect(summary).toContain('存在しないことの証明ではありません');
+  });
+});
+
+/* ------------------------------------------------- 新規性の判定（novelty） */
+
+/**
+ * 2026-09-09 の修正に対応する。
+ *
+ * 台帳22件が全件「既知の更新」になっていて、当日の新規報道が1件も
+ * 入っていなかった。原因は3つで、以下はそのそれぞれを固定する。
+ *   1. 表題だけでは種別が決まらず `other` になり捨てられていた
+ *   2. 掲載日で絞っていないため常設ページが毎日並んでいた
+ *   3. JSON往復で `undefined` になった影響人数が「訂正」を誘発していた
+ */
+describe('novelty：新規性の判定', () => {
+  const NOW_2026_09_09 = '2026-09-09T00:00:00.000Z';
+
+  it('政府広報のURLから掲載年月を読む', () => {
+    expect(urlMonthHint('https://www.gov-online.go.jp/media/commercials/202609/video-313937.html')).toEqual({
+      year: 2026,
+      month: 9,
+    });
+    expect(urlMonthHint('https://www.gov-online.go.jp/article/202407/entry-6238.html')).toEqual({ year: 2024, month: 7 });
+    // 年月に見えない数字は拾わない
+    expect(urlMonthHint('https://example.jp/news/123456/a.html')).toBeNull();
+    expect(urlMonthHint('https://example.jp/news/202613/a.html')).toBeNull();
+  });
+
+  it('表題の和暦から日付を読む（PDFは本文が取れない）', () => {
+    // 和暦はJSTの日付として解釈される（2026-06-24 JST = 前日15:00Z）
+    expect(titleDateHint('令和8年6月24日からの大雨に伴う災害の被災者に係る…（令和8年6月24日事務連絡）')).toBe(
+      '2026-06-23T15:00:00.000Z',
+    );
+    expect(titleDateHint('日付のない表題')).toBeNull();
+  });
+
+  it('当月・前月の掲載物は新規、それより古い常設ページは載せない', () => {
+    // ユーザーが指摘したマイナアプリCM（2026年9月掲載）
+    const cm = judgeNovelty(
+      { title: '本人確認はマイナアプリで（20秒）', urls: ['https://www.gov-online.go.jp/media/commercials/202609/video-313829.html'] },
+      { nowIso: NOW_2026_09_09 },
+    );
+    expect(cm.verdict).toBe('fresh');
+
+    // 前月の新聞広告も当日の動きとして残す
+    const ad = judgeNovelty(
+      { title: '公金受取口座', urls: ['https://www.gov-online.go.jp/newspaper/tsukidashi/202608/newspaper-2051.html'] },
+      { nowIso: NOW_2026_09_09 },
+    );
+    expect(ad.verdict).toBe('fresh');
+
+    // 2025年8月掲載の常設解説ページ。台帳22件の半分がこれだった
+    const standing = judgeNovelty(
+      { title: 'マイナ保険証　マイナンバーカードを健康保険証として利用', urls: ['https://www.gov-online.go.jp/article/202508/entry-8677.html'] },
+      { nowIso: NOW_2026_09_09 },
+    );
+    expect(standing.verdict).toBe('stale');
+    expect(isLedgerWorthy(standing.verdict)).toBe(false);
+  });
+
+  it('政府広報の全ページ共通の申告日（2024-01-01）に引きずられない', () => {
+    // gov-online.go.jp は全ページが publishedAt: 2024-01-01 を申告する（実測）
+    const cmUrl = 'https://www.gov-online.go.jp/media/commercials/202609/video-313937.html';
+    expect(reconcilePublishedAt('2024-01-01T00:00:00.000Z', cmUrl)).toBe('2026-09-01T00:00:00.000Z');
+    // URLより新しい申告日は尊重する（更新で日付が進むのは自然）
+    expect(reconcilePublishedAt('2026-09-08T00:00:00.000Z', cmUrl)).toBe('2026-09-08T00:00:00.000Z');
+    // URLに年月が無ければ申告日をそのまま使う
+    expect(reconcilePublishedAt('2026-09-08T00:00:00.000Z', 'https://example.jp/a.html')).toBe('2026-09-08T00:00:00.000Z');
+  });
+
+  it('URLの年月を採るときは月単位で判定する（月末に向かって古くならない）', () => {
+    // 9月9日時点で「9月公開」を日単位の7日窓に当てると8日前として落ちていた
+    const result = judgeNovelty(
+      {
+        title: 'マイナアプリ | 政府広報オンライン',
+        publishedAt: '2024-01-01T00:00:00.000Z',
+        urls: ['https://www.gov-online.go.jp/media/commercials/202609/video-313937.html'],
+      },
+      { nowIso: '2026-09-28T00:00:00.000Z', windowDays: 7 },
+    );
+    expect(result.verdict).toBe('fresh');
+    expect(result.dateBasis).toBe('urlMonth');
+  });
+
+  it('窓内に公開された報道は新規として扱う', () => {
+    const result = judgeNovelty(
+      { title: '「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか', publishedAt: '2026-09-08T03:00:00.000Z', urls: [] },
+      { nowIso: NOW_2026_09_09, windowDays: 7 },
+    );
+    expect(result.verdict).toBe('fresh');
+  });
+
+  it('掲載日を特定できないページは常設扱い。ただし定点観測ページは毎日見る', () => {
+    const noDate = { title: 'マイナンバー制度に関するお問合せ', urls: ['https://www.digital.go.jp/contact'] };
+    expect(judgeNovelty(noDate, { nowIso: NOW_2026_09_09 }).verdict).toBe('standing');
+
+    // 稼働状況・普及ダッシュボードは掲載日を持たないが落としてはいけない
+    const status = { title: 'メンテナンス・稼働状況', urls: ['https://developers.digital.go.jp/documents/mynaportal-api/maintenance/'] };
+    const verdict = judgeNovelty(status, {
+      nowIso: NOW_2026_09_09,
+      dailyObservationUrls: new Set(['https://developers.digital.go.jp/documents/mynaportal-api/maintenance/']),
+    }).verdict;
+    expect(verdict).toBe('observed');
+    expect(isLedgerWorthy(verdict)).toBe(true);
+  });
+
+  it('古い事務連絡は表題の日付で落とす', () => {
+    const old = judgeNovelty(
+      { title: '令和8年6月24日からの大雨に伴う災害の被災者に係るマイナ保険証又は資格確認書等の提示等について（令和8年6月24日事務連絡）', urls: ['https://kouseikyoku.mhlw.go.jp/chugokushikoku/000490139.pdf'] },
+      { nowIso: NOW_2026_09_09 },
+    );
+    expect(old.verdict).toBe('stale');
+  });
+});
+
+/* ------------------------------------- 見出しだけで種別を判定できるか */
+
+describe('見出し1行からの種別判定', () => {
+  /*
+   * 報道候補は news.google.com が robots.txt で全面拒否のため本文が取れず、
+   * 材料は見出しだけになる。下は 2026-09-08 に実際に取得して
+   * `other` として捨てられた見出しである。
+   */
+  it('提供開始・全国展開・実証実験を前進として拾う', () => {
+    expect(detectEventClass('「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか')).toBe('positive_service_update');
+    expect(detectEventClass('救急隊がマイナ保険証を活用する「マイナ救急」が全国で本格スタート')).toBe('positive_service_update');
+    expect(detectEventClass('マイナンバーカードで避難所の受け付けを…デジタル化の実証実験 秋田県総合防災訓練')).toBe(
+      'positive_service_update',
+    );
+    expect(detectEventClass('医療費助成オン資、約半数の薬局で導入')).toBe('positive_service_update');
+  });
+
+  it('災害時の特例と交付・送付の告知を制度変更として拾う', () => {
+    expect(detectEventClass('大雨被災者、マイナ保険証なしで受診可')).toBe('policy_change');
+    expect(detectEventClass('資格確認書または資格情報のお知らせの送付について')).toBe('policy_change');
+  });
+
+  it('券面画像や暗証番号を狙う手口をセキュリティ事案として拾う', () => {
+    expect(
+      detectEventClass('福岡・嘉麻市で郵便局や愛知県警名乗る不審電話 「あなたを容疑者として捜査」とマイナンバーカード画像要求'),
+    ).toBe('security_incident');
+    expect(detectEventClass('マイナポータルを装う偽サイトに注意')).toBe('security_incident');
+  });
+
+  it('マイナ語を含まない医療系は事案・障害だけを対象にする', () => {
+    const ad = {
+      title: '病院・クリニック・健診施設・薬局向けの最新ソリューションが集結。「第9回 メディカル ジャパン 東京」開催',
+      excerpt: '',
+      eventClass: 'uncategorized',
+      domain: 'medical_it',
+    };
+    // 展示会告知は監視対象ではない
+    expect(isInScope(ad)).toBe(false);
+
+    // 同じ施設語でもサイバー事案・障害なら対象
+    expect(isInScope({ ...ad, title: '病院にランサムウェア攻撃、電子カルテ停止', eventClass: 'security_incident' })).toBe(true);
+    expect(isInScope({ ...ad, title: '大学病院の電子カルテが停止しています', eventClass: 'outage' })).toBe(true);
+  });
+
+  it('無関係の商用リリースは前進に数えない', () => {
+    // 「導入」単独では拾わない。割合との共起に限る
+    expect(detectEventClass('ELEMENTS、セブン・カードサービスのnanacoクレカにeKYC提供')).toBe('other');
+  });
+});
+
+/* ----------------------------------------- 訂正の誤判定（JSON往復） */
+
+describe('影響人数の未設定を「訂正」にしない', () => {
+  it('前日が未判明なら訂正ではない', () => {
+    // JSONで保存すると undefined のフィールドは消える。翌日は undefined で読まれる
+    const before = { canonicalKey: 'k', status: 'follow_up', recoveryStatus: 'unknown', impactScore: 30 };
+    const today = { canonicalKey: 'k', affectedCount: null, recoveryStatus: 'unknown', impactScore: 30 };
+    expect(detectMaterialChanges(today, before)).toEqual([]);
+    expect(classifyDelta(today, before, { nowIso: NOW })).toBe(DELTA.UNCHANGED);
+  });
+
+  it('前日に数値が入っていたものが変わった場合だけ訂正とする', () => {
+    const before = { canonicalKey: 'k', affectedCount: 100, status: 'follow_up', recoveryStatus: 'unknown', impactScore: 30 };
+    const today = { canonicalKey: 'k', affectedCount: 250, recoveryStatus: 'unknown', impactScore: 30 };
+    expect(classifyDelta(today, before, { nowIso: NOW })).toBe(DELTA.CORRECTION);
+  });
+
+  it('未判明から判明した場合は重要更新であって訂正ではない', () => {
+    const before = { canonicalKey: 'k', affectedCount: null, status: 'follow_up', recoveryStatus: 'unknown', impactScore: 30 };
+    const today = { canonicalKey: 'k', affectedCount: 42, recoveryStatus: 'unknown', impactScore: 30 };
+    expect(classifyDelta(today, before, { nowIso: NOW })).toBe(DELTA.MATERIAL_UPDATE);
+  });
+});
+
+/* --------------------------------------- どのレーンにも入らない事象 */
+
+describe('3区分に入らない事象を表示から落とさない', () => {
+  it('制度変更・種別未確定はその他レーンに入る', () => {
+    const html = renderDailyReport({
+      siteUrl: 'https://example.jp/',
+      run: { runId: 'r', startedAt: NOW, queries: [], qa: { passed: true, blockingErrors: [], warnings: [] } },
+      events: [
+        {
+          id: 'evt-1',
+          title: '大雨被災者、マイナ保険証なしで受診可',
+          eventClass: 'policy_change',
+          polarity: 'neutral_watch',
+          status: 'new',
+          deltaStatus: 'new',
+          severity: 'medium',
+          summary: '被災者は提示なしで受診できます。',
+          detectedAt: NOW,
+          lastMaterialUpdateAt: NOW,
+          sources: [{ id: 's1', type: 'primary', tier: 0, label: '事務連絡', url: 'https://www.mhlw.go.jp/a.html', publisher: '厚生労働省' }],
+          dashboardVisible: true,
+        },
+      ],
+      report: {
+        reportDate: '2026-09-09',
+        generatedAt: NOW,
+        summary: '概要',
+        negativeEventIds: [],
+        positiveEventIds: [],
+        prEventIds: [],
+        otherEventIds: ['evt-1'],
+        watchEventIds: [],
+      },
+    });
+    expect(html).toContain('その他の新規の動き');
+    expect(html).toContain('大雨被災者、マイナ保険証なしで受診可');
   });
 });

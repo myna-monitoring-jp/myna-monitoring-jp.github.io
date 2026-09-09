@@ -16,6 +16,7 @@
  */
 
 import { parseJapaneseDate } from './fetch.mjs';
+import { reconcilePublishedAt } from './novelty.mjs';
 
 /* ------------------------------------------------------- システム層の語彙 */
 
@@ -71,13 +72,36 @@ export function detectEventClass(text, options = {}) {
   return classifyEventText(text);
 }
 
+/*
+ * 語彙は**実際に落ちた表題**で検証して足している。
+ *
+ * 報道候補は news.google.com が robots.txt で全面拒否のため本文が取れず、
+ * 判定材料は見出し1行しかない。本文向けの語彙しか無かったため、
+ * 2026-09-08 に取得した報道136件のうち105件が `other` になり捨てられた。
+ * 下の各行末に、その語で救われる実例を書いてある。
+ *
+ * 足さなかった語と理由：
+ *   「導入」単独 … 「〇〇社がeKYC導入」のような無関係の商用リリースを拾う。
+ *                  マイナ語との共起（TOPIC_TERMS の門）だけでは足りず、
+ *                  「約半数の薬局で導入」は下の普及・拡大側で拾う
+ *   「利用率」「保有率」… 数値の観測であって世論調査ではない。survey に入れない
+ *   「名乗る」単独 … 選挙・広報記事で多用される。不審電話等との共起に限る
+ */
 function classifyEventText(text) {
   // 計画停止。事前告知された停止・制限
   if (/計画(停止|メンテナンス)|定期メンテナンス|メンテナンスのお知らせ|以下の時間.{0,20}(停止|利用できません)/.test(text)) {
     return 'planned_maintenance';
   }
-  // セキュリティ事案
-  if (/漏えい|漏洩|流出|不正アクセス|ランサム|サイバー攻撃|誤送信|誤アップロード|不適切な取扱い|紛失/.test(text)) {
+  /*
+   * セキュリティ事案。詐欺・なりすましを追加した。
+   * カードの券面画像や暗証番号を狙う手口は情報漏えいと同じ扱いにする。
+   * 例：「郵便局や愛知県警名乗る不審電話 マイナンバーカード画像要求」
+   */
+  if (
+    /漏えい|漏洩|流出|不正アクセス|ランサム|サイバー攻撃|誤送信|誤アップロード|不適切な取扱い|紛失|詐欺|なりすまし|偽サイト|偽の(サイト|メール|SMS)|フィッシング|不審(電話|な電話|メール|なメール|SMS|サイト)|かたる/.test(
+      text,
+    )
+  ) {
     return 'security_incident';
   }
   // 広報
@@ -92,14 +116,35 @@ function classifyEventText(text) {
   if (/障害|不具合|エラー|停止しています|利用できな|つながらな|誤表示|資格.{0,3}無効|ログインできな/.test(text)) {
     return 'outage';
   }
-  // 制度変更
-  if (/改正|施行|制度変更|運用の見直し|取扱いを変更|開始します|廃止/.test(text)) {
+  /*
+   * 制度変更。災害時の特例と、被保険者への交付・送付の告知を追加した。
+   * 例：「大雨被災者、マイナ保険証なしで受診可」
+   *     「令和8年6月24日からの大雨に伴う災害の被災者に係る…提示等について」
+   *     「資格確認書または資格情報のお知らせの送付について」
+   */
+  if (
+    /改正|施行|制度変更|運用の見直し|取扱いを変更|開始します|廃止|特例|猶予|経過措置|(被災|災害).{0,12}(受診|提示|特例|取扱)|なしで(受診|利用)|(交付|送付|発送).{0,4}(について|します|開始)|事務連絡/.test(
+      text,
+    )
+  ) {
     return 'policy_change';
   }
   // 世論調査
   if (/世論調査|意識調査|アンケート結果/.test(text)) return 'survey';
-  // 前進・改善
-  if (/復旧しました|解消しました|開始しました|拡大|利便性|改善/.test(text)) return 'positive_service_update';
+  /*
+   * 前進・改善。開始・全国展開・実証実験を追加した。
+   * 例：「「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか」
+   *     「「マイナ救急」が全国で本格スタート」
+   *     「マイナンバーカードで避難所の受け付けを…デジタル化の実証実験」
+   *     「医療費助成オン資、約半数の薬局で導入」
+   */
+  if (
+    /復旧しました|解消しました|開始しました|拡大|利便性|改善|(提供|運用|サービス|受付|本格).{0,3}(開始|スタート)|全国(で|に).{0,6}(開始|展開|スタート|拡大)|実証(実験|事業)|使えるようになり|利用できます|一体化されました|(半数|過半|\d+割|\d+%).{0,8}導入/.test(
+      text,
+    )
+  ) {
+    return 'positive_service_update';
+  }
   return 'other';
 }
 
@@ -274,13 +319,19 @@ export function isInScope(record) {
   const text = `${record.title ?? ''} ${record.excerpt ?? ''}`;
   if (TOPIC_TERMS.test(text)) return true;
 
-  // 医療機関・健保のセキュリティ事案は、マイナ語が無くても監視対象
-  if (
-    (record.eventClass === 'security_incident' || record.domain === 'medical_it' || record.domain === 'cybersecurity') &&
-    MEDICAL_CYBER_SUBJECT.test(text)
-  ) {
-    return true;
-  }
+  /*
+   * 医療機関・健保のセキュリティ事案と障害は、マイナ語が無くても監視対象（仕様§5.5）。
+   *
+   * ただし**事案・障害に限る。** `domain === 'medical_it'` だけを条件にしていたため、
+   * 「病院」「薬局」の語を含むだけの展示会告知や製品紹介まで通っていた
+   * （2026-09-09 に「第9回 メディカル ジャパン 東京」「クラウド型電子カルテ」が混入）。
+   * detectDomain は本文に病院・電子カルテがあれば medical_it を返すので、
+   * 施設名の有無だけでは監視対象を絞れない。
+   */
+  const isIncident =
+    record.eventClass === 'security_incident' || record.eventClass === 'outage' || record.eventClass === 'operational_load';
+  if (isIncident && MEDICAL_CYBER_SUBJECT.test(text)) return true;
+
   return false;
 }
 
@@ -303,7 +354,15 @@ export function extractFromPage(page, { now, registry, sourceInfo }) {
    * 公開日はページ側の申告を優先する。
    * 検索結果の日付は当てにならず、1年前の記事が上位に来ることがある。
    */
-  const publishedAt = page.publishedAt ?? page.candidate?.publishedAt ?? null;
+  /*
+   * ただし、申告日がURLの掲載年月より古い場合はURLを採る。
+   * 政府広報オンラインは全ページが 2024-01-01 を申告しており（実測）、
+   * そのままだと2026年9月公開のCMまで982日前の古い物になる。
+   */
+  const publishedAt = reconcilePublishedAt(
+    page.publishedAt ?? page.candidate?.publishedAt ?? null,
+    page.canonicalUrl ?? page.finalUrl ?? page.url,
+  );
 
   return {
     url: page.url,

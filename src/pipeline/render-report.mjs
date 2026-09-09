@@ -187,6 +187,9 @@ export function renderDailyReport({ run, events, report, siteUrl }) {
   const negative = pick(report.negativeEventIds);
   const positive = pick(report.positiveEventIds);
   const pr = pick(report.prEventIds);
+  // ネガ／ポジ／広報のどれにも入らない事象。ここが無く、制度変更や
+  // 種別未確定の新規報道がカードとして表示されないまま消えていた
+  const other = pick(report.otherEventIds ?? []);
   const watch = pick(report.watchEventIds);
 
   const diffRows = events
@@ -313,6 +316,7 @@ export function renderDailyReport({ run, events, report, siteUrl }) {
       ${renderSection('ネガティブなニュース／要注意', negative, '直近24時間で、掲載対象となる新たなネガティブ事象は確認できませんでした。')}
       ${renderSection('ポジティブなニュース／制度・運用の前進', positive, '掲載対象となる前進事象は確認できませんでした。')}
       ${renderSection('広報・SNS炎上／批判動向', pr, '直近24時間で、新たな行政広報案件は確認できませんでした。')}
+      ${renderSection('その他の新規の動き', other, '上記3区分に入らない新規の動きはありません。')}
 
       <h2>今日の優先ウォッチ</h2>
       ${watchRows ? `<ol class="watch">${watchRows}</ol>` : '<p class="empty">優先して確認すべき項目はありません。</p>'}

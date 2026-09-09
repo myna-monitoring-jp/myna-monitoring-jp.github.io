@@ -24,6 +24,9 @@ export const DELTA = {
   BACKFILL: 'backfill',
 };
 
+/** 未設定は一律 `null` に寄せる。JSON往復で `undefined` が消えることへの対処。 */
+const nullish = (value) => (value === undefined || value === null ? null : value);
+
 /** 前日台帳を canonicalKey で引ける形にする。 */
 export function indexPrevious(previous) {
   const byKey = new Map();
@@ -67,12 +70,22 @@ export function detectMaterialChanges(event, before) {
   }
 
   // 影響人数が判明・変更された
-  if (event.affectedCount !== before.affectedCount) {
+  /*
+   * `null` と `undefined` を区別してはいけない。
+   *
+   * 台帳はJSONで保存するため `undefined` のフィールドは消える。翌日読み直すと
+   * `before.affectedCount` は `undefined`、当日算定した値は `null` になり、
+   * 「影響人数が変更された」と誤判定していた。さらに下の CORRECTION 条件が
+   * `before.affectedCount !== null`（`undefined` は真）で通ってしまい、
+   * 2026-09-08 の台帳22件のうち21件が「訂正」になっていた。
+   * 公式が何も訂正していないのに「公式が前報を訂正」と読める状態だった。
+   */
+  if (nullish(event.affectedCount) !== nullish(before.affectedCount)) {
     changes.push({
       field: 'affectedCount',
-      before: before.affectedCount ?? null,
-      after: event.affectedCount ?? null,
-      reason: before.affectedCount === null ? '影響人数が判明' : '影響人数が変更',
+      before: nullish(before.affectedCount),
+      after: nullish(event.affectedCount),
+      reason: nullish(before.affectedCount) === null ? '影響人数が判明' : '影響人数が変更',
     });
   }
 
@@ -143,8 +156,12 @@ export function classifyDelta(event, before, { nowIso, primaryWindowHours = 24 }
   if ((before.status === 'quiet' || before.status === 'archived') && changes.length > 0) {
     return DELTA.REIGNITED;
   }
-  // 公式が前報を訂正した、または原因が変わった
-  if (changes.some((change) => change.field === 'affectedCount' && before.affectedCount !== null)) {
+  /*
+   * 公式が前報を訂正した。
+   * 前日に**数値が入っていた**ものが変わった場合だけ訂正とする。
+   * 前日が未判明（null/undefined）だったものは「判明」であって訂正ではない。
+   */
+  if (changes.some((change) => change.field === 'affectedCount') && typeof before.affectedCount === 'number') {
     return DELTA.CORRECTION;
   }
   // 報道・反応・対象が拡大

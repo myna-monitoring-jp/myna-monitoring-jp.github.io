@@ -67,12 +67,23 @@ export function buildQueries(catalog, previous = { events: [] }) {
     queries.push({ query, pass, purpose, windowHours: hours });
   };
 
-  /* --- Pass A：広域発見。24時間と72時間の2本立てで索引遅延を回収する --- */
+  /*
+   * --- Pass A：広域発見。24時間と72時間の2本立てで索引遅延を回収する ---
+   *
+   * open_discovery を先頭に置く。制度名だけの無条件検索で、
+   * ここが**新規の発表・動きの唯一の通り道**になる。
+   * broad_discovery は事案語を必須にしているため、
+   * 事案語を含まない新規（提供開始・全国展開・実証実験など）を拾えない。
+   */
+  for (const query of groups.open_discovery?.queries ?? []) {
+    add(query, PASSES.A, 'open_discovery_24h', primary);
+    add(query, PASSES.A, 'open_discovery_72h', backfill);
+  }
   for (const query of groups.broad_discovery?.queries ?? []) {
     add(query, PASSES.A, 'broad_discovery_24h', primary);
     add(query, PASSES.A, 'broad_discovery_72h', backfill);
   }
-  for (const key of ['online_eligibility', 'portal_and_app', 'card_and_certificate', 'public_money_account', 'medical_it_cyber', 'public_relations']) {
+  for (const key of ['announcements', 'online_eligibility', 'portal_and_app', 'card_and_certificate', 'public_money_account', 'medical_it_cyber', 'public_relations']) {
     for (const query of groups[key]?.queries ?? []) {
       add(query, PASSES.A, key, backfill);
     }
@@ -95,9 +106,15 @@ export function buildQueries(catalog, previous = { events: [] }) {
     add(query, PASSES.A, 'local_government_incidents', 30 * 24);
   }
 
-  /* --- Pass C：深掘り。重要度が高い、または不明項目が残る事象だけ --- */
-  for (const event of eventsNeedingDeepDive(previous)) {
-    for (const suffix of ['影響人数', '復旧', '原因', '対象者', 'お詫び', '再発防止']) {
+  /*
+   * --- Pass C：深掘り。重要度が高い、または不明項目が残る事象だけ ---
+   *
+   * 既知案件の追跡に寄りすぎていた。2026-09-08 は全212本のうち
+   * 深掘り60本・反応25本・追跡6本＝91本が既知案件向けで、
+   * 新規発見に使われたのは20本だけだった。上位5件×4語に絞る。
+   */
+  for (const event of eventsNeedingDeepDive(previous).slice(0, 5)) {
+    for (const suffix of ['影響人数', '復旧', '原因', '再発防止']) {
       add(`"${event.title}" ${suffix}`, PASSES.C, `deep_dive:${event.id}`, trendDays * 24);
     }
   }
@@ -120,9 +137,15 @@ export function buildQueries(catalog, previous = { events: [] }) {
     }
   }
 
-  /* --- Pass E：前日の要注視・続報待ちのクローズ確認。毎日必ず回す --- */
-  for (const event of eventsNeedingClose(previous)) {
-    for (const template of groups.follow_up?.templates ?? []) {
+  /*
+   * --- Pass E：前日の要注視・続報待ちのクローズ確認。毎日必ず回す ---
+   *
+   * 12件×10語＝120本まで膨らみ、既知案件の追跡が検索予算の半分を占めていた。
+   * 上位8件×5語に絞る。残りの語（訂正・延長・削除・中止）は Pass C の深掘りで
+   * 影響度の高いものだけ見る。
+   */
+  for (const event of eventsNeedingClose(previous).slice(0, 8)) {
+    for (const template of (groups.follow_up?.templates ?? []).slice(0, 5)) {
       add(fillTemplate(template, { event_name: event.title }), PASSES.E, `follow_up:${event.id}`, trendDays * 24);
     }
   }
@@ -368,7 +391,13 @@ export async function discover({
       items = parseFeed(await fetchText(googleNewsUrl(entry.query, entry.windowHours)));
     } catch (error) {
       errors.push(`検索「${entry.query}」: ${error.message}`);
-      queryLogs.push({
+      /*
+       * 失敗したクエリも検索ログへ残す。
+       * ここで logSink を呼んでいなかったため、search-log.jsonl には
+       * 成功したクエリしか載らず、「探して出なかった」のか
+       * 「そもそも到達できなかった」のかが後から分からなかった（仕様§18）。
+       */
+      const failed = {
         query: entry.query,
         purpose: entry.purpose,
         provider: 'google_news_rss',
@@ -376,7 +405,10 @@ export async function discover({
         resultCount: 0,
         selectedUrls: [],
         newMaterialEventCount: 0,
-      });
+        error: String(error.message ?? error).slice(0, 200),
+      };
+      queryLogs.push(failed);
+      if (logSink) logSink(failed);
       continue;
     }
 

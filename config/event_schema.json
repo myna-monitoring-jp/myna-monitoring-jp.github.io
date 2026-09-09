@@ -122,7 +122,7 @@
         "canonicalKey": {"type": "string"},
         "title": {"type": "string"},
         "entity": {"type": ["string", "null"]},
-        "eventClass": {"enum": ["outage", "planned_maintenance", "operational_load", "policy_change", "security_incident", "public_communication", "positive_service_update", "survey"]},
+        "eventClass": {"enum": ["outage", "planned_maintenance", "operational_load", "policy_change", "security_incident", "public_communication", "positive_service_update", "survey", "uncategorized"]},
         "domain": {"enum": ["myna_insurance", "online_eligibility", "myna_card", "electronic_certificate", "myna_portal", "myna_app", "public_money_account", "pmh", "e_prescription", "local_government", "medical_it", "cybersecurity", "public_relations", "other"]},
         "systemLayer": {"type": ["string", "null"]},
         "polarity": {"enum": ["negative", "positive", "neutral_watch", "mixed"]},
@@ -131,6 +131,9 @@
         "severity": {"enum": ["critical", "high", "medium", "low", "reference"]},
         "impactScore": {"type": "integer", "minimum": 0, "maximum": 100},
         "attentionScore": {"type": "integer", "minimum": 0, "maximum": 100},
+        "affectedCount": {"type": ["integer", "null"], "minimum": 0},
+        "affectedCountUnit": {"type": ["string", "null"]},
+        "affectedCountNote": {"type": ["string", "null"]},
         "occurredAt": {"type": ["string", "null"], "format": "date-time"},
         "detectedAt": {"type": "string", "format": "date-time"},
         "publishedAt": {"type": ["string", "null"], "format": "date-time"},
@@ -189,7 +192,8 @@
         "executedAt": {"type": "string", "format": "date-time"},
         "resultCount": {"type": "integer", "minimum": 0},
         "selectedUrls": {"type": "array", "items": {"type": "string", "format": "uri"}},
-        "newMaterialEventCount": {"type": "integer", "minimum": 0}
+        "newMaterialEventCount": {"type": "integer", "minimum": 0},
+        "error": {"type": "string"}
       },
       "additionalProperties": false
     },
@@ -229,6 +233,7 @@
         "negativeEventIds": {"type": "array", "items": {"type": "string"}},
         "positiveEventIds": {"type": "array", "items": {"type": "string"}},
         "prEventIds": {"type": "array", "items": {"type": "string"}},
+        "otherEventIds": {"type": "array", "items": {"type": "string"}},
         "watchEventIds": {"type": "array", "items": {"type": "string"}},
         "htmlPath": {"type": ["string", "null"]}
       },
