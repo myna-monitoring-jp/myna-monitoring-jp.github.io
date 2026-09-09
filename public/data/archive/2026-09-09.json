@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-10T07:17:25.050+09:00",
-  "reportDate": "2026-09-10",
+  "generatedAt": "2026-09-09T11:38:13.357+09:00",
+  "reportDate": "2026-09-09",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-10T07:17:25.050+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-09T11:38:13.357+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -382,11 +382,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-10T07:17:25.050+09:00",
+      "lastMaterialUpdateAt": "2026-09-09T11:38:13.357+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "独立媒体2件の追加報道を自動検知（2026-09-10）。",
+      "dailyDiff": "独立媒体1件の追加報道を自動検知（2026-09-09）。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -414,23 +414,12 @@
         },
         {
           "type": "media",
-          "label": "厚生労働省",
-          "url": "https://www.mhlw.go.jp/stf/newpage_76068.html",
-          "linkText": "報道記事を開く",
-          "publisher": "厚生労働省",
-          "publishedAt": "2026-09-09T14:00:00+09:00",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
           "label": "パナソニック コネクト",
           "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOVpXcF94ODFkRE9zcnVSQmVPYV9QWUgxc2t1aGdPV1FYbzhVeXhfWDlWemNDcWNINHBrMzRYMlFkSjFBaTVzRWVVNlZWZHJnWHlZOHlKR09HWHNZR21Gdk9fekVhQzBYNXlveE1wZ3o2TVY4ZmNfdExGUFgzcXFRMW5lY2Y0d211cUhSd3NmaXF4Nnpl?oc=5",
           "linkText": "報道記事を開く",
           "publisher": "パナソニック コネクト",
           "publishedAt": "2026-08-24T23:30:13+09:00",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -1656,281 +1645,6 @@
       "id": "news-auto-20260904-bzib32",
       "category": "commentary",
       "polarity": "neutral"
-    },
-    {
-      "title": "あなたの命を守る「マイナ救急」（広報動画）",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-09-10T07:17:25.050+09:00",
-      "publishedAt": "2026-09-09T14:15:54+09:00",
-      "lastMaterialUpdateAt": "2026-09-09T14:15:54+09:00",
-      "summary": "健康保険証の機能を持たせたマイナンバーカード（マイナ保険証）を救急業務に生かす「マイナ救急」の取り組みが今年度、全国で始まった。 救急搬送される患者の救命率を向上させていくことが重要だ。 救急隊員は通常、現場に到着すると、患者の名前 ...",
-      "dailyDiff": "2026-09-10の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集",
-        "広報候補"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "city.joyo.kyoto.jp",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9iVHRQbHlaWDVQdzcydDZ3dmhQZXRjdXFOVWR4LUpLbjA2MDNWWl9pSTJJSXhkTFFiVURPUnQ0YkVmZ1hIbkhiTUJYaHhJS2MwUjNaTXlpSUJSQQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "city.joyo.kyoto.jp",
-          "publishedAt": "2026-09-09T14:15:54+09:00",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260909-83zds0",
-      "category": "other"
-    },
-    {
-      "title": "第215回社会保障審議会医療保険部会（ペーパーレス）の開催について",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-10T07:17:25.050+09:00",
-      "publishedAt": "2026-09-09T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-09T14:00:00+09:00",
-      "summary": "厚生労働省は6月18日、マイナ保険証の受付に使う「第2世代（次期）顔認証付きカードリーダー」の販売が2026年度から順次始まったことを、社会保障審議会医療保険部会の資料で明らかにした。最大の特徴は、本体だけでスマートフォンのマイナ保険証を ...",
-      "dailyDiff": "2026-09-10の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "厚生労働省",
-          "url": "https://www.mhlw.go.jp/stf/newpage_76068.html",
-          "linkText": "報道記事を開く",
-          "publisher": "厚生労働省",
-          "publishedAt": "2026-09-09T14:00:00+09:00",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260909-m080md",
-      "category": "reference"
-    },
-    {
-      "title": "国内からオンライン申請する｜外務省",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-10T07:17:25.050+09:00",
-      "publishedAt": "2026-09-07T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-07T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-10の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "mofa.go.jp",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE12OTIxbVlrUWE1TndHRWVlZFNXMVJaYnFhclZVUGRfZjhDcHIyRkIydmVQUUlNWmRVRU9oODd6dXdoM2JZSEU4Tk9EeFcwUXJWWER5SzduX1BkMWdjbHd1eE96NjQwbWtIX0JET09R?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "mofa.go.jp",
-          "publishedAt": "2026-09-07T07:00:00.000Z",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260907-uvc8zn",
-      "category": "reference"
-    },
-    {
-      "title": "旅券（パスポート）の申請手続きに関するお知らせ",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-10T07:17:25.050+09:00",
-      "publishedAt": "2026-09-07T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-07T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-10の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "city.tomigusuku.lg.jp",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1Ic0NHWVhtWEg4TFV4dUJtZmd4TU1aQnBybE9OdUxrdkdLMVhraWlJeGp4eW9NZlRMUFRHU21xaE1wMS02NWFjWU1iMjZpMy1sMWswa3VyRHV4VXdUNTI3Mm9Fdjg0ZXVRdVRFOVB6SFZxZVowZnJCSTlvS0wzQQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "city.tomigusuku.lg.jp",
-          "publishedAt": "2026-09-07T07:00:00.000Z",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260907-yh2vhi",
-      "category": "reference"
-    },
-    {
-      "title": "国外からオンライン申請する｜外務省",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-10T07:17:25.050+09:00",
-      "publishedAt": "2026-09-07T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-07T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-10の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "mofa.go.jp",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBNcU5uaEwwQ0w1ZWNsbVRWUWs3UjhzV2w4aHFIbFdPejFfV3lhZDlXQXMxMUVycjJPQXhuZkJFRk1XeTZUdEljMnhReG1tSE80XzdqNVdhMF9KaVlvdkk4b3NMUGU5SDFibmtiaHpn?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "mofa.go.jp",
-          "publishedAt": "2026-09-07T07:00:00.000Z",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260907-nfgbzw",
-      "category": "reference"
-    },
-    {
-      "title": "「救急の日」に適正利用を呼びかけ 大分市の救急出動が過去最多 呼ぶべき症状と相談先は",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-10T07:17:25.050+09:00",
-      "publishedAt": "2026-09-09T09:55:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-09T09:55:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-10の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "ｄメニューニュース",
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNTEpscnprMnFsbkdMTklzNl8tSnpCVzF4YXlLbWZhcDBHTlgtRWU2ODZndE5NLXo4aUlHcU5aSGtXSDFuekZGdDNlQ2Y2cWtfeF9Db1N0YmRmdS1ybXRnUDM2RnZ5dHFxZU5fc3JwVzhpR2h6LUJ4M2JoSllPQXlkVjF30gGCAUFVX3lxTE1MSmxyemsycWxuR0xOSXM2Xy1KekJXMXhheUttZmFwMEdOWC1FZTY4Nmd0Tk0tejhpSUdxTlpIa1dIMW56RkZ0M2VDZjZxa194X0NvU3RiZGZ1LXJtdGdQMzZGdnl0cXFlTl9zcnBXOGlHaHotQngzYmhKWU9BeWRWMXc?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "ｄメニューニュース",
-          "publishedAt": "2026-09-09T09:55:00.000Z",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260909-9j2yvy",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "“マイナ救急”で円滑に 消防局が救急車の適正利用やマイナンバーカード携帯呼びかけ「救急の日」大分",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-09-10T07:17:25.050+09:00",
-      "publishedAt": "2026-09-09T11:50:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-09T11:50:00+09:00",
-      "summary": "健康保険証の機能を持たせたマイナンバーカード（マイナ保険証）を救急業務に生かす「マイナ救急」の取り組みが今年度、全国で始まった。 救急搬送される患者の救命率を向上させていくことが重要だ。 救急隊員は通常、現場に到着すると、患者の名前 ...",
-      "dailyDiff": "2026-09-10の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "tosonline.jp",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB0U2hINDF5ZWtJY1lQUnRJc3R2amZib295ZjV5b0lmRzd0S2thd0RpT2lRR242aVR1LXRMaEY1djdXNGpaQlFCNFl6bjh4T0xDMEk1SGF3Y1JtUjZG?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "tosonline.jp",
-          "publishedAt": "2026-09-09T11:50:00+09:00",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260909-jp7oya",
-      "category": "commentary",
-      "polarity": "positive"
-    },
-    {
-      "title": "“マイナ救急”で円滑に 消防局が救急車の適正利用やマイナンバーカード携帯呼びかけ「救急の日」大分",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-10T07:17:25.050+09:00",
-      "publishedAt": "2026-09-09T02:50:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-09T02:50:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-10の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "FNNプライムオンライン",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5YamlpZzZqTGU5WUxWeVJZRzA2UjNGUFlaZ1NVSWNsV1BBcUo0TU80c09QSDFEQ3M3RjNSLU9pX2hNWTctbXZaRTQtV0Npdw?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "FNNプライムオンライン",
-          "publishedAt": "2026-09-09T02:50:00.000Z",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260909-ryz6fy",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナ保険証 有用性の訴えが足りない",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-10T07:17:25.050+09:00",
-      "publishedAt": "2026-09-09T07:30:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-09T07:30:00+09:00",
-      "summary": "8月に入って、私たちの生活に関わる多くのことが変化した。 その1つが保険証だ。 従来の紙の保険証は8月から使用ができなくなり、マイナ保険証などの提示が必要となった。 医療機関で混乱は起きていないのだろうか。 「紙の保険証」で受診できる暫定 ...",
-      "dailyDiff": "2026-09-10の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "福井新聞社",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5RTjFxM0RsNjg2SU1uaGV5YkU5Y2lvdkhzMldHZzdsNWlES1duZXpLZkhyWExEOW9NQkVpd2xPa3pSZ2lLTlFGc3Rzd1RuT1hsSDIwY0pNNTBrZC00UWc?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "福井新聞社",
-          "publishedAt": "2026-09-09T07:30:00+09:00",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260909-vuka0v",
-      "category": "commentary",
-      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -2408,7 +2122,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-10T07:17:25.050+09:00",
+      "lastMaterialUpdateAt": "2026-09-09T11:38:13.357+09:00",
       "affectedCount": null,
       "affectedCountNote": "更新期限を迎える保有者。人数は自治体別に未公表",
       "symptoms": "立川市は9/2更新の案内で、カード交付に加え電子証明書の更新・新規発行、暗証番号再設定が混雑し待ち時間が60分以上となることが多いと明記。姫路市はマイナンバーコールセンターへの問い合わせ集中で電話がつながりにくい状態が続くと案内。広島市中区は夜間・休日の予約窓口を案内。",
@@ -2420,7 +2134,7 @@
       "summary": "電子証明書の更新需要により自治体窓口の負荷が継続。立川市は「60分以上待つことが多い」と明記し、姫路市は電話混雑を案内している。SNSの反応ではなく自治体公式の一次情報として確認。",
       "whatIsNew": "立川市が9/2に待ち時間「60分以上」を明記。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体4件の追加報道を自動検知（2026-09-10）。",
+      "dailyDiff": "独立媒体4件の追加報道を自動検知（2026-09-09）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -2494,7 +2208,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁",
           "publishedAt": "2026-08-28T15:00:00+09:00",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -2505,18 +2219,18 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁 ウェブサービス・アプリケーション",
           "publishedAt": "2026-08-25T19:50:56+09:00",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         },
         {
           "type": "media",
-          "label": "沼津市ホームページ",
+          "label": "city.numazu.shizuoka.jp",
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9WdlJjRjdWNjQ1ekJ6V2hEck9icEFOQVZFTHJVampwazlWVnZLckZDbXgtSnZsQ1JLaUlLM2tfVTA3eWI0NHloVTFPMVFaeWpiTzdOeHZPR2UwcUYxaTBkSEdaNUhkMXZ0RUFNa095MWQ1S3NwYUxN?oc=5",
           "linkText": "報道記事を開く",
-          "publisher": "沼津市ホームページ",
+          "publisher": "city.numazu.shizuoka.jp",
           "publishedAt": "2026-09-07T05:57:39.000Z",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -2527,7 +2241,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.niigata.lg.jp",
           "publishedAt": "2026-08-27T07:00:00.000Z",
-          "verifiedAt": "2026-09-10T07:17:25.050+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -3022,11 +2736,6 @@
     }
   ],
   "archive": [
-    {
-      "date": "2026-09-09",
-      "title": "日次レポート",
-      "dataPath": "archive/2026-09-09.json"
-    },
     {
       "date": "2026-09-08",
       "title": "日次レポート",
