@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-09T07:10:01.965+09:00",
+  "generatedAt": "2026-09-09T11:38:13.357+09:00",
   "reportDate": "2026-09-09",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-09T07:10:01.965+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-09T11:38:13.357+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -382,7 +382,7 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-09T07:10:01.965+09:00",
+      "lastMaterialUpdateAt": "2026-09-09T11:38:13.357+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
@@ -419,7 +419,7 @@
           "linkText": "報道記事を開く",
           "publisher": "パナソニック コネクト",
           "publishedAt": "2026-08-24T23:30:13+09:00",
-          "verifiedAt": "2026-09-09T07:10:01.965+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -1583,6 +1583,68 @@
       ],
       "id": "news-auto-20260906-h12vq6",
       "category": "reference"
+    },
+    {
+      "title": "たった1社の停止で全米の医療が麻痺…｢ハッキングされていない病院｣の経営まで止まったサイバー攻撃の戦慄",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-09T11:38:13.357+09:00",
+      "publishedAt": "2026-09-08T23:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-09-08T23:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-09-09の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（医療IT・サイバー）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Infoseek",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5KWGdxVVNjOXptSnlpWHJKV0dvaUlDNjFzV2Q1SThoZ0pMc0xuMUd4TUpyenBaTXhRblA0NDEwajNFYnBsNUVEYTBtaU9ITl9vNHQ0Z05XaW5IcGgyUW5EczVjYzhmeWxlbXJqd0Z3SGw?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Infoseek",
+          "publishedAt": "2026-09-08T23:00:00.000Z",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260908-gp6vrz",
+      "category": "other"
+    },
+    {
+      "title": "マイナ救急を実施中",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-09T11:38:13.357+09:00",
+      "publishedAt": "2026-09-04T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-09-04T07:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-09-09の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "city-kirishima.jp",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcXpXTFdwcG9ZOFQxVlJ1UGdHWm5QUW51MlM1cFRTSmQyVExBbDFKNGhMWWsyZm5xOEplQzNVbXZxdkNMS015WWo3TDVPQzBseklyUUV1RE9FdHdDcmNSalYxM1FmbWw2Z1pnTW9fbngySXU0Vndic3VXTUZWbmZzQUJzbEk0QQ?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "city-kirishima.jp",
+          "publishedAt": "2026-09-04T07:00:00.000Z",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260904-bzib32",
+      "category": "commentary",
+      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -2060,7 +2122,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-09T07:10:01.965+09:00",
+      "lastMaterialUpdateAt": "2026-09-09T11:38:13.357+09:00",
       "affectedCount": null,
       "affectedCountNote": "更新期限を迎える保有者。人数は自治体別に未公表",
       "symptoms": "立川市は9/2更新の案内で、カード交付に加え電子証明書の更新・新規発行、暗証番号再設定が混雑し待ち時間が60分以上となることが多いと明記。姫路市はマイナンバーコールセンターへの問い合わせ集中で電話がつながりにくい状態が続くと案内。広島市中区は夜間・休日の予約窓口を案内。",
@@ -2146,7 +2208,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁",
           "publishedAt": "2026-08-28T15:00:00+09:00",
-          "verifiedAt": "2026-09-09T07:10:01.965+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -2157,18 +2219,18 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁 ウェブサービス・アプリケーション",
           "publishedAt": "2026-08-25T19:50:56+09:00",
-          "verifiedAt": "2026-09-09T07:10:01.965+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         },
         {
           "type": "media",
-          "label": "沼津市ホームページ",
+          "label": "city.numazu.shizuoka.jp",
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9WdlJjRjdWNjQ1ekJ6V2hEck9icEFOQVZFTHJVampwazlWVnZLckZDbXgtSnZsQ1JLaUlLM2tfVTA3eWI0NHloVTFPMVFaeWpiTzdOeHZPR2UwcUYxaTBkSEdaNUhkMXZ0RUFNa095MWQ1S3NwYUxN?oc=5",
           "linkText": "報道記事を開く",
-          "publisher": "沼津市ホームページ",
+          "publisher": "city.numazu.shizuoka.jp",
           "publishedAt": "2026-09-07T05:57:39.000Z",
-          "verifiedAt": "2026-09-09T07:10:01.965+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -2179,7 +2241,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.niigata.lg.jp",
           "publishedAt": "2026-08-27T07:00:00.000Z",
-          "verifiedAt": "2026-09-09T07:10:01.965+09:00",
+          "verifiedAt": "2026-09-09T11:38:13.357+09:00",
           "active": true,
           "note": "自動収集"
         }
