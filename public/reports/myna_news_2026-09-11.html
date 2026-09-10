@@ -1,0 +1,1619 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>マイナ関連 朝の動向レポート 2026-09-11</title>
+    <style>
+      :root{--ink:#1d2433;--muted:#667085;--line:#e3e7ee;--bg:#f4f6fa;--purple:#6741c7;
+        --red:#b42318;--red-bg:#fff1f0;--amber:#b54708;--amber-bg:#fffaeb;--green:#067647;--green-bg:#ecfdf3;--gray-bg:#f2f4f7}
+      *{box-sizing:border-box}
+      body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;
+        font-family:'Meiryo UI','Meiryo','Yu Gothic UI','Yu Gothic',Arial,sans-serif}
+      .wrap{max-width:1040px;margin:0 auto;padding:0 18px 48px}
+      header.hero{background:linear-gradient(135deg,#1c1730,#4b3189 62%,#886ce0);color:#fff;padding:26px 22px}
+      header.hero .inner{max-width:1040px;margin:0 auto}
+      header.hero p.kicker{margin:0;font-size:10px;letter-spacing:.09em;opacity:.8;text-transform:uppercase}
+      header.hero h1{margin:6px 0;font-size:26px}
+      header.hero p.window{margin:0;font-size:12px;opacity:.92}
+      h2{font-size:17px;margin:30px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--purple)}
+      .summary{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:18px}
+      .summary p{margin:0 0 8px;font-size:13px}
+      .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+      .card-head{display:flex;gap:11px;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:11px;margin-bottom:12px}
+      .card-index{display:inline-grid;place-items:center;width:23px;height:23px;flex:none;border-radius:6px;background:#181326;color:#fff;font-size:11px;font-weight:800}
+      .card-head h3{margin:0 0 6px;font-size:15px;line-height:1.45}
+      .badges{display:flex;flex-wrap:wrap;gap:5px;margin:0;padding:0;list-style:none}
+      .badge{font-size:10px;font-weight:700;border:1px solid var(--line);background:var(--gray-bg);color:#475467;border-radius:999px;padding:2px 8px}
+      .badge.sev-critical,.badge.sev-high{background:var(--red-bg);border-color:#fbc9c4;color:var(--red)}
+      .badge.sev-medium{background:var(--amber-bg);border-color:#fde3b0;color:var(--amber)}
+      .badge.ok{background:var(--green-bg);border-color:#b7ebc9;color:var(--green)}
+      .badge.warn{background:var(--amber-bg);border-color:#fde3b0;color:var(--amber)}
+      .block{margin-bottom:13px}
+      .block:last-child{margin-bottom:0}
+      .block h4{margin:0 0 6px;font-size:11px;font-weight:800;color:var(--purple)}
+      .block p{margin:0 0 7px;font-size:12.5px}
+      .whatsnew{color:var(--purple);font-weight:700}
+      .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:9px 0 0;padding:0;list-style:none}
+      .facts li{border:1px solid var(--line);border-radius:9px;background:#fbfbfe;padding:7px 9px}
+      .facts span{display:block;font-size:9.5px;color:var(--muted)}
+      .facts strong{display:block;font-size:12.5px}
+      .voices,.unknowns{margin:0 0 7px;padding-left:18px}
+      .voices li,.unknowns li{font-size:12px;margin-bottom:4px}
+      .voice-meta{display:block;font-size:10px;color:var(--muted)}
+      .novoice{color:var(--muted)}
+      .denial{font-size:11.5px;background:var(--gray-bg);border-radius:8px;padding:7px 9px}
+      .note{font-size:10.5px;color:var(--muted);margin:0}
+      .srcrow{display:flex;flex-wrap:wrap;gap:7px}
+      a.src{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:6px 11px;border:1px solid #d9d0f5;
+        background:#f7f3ff;color:#4b2fa8;border-radius:8px;font-size:11.5px;font-weight:700;text-decoration:none;pointer-events:auto}
+      a.src:hover{background:#efe8ff}
+      a.src:focus-visible{outline:3px solid #7a5af8;outline-offset:2px}
+      .src-host{font-weight:400;color:var(--muted);font-size:10px}
+      .src-broken{font-size:11px;color:var(--muted)}
+      table{width:100%;border-collapse:collapse;font-size:12px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+      th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+      thead th{background:var(--gray-bg);font-size:11px;color:#475467}
+      .watch{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+      .watch li{display:flex;gap:8px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+      .rank{display:inline-grid;place-items:center;width:19px;height:19px;flex:none;border-radius:5px;background:var(--purple);color:#fff;font-size:10px}
+      .watch strong{font-size:12px}
+      .watch p{margin:2px 0 0;font-size:11px;color:var(--muted)}
+      .sources{margin:0;padding-left:18px}
+      .sources li{font-size:11.5px;margin-bottom:5px}
+      .empty{font-size:12.5px;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:14px}
+      footer{margin-top:32px;font-size:11px;color:var(--muted)}
+      @media (max-width:820px){.facts{grid-template-columns:repeat(2,1fr)}.watch{grid-template-columns:1fr}header.hero h1{font-size:21px}}
+      @media print{body{background:#fff}.card,.summary,.watch li{box-shadow:none;break-inside:avoid;page-break-inside:avoid}
+        a.src{text-decoration:underline}h2{break-after:avoid}}
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="inner">
+        <p class="kicker">DAILY MONITORING / MY NUMBER &amp; MYNA INSURANCE CARD</p>
+        <h1>マイナ関連 朝の動向レポート</h1>
+        <p class="window">2026-09-11｜主対象：2026/09/10 08:40 〜 2026/09/11 08:40 JST（直近24時間）</p>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <section class="summary">
+        <h2 style="margin-top:4px">今朝の総括</h2>
+        <p>直近24時間で、マイナ保険証・オンライン資格確認の新たな全国規模の重大障害は確認できませんでした。個人情報・セキュリティ関連は4件を確認しています。行政広報について、新たに二次転載・主要報道化まで進んだ大型の炎上は確認できませんでした。本日新規に検知した事象は4件です。この判断は、220本の検索と取得できた公式情報の範囲によるものです。存在しないことの証明ではありません。</p>
+      </section>
+
+      <h2>前日からの差分</h2>
+      <table><caption class="note" style="text-align:left;padding:8px 10px">前日から動いた項目</caption>
+        <thead><tr><th scope="col">差分</th><th scope="col">事象</th><th scope="col">内容</th></tr></thead>
+        <tbody>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>意識不明でも病歴や持参薬がすぐわかる！救急隊がマイナ保険証を活用する「マイナ救急」が全国で本格スタート</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>あなたの命を守る「マイナ救急」（広報動画）</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）、炎上認定（backlashRecognized: false → true）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>長崎市「マイナンバーカード申請書類を紛失」個人情報記載書類を誤って廃棄した可能性《長崎》</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）、炎上認定（backlashRecognized: false → true）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>たった1社の停止で全米の医療が麻痺…｢ハッキングされていない病院｣の経営まで止まったサイバー攻撃の戦慄</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>病院で相次ぐサイバー攻撃、厚労省が対策強化へ…外部との回線集約化に助成・攻撃時の遮断が容易に</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）、炎上認定（backlashRecognized: false → true）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>病院へのサイバー攻撃 対策強化へ</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>大雨被災者、マイナ保険証なしで受診可【無料】</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）｜デジタル庁</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>マイナンバーカードの普及と利活用に関するダッシュボード｜デジタル庁</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">新規</th>
+              <td>学園祭での年齢確認にマイナンバーカードを活用しています｜デジタル庁</td>
+              <td>本日新たに検知しました。</td>
+            </tr>
+            <tr>
+              <th scope="row">解消</th>
+              <td>メンテナンス・稼働状況 | マイナポータルAPI 仕様公開サイト | ドキュメント | デジタル庁 開発者サイト</td>
+              <td>復旧・終了が確認できました。 復旧状態の更新（recoveryStatus: 未公表 → recovered_confirmed）</td>
+            </tr>
+            <tr>
+              <th scope="row">新規</th>
+              <td>「マイナ免許証」窓口警察署拡大へ 11月2日から栃木県内18署で受け付け、取得しやすく</td>
+              <td>本日新たに検知しました。</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">大きな動きなし</th>
+              <td>医療費助成オン資、約半数の薬局で導入</td>
+              <td>前日から大きな動きはありません。</td>
+            </tr>
+            <tr>
+              <th scope="row">大きな動きなし</th>
+              <td>千葉興業銀行、対面の本人確認にJPKI利用 顧客の利便性を向上（2ページ目）</td>
+              <td>前日から大きな動きはありません。</td>
+            </tr>
+            <tr>
+              <th scope="row">大きな動きなし</th>
+              <td>マイナンバーカードで避難所の受け付けを…デジタル化の実証実験 秋田県総合防災訓練</td>
+              <td>前日から大きな動きはありません。</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>マイナンバー（個人番号）カードについて</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）、影響範囲の評価が変化（impactScore: 0 → 17）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>マイナ保険証 有用性の訴えが足りない</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">追補</th>
+              <td>地震で病院に行けない被災者を救う 熊本市の「ひのくに薬局」が電子処方箋を活用したお薬配達を続ける 「まずは薬局に相談を」</td>
+              <td>直近24時間より前の事象を新たに検知しました（追補）。</td>
+            </tr>
+            <tr>
+              <th scope="row">大きな動きなし</th>
+              <td>【三浦政策統括官】電子カルテ認証制度推進‐電子処方箋普及と一体で</td>
+              <td>前日から大きな動きはありません。</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>本人確認はマイナアプリで（20秒）　 | 政府広報オンライン</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>マイナアプリ（iOS）のアプリストア評価：2.3／5・616件</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">大きな動きなし</th>
+              <td>マイナアプリ | 政府広報オンライン</td>
+              <td>前日から大きな動きはありません。</td>
+            </tr>
+            <tr>
+              <th scope="row">大きな動きなし</th>
+              <td>公金受取口座（令和8年（2026年）8月掲載） | 政府広報オンライン</td>
+              <td>前日から大きな動きはありません。</td>
+            </tr>
+            <tr>
+              <th scope="row">新規</th>
+              <td>学園祭での年齢確認にマイナンバーカードを活用しています</td>
+              <td>本日新たに検知しました。</td>
+            </tr>
+            <tr>
+              <th scope="row">新規</th>
+              <td>｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由の写真一覧</td>
+              <td>本日新たに検知しました。</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>１７８人のマイナンバーカード「署名用電子証明書」が失効 鳥取市</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>本人確認はマイナアプリで（20秒）</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">重要更新</th>
+              <td>【画像】スマホとマイナンバーカードだけでパスポートを更新、自撮り写真も使えた 2/5</td>
+              <td>重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</td>
+            </tr>
+            <tr>
+              <th scope="row">追補</th>
+              <td>マイナアプリとは？ できること・マイナポータルアプリからの移行方法・ロック設定の必須化まで解説</td>
+              <td>直近24時間より前の事象を新たに検知しました（追補）。</td>
+            </tr>
+            <tr>
+              <th scope="row">大きな動きなし</th>
+              <td>｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由の写真一覧</td>
+              <td>前日から大きな動きはありません。</td>
+            </tr>
+            <tr>
+              <th scope="row">大きな動きなし</th>
+              <td>マイナンバーカード・電子証明書の更新について</td>
+              <td>前日から大きな動きはありません。</td>
+            </tr>
+            <tr>
+              <th scope="row">大きな動きなし</th>
+              <td>パーソナルヘルスレコード（PHR）とは？ 含まれる情報とマイナポータルとの関係、スマートウォッチのデータの扱いまで解説</td>
+              <td>前日から大きな動きはありません。</td>
+            </tr></tbody></table>
+
+      <h2>ネガティブなニュース／要注意</h2>
+      <article class="card" id="event-evt-mvsuoj">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">1</span>
+          <div>
+            <h3>長崎市「マイナンバーカード申請書類を紛失」個人情報記載書類を誤って廃棄した可能性《長崎》</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">要注視</li>
+              <li class="badge">重要更新</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）、炎上認定（backlashRecognized: false → true）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/09</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>1</strong></li><li><span>影響度 / 話題度</span><strong>10 / 12</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMie0FVX3lxTE02XzIxYTRIX2pKeExJc3lNVEZEODhsTzktUWxwZC1DU0ZXTVExdGJBWXpxcHlfaTBzdE5PUFktM0dCZGZQVmk0Q3ZPc3VTajI0bnEzSVVfdXhVQTlPZHg4ZlFaVm10cV9hSm9vZTgzNDNSR3B3UDdlcEZHMNIBgAFBVV95cUxOcktubk9ncWZrX2FWeGh1djBBTWd4ZEFqbHhPRDI5bDU0eV8taWt2TE0zc2JfV1VVazFTUkpzd0Z6MEpjZjJneE1Tb2t4N3VqWmFuVVZnVGRySU1LNG81V2JpazdlWjhWSER2aWt2Tm9iWmVyRzhqMXRPSTFET0ViTA?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOaktCbGg1VUxPWXBUN3ZhUXZMYVFSYWpEQjA1Z0RHYmxGRXlNNUJuT1NCR1ExZEhSVTlKa2NST29FQ19WUGV0bjE4emhfb1Fmak5MUGxvNFdhaGM3a3pZcmprLVpRTEpLYzNVTHVMdzRSYU44RXBDODJESjl2MTk0NFY1ZE1wekFqTDM0RWJR?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNYmc3b3lIV05ObEZkM0FfNTNncEc4c1c0ZXQyM1RPQUdndXJ3MENxTmp6MzBJajJhQlJIdkxZa25zMi1fLXFSTXd1OEJDZTYxQjdhYXZuYjV5VlpvUU1XNFo5TllLMkY3QlJzckh3ZnN6b2ZKOWJzMF9QZWFzQjdGXzJPa2ljQzA?oc=5" target="_blank" rel="noopener noreferrer">報道記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9KLXIzd3Vsc19sMWRRTzlYSU41YWc1bUJoTGVoWnIzaW1vNGJhaE55YVdGZUpTVGVaOTlSaUNwR05zbDQ4cnpCb3lISzNhODlhZFhhaVAwTmtTQnJhaVE?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5kTGhrS01EVEZBUEZxMEFia2Rvc29BNGxjSWgzdGJnX2RqU1FSOU0zUnc4cnJQOVY1Um10TWhvWXA2TElZczJaZ0hQcUlJNUdSWVhfbWlHOWZ1ZmZ5b085YkZyOXExM21FaXlRc1VGU3BWcEZZOU1leE1DcnBwMWM?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-i976i6">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">2</span>
+          <div>
+            <h3>たった1社の停止で全米の医療が麻痺…｢ハッキングされていない病院｣の経営まで止まったサイバー攻撃の戦慄</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/09</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>1</strong></li><li><span>影響度 / 話題度</span><strong>0 / 5</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE96ZHQyWENpeFdjcnJDdGFtTzV3alVsbUYzLXVrempjdjU4N3l0QzM3WmpFcjZaNE1xQmFJNWlsS042R2NXYm43UGJqbjh0RkI0eGwxdFpNc000V2c?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBJVTZNVk1GS0xWSEp5LVl5bHVGRGRSQmJNR1dUalZFZjJlSjJVclFyQUgyTUtUREFGS1hEQzZNU3lxZ1ViNkhuRGJVbXVOMmN5RzUtNjlZS01OSVk?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPV1RoQVpOX1cwMk1FNTdndkFLNG5VZmhEVVhoRTdTeWJzTnNBZHZTWmxYWDJHdHAwbURmWWg3STFfRE8tc1FaVHRkOHVEdXNGV3did2sxb0pfTUpKOFh6QkVLTlJMdW9DVVZIWUhZVWNzWnAxazVfOTJqV3lTWmdETFE3c0ltZWdqX0FoYU93?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1CYUhNdi1TM1J0UzdnQlBaMWJ3a3VMWmNmNXR5S2hwSzZJZXRGNlZpd0stMGwzU2Q1YXhGdF9YaU1fMld3SXZYWHJaVm1RZUwwaTBEdkhMclFULWp3S25LMjhKd0ZHTzBFVUE?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5QYUg1S3o3eDRfNFRVdGhYNjVKWWpHMmhXdDl5VmpENWhHdGpidHphekNMS3N3VHNVRUFmY1VQMWJjTmVvWlJ2Z2RrNGo0a2MxUlE?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMidEFVX3lxTE92T1dEd1VrcldxcHhPZ09ROHc3dFNvVjFyQUNkVzREejhUQjNnRHFqTXFmMzlkenZHa19mMGRwaW9aWnBReHJmaTVqTkpSYVVkYkF0LXVWMDc5NFFtVy1XV1RGel83MUR3YlBuUEgzZWlzN3l3?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5wTlhPd19fU2JnbWdGWkliNWZpeFJ5SkpQQlg2QnJla1lqSEs1WE1xVkQyOGYwM093TWpDZlBmWDF5MDlOcUZ2YWxMTHo3eU9qdFpRZU9xcVY5UXRJX20xNnpSODg0OW1fNW1DdXNrTGNYNkV5aVFVcFNKTEVXOFU?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5KWGdxVVNjOXptSnlpWHJKV0dvaUlDNjFzV2Q1SThoZ0pMc0xuMUd4TUpyenBaTXhRblA0NDEwajNFYnBsNUVEYTBtaU9ITl9vNHQ0Z05XaW5IcGgyUW5EczVjYzhmeWxlbXJqd0Z3SGw?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-ti36wg">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">3</span>
+          <div>
+            <h3>病院で相次ぐサイバー攻撃、厚労省が対策強化へ…外部との回線集約化に助成・攻撃時の遮断が容易に</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">要注視</li>
+              <li class="badge">重要更新</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）、炎上認定（backlashRecognized: false → true）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>1</strong></li><li><span>影響度 / 話題度</span><strong>0 / 12</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1INV84RHV1eG5PdzBDWEhZa0EwelA3X3Q3S1JIajg3Q2dqMW5KSklNVUtaZ0VoOEt1a1g1SXk3UnlyemZEeG5ZbXFyUThHMHQ1MzBnNWJFV2JiTkdmdzRKTnpnTEplUQ?oc=5" target="_blank" rel="noopener noreferrer">報道記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1yak54azdJR2lFZi0yY1oxc1p6T2JzeDcxdTAyOVktcl9IaVVaZnEyRzZaQ2FrdWx3eGtWS0M5V1k5NE1GTVpWZVUzbkpUMDBYSVlJM2FxYnBkZERhQ2c?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTFA4QTlxbnFBVXdlMWJKekstR1lNUlBhMG4zUURSMldqdU9ZUTF3LWpqVVhrRHVBc1hVdXprblozaEZmTllzTVZTSldJVXhNSTd0Tk5UbzlDcXgtSFRkVTNOLU9ub3p0d0ZXUHlBM2VHa19kdlplX0R6OE5IY1o?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTFAwaUFQYUhGZ3U1WjF5NnJWdUNtbDB0SjliUm9NbWN1ZW96ajYyN0FJNloteGFhZE9VWDJSa0RWaENSMXg3dGxvLWU1TnZPNnRCX1Jlc0tJYmhkNTRGaDI1emRXWmMtQzUxelNkRzRNUV9NaTBlZFRlTnZoUkh1MTg?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNX2dqaDVnRTdvN0lyX2Y1MHZBQjk5RF9DWTBwWFZzLVpRMlViUEFkaURzMFNuelBYWUNjQ0lLZ0JQUVR5eXpoREM4cjhBWHk2dG5MSHJYdEJrM0V4NUdPVkNraG1XTmxQeE9CUjdzcERuVURlYmFUVi1PR2hLcGU4X0pMOTc0YmhFT01lSWtn?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPZUd3SGgweVZtNU9DNDdWZzdzQ3RmU2ltMGdYbDBZeVdfYk5YcENEckRNVVI0bWMwUF9vSXVzWGVTbXZJd2tUMlBKYTNMNzE0QmJ5cUltUDNhX2pLN3ZRdVRXazZBZjRZRklpSEFmRGJzbkVRb0I1c3RXRThLblVTb0dkOUzSAYoBQVVfeXFMTlpnZXl0dUh0bnpvby11MDI3dFB4TlhZWFJLZEM0NmJoaVF1WDBRNS1OT2NQa2VNbG5PaFMyb0dZRUZhWDBIT3pZV1E0RG14UFI4WjlJRHNwUXljVjlES3NaRTFldFNKVFFKNzZNR0hWV0hXc2NfVzJiMzFkQmhyQm45Y2MyMExZNHdB?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-bmwua9">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">4</span>
+          <div>
+            <h3>病院へのサイバー攻撃 対策強化へ</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE13enc1UUJmQVV0WDV0U2VSVlVpaXRvc1RUVks1LU96TEVWTE1ENEZVbHdqVWszOGMwWmQwT2w1ZkNYS1Q3R285bnZKTnpqWXNC?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-jqlpfz">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">5</span>
+          <div>
+            <h3>マイナアプリ（iOS）のアプリストア評価：2.3／5・616件</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              <li class="badge">マイナアプリ</li>
+              <li class="badge warn">一次情報未確認</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>マイナアプリ（iOS）のアプリストア評価は2.3／5、評価件数は616件です（2026-09-10時点）。評価値は横ばいです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/11</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>8 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li><li>アプリストアの評価は利用者の自発的な投稿であり、全国世論を代表しません。</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://apps.apple.com/jp/app/id1476359069" target="_blank" rel="noopener noreferrer">アプリストアを開く<span class="src-host">apps.apple.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <h2>ポジティブなニュース／制度・運用の前進</h2>
+      <article class="card" id="event-evt-nrtadz">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">1</span>
+          <div>
+            <h3>意識不明でも病歴や持参薬がすぐわかる！救急隊がマイナ保険証を活用する「マイナ救急」が全国で本格スタート</h3>
+            <ul class="badges">
+              <li class="badge sev-high">重要度：大</li>
+              <li class="badge">要注視</li>
+              <li class="badge">重要更新</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>65 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTFBzZkVTNHNLMmh4Q3JSNjN6ODdtVXBsNjRQU0pvbk1yMlRJWmh3YThNYW81VG84cmx3a2l0T2J0WU1RWFFpZUVzUGpEUl8?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-15dwhm">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">2</span>
+          <div>
+            <h3>自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）｜デジタル庁</h3>
+            <ul class="badges">
+              <li class="badge sev-low">重要度：小</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              <li class="badge">PMH情報連携API</li>
+              <li class="badge ok">一次情報あり</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH） 最終更新日: 2026年9月7日 デジタル庁では、関係省庁と連携し、医療費助成、予防接種、母子保健等領域におけるマイナンバーカードを活用したデジタル化の取組を推進しています。 お知らせ 2026年9月7日 以下の資料を更新しました 先行実施事業の実施状況 の「医療費助成オンライン資格確認の導入済み医療機関・薬局リスト」 2026年8月3日 以下の資料を更新しました 先行実施事業の実施状況 の「PMH（医療費助成）先行実施自治体一覧」 自治体・自治体システムベンダー向けの情報 の「Public Medical Hub システム利用規約（自治体向け）」 医療機関・薬局向けの情報 の「Public Medical Hub システム利用規約（医療機関等向け）」 2026年7月24日 以下を掲載しました Public Medical Hub システム利用規約（自治体向け）（医療機関・薬局向け）の改正について 目次 PMHの取組 PMHのメリット 先行実施事業の実施状況 資料 自治体・自治体システムベンダー向けの情報 医療機関・薬局向けの情報 医療機関・薬局システムベンダー向けの情報 関連情報 1. PMHの取組 自治体が実施主体となっている医療費助成・母子保健・予防接種・介護保険等分野の業務については 影響人数・件数は未公表です。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>発生日</span><strong>2026/01/09</strong></li><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>22 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>影響人数・件数は未公表</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://www.digital.go.jp/policies/health/public-medical-hub" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">digital.go.jp</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-hl8yky">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">3</span>
+          <div>
+            <h3>マイナンバーカードの普及と利活用に関するダッシュボード｜デジタル庁</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              <li class="badge">電子証明書・JPKI</li>
+              <li class="badge ok">一次情報あり</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>マイナンバーカードの普及と利活用に関するダッシュボード 最終更新日: 2026年9月7日 マイナンバーカードは、対面に加えオンラインでも確実な本人確認ができる身分証であり、官民や分野を問わず、様々なシーンで利用することができます。マイナンバーカードの普及・利活用の状況を伝える取り組みとして、ダッシュボードを公開しています。 お知らせ 2026年9月7日 データを更新しました 2026年8月4日 オンライン市役所化 の「コンビニでの証明書交付サービス」について一部訂正しました。 影響人数・件数は未公表です。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>8 / 8</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://www.digital.go.jp/resources/govdashboard/mynumber_card_penetration_usage" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">digital.go.jp</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-k2k13h">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">4</span>
+          <div>
+            <h3>学園祭での年齢確認にマイナンバーカードを活用しています｜デジタル庁</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">新着</li>
+              <li class="badge">新規</li>
+              <li class="badge">マイナアプリ</li>
+              <li class="badge ok">一次情報あり</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>学園祭での年齢確認にマイナンバーカードを活用しています 公開日: 2026年9月10日 大学の学園祭で進む、マイナンバーカードを活用した年齢確認の取組を紹介します。 学園祭の「20歳未満の飲酒防止」に、マイナンバーカードを活用しています 大学の学園祭には、さまざまな年代の方が訪れます。酒類を提供する学園祭では、20歳未満の方への酒類提供を防ぐため、確実な年齢確認が必要です。 影響人数・件数は未公表です。</p>
+          <p class="whatsnew">本日新たに検知しました。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/10</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>8 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://www.digital.go.jp/news/6a52d1e9-30cc-455a-9154-f32479d1731a" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">digital.go.jp</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-h4d8nm">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">5</span>
+          <div>
+            <h3>メンテナンス・稼働状況 | マイナポータルAPI 仕様公開サイト | ドキュメント | デジタル庁 開発者サイト</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">解消済</li>
+              <li class="badge">解消</li>
+              <li class="badge">マイナポータルAPI（自己情報取得）</li>
+              <li class="badge ok">一次情報あり</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>マイナポータルAPI メンテナンス・稼働状況 公開日 2026年06月16日 更新日 2026年09月07日 既にマイナポータルAPIを活用している事業者の方向けに、メンテナンス情報や稼働状況を掲載しています。 外部システムの通常稼働時間に関する情報は、「 マイナポータルAPI一覧 」にある各APIページの「利用にあたって」の手引書またはガイドラインにて確認できます。 稼働状況 正常に稼働しております。 影響人数・件数は未公表です。 復旧を公式に確認しました。</p>
+          <p class="whatsnew">復旧・終了が確認できました。 復旧状態の更新（recoveryStatus: 未公表 → recovered_confirmed）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/06/16</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>8 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://developers.digital.go.jp/documents/mynaportal-api/maintenance/" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">developers.digital.go.jp</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-uvd9kv">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">6</span>
+          <div>
+            <h3>「マイナ免許証」窓口警察署拡大へ 11月2日から栃木県内18署で受け付け、取得しやすく</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">新着</li>
+              <li class="badge">新規</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">本日新たに検知しました。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/10</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBFdFJUWmpFa0hkOHZfWGZkR2ZEZlh0cFRrNmY4cnFhUWs3QXRWLUFfdERzRVRydnMwOVlQaDA4UjRiS2ZpeGc1dXRmQWduY3pfVnlnRjJGaFhaWkE?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE54bDFMdTNXbUhndm9TLTgtTXlxaXFIVDAxMmE4anY4OXhzakk4X2hrLWtKZ2ZIY1VjV041WklBVHlDNUg0dTBzTFpBRQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-bh95zc">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">7</span>
+          <div>
+            <h3>「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              <li class="badge">マイナアプリ</li>
+              <li class="badge warn">一次情報未確認</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTFB6TDRYeUE0eGNBMW5Zb2dVOXgzMndPSVd4QzF4Qk9xb2J5LUxrMDFNUnFYUzNQUTB6X2pPWFVfakMzWEZoUkhoSXZYZ3dQR1c5VjdvX1BLbG56WUFabDlFQTRjYUxXalFYZVNIY0hSN0syWllwTS1rd1FOV07SAYIBQVVfeXFMUFB5R2lDS3pKalhKZU1NSnJ2ZTExcVQzU2tWT2NKR3AtUnU2SWN6SkoyYkVadTRJdHdLaUtXOVhOV1NXY0lGWGhvUlVPemk1bWowOFN2UnZLTUh1eDdMNDNsY3ZVTzE3bjZoTEhta0dzUzlYaXBqLWkxenVMV1pOVUJXZw?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9kNGtXTi1fQWg2YXVtbHYyZklHdWVjcTdkNlZfRUh2dXpSRXdhejEtLXRoUFJrZTN3eFVuQkVBZU9aMnROOGJZUFVuVV9CRE81dkJqakF4N0NYbHNHcFVz?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE05SXhRcW1mQUtLdGZzRlRBWWp1dkc4eWZId211bGFwN3lhUlJiR1BvWVI1QTZoQm56Ny1Vc1NDWW94WWNLOWJuenhXM1ZLWVJPOXVSdFNPUkRCLXlQNWJrUlpxM1J5ckU5cmRJbUNUd2pUNVc2MDBjLWY3V0g?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9IRGluZS1Tek9kTEdHRVpzSHBURWpKXzlkNEt2TTFGN0xJRlBIWHhWXzJWVUJyRFlhLXZyQnh3ME0wOUdXdkRPNi1SMkRzOVFXT3lUVDZFbE5tcUsxNk4yM2FWbUVzbjc0ZGJwdQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPNGpkSEN6ck9tQUpMY1dodDYtVTY0eUtIdWVtZXk1R0ozNWZ6NnZHVDVJZDh2VkRFVkhtMnpNVElxdGxQS2lzUjNKMDh6THptMTJHWk5xWFUzRzdIdC0xaEp1MVhnSlBlQ09URzczZ2tRcGpWa0JBaHdzdEJ0TnZ4aVFIaVZhUzlNVlM4M3lR?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMihgFBVV95cUxOZVdWNXNIdVJTbTVRUTItd2FpRl9mc21QQ1RfcXpSV1VSaHpiQUgtaGRUSFY2UlVJNU40andIVW5rTldFdnJsUHI4VEphcUFPMWQxb1BEZGtHVS1BNXljdFNVVk5PQjhob3BPejdrTE5KcEd3aUtjVFNmeFViZjdIelRqY3ZnQdIBggFBVV95cUxQUHlHaUNLekpqWEplTU1KcnZlMTFxVDNTa1ZPY0pHcC1SdTZJY3pKSjJiRVp1NEl0d0tpS1c5WE5XU1djSUZYaG9SVU96aTVtajA4U3ZSdktNSHV4N0w0M2xjdlVPMTduNmhMSG1rR3NTOVhpcGotaTF6dUxXWk5VQldn?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KMnViV0FjZjJRbXZjX0FEZVFMdkJFQXl4VzJsVDc1cU9OeWZQb3pKTU1OZjl4VzZLV1pGUG5hUzZ2U0dsQ3hkQllpSW8xSkc1RTVoRUJrdWZ4ZlM0bS04?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMid0FVX3lxTE50cXdhRS1rV0M5TkR6emRZbHNCRm9GUkVDeHc5WTl2QWtJa1UzRUJRb2VKUlpRRmptaVRSZnYySUt4UUFPOHd5WWd2SndfRG85NExjaWN0cXZVS045RWNlQVlYTEh6aWxWYlR4bnVXRldCa1h1VnhN?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-123z5c">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">8</span>
+          <div>
+            <h3>医療費助成オン資、約半数の薬局で導入</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">大きな動きなし</li>
+              <li class="badge">オンライン資格確認</li>
+              <li class="badge warn">一次情報未確認</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">前日から大きな動きはありません。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE9OUHZ3ZmZsUWFhTEVMZThMUGtmdEpaaW5uWmR3ZGxMX2VkY2JJRFdDbllNeVdDbnNzN2ZGVXdjYXBKRTFNOUI2Zk130gFPQVVfeXFMT2dFa3o0c0ppWHE1VHpKOWNxenh0S3pnOFBLU2ZIZ3h5MlFSejQ2WUF6cTY5cUZFVjViVGtTVTdzdlpwOTJNbGRsWTM2TDlmZw?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9nRWt6NHNKaVhxNVR6SjljcXp4dEt6ZzhQS1NmSGd4eTJRUno0NllBenE2OXFGRVY1YlRrU1U3c3ZacDkyTWxkbFkzNkw5ZmfSAU9BVV95cUxPZ0VrejRzSmlYcTVUeko5Y3F6eHRLemc4UEtTZkhneHkyUVJ6NDZZQXpxNjlxRkVWNWJUa1NVN3N2WnA5Mk1sZGxZMzZMOWZn?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-4szxjm">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">9</span>
+          <div>
+            <h3>千葉興業銀行、対面の本人確認にJPKI利用 顧客の利便性を向上（2ページ目）</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">大きな動きなし</li>
+              <li class="badge">電子証明書・JPKI</li>
+              <li class="badge warn">一次情報未確認</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">前日から大きな動きはありません。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/08</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMib0FVX3lxTE0zNF9XSUl5NURTWDdGRnc3S1R5VFF1eEQxdmFDS3BfaE95S3Z3MGZlbktOWHJqWV9aNndybGVMTXAzTF9kam1ZR0tFaXpITkV5R0x4Y09jRjZHSEhMaGxuRHRISzlNV3ZtaTQxakEtVQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-64aqeg">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">10</span>
+          <div>
+            <h3>マイナンバーカードで避難所の受け付けを…デジタル化の実証実験 秋田県総合防災訓練</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">新着</li>
+              <li class="badge">大きな動きなし</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">前日から大きな動きはありません。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/06</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMibEFVX3lxTE0yenJFU0NUbVFJZGpIbFlIUzE3SUVZRVlLZWFBR2ozb3ZCek1HUW5IOU1hNV9XLUYwY0RIOHAyWG9iNGM1cTEwbE05RExqY3BCYURGcnNiaWJHWGlvTjc4dnRvTzdqd0NvNHZoTNIBckFVX3lxTE1SQWtDb0VrNERfQ2haVWxsUHZIY01jMnhrXzhSS0xaX0RNNVVVX0tuMVdBd3NQZkVzcVJSZEg2SXg4OUI3NThremVIckhQS0xqV3dFSEhnMHBRSjl5Z1dTX2dmYksxMExWQVJDVC1YQk42UQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFByQXNHNXV1bmMxWGhZaDR2NjBPX2g5dGZFamdfU05HTThkMmZQNTFWd2J0RlNoLTh3WlBkckdVVV91d3JYNnV5TnQzS1FLQm5nNkZVWVZSclMwRHpyMGc?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE00YS1JVXBGMFJmOXEwR1FScERJdHgtQVZFaU1xbEZSOWE4LW1PeG9mOGxtbnh2YXVoVlBGSi1jazlLTHBhRXBUWkpDQTBMV013Sjd4VkdIaUZBSkNyWnFGMTkyOW8wVlNnVURadVV4QnNENFZoUU5VQm4xVXE?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <h2>広報・SNS炎上／批判動向</h2>
+      <article class="card" id="event-evt-bo9hgp">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">1</span>
+          <div>
+            <h3>本人確認はマイナアプリで（20秒）　 | 政府広報オンライン</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              <li class="badge">マイナアプリ</li>
+              <li class="badge ok">一次情報あり</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>CM等 デジタル化 マイナンバー 2026年9月8日 本人確認はマイナアプリで（20秒） #マイナアプリ #ラジオCM 動画が表示されない場合はこちら シェアする 名前が変わる。でも、便利さはもっと変わる。 マイナポータルアプリは、マイナアプリへ。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>発生日</span><strong>2026/09/08</strong></li><li><span>公表日</span><strong>2026/09/01</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>8 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <p>現時点で確認できていない項目はありません。</p>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://www.gov-online.go.jp/media/commercials/202609/video-313829.html" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">gov-online.go.jp</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-m69kix">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">2</span>
+          <div>
+            <h3>マイナアプリ | 政府広報オンライン</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">大きな動きなし</li>
+              <li class="badge">マイナアプリ</li>
+              <li class="badge ok">一次情報あり</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。</p>
+          <p class="whatsnew">前日から大きな動きはありません。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2024/01/01</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>8 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://www.gov-online.go.jp/media/commercials/202609/video-313937.html" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">gov-online.go.jp</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-m180ah">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">3</span>
+          <div>
+            <h3>公金受取口座（令和8年（2026年）8月掲載） | 政府広報オンライン</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">大きな動きなし</li>
+              
+              <li class="badge ok">一次情報あり</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。</p>
+          <p class="whatsnew">前日から大きな動きはありません。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2024/01/01</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>8 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://www.gov-online.go.jp/newspaper/tsukidashi/202608/newspaper-2051.html" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">gov-online.go.jp</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <h2>その他の新規の動き</h2>
+      <article class="card" id="event-evt-8b3nsc">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">1</span>
+          <div>
+            <h3>あなたの命を守る「マイナ救急」（広報動画）</h3>
+            <ul class="badges">
+              <li class="badge sev-low">重要度：小</li>
+              <li class="badge">要注視</li>
+              <li class="badge">重要更新</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）、炎上認定（backlashRecognized: false → true）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/10</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>2</strong></li><li><span>影響度 / 話題度</span><strong>20 / 23</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報のページは特定できたが、本文を機械確認できていない</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9iVHRQbHlaWDVQdzcydDZ3dmhQZXRjdXFOVWR4LUpLbjA2MDNWWl9pSTJJSXhkTFFiVURPUnQ0YkVmZ1hIbkhiTUJYaHhJS2MwUjNaTXlpSUJSQQ?oc=5" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5MejA4M0hGSWpSVjVDcWhBVm9QeU82UGpJekhqcGdMd21yM2Y3dmw1OTRvUERxWkFZZEJvTWJYVFppanVYNGpZbS1RVTFpT29EX2VMZlU4dng0SVpDN25F?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiO0FVX3lxTE5NeDdfTWhZemhTdWZqMmpXSFRWdkRYYkk2czlzR2hlMU1HemlCTEs5akVoNVdmcmFRLUNF?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE50WmtYX3BPUG11NWFZbzh1aTJMa0F0QTZoNmY4XzEzTVkxbjIxRHF4MHZLTVIyRW95dlM2ZTdhNWNXMEJmVU5rcVFBMjlyZ1F3MDRDTldpRElBSlJTMTE2YQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5LTmo5cmpaWms4UHdaeEw1b3I3ak9uSVlMWTFnTW9fMUpuTVo4a2FPdnlDMnAwc3BtVWNyXzJrdE0xUEdMVU1wc2pvSjZFWUgtaEY5ZnRLSHRwMUE3OWFVYlZtaU5PcHFfUnc?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE5YamlpZzZqTGU5WUxWeVJZRzA2UjNGUFlaZ1NVSWNsV1BBcUo0TU80c09QSDFEQ3M3RjNSLU9pX2hNWTctbXZaRTQtV0Npdw?oc=5" target="_blank" rel="noopener noreferrer">報道記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1LOW9hNWVCQ0lta2IzRnhfbUtKRTBOYUJ6UmhycFkwNlRONDNWNjlyR2xYNFo3Mmt5RzgxU2hpelkweG9QV0YwRGQ0UQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE5haDc5emRKRTBtc1VwNG1DeExObnRwN3NacnEwdDBOc0xwcXkyc2NqYnV0NXNrN0ZOLUN4eG5IcEJ6eGJZTVE?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-mbd36t">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">2</span>
+          <div>
+            <h3>大雨被災者、マイナ保険証なしで受診可【無料】</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>1</strong></li><li><span>影響度 / 話題度</span><strong>14 / 5</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFBHeExiNmtYNGhWZnktMGNjeEFIS1VGeTJIYUZrSU02S0RaRk16NVJYUlNscHN1WjZDeW1DamxUTzVSX2w3VXBmNdIBTkFVX3lxTE90Q3k2WjFmeGRfRWRFU0xRUl9keGdaRklIenduN2kxU3NTaVJ3cnNUaGNkbWE0cHFlSTkwSTJTN0ktOHlIcGZkNzhmem13QQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-jjzo6m">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">3</span>
+          <div>
+            <h3>マイナンバー（個人番号）カードについて</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）、影響範囲の評価が変化（impactScore: 0 → 17）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>17 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報のページは特定できたが、本文を機械確認できていない</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBLdTFjemQ4VVJZdGMtUzFIYUhpNzh6cTY5RzZlYl8xd2ZZVENvZlctbXdjejBabjAtbEF5blBMaVFWZDVsSEFud0tIZDNkZncxbkZEV0lmcS13aHJhT2JUbQ?oc=5" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1QTzNFRDdLYlFyS2I3ZzZqdmpDQ0RPWXZCZFIwT18wbmhHM1NKMXFuSUp1bzA0aFlEQm42WUEyNGE5dXRkU1MzQk1rTnlDVEJhTUJMZXhwMW9rQTBuelE1Tw?oc=5" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-ll0d03">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">4</span>
+          <div>
+            <h3>マイナ保険証 有用性の訴えが足りない</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/09</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>14 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE5RTjFxM0RsNjg2SU1uaGV5YkU5Y2lvdkhzMldHZzdsNWlES1duZXpLZkhyWExEOW9NQkVpd2xPa3pSZ2lLTlFGc3Rzd1RuT1hsSDIwY0pNNTBrZC00UWc?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1qNlAzUVBrZll4LUFWaW9pLVdpMlhoanZwNF8wLUpCVVo2RG1YZGRBTzlGSEhTd1VSbDZsRUNyM2p5Q0VPVmJES3l0bw?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5DVy1wbmszWkxWMi02LW51bjFZSWZ4RDE5SlRUdllobFp4bDBLX1QyVHpkNWtGTGNuMW44RGN3dHp1Ti1BclhhejVrbEtLSjUwWjNCM1Z5bHdXRFJwaE1OaGkxZXZiYmlCUDBBQlpn?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBpSlFrSXJCUWpoWWpmR0ZFR0F1UUsyOC1Wblh6N3R4aHlZLXdYUFBFMXNhUGtCOWJ6dTUwaXpGSU5MdVlKeU14MVZtRmNweWVQMTc0dTNpckROR1E?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBnemFMNnY3TEhmeDZpTXVsWF9BWmo0bVFhbWp1bVdRUjJPWjFOMHpyOU9JakVSTFlkTTBBVExlcWRsZXdGeHVsd2x2bEVDcHRWemVOOFhB?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE9wczZoMG41QXRYU2VDNTllSXlwVlFqTU9IWkVjMm52TUJGS2NqM1E1WEJDZnJYMk1zLWpVOUx6VkYzN0JWcXB2X1pTUVQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBrVzFSTzdVT25JM0czTmdIX0R2ZWotVWdxQUhwSXdkcXAtNGRma1U1UGRldktVWXhxMU5RZW5wMlhHRmtpWmZaTWxJREg0ZzBNUW1MU2F3?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9adEE4b181ZlBzMHhCdTdoZThFSmlwZWtiVDdZZHhHRFU3LVc4Q3hFTnYwY3JfZVZJLXdLTEE1ZzFjenpNUW1sRHVGcjNLeWhXQ3JDRk93?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-m5e1if">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">5</span>
+          <div>
+            <h3>地震で病院に行けない被災者を救う 熊本市の「ひのくに薬局」が電子処方箋を活用したお薬配達を続ける 「まずは薬局に相談を」</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">新着</li>
+              <li class="badge">追補</li>
+              <li class="badge">電子処方箋</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">直近24時間より前の事象を新たに検知しました（追補）。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/10</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>1</strong></li><li><span>影響度 / 話題度</span><strong>14 / 12</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBER0pIUm9SdlNRSG0yNnlCcFhfalFSUEpCWU5JOWRsRXRVa2xtbzZDc3FoTUk4Tlotenh0RlI5MVZSc3pDenAwRE14U2dXQ0hZWFpPeGZUMWtRV3pubmJB?oc=5" target="_blank" rel="noopener noreferrer">報道記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-77eixn">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">6</span>
+          <div>
+            <h3>【三浦政策統括官】電子カルテ認証制度推進‐電子処方箋普及と一体で</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">大きな動きなし</li>
+              <li class="badge">電子処方箋</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">前日から大きな動きはありません。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>14 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1CTGE3SFFLOFR1N1lmTGlVb1AxTTJPWXltYjRsMjFXTFpGMTlYWVdMZDBQRjRRVkhTMWtQMWdkYUMzRjRVUllkbXoxcWV1YzV6aHFn?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-qnjndi">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">7</span>
+          <div>
+            <h3>学園祭での年齢確認にマイナンバーカードを活用しています</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">新着</li>
+              <li class="badge">新規</li>
+              
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">本日新たに検知しました。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/10</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報のページは特定できたが、本文を機械確認できていない</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOb01tSXRuZHhITlJSdk1KNEZRX3BRTE9NcTJCMXJwRUVGREpDcHZwcEp6T0d6WUk4LVJSelNxMUpVdTJSYmZOV21ia20zdkd6cGxscmVwSjVZZVFYbldpLWtnczRYNW5ZOVJWckVCWXhWS0YyMnZuVU1EX1Ixal9aMQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMic0FVX3lxTE54a0hVcEhJVVRWLXhfR3FzOTVYZFBvQ2xZWmZzc2s0WVpqWDJ1LXBHM1Y0NzBQNXp3OWRQLUZkeDM4dXROSlFrT2dDd2o0N2l4UXduS0Ewa2ZEcWRRVV9sZjdwaFFmR0F0c0lpb05hUlp6ZUE?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMieEFVX3lxTE8yQnhFQTlvSlhqNHBlVjJLVS1UQWNQd2FrNGs1WERRRlRiR3NRWlZTcWxvRTNkaGYtOWxpcjBPY2lqc1l2VngzZTB3YkRYTGZxNFpZTTVPN3pkZERtSnVSRmF3UUsyS0QtaFo1dHUwSlUzZWRNaEh6ZQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE1zTTczYjVVbGdEWE9IX1pVYjZCNTRJUVdlOUpkc1Y1dDhmN0VOR25zRDAtZUgxcm43Nm5PTHA4ZzFfTXRvM2hsT0VyM0g?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVGlGbGR6bDFHbWxuSjFmeEZpWE1kR2FKXzdkZTRHYk5mR25QSERPalI3UXUxM2szcTItaWFEbEo3UEkyWWZnd3ltLUZZTG9maHN4Qk8tb180ZExLUW9zZFJZSUhWX1pldXZ0aGFtNU5URGRXNDRZeGd4ZVFVUEFOOGtHSXEySXVM0gGIAUFVX3lxTFBUaUZsZHpsMUdtbG5KMWZ4RmlYTWRHYUpfN2RlNEdiTmZHblBIRE9qUjdRdTEzazNxMi1pYURsSjdQSTJZZmd3eW0tRllMb2Zoc3hCTy1vXzRkTEtRb3NkUllJSFZfWmV1dnRoYW01TlREZFc0NFl4Z3hlUVVQQU44a0dJcTJJdUw?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1tZEhkQmg5YVNuaHUtWnhKdUF1TWdLUl9LNFBGLUJxMWYyT0ZTYnVyZGh0VG9LSUhNZlYtRzBmbWxtUkhEYTFwVVNFajlBdVB6UExxMDFzZWVCQkN5RFBKeHNCNm5aNW9rejB6RGZtSWlWeGpaYU54UU9ZQUNWUGc?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE51amJIcUk3QzY1TV9QemJFTEp4WGJrdnhDSFpoMW52OUtTbTRhUDIyQkpTYnl2ZldGVzFUMGNJXy00SnNGSUZHeFJneUFZWWphT1hn?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMickFVX3lxTE81Nmp4TlNYbGVRMlcwN2pXVmJESnpWQm9nb2pWNUZuS3hZS1RoTVl5Q05xX0c3bE1tYjVBbXdUZ3NhM0hhNjcycUhXSk5rMXRmMGgtX2t1UXg5NC1xbGJid2dLM01tcV9WQndhdXhPZVpfQQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-4p4z8p">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">8</span>
+          <div>
+            <h3>｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由の写真一覧</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">新着</li>
+              <li class="badge">新規</li>
+              <li class="badge">マイナアプリ</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">本日新たに検知しました。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/10</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE5sQnRCUXhoem1DVHNFbHhrdGZELXRCUG5HeVhWMXZQUjBERGJkdEc1VUxfdW9wd3pPem45cDVuYkt4NFBXVC1JYXNQQWlsQUxmdDZrUTA1Zw?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5wSVhxOVljeDNGNUxkX1ZLUDFBT1hvOUdRaGdKdlFVTGY3V3E1OEVRdUp2ZzFWSzVlVzduMDFUcUxneXlKWnEtQkIyWFJobGt1cWtmUkVmUVRSenc?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPV1JfUlE4dXl4VlRkdm9KYWJXSDdVNi1HamVoaTA4T1RLTVhuZjBwOTNFSE1vOUVKVEJnN3BFUTVfNjZua1NUNWpreTJVb3NfSGNRcDJ6LWVuZmRWYnZZUkdBa2E1YVljNktpcENJenRHWTI1MTJlNmRpSkNHRno3Y3E2Sm43VnAw?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBRRFU2andXeERFTHN3RDdxUml1RzFJejh6aUdsRGZDWU1kWUZESHUxZHJMWmNCUHpqVEhabGs1Vlo3YlBrYmpaSHFzNUw1NjJuc0lrZ1V3WlFWVXpMMzJLNHQ4cjFhRl82NUs1c0Jmbw?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-aukx95">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">9</span>
+          <div>
+            <h3>１７８人のマイナンバーカード「署名用電子証明書」が失効 鳥取市</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              <li class="badge">電子証明書・JPKI</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/10</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE5DbWxYZGU2aWt0RE9ta0luRU9obXdqMEZzNWdNeEszVFdoWEZVRUZ4T1VIckNKZGxJVWkzM2NKX2JGdXl5Q0wzRHlLcWxkNUh2?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1nNWlpNGdhakxraW5qeEE5R3gzMURoeGdJSlVvQUJ1MU9FbzRjcEctVldKWXpUQ2M2aDNPMjBSVHlxdWhCXzdqU2JjT25pSUJH?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-schdv6">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">10</span>
+          <div>
+            <h3>本人確認はマイナアプリで（20秒）</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              <li class="badge">マイナアプリ</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/08</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報のページは特定できたが、本文を機械確認できていない</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMie0FVX3lxTE5xdllwUURmblBfcDJoT1FySVhOaEhZOFR1bll1RVVNUXV2Vmdkb0JoYWlWLVlsTWkwRExvXzRtUGNIemFGRFRvZ28xVFVrZjctb1RoWTk0TGdOSGNmMDZMc3FiOXIzRUhiQVVhRHVuWXJ2anVDUGVrTEEwWQ?oc=5" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUzBIXzRiM25Qcl9vRnptUTdIeWJRRWRfM0tIalVxSXhZVE1Yb0ZOZWxLVUNaUm5uSGk0QmVQZm8zdWJzNmtNLVVuMDlqNFJaOXJSb0xrVTdCUVNJSzBwamlid0FTdnNueUtrM25JQnB0UDYtTmZVUGlpazJrazAyay1uWU8tN2xC?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBJdDFfc21SQWxVZlNjUVhXZFVNVF83TEtZc0J2SHhjOFZBQWZIZ0VrQ09mblVnemcxd1o1SVRCelRxWHF3ZzBWVGpQNjh2b2tBV3c?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE0tT0ZzTGp1WVdOMXhzX2R3cktYT185c1Rra3VOSGl2QkI0TlFzZGQ5WkUxenl6aVJLT0ctNWhtVmJ0MEZIOHpDcWg5bHhXNUlnX2hVZUNRRWpTU2tRc0l6SC1jNkRUNVYwUjhLVDhYQkM?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQblpyc3RMN1lObUhVV1k3MFBDX2Vadk8wZEcyY0UwZk9leXBMczdaNU5VLXc2dzU3TWgwM3ZNdGlqWXRvVlZEZjRVNWZrcW9pdEI1VkkwNjQyNjNhQ0YwR1JoeXZkSmFrX19td1RPUDFyanRfQ0oxc253Si1RYTdYNEswQQ?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1nd3JDWUs1SHlBYTVjaE1vM1F1NVFlRmdXNFhZTFBJQWFjWC0wR1o2OHNIckFHeldIRjY5aG5WRXZmZm1ZdWhnYmppcjN6c3ZJLXFMcGgxY1RFbzRHWkhLdDZmTEpvNlNPSklJMEtaUENrMEJHX1pFUzJ2VUdZOXM?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-g0zn3r">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">11</span>
+          <div>
+            <h3>【画像】スマホとマイナンバーカードだけでパスポートを更新、自撮り写真も使えた 2/5</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">重要更新</li>
+              <li class="badge">パスポートオンライン申請</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">重要な更新がありました。 復旧状態の更新（recoveryStatus: 未公表 → unknown）</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/09</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE81aWVuajgybGhVMklwTVNWV3lHczZLOC1IaDM3M0l6VUI3cUE0QTByd1pIbGJPVUlqbjdhWUdydVlUeTY4REI3SHZiQWQxeDBtV0FETWVOSGZRaVdnTDhCMjNHaGJHQTBHal9JRXlwRUNHZ2VlcC12V0RndHk?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE84eGpmSFZMX29tQUdPR3JMRjRkVE5mRUNNVlpvLUlDMUZ2V09Cb1BVYzlSSmRaTU1QcnBpOG9EdldTZDBDWjBBNlNMYnRYZ2hjSUhjczVxV0tqYzBJc0kzYlVHVXJaLU1hRWF3dTg3aXdRTXh2alFhQm1LQ2s?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-dv071r">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">12</span>
+          <div>
+            <h3>マイナアプリとは？ できること・マイナポータルアプリからの移行方法・ロック設定の必須化まで解説</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">新着</li>
+              <li class="badge">追補</li>
+              <li class="badge">マイナアプリ</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">直近24時間より前の事象を新たに検知しました（追補）。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE4wYWhmMlJWYm1uRkVYNW95MGJZTGZCUndVS2Npd1RPMmVKNnlkcjBwb1RCeGhvSl9sMWhvXy1uWk11QW5kbzdteXZEZTE?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-h5371">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">13</span>
+          <div>
+            <h3>｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由の写真一覧</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">新着</li>
+              <li class="badge">大きな動きなし</li>
+              <li class="badge">マイナアプリ</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">前日から大きな動きはありません。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/09</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1PYkxDNDFWZ2RHMW1qbTRWOHdVT2ZpV05qOTlHTGVNS2d1YU9xS0dReUduUlp1OHpWQWpNdnBqVlN3bDhQUkJqV2Y5ZXJUU1VwVURZQzZwYmNGZFRwV2c?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PcmZ5d1pSOEtQZjdtOHFjQk41Q2VPdUVORnJqNV9Sek9jd1gzWjJ3NXB4Wm1OY2FjREJUS1NSY1k1WTlzdllrVElFamE2YUd0dVpEdFQ2TzFwU1E?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5wSVhxOVljeDNGNUxkX1ZLUDFBT1hvOUdRaGdKdlFVTGY3V3E1OEVRdUp2ZzFWSzVlVzduMDFUcUxneXlKWnEtQkIyWFJobGt1cWtmUkVmUVRSenc?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPV1JfUlE4dXl4VlRkdm9KYWJXSDdVNi1HamVoaTA4T1RLTVhuZjBwOTNFSE1vOUVKVEJnN3BFUTVfNjZua1NUNWpreTJVb3NfSGNRcDJ6LWVuZmRWYnZZUkdBa2E1YVljNktpcENJenRHWTI1MTJlNmRpSkNHRno3Y3E2Sm43VnAw?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBJdDFfc21SQWxVZlNjUVhXZFVNVF83TEtZc0J2SHhjOFZBQWZIZ0VrQ09mblVnemcxd1o1SVRCelRxWHF3ZzBWVGpQNjh2b2tBV3c?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOd0NFbllWMHRpZjBRd2hPX0s1TEptaVV2ZmJVVC1aZGtkNjNmX3hBUVl4V2k3Wl9LZTlMQkhPMTlVUW1RMC1xdGlMVzZQZDBiaUJVMUNkZ1ZHLS1fc0tjLUJqWUVtbFNILXNBYkZZSmtoQ1A0NWtqcm4xWmF5UERfV2VmQ1RtMFN3aWt5MjN3?oc=5" target="_blank" rel="noopener noreferrer">X投稿を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBRRFU2andXeERFTHN3RDdxUml1RzFJejh6aUdsRGZDWU1kWUZESHUxZHJMWmNCUHpqVEhabGs1Vlo3YlBrYmpaSHFzNUw1NjJuc0lrZ1V3WlFWVXpMMzJLNHQ4cjFhRl82NUs1c0Jmbw?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a><a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBiazJkUGh0MC1ta0pDMEFZTVRuaE1QX0xBVHJjUXh3cmdDeDZUN2NsZHhNbmxscHRBZ2tPUjI5NXFPTGFvYWdUUDBPTE9QZFNhdmdVdUI0ZDRfdkZOa2c?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-qtbmx">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">14</span>
+          <div>
+            <h3>マイナンバーカード・電子証明書の更新について</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">大きな動きなし</li>
+              <li class="badge">電子証明書・JPKI</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">前日から大きな動きはありません。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報のページは特定できたが、本文を機械確認できていない</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9WdlJjRjdWNjQ1ekJ6V2hEck9icEFOQVZFTHJVampwazlWVnZLckZDbXgtSnZsQ1JLaUlLM2tfVTA3eWI0NHloVTFPMVFaeWpiTzdOeHZPR2UwcUYxaTBkSEdaNUhkMXZ0RUFNa095MWQ1S3NwYUxN?oc=5" target="_blank" rel="noopener noreferrer">一次情報を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+      <article class="card" id="event-evt-59aaj3">
+        <header class="card-head">
+          <span class="card-index" aria-hidden="true">15</span>
+          <div>
+            <h3>パーソナルヘルスレコード（PHR）とは？ 含まれる情報とマイナポータルとの関係、スマートウォッチのデータの扱いまで解説</h3>
+            <ul class="badges">
+              <li class="badge sev-reference">重要度：参考</li>
+              <li class="badge">続報待ち</li>
+              <li class="badge">大きな動きなし</li>
+              <li class="badge">マイナポータルWeb</li>
+              <li class="badge warn">一次情報未確認</li>
+              <li class="badge warn">要レビュー</li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="block">
+          <h4>A. ニュース自体</h4>
+          <p>本文を機械確認できていないため、内容は出典のページで確認してください。 影響人数・件数は未公表です。 一次情報は確認できず、現時点では報道ベースです。</p>
+          <p class="whatsnew">前日から大きな動きはありません。</p>
+          <ul class="facts"><li><span>公表日</span><strong>2026/09/07</strong></li><li><span>影響件数</span><strong>未公表</strong></li><li><span>独立媒体数</span><strong>0</strong></li><li><span>影響度 / 話題度</span><strong>0 / 0</strong></li></ul>
+        </section>
+
+        <section class="block">
+          <h4>B. 国民の声・現場の声</h4>
+          <p class="novoice">直近24時間で、新規の有意な反応は確認できませんでした。</p>
+          <p class="note">SNS・アプリストアの反応は非代表サンプルです。全国世論へ一般化しません。</p>
+        </section>
+
+        <section class="block">
+          <h4>C. 事実関係・補足</h4>
+          <ul class="unknowns"><li>一次情報は確認できず、現時点では報道ベース</li><li>影響人数・件数は未公表</li><li>発生日は特定できていない</li></ul>
+          
+        </section>
+
+        <section class="block">
+          <h4>D. 出典・リンク</h4>
+          <div class="srcrow"><a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTFB2UE1PQ3FjRnM4alRmTTVkMUFJVkpBZE55Yl9qeHhIRERwME1GREZBWl9CU0MtTlo3ZnZiakUzVmYzYlpKNHdDWmRhOW4?oc=5" target="_blank" rel="noopener noreferrer">専門媒体の記事を開く<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+      </article>
+
+      <h2>今日の優先ウォッチ</h2>
+      <ol class="watch">
+            <li><span class="rank" aria-hidden="true">1</span>
+            <div><strong>意識不明でも病歴や持参薬がすぐわかる！救急隊がマイナ保険証を活用する「マイナ救急」が全国で本格スタート</strong>
+            <p>一次情報は確認できず、現時点では報道ベース / 影響人数・件数は未公表 / 発生日は特定できていない</p></div></li>
+            <li><span class="rank" aria-hidden="true">2</span>
+            <div><strong>あなたの命を守る「マイナ救急」（広報動画）</strong>
+            <p>一次情報のページは特定できたが、本文を機械確認できていない / 影響人数・件数は未公表 / 発生日は特定できていない</p></div></li>
+            <li><span class="rank" aria-hidden="true">3</span>
+            <div><strong>長崎市「マイナンバーカード申請書類を紛失」個人情報記載書類を誤って廃棄した可能性《長崎》</strong>
+            <p>一次情報は確認できず、現時点では報道ベース / 影響人数・件数は未公表 / 発生日は特定できていない</p></div></li>
+            <li><span class="rank" aria-hidden="true">4</span>
+            <div><strong>たった1社の停止で全米の医療が麻痺…｢ハッキングされていない病院｣の経営まで止まったサイバー攻撃の戦慄</strong>
+            <p>一次情報は確認できず、現時点では報道ベース / 影響人数・件数は未公表 / 発生日は特定できていない</p></div></li>
+            <li><span class="rank" aria-hidden="true">5</span>
+            <div><strong>病院で相次ぐサイバー攻撃、厚労省が対策強化へ…外部との回線集約化に助成・攻撃時の遮断が容易に</strong>
+            <p>一次情報は確認できず、現時点では報道ベース / 影響人数・件数は未公表 / 発生日は特定できていない</p></div></li>
+            <li><span class="rank" aria-hidden="true">6</span>
+            <div><strong>病院へのサイバー攻撃 対策強化へ</strong>
+            <p>一次情報は確認できず、現時点では報道ベース / 影響人数・件数は未公表 / 発生日は特定できていない</p></div></li>
+            <li><span class="rank" aria-hidden="true">7</span>
+            <div><strong>大雨被災者、マイナ保険証なしで受診可【無料】</strong>
+            <p>一次情報は確認できず、現時点では報道ベース / 影響人数・件数は未公表 / 発生日は特定できていない</p></div></li>
+            <li><span class="rank" aria-hidden="true">8</span>
+            <div><strong>自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）｜デジタル庁</strong>
+            <p>影響人数・件数は未公表</p></div></li></ol>
+
+      <h2>主な情報源</h2>
+      <ul class="sources"><li>DXマガジン｜<a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTFBzZkVTNHNLMmh4Q3JSNjN6ODdtVXBsNjRQU0pvbk1yMlRJWmh3YThNYW81VG84cmx3a2l0T2J0WU1RWFFpZUVzUGpEUl8?oc=5" target="_blank" rel="noopener noreferrer">意識不明でも病歴や持参薬がすぐわかる！救急隊がマイナ保険証を活用する「マイナ救急」が全国で本格スタート<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>city.joyo.kyoto.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9iVHRQbHlaWDVQdzcydDZ3dmhQZXRjdXFOVWR4LUpLbjA2MDNWWl9pSTJJSXhkTFFiVURPUnQ0YkVmZ1hIbkhiTUJYaHhJS2MwUjNaTXlpSUJSQQ?oc=5" target="_blank" rel="noopener noreferrer">あなたの命を守る「マイナ救急」（広報動画）<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5MejA4M0hGSWpSVjVDcWhBVm9QeU82UGpJekhqcGdMd21yM2Y3dmw1OTRvUERxWkFZZEJvTWJYVFppanVYNGpZbS1RVTFpT29EX2VMZlU4dng0SVpDN25F?oc=5" target="_blank" rel="noopener noreferrer">“マイナ救急”で円滑に 消防局が救急車の適正利用やマイナンバーカード携帯呼びかけ「救急の日」大分<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>t.co｜<a class="src" href="https://news.google.com/rss/articles/CBMiO0FVX3lxTE5NeDdfTWhZemhTdWZqMmpXSFRWdkRYYkk2czlzR2hlMU1HemlCTEs5akVoNVdmcmFRLUNF?oc=5" target="_blank" rel="noopener noreferrer">「救急の日」ＡＥＤ活用やマイナ保険証携行を呼びかけ 水戸 | NHKニュース<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>yakult-swallows.co.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE50WmtYX3BPUG11NWFZbzh1aTJMa0F0QTZoNmY4XzEzTVkxbjIxRHF4MHZLTVIyRW95dlM2ZTdhNWNXMEJmVU5rcVFBMjlyZ1F3MDRDTldpRElBSlJTMTE2YQ?oc=5" target="_blank" rel="noopener noreferrer">スワレージアイテム「マイナンバーカードケース」の再入荷に関するお知らせ<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>PR TIMES｜<a class="src" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5LTmo5cmpaWms4UHdaeEw1b3I3ak9uSVlMWTFnTW9fMUpuTVo4a2FPdnlDMnAwc3BtVWNyXzJrdE0xUEdMVU1wc2pvSjZFWUgtaEY5ZnRLSHRwMUE3OWFVYlZtaU5PcHFfUnc?oc=5" target="_blank" rel="noopener noreferrer">クレジットカードはナンバーレスなのに、マイナンバーは丸見えでいいの？ ？新潟県、燕三条製。純チタンが個人情報を防御する「マイナンバーカードケース」Makuakeにて先行販売開始！<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>FNNプライムオンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE5YamlpZzZqTGU5WUxWeVJZRzA2UjNGUFlaZ1NVSWNsV1BBcUo0TU80c09QSDFEQ3M3RjNSLU9pX2hNWTctbXZaRTQtV0Npdw?oc=5" target="_blank" rel="noopener noreferrer">“マイナ救急”で円滑に 消防局が救急車の適正利用やマイナンバーカード携帯呼びかけ「救急の日」大分<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>TVer｜<a class="src" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1LOW9hNWVCQ0lta2IzRnhfbUtKRTBOYUJ6UmhycFkwNlRONDNWNjlyR2xYNFo3Mmt5RzgxU2hpelkweG9QV0YwRGQ0UQ?oc=5" target="_blank" rel="noopener noreferrer">“マイナ救急”で円滑に 消防局が救急車の適正利用やマイナンバーカード携帯呼びかけ「救急の日」大分<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Togetter｜<a class="src" href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE5haDc5emRKRTBtc1VwNG1DeExObnRwN3NacnEwdDBOc0xwcXkyc2NqYnV0NXNrN0ZOLUN4eG5IcEJ6eGJZTVE?oc=5" target="_blank" rel="noopener noreferrer">マイナンバーカードを落として交番から手元に戻ってきたが、薬局でカードを提示したら使えなかった…拾得者が利用停止の手続きをしたらしく、停止の連絡がないことを問題視<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ｄメニューニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMie0FVX3lxTE02XzIxYTRIX2pKeExJc3lNVEZEODhsTzktUWxwZC1DU0ZXTVExdGJBWXpxcHlfaTBzdE5PUFktM0dCZGZQVmk0Q3ZPc3VTajI0bnEzSVVfdXhVQTlPZHg4ZlFaVm10cV9hSm9vZTgzNDNSR3B3UDdlcEZHMNIBgAFBVV95cUxOcktubk9ncWZrX2FWeGh1djBBTWd4ZEFqbHhPRDI5bDU0eV8taWt2TE0zc2JfV1VVazFTUkpzd0Z6MEpjZjJneE1Tb2t4N3VqWmFuVVZnVGRySU1LNG81V2JpazdlWjhWSER2aWt2Tm9iWmVyRzhqMXRPSTFET0ViTA?oc=5" target="_blank" rel="noopener noreferrer">長崎市「マイナンバーカード申請書類を紛失」個人情報記載書類を誤って廃棄した可能性《長崎》<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOaktCbGg1VUxPWXBUN3ZhUXZMYVFSYWpEQjA1Z0RHYmxGRXlNNUJuT1NCR1ExZEhSVTlKa2NST29FQ19WUGV0bjE4emhfb1Fmak5MUGxvNFdhaGM3a3pZcmprLVpRTEpLYzNVTHVMdzRSYU44RXBDODJESjl2MTk0NFY1ZE1wekFqTDM0RWJR?oc=5" target="_blank" rel="noopener noreferrer">長崎市「マイナンバーカード申請書類を紛失」個人情報記載書類を誤って廃棄した可能性《長崎》 (長崎国際テレビ)<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>news.ntv.co.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNYmc3b3lIV05ObEZkM0FfNTNncEc4c1c0ZXQyM1RPQUdndXJ3MENxTmp6MzBJajJhQlJIdkxZa25zMi1fLXFSTXd1OEJDZTYxQjdhYXZuYjV5VlpvUU1XNFo5TllLMkY3QlJzckh3ZnN6b2ZKOWJzMF9QZWFzQjdGXzJPa2ljQzA?oc=5" target="_blank" rel="noopener noreferrer">長崎市「マイナンバーカード申請書類を紛失」個人情報記載書類を誤って廃棄した可能性《長崎》<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9KLXIzd3Vsc19sMWRRTzlYSU41YWc1bUJoTGVoWnIzaW1vNGJhaE55YVdGZUpTVGVaOTlSaUNwR05zbDQ4cnpCb3lISzNhODlhZFhhaVAwTmtTQnJhaVE?oc=5" target="_blank" rel="noopener noreferrer">長崎市「マイナンバーカード申請書類を紛失」個人情報記載書類を誤って廃棄した可能性《長崎》 (2026年9月9日掲載)<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5kTGhrS01EVEZBUEZxMEFia2Rvc29BNGxjSWgzdGJnX2RqU1FSOU0zUnc4cnJQOVY1Um10TWhvWXA2TElZczJaZ0hQcUlJNUdSWVhfbWlHOWZ1ZmZ5b085YkZyOXExM21FaXlRc1VGU3BWcEZZOU1leE1DcnBwMWM?oc=5" target="_blank" rel="noopener noreferrer">長崎市「マイナンバーカード申請書類を紛失」個人情報記載書類を誤って廃棄した可能性《長崎》（長崎国際テレビ）<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>東洋経済オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE96ZHQyWENpeFdjcnJDdGFtTzV3alVsbUYzLXVrempjdjU4N3l0QzM3WmpFcjZaNE1xQmFJNWlsS042R2NXYm43UGJqbjh0RkI0eGwxdFpNc000V2c?oc=5" target="_blank" rel="noopener noreferrer">たった1社の停止で全米の医療が麻痺…｢ハッキングされていない病院｣の経営まで止まったサイバー攻撃の戦慄<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>東洋経済オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBJVTZNVk1GS0xWSEp5LVl5bHVGRGRSQmJNR1dUalZFZjJlSjJVclFyQUgyTUtUREFGS1hEQzZNU3lxZ1ViNkhuRGJVbXVOMmN5RzUtNjlZS01OSVk?oc=5" target="_blank" rel="noopener noreferrer">たった1社の停止で全米の医療が麻痺…｢ハッキングされていない病院｣の経営まで止まったサイバー攻撃の戦慄<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPV1RoQVpOX1cwMk1FNTdndkFLNG5VZmhEVVhoRTdTeWJzTnNBZHZTWmxYWDJHdHAwbURmWWg3STFfRE8tc1FaVHRkOHVEdXNGV3did2sxb0pfTUpKOFh6QkVLTlJMdW9DVVZIWUhZVWNzWnAxazVfOTJqV3lTWmdETFE3c0ltZWdqX0FoYU93?oc=5" target="_blank" rel="noopener noreferrer">たった1社の停止で全米の医療が麻痺…「ハッキングされていない病院」の経営まで止まったサイバー攻撃の戦慄<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ITmedia｜<a class="src" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1CYUhNdi1TM1J0UzdnQlBaMWJ3a3VMWmNmNXR5S2hwSzZJZXRGNlZpd0stMGwzU2Q1YXhGdF9YaU1fMld3SXZYWHJaVm1RZUwwaTBEdkhMclFULWp3S25LMjhKd0ZHTzBFVUE?oc=5" target="_blank" rel="noopener noreferrer">東京科学大に不正アクセス、個人情報漏えいか 東工大・医科歯科大統合当時の学生・教職員情報も<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>東洋経済オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5QYUg1S3o3eDRfNFRVdGhYNjVKWWpHMmhXdDl5VmpENWhHdGpidHphekNMS3N3VHNVRUFmY1VQMWJjTmVvWlJ2Z2RrNGo0a2MxUlE?oc=5" target="_blank" rel="noopener noreferrer">たった1社の停止で全米の医療が麻痺…｢ハッキングされていない病院｣の経営まで止まったサイバー攻撃の戦慄<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Ledge.ai｜<a class="src" href="https://news.google.com/rss/articles/CBMidEFVX3lxTE92T1dEd1VrcldxcHhPZ09ROHc3dFNvVjFyQUNkVzREejhUQjNnRHFqTXFmMzlkenZHa19mMGRwaW9aWnBReHJmaTVqTkpSYVVkYkF0LXVWMDc5NFFtVy1XV1RGel83MUR3YlBuUEgzZWlzN3l3?oc=5" target="_blank" rel="noopener noreferrer">RIZAP、社員が個人利用の生成AIに氏名・疾患情報を誤アップロード IHI健保分は210人、OpenAI社と公表<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5wTlhPd19fU2JnbWdGWkliNWZpeFJ5SkpQQlg2QnJla1lqSEs1WE1xVkQyOGYwM093TWpDZlBmWDF5MDlOcUZ2YWxMTHo3eU9qdFpRZU9xcVY5UXRJX20xNnpSODg0OW1fNW1DdXNrTGNYNkV5aVFVcFNKTEVXOFU?oc=5" target="_blank" rel="noopener noreferrer">たった1社の停止で全米の医療が麻痺…「ハッキングされていない病院」の経営まで止まったサイバー攻撃の戦慄<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Infoseek｜<a class="src" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5KWGdxVVNjOXptSnlpWHJKV0dvaUlDNjFzV2Q1SThoZ0pMc0xuMUd4TUpyenBaTXhRblA0NDEwajNFYnBsNUVEYTBtaU9ITl9vNHQ0Z05XaW5IcGgyUW5EczVjYzhmeWxlbXJqd0Z3SGw?oc=5" target="_blank" rel="noopener noreferrer">たった1社の停止で全米の医療が麻痺…｢ハッキングされていない病院｣の経営まで止まったサイバー攻撃の戦慄<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>読売新聞｜<a class="src" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1INV84RHV1eG5PdzBDWEhZa0EwelA3X3Q3S1JIajg3Q2dqMW5KSklNVUtaZ0VoOEt1a1g1SXk3UnlyemZEeG5ZbXFyUThHMHQ1MzBnNWJFV2JiTkdmdzRKTnpnTEplUQ?oc=5" target="_blank" rel="noopener noreferrer">病院で相次ぐサイバー攻撃、厚労省が対策強化へ…外部との回線集約化に助成・攻撃時の遮断が容易に<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1yak54azdJR2lFZi0yY1oxc1p6T2JzeDcxdTAyOVktcl9IaVVaZnEyRzZaQ2FrdWx3eGtWS0M5V1k5NE1GTVpWZVUzbkpUMDBYSVlJM2FxYnBkZERhQ2c?oc=5" target="_blank" rel="noopener noreferrer">病院で相次ぐサイバー攻撃、厚労省が対策強化へ…外部との回線集約化に助成・攻撃時の遮断が容易に (2026年9月7日掲載)<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTFA4QTlxbnFBVXdlMWJKekstR1lNUlBhMG4zUURSMldqdU9ZUTF3LWpqVVhrRHVBc1hVdXprblozaEZmTllzTVZTSldJVXhNSTd0Tk5UbzlDcXgtSFRkVTNOLU9ub3p0d0ZXUHlBM2VHa19kdlplX0R6OE5IY1o?oc=5" target="_blank" rel="noopener noreferrer">【画像】病院で相次ぐサイバー攻撃、厚労省が対策強化へ…外部との回線集約化に助成・攻撃時の遮断が容易に<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTFAwaUFQYUhGZ3U1WjF5NnJWdUNtbDB0SjliUm9NbWN1ZW96ajYyN0FJNloteGFhZE9VWDJSa0RWaENSMXg3dGxvLWU1TnZPNnRCX1Jlc0tJYmhkNTRGaDI1emRXWmMtQzUxelNkRzRNUV9NaTBlZFRlTnZoUkh1MTg?oc=5" target="_blank" rel="noopener noreferrer">病院で相次ぐサイバー攻撃、厚労省が対策強化へ…外部との回線集約化に助成・攻撃時の遮断が容易に（読売新聞オンライン）<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNX2dqaDVnRTdvN0lyX2Y1MHZBQjk5RF9DWTBwWFZzLVpRMlViUEFkaURzMFNuelBYWUNjQ0lLZ0JQUVR5eXpoREM4cjhBWHk2dG5MSHJYdEJrM0V4NUdPVkNraG1XTmxQeE9CUjdzcERuVURlYmFUVi1PR2hLcGU4X0pMOTc0YmhFT01lSWtn?oc=5" target="_blank" rel="noopener noreferrer">病院で相次ぐサイバー攻撃、厚労省が対策強化へ…外部との回線集約化に助成・攻撃時の遮断が容易に (読売新聞オンライン)<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ｄメニューニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPZUd3SGgweVZtNU9DNDdWZzdzQ3RmU2ltMGdYbDBZeVdfYk5YcENEckRNVVI0bWMwUF9vSXVzWGVTbXZJd2tUMlBKYTNMNzE0QmJ5cUltUDNhX2pLN3ZRdVRXazZBZjRZRklpSEFmRGJzbkVRb0I1c3RXRThLblVTb0dkOUzSAYoBQVVfeXFMTlpnZXl0dUh0bnpvby11MDI3dFB4TlhZWFJLZEM0NmJoaVF1WDBRNS1OT2NQa2VNbG5PaFMyb0dZRUZhWDBIT3pZV1E0RG14UFI4WjlJRHNwUXljVjlES3NaRTFldFNKVFFKNzZNR0hWV0hXc2NfVzJiMzFkQmhyQm45Y2MyMExZNHdB?oc=5" target="_blank" rel="noopener noreferrer">病院で相次ぐサイバー攻撃、厚労省が対策強化へ…外部との回線集約化に助成・攻撃時の遮断が容易に<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE13enc1UUJmQVV0WDV0U2VSVlVpaXRvc1RUVks1LU96TEVWTE1ENEZVbHdqVWszOGMwWmQwT2w1ZkNYS1Q3R285bnZKTnpqWXNC?oc=5" target="_blank" rel="noopener noreferrer">病院へのサイバー攻撃 対策強化へ<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>MEDIFAX web｜<a class="src" href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFBHeExiNmtYNGhWZnktMGNjeEFIS1VGeTJIYUZrSU02S0RaRk16NVJYUlNscHN1WjZDeW1DamxUTzVSX2w3VXBmNdIBTkFVX3lxTE90Q3k2WjFmeGRfRWRFU0xRUl9keGdaRklIenduN2kxU3NTaVJ3cnNUaGNkbWE0cHFlSTkwSTJTN0ktOHlIcGZkNzhmem13QQ?oc=5" target="_blank" rel="noopener noreferrer">大雨被災者、マイナ保険証なしで受診可【無料】<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>デジタル庁｜<a class="src" href="https://www.digital.go.jp/policies/health/public-medical-hub" target="_blank" rel="noopener noreferrer">自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）｜デジタル庁<span class="src-host">digital.go.jp</span><span aria-hidden="true">↗</span></a></li><li>デジタル庁｜<a class="src" href="https://www.digital.go.jp/resources/govdashboard/mynumber_card_penetration_usage" target="_blank" rel="noopener noreferrer">マイナンバーカードの普及と利活用に関するダッシュボード｜デジタル庁<span class="src-host">digital.go.jp</span><span aria-hidden="true">↗</span></a></li><li>デジタル庁｜<a class="src" href="https://www.digital.go.jp/news/6a52d1e9-30cc-455a-9154-f32479d1731a" target="_blank" rel="noopener noreferrer">学園祭での年齢確認にマイナンバーカードを活用しています｜デジタル庁<span class="src-host">digital.go.jp</span><span aria-hidden="true">↗</span></a></li><li>デジタル庁｜<a class="src" href="https://developers.digital.go.jp/documents/mynaportal-api/maintenance/" target="_blank" rel="noopener noreferrer">メンテナンス・稼働状況 | マイナポータルAPI 仕様公開サイト | ドキュメント | デジタル庁 開発者サイト<span class="src-host">developers.digital.go.jp</span><span aria-hidden="true">↗</span></a></li><li>下野新聞社｜<a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBFdFJUWmpFa0hkOHZfWGZkR2ZEZlh0cFRrNmY4cnFhUWs3QXRWLUFfdERzRVRydnMwOVlQaDA4UjRiS2ZpeGc1dXRmQWduY3pfVnlnRjJGaFhaWkE?oc=5" target="_blank" rel="noopener noreferrer">「マイナ免許証」窓口警察署拡大へ 11月2日から栃木県内18署で受け付け、取得しやすく<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>47NEWS｜<a class="src" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE54bDFMdTNXbUhndm9TLTgtTXlxaXFIVDAxMmE4anY4OXhzakk4X2hrLWtKZ2ZIY1VjV041WklBVHlDNUg0dTBzTFpBRQ?oc=5" target="_blank" rel="noopener noreferrer">「マイナ免許証」窓口警察署拡大へ 11月2日から栃木県内18署で受け付け、取得しやすく<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ｄメニューニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTFB6TDRYeUE0eGNBMW5Zb2dVOXgzMndPSVd4QzF4Qk9xb2J5LUxrMDFNUnFYUzNQUTB6X2pPWFVfakMzWEZoUkhoSXZYZ3dQR1c5VjdvX1BLbG56WUFabDlFQTRjYUxXalFYZVNIY0hSN0syWllwTS1rd1FOV07SAYIBQVVfeXFMUFB5R2lDS3pKalhKZU1NSnJ2ZTExcVQzU2tWT2NKR3AtUnU2SWN6SkoyYkVadTRJdHdLaUtXOVhOV1NXY0lGWGhvUlVPemk1bWowOFN2UnZLTUh1eDdMNDNsY3ZVTzE3bjZoTEhta0dzUzlYaXBqLWkxenVMV1pOVUJXZw?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9kNGtXTi1fQWg2YXVtbHYyZklHdWVjcTdkNlZfRUh2dXpSRXdhejEtLXRoUFJrZTN3eFVuQkVBZU9aMnROOGJZUFVuVV9CRE81dkJqakF4N0NYbHNHcFVz?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE05SXhRcW1mQUtLdGZzRlRBWWp1dkc4eWZId211bGFwN3lhUlJiR1BvWVI1QTZoQm56Ny1Vc1NDWW94WWNLOWJuenhXM1ZLWVJPOXVSdFNPUkRCLXlQNWJrUlpxM1J5ckU5cmRJbUNUd2pUNVc2MDBjLWY3V0g?oc=5" target="_blank" rel="noopener noreferrer">【画像】「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>BCN Retail｜<a class="src" href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9IRGluZS1Tek9kTEdHRVpzSHBURWpKXzlkNEt2TTFGN0xJRlBIWHhWXzJWVUJyRFlhLXZyQnh3ME0wOUdXdkRPNi1SMkRzOVFXT3lUVDZFbE5tcUsxNk4yM2FWbUVzbjc0ZGJwdQ?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPNGpkSEN6ck9tQUpMY1dodDYtVTY0eUtIdWVtZXk1R0ozNWZ6NnZHVDVJZDh2VkRFVkhtMnpNVElxdGxQS2lzUjNKMDh6THptMTJHWk5xWFUzRzdIdC0xaEp1MVhnSlBlQ09URzczZ2tRcGpWa0JBaHdzdEJ0TnZ4aVFIaVZhUzlNVlM4M3lR?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか (BCN)<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ｄメニューニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMihgFBVV95cUxOZVdWNXNIdVJTbTVRUTItd2FpRl9mc21QQ1RfcXpSV1VSaHpiQUgtaGRUSFY2UlVJNU40andIVW5rTldFdnJsUHI4VEphcUFPMWQxb1BEZGtHVS1BNXljdFNVVk5PQjhob3BPejdrTE5KcEd3aUtjVFNmeFViZjdIelRqY3ZnQdIBggFBVV95cUxQUHlHaUNLekpqWEplTU1KcnZlMTFxVDNTa1ZPY0pHcC1SdTZJY3pKSjJiRVp1NEl0d0tpS1c5WE5XU1djSUZYaG9SVU96aTVtajA4U3ZSdktNSHV4N0w0M2xjdlVPMTduNmhMSG1rR3NTOVhpcGotaTF6dUxXWk5VQldn?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>千葉テレビ放送株式会社｜<a class="src" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KMnViV0FjZjJRbXZjX0FEZVFMdkJFQXl4VzJsVDc1cU9OeWZQb3pKTU1OZjl4VzZLV1pGUG5hUzZ2U0dsQ3hkQllpSW8xSkc1RTVoRUJrdWZ4ZlM0bS04?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>BCN Retail｜<a class="src" href="https://news.google.com/rss/articles/CBMid0FVX3lxTE50cXdhRS1rV0M5TkR6emRZbHNCRm9GUkVDeHc5WTl2QWtJa1UzRUJRb2VKUlpRRmptaVRSZnYySUt4UUFPOHd5WWd2SndfRG85NExjaWN0cXZVS045RWNlQVlYTEh6aWxWYlR4bnVXRldCa1h1VnhN?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」提供開始 これまでと何が違い、どう便利なのか<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>PHARMACY NEWSBREAK｜<a class="src" href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE9OUHZ3ZmZsUWFhTEVMZThMUGtmdEpaaW5uWmR3ZGxMX2VkY2JJRFdDbllNeVdDbnNzN2ZGVXdjYXBKRTFNOUI2Zk130gFPQVVfeXFMT2dFa3o0c0ppWHE1VHpKOWNxenh0S3pnOFBLU2ZIZ3h5MlFSejQ2WUF6cTY5cUZFVjViVGtTVTdzdlpwOTJNbGRsWTM2TDlmZw?oc=5" target="_blank" rel="noopener noreferrer">医療費助成オン資、約半数の薬局で導入<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>PHARMACY NEWSBREAK｜<a class="src" href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9nRWt6NHNKaVhxNVR6SjljcXp4dEt6ZzhQS1NmSGd4eTJRUno0NllBenE2OXFGRVY1YlRrU1U3c3ZacDkyTWxkbFkzNkw5ZmfSAU9BVV95cUxPZ0VrejRzSmlYcTVUeko5Y3F6eHRLemc4UEtTZkhneHkyUVJ6NDZZQXpxNjlxRkVWNWJUa1NVN3N2WnA5Mk1sZGxZMzZMOWZn?oc=5" target="_blank" rel="noopener noreferrer">医療費助成オン資、約半数の薬局で導入<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>日経クロステック Active｜<a class="src" href="https://news.google.com/rss/articles/CBMib0FVX3lxTE0zNF9XSUl5NURTWDdGRnc3S1R5VFF1eEQxdmFDS3BfaE95S3Z3MGZlbktOWHJqWV9aNndybGVMTXAzTF9kam1ZR0tFaXpITkV5R0x4Y09jRjZHSEhMaGxuRHRISzlNV3ZtaTQxakEtVQ?oc=5" target="_blank" rel="noopener noreferrer">千葉興業銀行、対面の本人確認にJPKI利用 顧客の利便性を向上（2ページ目）<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ｄメニューニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMibEFVX3lxTE0yenJFU0NUbVFJZGpIbFlIUzE3SUVZRVlLZWFBR2ozb3ZCek1HUW5IOU1hNV9XLUYwY0RIOHAyWG9iNGM1cTEwbE05RExqY3BCYURGcnNiaWJHWGlvTjc4dnRvTzdqd0NvNHZoTNIBckFVX3lxTE1SQWtDb0VrNERfQ2haVWxsUHZIY01jMnhrXzhSS0xaX0RNNVVVX0tuMVdBd3NQZkVzcVJSZEg2SXg4OUI3NThremVIckhQS0xqV3dFSEhnMHBRSjl5Z1dTX2dmYksxMExWQVJDVC1YQk42UQ?oc=5" target="_blank" rel="noopener noreferrer">マイナンバーカードで避難所の受け付けを…デジタル化の実証実験 秋田県総合防災訓練<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFByQXNHNXV1bmMxWGhZaDR2NjBPX2g5dGZFamdfU05HTThkMmZQNTFWd2J0RlNoLTh3WlBkckdVVV91d3JYNnV5TnQzS1FLQm5nNkZVWVZSclMwRHpyMGc?oc=5" target="_blank" rel="noopener noreferrer">マイナンバーカードで避難所の受け付けを…デジタル化の実証実験 秋田県総合防災訓練 (2026年9月6日掲載)<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE00YS1JVXBGMFJmOXEwR1FScERJdHgtQVZFaU1xbEZSOWE4LW1PeG9mOGxtbnh2YXVoVlBGSi1jazlLTHBhRXBUWkpDQTBMV013Sjd4VkdIaUZBSkNyWnFGMTkyOW8wVlNnVURadVV4QnNENFZoUU5VQm4xVXE?oc=5" target="_blank" rel="noopener noreferrer">【画像】マイナンバーカードで避難所の受け付けを…デジタル化の実証実験 秋田県総合防災訓練<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>town.iwaizumi.lg.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBLdTFjemQ4VVJZdGMtUzFIYUhpNzh6cTY5RzZlYl8xd2ZZVENvZlctbXdjejBabjAtbEF5blBMaVFWZDVsSEFud0tIZDNkZncxbkZEV0lmcS13aHJhT2JUbQ?oc=5" target="_blank" rel="noopener noreferrer">マイナンバー（個人番号）カードについて<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>town.iwaizumi.lg.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1QTzNFRDdLYlFyS2I3ZzZqdmpDQ0RPWXZCZFIwT18wbmhHM1NKMXFuSUp1bzA0aFlEQm42WUEyNGE5dXRkU1MzQk1rTnlDVEJhTUJMZXhwMW9rQTBuelE1Tw?oc=5" target="_blank" rel="noopener noreferrer">社会保障・税番号制度（マイナンバー制度）<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>福井新聞社｜<a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE5RTjFxM0RsNjg2SU1uaGV5YkU5Y2lvdkhzMldHZzdsNWlES1duZXpLZkhyWExEOW9NQkVpd2xPa3pSZ2lLTlFGc3Rzd1RuT1hsSDIwY0pNNTBrZC00UWc?oc=5" target="_blank" rel="noopener noreferrer">マイナ保険証 有用性の訴えが足りない<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>47NEWS｜<a class="src" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1qNlAzUVBrZll4LUFWaW9pLVdpMlhoanZwNF8wLUpCVVo2RG1YZGRBTzlGSEhTd1VSbDZsRUNyM2p5Q0VPVmJES3l0bw?oc=5" target="_blank" rel="noopener noreferrer">マイナ保険証有用性の訴えが足りない<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>walkerplus.com｜<a class="src" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5DVy1wbmszWkxWMi02LW51bjFZSWZ4RDE5SlRUdllobFp4bDBLX1QyVHpkNWtGTGNuMW44RGN3dHp1Ti1BclhhejVrbEtLSjUwWjNCM1Z5bHdXRFJwaE1OaGkxZXZiYmlCUDBBQlpn?oc=5" target="_blank" rel="noopener noreferrer">＜画像7 / 7＞確定申告はマイナンバーカードでスムーズに！2022年1月から「e-Tax」がさらに進化<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Mshale｜<a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBpSlFrSXJCUWpoWWpmR0ZFR0F1UUsyOC1Wblh6N3R4aHlZLXdYUFBFMXNhUGtCOWJ6dTUwaXpGSU5MdVlKeU14MVZtRmNweWVQMTc0dTNpckROR1E?oc=5" target="_blank" rel="noopener noreferrer">「eーTax」高橋英樹さん スマホで申告体験 “マイナ連携”「あっという間に」(2026年2月16日) Itv Vote (Kpr2mekCVd)<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>nikkinonline.com｜<a class="src" href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBnemFMNnY3TEhmeDZpTXVsWF9BWmo0bVFhbWp1bVdRUjJPWjFOMHpyOU9JakVSTFlkTTBBVExlcWRsZXdGeHVsd2x2bEVDcHRWemVOOFhB?oc=5" target="_blank" rel="noopener noreferrer">政府が消費減税の大綱案 中所得者に支援金 公金受取口座の登録促進 外食事業へ資金繰り支援も<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>LIMO | くらしとお金の経済メディア｜<a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE9wczZoMG41QXRYU2VDNTllSXlwVlFqTU9IWkVjMm52TUJGS2NqM1E1WEJDZnJYMk1zLWpVOUx6VkYzN0JWcXB2X1pTUVQ?oc=5" target="_blank" rel="noopener noreferrer">60歳から89歳まで「年金は月平均いくらもらえる？」今夏スタート！公金受取口座「放置すると自動登録される？」みなし同意について解説<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>LIMO | くらしとお金の経済メディア｜<a class="src" href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBrVzFSTzdVT25JM0czTmdIX0R2ZWotVWdxQUhwSXdkcXAtNGRma1U1UGRldktVWXhxMU5RZW5wMlhHRmtpWmZaTWxJREg0ZzBNUW1MU2F3?oc=5" target="_blank" rel="noopener noreferrer">60歳から89歳まで「年金は月平均いくらもらえる？」今夏スタート！公金受取口座「放置すると自動登録される？」みなし同意について解説 負担が減る？住民税非課税世帯になる年代別割合グラフをみる | 2ページ目 | LIMO | くらしとお金の経済メディア<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>LIMO | くらしとお金の経済メディア｜<a class="src" href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9adEE4b181ZlBzMHhCdTdoZThFSmlwZWtiVDdZZHhHRFU3LVc4Q3hFTnYwY3JfZVZJLXdLTEE1ZzFjenpNUW1sRHVGcjNLeWhXQ3JDRk93?oc=5" target="_blank" rel="noopener noreferrer">60歳から89歳まで「年金は月平均いくらもらえる？」今夏スタート！公金受取口座「放置すると自動登録される？」みなし同意について解説<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>TBS NEWS DIG｜<a class="src" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBER0pIUm9SdlNRSG0yNnlCcFhfalFSUEpCWU5JOWRsRXRVa2xtbzZDc3FoTUk4Tlotenh0RlI5MVZSc3pDenAwRE14U2dXQ0hZWFpPeGZUMWtRV3pubmJB?oc=5" target="_blank" rel="noopener noreferrer">地震で病院に行けない被災者を救う 熊本市の「ひのくに薬局」が電子処方箋を活用したお薬配達を続ける 「まずは薬局に相談を」<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>sudoh.co.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1CTGE3SFFLOFR1N1lmTGlVb1AxTTJPWXltYjRsMjFXTFpGMTlYWVdMZDBQRjRRVkhTMWtQMWdkYUMzRjRVUllkbXoxcWV1YzV6aHFn?oc=5" target="_blank" rel="noopener noreferrer">【三浦政策統括官】電子カルテ認証制度推進‐電子処方箋普及と一体で<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>政府広報オンライン｜<a class="src" href="https://www.gov-online.go.jp/media/commercials/202609/video-313829.html" target="_blank" rel="noopener noreferrer">本人確認はマイナアプリで（20秒）　 | 政府広報オンライン<span class="src-host">gov-online.go.jp</span><span aria-hidden="true">↗</span></a></li><li>Apple App Store｜<a class="src" href="https://apps.apple.com/jp/app/id1476359069" target="_blank" rel="noopener noreferrer">マイナアプリ（iOS） アプリページ<span class="src-host">apps.apple.com</span><span aria-hidden="true">↗</span></a></li><li>政府広報オンライン｜<a class="src" href="https://www.gov-online.go.jp/media/commercials/202609/video-313937.html" target="_blank" rel="noopener noreferrer">マイナアプリ | 政府広報オンライン<span class="src-host">gov-online.go.jp</span><span aria-hidden="true">↗</span></a></li><li>政府広報オンライン｜<a class="src" href="https://www.gov-online.go.jp/newspaper/tsukidashi/202608/newspaper-2051.html" target="_blank" rel="noopener noreferrer">公金受取口座（令和8年（2026年）8月掲載） | 政府広報オンライン<span class="src-host">gov-online.go.jp</span><span aria-hidden="true">↗</span></a></li><li>UQライフ｜<a class="src" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOb01tSXRuZHhITlJSdk1KNEZRX3BRTE9NcTJCMXJwRUVGREpDcHZwcEp6T0d6WUk4LVJSelNxMUpVdTJSYmZOV21ia20zdkd6cGxscmVwSjVZZVFYbldpLWtnczRYNW5ZOVJWckVCWXhWS0YyMnZuVU1EX1Ixal9aMQ?oc=5" target="_blank" rel="noopener noreferrer">マイナ救急、漫画で周知 水戸市消防局が啓発チラシ制作 AED利用も呼びかけ 茨城<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>茨城新聞クロスアイ｜<a class="src" href="https://news.google.com/rss/articles/CBMic0FVX3lxTE54a0hVcEhJVVRWLXhfR3FzOTVYZFBvQ2xZWmZzc2s0WVpqWDJ1LXBHM1Y0NzBQNXp3OWRQLUZkeDM4dXROSlFrT2dDd2o0N2l4UXduS0Ewa2ZEcWRRVV9sZjdwaFFmR0F0c0lpb05hUlp6ZUE?oc=5" target="_blank" rel="noopener noreferrer">マイナ救急、漫画で周知 水戸市消防局が啓発チラシ制作 AED利用も呼びかけ 茨城<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>article.auone.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMieEFVX3lxTE8yQnhFQTlvSlhqNHBlVjJLVS1UQWNQd2FrNGs1WERRRlRiR3NRWlZTcWxvRTNkaGYtOWxpcjBPY2lqc1l2VngzZTB3YkRYTGZxNFpZTTVPN3pkZERtSnVSRmF3UUsyS0QtaFo1dHUwSlUzZWRNaEh6ZQ?oc=5" target="_blank" rel="noopener noreferrer">マイナ救急、漫画で周知 水戸市消防局が啓発チラシ制作 AED利用も呼びかけ 茨城<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Smart Watch Life｜<a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE1zTTczYjVVbGdEWE9IX1pVYjZCNTRJUVdlOUpkc1Y1dDhmN0VOR25zRDAtZUgxcm43Nm5PTHA4ZzFfTXRvM2hsT0VyM0g?oc=5" target="_blank" rel="noopener noreferrer">iPhoneのマイナンバーカードで学園祭の年齢確認ができる｜デジタル庁が5大学で実施、学生スタッフに渡るのは「20歳以上かどうか」だけ<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ｄメニューニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVGlGbGR6bDFHbWxuSjFmeEZpWE1kR2FKXzdkZTRHYk5mR25QSERPalI3UXUxM2szcTItaWFEbEo3UEkyWWZnd3ltLUZZTG9maHN4Qk8tb180ZExLUW9zZFJZSUhWX1pldXZ0aGFtNU5URGRXNDRZeGd4ZVFVUEFOOGtHSXEySXVM0gGIAUFVX3lxTFBUaUZsZHpsMUdtbG5KMWZ4RmlYTWRHYUpfN2RlNEdiTmZHblBIRE9qUjdRdTEzazNxMi1pYURsSjdQSTJZZmd3eW0tRllMb2Zoc3hCTy1vXzRkTEtRb3NkUllJSFZfWmV1dnRoYW01TlREZFc0NFl4Z3hlUVVQQU44a0dJcTJJdUw?oc=5" target="_blank" rel="noopener noreferrer">マイナ救急、漫画で周知 水戸市消防局が啓発チラシ制作 AED利用も呼びかけ 茨城<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1tZEhkQmg5YVNuaHUtWnhKdUF1TWdLUl9LNFBGLUJxMWYyT0ZTYnVyZGh0VG9LSUhNZlYtRzBmbWxtUkhEYTFwVVNFajlBdVB6UExxMDFzZWVCQkN5RFBKeHNCNm5aNW9rejB6RGZtSWlWeGpaYU54UU9ZQUNWUGc?oc=5" target="_blank" rel="noopener noreferrer">岐阜市 物価高騰対策の支援事業 未申請者にギフトカード配布へ マイナカードによる給付申請（ぎふチャンDIGITAL）<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>STRAIGHT PRESS｜<a class="src" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE51amJIcUk3QzY1TV9QemJFTEp4WGJrdnhDSFpoMW52OUtTbTRhUDIyQkpTYnl2ZldGVzFUMGNJXy00SnNGSUZHeFJneUFZWWphT1hn?oc=5" target="_blank" rel="noopener noreferrer">【長野県白馬村】白馬八方尾根スキー場、最大39％オフのリフト券「早割マイナチケット」を期間限定販売！<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Infoseek｜<a class="src" href="https://news.google.com/rss/articles/CBMickFVX3lxTE81Nmp4TlNYbGVRMlcwN2pXVmJESnpWQm9nb2pWNUZuS3hZS1RoTVl5Q05xX0c3bE1tYjVBbXdUZ3NhM0hhNjcycUhXSk5rMXRmMGgtX2t1UXg5NC1xbGJid2dLM01tcV9WQndhdXhPZVpfQQ?oc=5" target="_blank" rel="noopener noreferrer">クレジットカードはナンバーレスなのに、マイナンバーは丸見えでいいの？ ？新潟県、燕三条製。純チタンが個人情報を防御する「マイナンバーカードケース」Makuakeにて先行販売開始！<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>東洋経済オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE5sQnRCUXhoem1DVHNFbHhrdGZELXRCUG5HeVhWMXZQUjBERGJkdEc1VUxfdW9wd3pPem45cDVuYkt4NFBXVC1JYXNQQWlsQUxmdDZrUTA1Zw?oc=5" target="_blank" rel="noopener noreferrer">｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由の写真一覧<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>東洋経済オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5wSVhxOVljeDNGNUxkX1ZLUDFBT1hvOUdRaGdKdlFVTGY3V3E1OEVRdUp2ZzFWSzVlVzduMDFUcUxneXlKWnEtQkIyWFJobGt1cWtmUkVmUVRSenc?oc=5" target="_blank" rel="noopener noreferrer">｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPV1JfUlE4dXl4VlRkdm9KYWJXSDdVNi1HamVoaTA4T1RLTVhuZjBwOTNFSE1vOUVKVEJnN3BFUTVfNjZua1NUNWpreTJVb3NfSGNRcDJ6LWVuZmRWYnZZUkdBa2E1YVljNktpcENJenRHWTI1MTJlNmRpSkNHRno3Y3E2Sm43VnAw?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」に変わったマイナポータル、口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>news.infoseek.co.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBRRFU2andXeERFTHN3RDdxUml1RzFJejh6aUdsRGZDWU1kWUZESHUxZHJMWmNCUHpqVEhabGs1Vlo3YlBrYmpaSHFzNUw1NjJuc0lrZ1V3WlFWVXpMMzJLNHQ4cjFhRl82NUs1c0Jmbw?oc=5" target="_blank" rel="noopener noreferrer">｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>nnn.co.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE5DbWxYZGU2aWt0RE9ta0luRU9obXdqMEZzNWdNeEszVFdoWEZVRUZ4T1VIckNKZGxJVWkzM2NKX2JGdXl5Q0wzRHlLcWxkNUh2?oc=5" target="_blank" rel="noopener noreferrer">１７８人のマイナンバーカード「署名用電子証明書」が失効 鳥取市<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>nnn.co.jp｜<a class="src" href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1nNWlpNGdhakxraW5qeEE5R3gzMURoeGdJSlVvQUJ1MU9FbzRjcEctVldKWXpUQ2M2aDNPMjBSVHlxdWhCXzdqU2JjT25pSUJH?oc=5" target="_blank" rel="noopener noreferrer">署名用電子証明書１７８人分誤って失効 マイナカードで、鳥取市<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>政府広報オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMie0FVX3lxTE5xdllwUURmblBfcDJoT1FySVhOaEhZOFR1bll1RVVNUXV2Vmdkb0JoYWlWLVlsTWkwRExvXzRtUGNIemFGRFRvZ28xVFVrZjctb1RoWTk0TGdOSGNmMDZMc3FiOXIzRUhiQVVhRHVuWXJ2anVDUGVrTEEwWQ?oc=5" target="_blank" rel="noopener noreferrer">本人確認はマイナアプリで（20秒）<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUzBIXzRiM25Qcl9vRnptUTdIeWJRRWRfM0tIalVxSXhZVE1Yb0ZOZWxLVUNaUm5uSGk0QmVQZm8zdWJzNmtNLVVuMDlqNFJaOXJSb0xrVTdCUVNJSzBwamlid0FTdnNueUtrM25JQnB0UDYtTmZVUGlpazJrazAyay1uWU8tN2xC?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」に変わったマイナポータル、口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>東洋経済オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBJdDFfc21SQWxVZlNjUVhXZFVNVF83TEtZc0J2SHhjOFZBQWZIZ0VrQ09mblVnemcxd1o1SVRCelRxWHF3ZzBWVGpQNjh2b2tBV3c?oc=5" target="_blank" rel="noopener noreferrer">｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Infoseek｜<a class="src" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE0tT0ZzTGp1WVdOMXhzX2R3cktYT185c1Rra3VOSGl2QkI0TlFzZGQ5WkUxenl6aVJLT0ctNWhtVmJ0MEZIOHpDcWg5bHhXNUlnX2hVZUNRRWpTU2tRc0l6SC1jNkRUNVYwUjhLVDhYQkM?oc=5" target="_blank" rel="noopener noreferrer">｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ｄメニューニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQblpyc3RMN1lObUhVV1k3MFBDX2Vadk8wZEcyY0UwZk9leXBMczdaNU5VLXc2dzU3TWgwM3ZNdGlqWXRvVlZEZjRVNWZrcW9pdEI1VkkwNjQyNjNhQ0YwR1JoeXZkSmFrX19td1RPUDFyanRfQ0oxc253Si1RYTdYNEswQQ?oc=5" target="_blank" rel="noopener noreferrer">｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1nd3JDWUs1SHlBYTVjaE1vM1F1NVFlRmdXNFhZTFBJQWFjWC0wR1o2OHNIckFHeldIRjY5aG5WRXZmZm1ZdWhnYmppcjN6c3ZJLXFMcGgxY1RFbzRHWkhLdDZmTEpvNlNPSklJMEtaUENrMEJHX1pFUzJ2VUdZOXM?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」に変わったマイナポータル、口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE81aWVuajgybGhVMklwTVNWV3lHczZLOC1IaDM3M0l6VUI3cUE0QTByd1pIbGJPVUlqbjdhWUdydVlUeTY4REI3SHZiQWQxeDBtV0FETWVOSGZRaVdnTDhCMjNHaGJHQTBHal9JRXlwRUNHZ2VlcC12V0RndHk?oc=5" target="_blank" rel="noopener noreferrer">【画像】スマホとマイナンバーカードだけでパスポートを更新、自撮り写真も使えた 2/5<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>ライブドアニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE84eGpmSFZMX29tQUdPR3JMRjRkVE5mRUNNVlpvLUlDMUZ2V09Cb1BVYzlSSmRaTU1QcnBpOG9EdldTZDBDWjBBNlNMYnRYZ2hjSUhjczVxV0tqYzBJc0kzYlVHVXJaLU1hRWF3dTg3aXdRTXh2alFhQm1LQ2s?oc=5" target="_blank" rel="noopener noreferrer">【画像】スマホとマイナンバーカードだけでパスポートを更新、自撮り写真も使えた 1/5<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Smart Watch Life｜<a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE4wYWhmMlJWYm1uRkVYNW95MGJZTGZCUndVS2Npd1RPMmVKNnlkcjBwb1RCeGhvSl9sMWhvXy1uWk11QW5kbzdteXZEZTE?oc=5" target="_blank" rel="noopener noreferrer">マイナアプリとは？ できること・マイナポータルアプリからの移行方法・ロック設定の必須化まで解説<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>東洋経済オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1PYkxDNDFWZ2RHMW1qbTRWOHdVT2ZpV05qOTlHTGVNS2d1YU9xS0dReUduUlp1OHpWQWpNdnBqVlN3bDhQUkJqV2Y5ZXJUU1VwVURZQzZwYmNGZFRwV2c?oc=5" target="_blank" rel="noopener noreferrer">｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由の写真一覧<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>東洋経済オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PcmZ5d1pSOEtQZjdtOHFjQk41Q2VPdUVORnJqNV9Sek9jd1gzWjJ3NXB4Wm1OY2FjREJUS1NSY1k1WTlzdllrVElFamE2YUd0dVpEdFQ2TzFwU1E?oc=5" target="_blank" rel="noopener noreferrer">｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Yahoo!ニュース｜<a class="src" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOd0NFbllWMHRpZjBRd2hPX0s1TEptaVV2ZmJVVC1aZGtkNjNmX3hBUVl4V2k3Wl9LZTlMQkhPMTlVUW1RMC1xdGlMVzZQZDBiaUJVMUNkZ1ZHLS1fc0tjLUJqWUVtbFNILXNBYkZZSmtoQ1A0NWtqcm4xWmF5UERfV2VmQ1RtMFN3aWt5MjN3?oc=5" target="_blank" rel="noopener noreferrer">「マイナアプリ」に変わったマイナポータル、口座開設やフリマの本人確認がマイナンバーカード中心になる理由<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>東洋経済オンライン｜<a class="src" href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBiazJkUGh0MC1ta0pDMEFZTVRuaE1QX0xBVHJjUXh3cmdDeDZUN2NsZHhNbmxscHRBZ2tPUjI5NXFPTGFvYWdUUDBPTE9QZFNhdmdVdUI0ZDRfdkZOa2c?oc=5" target="_blank" rel="noopener noreferrer">｢マイナアプリ｣に変わったマイナポータル､口座開設やフリマの本人確認がマイナンバーカード中心になる理由の写真一覧<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>沼津市ホームページ｜<a class="src" href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9WdlJjRjdWNjQ1ekJ6V2hEck9icEFOQVZFTHJVampwazlWVnZLckZDbXgtSnZsQ1JLaUlLM2tfVTA3eWI0NHloVTFPMVFaeWpiTzdOeHZPR2UwcUYxaTBkSEdaNUhkMXZ0RUFNa095MWQ1S3NwYUxN?oc=5" target="_blank" rel="noopener noreferrer">マイナンバーカード・電子証明書の更新について<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li><li>Smart Watch Life｜<a class="src" href="https://news.google.com/rss/articles/CBMiTEFVX3lxTFB2UE1PQ3FjRnM4alRmTTVkMUFJVkpBZE55Yl9qeHhIRERwME1GREZBWl9CU0MtTlo3ZnZiakUzVmYzYlpKNHdDWmRhOW4?oc=5" target="_blank" rel="noopener noreferrer">パーソナルヘルスレコード（PHR）とは？ 含まれる情報とマイナポータルとの関係、スマートウォッチのデータの扱いまで解説<span class="src-host">news.google.com</span><span aria-hidden="true">↗</span></a></li></ul>
+
+      <footer>
+        <p>検索 220 本を実行しました。「確認できず」は公開情報・主要報道・取得できた公式情報の範囲での判断であり、存在しないことの証明ではありません。</p>
+        <p>SNS・Yahoo!コメント・アプリストアのレビューは全国世論を代表しません。「炎上」は批判の存在だけでなく、反応量・二次転載・主要媒体への波及・公式対応を確認して評価しています。</p>
+        <p><a class="src" href="https://myna-monitoring-jp.github.io/" target="_blank" rel="noopener noreferrer">モニタリングポータルを開く<span class="src-host">myna-monitoring-jp.github.io</span><span aria-hidden="true">↗</span></a></p>
+      </footer>
+    </div>
+  </body>
+</html>
