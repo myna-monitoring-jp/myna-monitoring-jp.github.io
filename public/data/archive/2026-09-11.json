@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-12T08:52:10.247+09:00",
-  "reportDate": "2026-09-12",
+  "generatedAt": "2026-09-11T08:41:39.635+09:00",
+  "reportDate": "2026-09-11",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,66 +10,13 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-12T08:52:10.247+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-11T08:41:39.635+09:00"
   },
   "headline": {
     "title": "今日の全体像",
     "description": "トップニュース・世論、自治体／共通システム／医療機関の不具合、行政広報の炎上・掲載中・好反応を一つの固定URLで共有します。"
   },
   "news": [
-    {
-      "id": "news-gakuensai-age-verification-20260910",
-      "title": "学園祭での年齢確認にマイナンバーカードを活用（5大学で順次実施）",
-      "category": "policy",
-      "polarity": "positive",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-11T08:00:00+09:00",
-      "publishedAt": "2026-09-10T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-11T08:00:00+09:00",
-      "pinned": false,
-      "summary": "デジタル庁が大学の学園祭でマイナンバーカード対面確認アプリを使った年齢確認の取り組みを推進。東京都市大学「横浜祭」（9/12-13）を皮切りに、京都大学「11月祭」（11/20-23）まで5大学で順次実施予定。iPhoneのマイナ機能では「20歳以上か否か」の情報のみ共有し、氏名・住所等の不要な個人情報は開示されない設計。",
-      "whatIsNew": "9/10にデジタル庁が取り組みを公表。最初の実施は翌9/12-13の東京都市大学「横浜祭」。",
-      "audience": "大学学園祭関係者、マイナンバーカード対面確認アプリ導入を検討する事業者",
-      "dailyDiff": "新規に確認。初回の横浜祭は明日9/12から。",
-      "tags": [
-        "利活用",
-        "年齢確認",
-        "対面確認アプリ"
-      ],
-      "matchKeywords": [
-        "学園祭",
-        "年齢確認"
-      ],
-      "quantitativeMetrics": [
-        {
-          "label": "参加大学",
-          "value": "5",
-          "unit": "校"
-        }
-      ],
-      "publicVoices": [],
-      "factChecks": [
-        {
-          "claim": "個人情報が全て読み取られる",
-          "assessment": "misunderstanding",
-          "explanation": "iPhoneのマイナンバーカード機能を使う場合、「20歳以上か否か」のみ確認する設計。氏名・住所など年齢確認に不要な情報は開示されない。"
-        }
-      ],
-      "sources": [
-        {
-          "type": "primary",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/news/6a52d1e9-30cc-455a-9154-f32479d1731a",
-          "linkText": "一次情報を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-09-10T00:00:00+09:00",
-          "verifiedAt": "2026-09-11T08:00:00+09:00",
-          "active": true
-        }
-      ],
-      "reviewState": "reviewed"
-    },
     {
       "id": "news-android-mdoc-20260831",
       "title": "Androidへの基本4情報等搭載に向け制度整備",
@@ -97,7 +44,7 @@
           "note": "省令・技術基準"
         }
       ],
-      "dailyDiff": "9/11朝：パブコメ期間中（〜9/30頃）。追加の公式発表・独立報道は確認できず。",
+      "dailyDiff": "前日に公示。本日時点で追加の公式発表・独立報道は確認できず。",
       "tags": [
         "制度変更",
         "デジタル庁",
@@ -144,7 +91,7 @@
       "lastMaterialUpdateAt": "2026-09-03T08:07:00+09:00",
       "pinned": true,
       "summary": "新聞広告の掲載が拡大。既存のオプトアウト批判と広告コピーが結び付いて再燃するかを監視している。広告起点の大規模炎上は現時点で未確認。",
-      "whatIsNew": "掲載媒体が拡大。9/4の地方紙大量掲載後も大規模批判は未確認。",
+      "whatIsNew": "掲載媒体が拡大。9/4の地方紙大量掲載が次の重点。",
       "audience": "公金受取口座の登録対象となる国民、特に高齢者層",
       "quantitativeMetrics": [
         {
@@ -164,7 +111,7 @@
           "note": "独立媒体による記事化は未確認"
         }
       ],
-      "dailyDiff": "9/11朝：9/4の地方紙大量掲載を経ても、広告起点の大規模批判・記事化は確認できず。SNS上の既存の警戒感は継続しているが、量・波及に有意な変化は未確認。",
+      "dailyDiff": "9/2は産経新聞に掲載。9/4に地方紙へ一気に拡大予定。広告を直接起点とする新たな大規模批判・記事化は9/3朝時点で未確認。",
       "tags": [
         "既存批判あり",
         "広告掲載中",
@@ -259,7 +206,7 @@
       "summary": "一部端末・利用環境でログインが完了しない事象。直近では新たな大規模波及は確認できず、公式の明確な続報を待つ状態。",
       "whatIsNew": "8/27の報道以降、追加の公式発表は確認できていない。",
       "audience": "マイナアプリで初回利用登録・認証を行う利用者",
-      "dailyDiff": "9/11朝：全面解消の公式発表は依然なし。EDZ211 関連の報告が引き続き確認される。新たな大規模波及は未確認。",
+      "dailyDiff": "9/3朝：デジタル庁からの新たな全面解消発表は確認できず。App Storeに EDZ211 でログインできない具体レビューが残る。反応量の有意な増加は未確認のため最終重要更新は据え置き。",
       "tags": [
         "全面解消の明示なし",
         "オン資とは別"
@@ -353,7 +300,7 @@
       "publishedAt": "2026-08-24T00:00:00+09:00",
       "lastMaterialUpdateAt": "2026-08-24T00:00:00+09:00",
       "summary": "当事者配慮への批判が報道化し、8/24にタイアップ中止・ポスター回収・特設ページ削除が実施された。事例としてアーカイブに保持する。",
-      "dailyDiff": "9/11朝：変化なし。",
+      "dailyDiff": "前日から変化なし。",
       "tags": [
         "報道化炎上",
         "公式対応済み"
@@ -395,7 +342,7 @@
           "note": "今年度末時点・デジタル庁まとめ"
         }
       ],
-      "dailyDiff": "9/11朝：新たな公式発表なし。",
+      "dailyDiff": "新規に確認。",
       "tags": [
         "制度拡大",
         "自治体"
@@ -435,11 +382,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-01T14:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-09-11T08:41:39.635+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "9/11朝：新たな公式発表なし。",
+      "dailyDiff": "独立媒体2件の追加報道を自動検知（2026-09-11）。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -472,7 +419,18 @@
           "linkText": "報道記事を開く",
           "publisher": "厚生労働省",
           "publishedAt": "2026-09-09T14:00:00+09:00",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
+          "verifiedAt": "2026-09-11T08:41:39.635+09:00",
+          "active": true,
+          "note": "自動収集"
+        },
+        {
+          "type": "media",
+          "label": "パナソニック コネクト",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOVpXcF94ODFkRE9zcnVSQmVPYV9QWUgxc2t1aGdPV1FYbzhVeXhfWDlWemNDcWNINHBrMzRYMlFkSjFBaTVzRWVVNlZWZHJnWHlZOHlKR09HWHNZR21Gdk9fekVhQzBYNXlveE1wZ3o2TVY4ZmNfdExGUFgzcXFRMW5lY2Y0d211cUhSd3NmaXF4Nnpl?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "パナソニック コネクト",
+          "publishedAt": "2026-08-24T23:30:13+09:00",
+          "verifiedAt": "2026-09-11T08:41:39.635+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -492,7 +450,7 @@
       "summary": "9月2日公開の松本デジタル大臣の9月1日会見要旨で、FY2027のデジタル庁概算要求は約1兆295億円と説明。1億枚を超えたカードを行政手続等でさらに使えるよう、利用シーン拡大の費用を反映するとしている。Androidへのカード機能搭載は今秋を目途とする方針。",
       "whatIsNew": "9/2に会見要旨が公開され、利用シーン拡大の方針が改めて示された。",
       "audience": "マイナンバーカード保有者、行政手続のオンライン化に関わる事業者",
-      "dailyDiff": "9/11朝：新たな公式発表なし。9/8大臣会見はデジタル人材育成目標の達成（244万人・1年前倒し）が主テーマで、マイナ関連の新たな発言は未確認。",
+      "dailyDiff": "新規に確認。",
       "tags": [
         "概算要求",
         "デジタル庁",
@@ -566,7 +524,7 @@
       "summary": "宮城県が9月2日、県公式アプリ「ポケットサイン」上で生成AIチャットボット「AIみやぎ県」の実証を開始。県ホームページの情報を基に24時間回答し、当面は分野を限定して運用する。本格提供は2027年1月予定。",
       "whatIsNew": "9/2に実証が開始された。",
       "audience": "宮城県民、自治体の窓口・問い合わせ対応",
-      "dailyDiff": "9/11朝：新たな公式発表なし。",
+      "dailyDiff": "新規に確認。",
       "tags": [
         "利活用",
         "JPKI",
@@ -665,7 +623,7 @@
       "publishedAt": "2026-09-02T00:00:00+09:00",
       "lastMaterialUpdateAt": "2026-09-03T08:07:00+09:00",
       "summary": "デジタル庁が9月2日、政府情報システムの利用者満足度評価の取組ページを更新。統一指標に基づく定量的な満足度・利便性フィードバックを各システム上で直接収集し、各府省の改善につなげる仕組みを整備するとしている。",
-      "dailyDiff": "9/11朝：新たな公式発表なし。",
+      "dailyDiff": "新規に確認。",
       "tags": [
         "行政DX",
         "利用者視点"
@@ -2219,250 +2177,6 @@
       "id": "news-auto-20260908-y5jgrd",
       "category": "commentary",
       "polarity": "neutral"
-    },
-    {
-      "title": "（公募終了）【二次公募】令和6年度PMH（医療費助成）先行実施事業の自治体公募を開始しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-12T08:52:10.247+09:00",
-      "publishedAt": "2026-09-11T23:44:27.000Z",
-      "lastMaterialUpdateAt": "2026-09-11T23:44:27.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-12の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/news/667aa61d-a798-4098-9653-8d3cad62679a",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-09-11T23:44:27.000Z",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260911-5w11uq",
-      "category": "reference"
-    },
-    {
-      "title": "電子処方箋の導入状況に関するダッシュボードを更新しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-12T08:52:10.247+09:00",
-      "publishedAt": "2026-09-11T15:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-11T15:00:00+09:00",
-      "summary": "PHCホールディングス株式会社（本社：東京都千代田区、東証プライム：6523）傘下のウィーメックス株式会社（本社：東京都渋谷区、代表取締役社長：高橋秀明、以下「ウィーメックス」）は、ウィーメックスが提供するシステムと連携した医療機関 ...",
-      "dailyDiff": "2026-09-12の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/resources/govdashboard/electronic-prescription",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-09-11T15:00:00+09:00",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260911-8btffv",
-      "category": "reference"
-    },
-    {
-      "title": "企画競争：令和8年度マイナンバーカードを活用した地域住民等による地域活性化実証実験を掲載しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-12T08:52:10.247+09:00",
-      "publishedAt": "2026-09-11T06:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-11T06:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-12の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/procurement",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-09-11T06:00:00.000Z",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260911-6otwb5",
-      "category": "reference"
-    },
-    {
-      "title": "マイナンバーカード(個人番号カード)および電子証明書の更新について",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-12T08:52:10.247+09:00",
-      "publishedAt": "2026-09-08T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-08T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-12の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "city.fukaya.saitama.jp",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQZTJjUFFVXzlYaktseWgwTDNsMzN4bmRMOVZqczV6ZldySmQ2WVpwWmx2dktyYnRwSXZCcHRmLUlKdUtXSHBxNC1xRU5NelZmY1c5SDhnLVEzcjVfM3Buc0JlT1VEcWxNMzc1T2R5Y1VuSzdUOWxENm96ek5qYjdlWXpZWDVEdV9nWjFjOGhfd3l6OWJoVlB3QXB1R2o1TlN5?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "city.fukaya.saitama.jp",
-          "publishedAt": "2026-09-08T07:00:00.000Z",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260908-rkhlpo",
-      "category": "reference"
-    },
-    {
-      "title": "普及進まない「マイナ免許証」 福井県内では1割にとどまる 「このままでいい」メリットあっても“決め手”にならない背景",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-12T08:52:10.247+09:00",
-      "publishedAt": "2026-09-11T20:18:02+09:00",
-      "lastMaterialUpdateAt": "2026-09-11T20:18:02+09:00",
-      "summary": "マイナンバーカードを運転免許証として利用できる制度が去年3月から運用されました。免許更新の際にオンラインで講習を受けられるなどのメリットはあるものの、運用から1年半近くがたった現在も、福井県内での普及は1割ほどにとどまっています。普及が進まない背景について専門家に聞きました。",
-      "dailyDiff": "2026-09-12の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB4MzlVQTMtZXJObXYtZDZBZlZWcnVXV0ZoTUJ5MEwyMXFmVWdIOW91c1BYQXVac0xxWm5vbmhkbllKSUpZN3RQam9VRUlMT0otNlNCQTB0R3FHWThVUlk5bDFmNVUxXzh3c29xeWFfRlF5LUhOOVNwUXJUYVNnZWs?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-09-11T20:18:02+09:00",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260911-mt2olh",
-      "category": "commentary",
-      "polarity": "positive"
-    },
-    {
-      "title": "マイナンバーカードの署名用電子証明書が意図せず失効｜市原市、マイナ保険証は影響なし・案内は郵送予定",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-12T08:52:10.247+09:00",
-      "publishedAt": "2026-09-11T11:28:48+09:00",
-      "lastMaterialUpdateAt": "2026-09-11T11:28:48+09:00",
-      "summary": "市原市は2026年9月11日、マイナンバーカードの「署名用電子証明書」が意図せず失効するケースが一部で判明したと発表しました。戸籍への氏名の振り仮名記載にともなって住民票にも振り仮名を記載した際、システム上で本人確認情報が変更されたと誤って ...",
-      "dailyDiff": "2026-09-12の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "ジモはる",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1HZ05uZmVvLXZZOEFKZVFCOXBRQ1kzMmRKVEdWWTY3eUl1bWlXbXFBR1lwSVMzeHZtODgtcmdkTk9peHh2cXMtODBIRV8xNExMOWxRVkU0VFYxeGxBXzMzNDNVZExhWWNuTm5fVUt3?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "ジモはる",
-          "publishedAt": "2026-09-11T11:28:48+09:00",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260911-9yymjy",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "「マイナ免許証」窓口警察署拡大へ 11月2日から栃木県内18署で受け付け、取得しやすく",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-12T08:52:10.247+09:00",
-      "publishedAt": "2026-09-10T08:30:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-10T08:30:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-12の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "47NEWS",
-          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE54bDFMdTNXbUhndm9TLTgtTXlxaXFIVDAxMmE4anY4OXhzakk4X2hrLWtKZ2ZIY1VjV041WklBVHlDNUg0dTBzTFpBRQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "47NEWS",
-          "publishedAt": "2026-09-10T08:30:00.000Z",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260910-aifqg6",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "宛名と住所が 1 行ズレた状態で発送データ作成 ～ 学校法人でダイレクトメール誤送付",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-09-12T08:52:10.247+09:00",
-      "publishedAt": "2026-09-07T23:05:09.000Z",
-      "lastMaterialUpdateAt": "2026-09-07T23:05:09.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-09-12の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "ScanNetSecurity",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5CM2tvZVM3WWlNQV85VmFMaGlmOWRLZ1pPNlIzbVc2alRaUWsyMmhiWnh5aUZBUjU1N2hGNDZYZEF6V0lGZkRzcDhSU1hyYzlZdzd3VVIzc2d0MTVYUThYckRFM1Q4ay1MY3k5Rw?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "ScanNetSecurity",
-          "publishedAt": "2026-09-07T23:05:09.000Z",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260907-t5jqno",
-      "category": "commentary",
-      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -2480,11 +2194,11 @@
       "affectedCount": 9955,
       "affectedCountNote": "最大27,745人に影響が及ぶ可能性",
       "symptoms": "負担割合が2割の対象者に3割と表示される、限度額適用区分が誤って表示される。",
-      "cause": "年次処理に関連するシステム処理の設定誤りにより、医療機関へ正しい情報が連携されなかった。",
+      "cause": "年度切替処理・区分設定に起因する可能性（調査中）",
       "medicalImpact": "窓口で過大な自己負担が発生する可能性。",
-      "officialStatus": "8/30に市が調査状況を更新。対象人数の確定は未了。",
+      "officialStatus": "報道先行。市の詳細公表を待つ状態。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：新たな公式発表なし。8/30の調査状況更新が最新。対象人数の確定は未公表。",
+      "dailyDiff": "8/30に市が調査状況を更新。対象人数の確定は未了。",
       "tags": [
         "負担割合",
         "限度額区分"
@@ -2527,7 +2241,7 @@
       "medicalImpact": "医療機関受付での資格確認に支障。",
       "officialStatus": "8/7に最終報を公表。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：解消済み。変化なし。",
+      "dailyDiff": "前日から変化なし。",
       "tags": [
         "資格無効表示",
         "解消済み"
@@ -2561,7 +2275,7 @@
       "cause": "新しい資格情報が一部反映されなかった。",
       "medicalImpact": "窓口負担・高額療養費の確認に影響。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：解消済み。変化なし。",
+      "dailyDiff": "前日から変化なし。",
       "sources": [
         {
           "type": "primary",
@@ -2589,7 +2303,7 @@
       "medicalImpact": "資格反映の遅延が生じる可能性。",
       "officialStatus": "公式の追加公表なし。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：公式の追加公表なし。",
+      "dailyDiff": "前日から変化なし。",
       "sources": [
         {
           "type": "primary",
@@ -2615,7 +2329,7 @@
       "affectedCountNote": "更新待ち",
       "cause": "連携工程を確認中。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：公式の追加公表なし。",
+      "dailyDiff": "前日から変化なし。",
       "sources": [
         {
           "type": "primary",
@@ -2642,7 +2356,7 @@
       "cause": "資格登録・連携工程を確認中。",
       "medicalImpact": "資格確認ができない可能性。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：公式の追加公表なし。",
+      "dailyDiff": "前日から変化なし。",
       "sources": [
         {
           "type": "primary",
@@ -2674,7 +2388,7 @@
       "medicalImpact": "利用登録・認証導線に影響。オンライン資格確認自体への波及は確認されていない。",
       "officialStatus": "全面解消の明示なし。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：全面解消の明示なし。新たな大規模波及は未確認。",
+      "dailyDiff": "前日から変化なし。",
       "sources": [
         {
           "type": "media",
@@ -2698,7 +2412,7 @@
       "systemName": "マイナポータルAPI",
       "status": "resolved",
       "severity": "low",
-      "lastMaterialUpdateAt": "2026-09-11T08:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-09-01T08:00:00+09:00",
       "affectedCount": null,
       "affectedCountNote": "―",
       "symptoms": "公式稼働ページは正常表示。",
@@ -2706,14 +2420,14 @@
       "medicalImpact": "API利用事業者への影響なし。",
       "officialStatus": "正常稼働として公表。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：API正常稼働を確認。本日夜（21:00）から9/13（日）8:00にかけて医療保険情報取得API・PMH情報連携API・自己情報取得API等の初回利用時の制限メンテナンスが予定されている。また9/12（金）9:00〜14:30にGビズIDメンテナンスに伴う法人設立手続等申請API・社会保険税手続申請APIの停止あり。",
+      "dailyDiff": "本日8:00時点でも正常を確認。",
       "sources": [
         {
           "type": "primary",
           "label": "デジタル庁 開発者向けサイト",
           "url": "https://developers.digital.go.jp/documents/mynaportal-api/maintenance/",
           "linkText": "稼働状況の一次情報を開く",
-          "verifiedAt": "2026-09-11T08:00:00+09:00",
+          "verifiedAt": "2026-09-01T08:30:00+09:00",
           "active": true
         }
       ],
@@ -2736,7 +2450,7 @@
       "medicalImpact": "オンライン資格確認自体は通常どおり利用可能。",
       "officialStatus": "事前公表済み。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：8/30開始の計画作業。一次情報源からの完了確認が取れていないため、ステータスを据え置き。医療機関等向けポータルで完了状況の要確認。",
+      "dailyDiff": "前日から変化なし。",
       "tags": [
         "計画停止",
         "障害ではない"
@@ -2778,7 +2492,7 @@
       "cause": "通信障害",
       "medicalImpact": "連携医療機関における検査結果参照に支障。",
       "cyberAttack": false,
-      "dailyDiff": "9/11朝：公式の追加発表なし。",
+      "dailyDiff": "前日から変化なし。",
       "sources": [
         {
           "type": "primary",
@@ -2809,7 +2523,7 @@
       "medicalImpact": "医療機関ブランドと検索流入の信頼性に影響。",
       "cyberAttack": true,
       "officialStatus": "事業者が経緯を公表、調査中。",
-      "dailyDiff": "9/11朝：公式の追加発表なし。調査継続中。",
+      "dailyDiff": "前日から変化なし。",
       "tags": [
         "サイバー攻撃",
         "SEOポイズニング"
@@ -2837,25 +2551,25 @@
     {
       "id": "incident-planned-outage-20260904",
       "incidentCategory": "common_system",
-      "title": "パスポートオンライン申請が54時間停止（完了）、医療系API初回利用制限は9月中に継続",
+      "title": "パスポートオンライン申請が54時間停止、医療保険情報取得API等も初回利用制限",
       "entityName": "外務省 / デジタル庁",
       "systemName": "マイナポータル（旅券申請・医療保険情報取得API・PMH情報連携API・自己情報取得API）",
       "status": "planned_outage",
       "severity": "high",
       "occurredAt": "2026-09-04T18:00:00+09:00",
       "publishedAt": "2026-09-03T08:07:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-11T08:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-09-03T13:45:00+09:00",
       "affectedCount": null,
       "affectedCountNote": "マイナポータル経由の旅券申請利用者、医療系API利用事業者",
-      "symptoms": "【完了】9/4 18:00〜9/6 24:00 パスポートオンライン申請が54時間停止（完了済み）。【継続】マイナポータルAPIは9月中、土日を中心に段階的な利用制限が続く。9/12（土）21:00〜9/13（日）8:00に医療保険情報取得API・PMH情報連携API・自己情報取得API等の初回利用時の制限あり。9/19 9:00〜9/21 0:00 戸籍関係情報が利用不可。9/20 0:00〜8:00 初回利用時のみ利用不可。",
+      "symptoms": "9/4 18:00〜9/6 24:00 の54時間、マイナポータル上のパスポートオンライン申請が停止。マイナポータルAPIは9月中、土日を中心に段階的な利用制限がある。自己情報取得API：9/5 0:00〜9/7 0:00 戸籍関係情報が利用不可、9/5・9/12の21:00〜翌8:00 特定個人情報31番・87番が利用不可、9/19 9:00〜9/21 0:00 戸籍関係情報が利用不可、9/20 0:00〜8:00 初回利用時のみ利用不可。医療保険情報取得API：9/5・9/12の21:00〜翌8:00、9/20 0:00〜8:00 に初回利用時のみ利用不可。PMH情報連携API・利用者登録等API・健康保険証利用登録API・属性連携設定APIにも同様の制限あり。",
       "cause": "事前公表済みの計画メンテナンス。",
       "medicalImpact": "オンライン資格確認そのものの全国停止ではない。医療系APIは初回利用時のみの制限。",
       "officialStatus": "外務省・デジタル庁が事前公表済み。",
       "cyberAttack": false,
-      "summary": "パスポートオンライン申請の54時間停止（9/4-9/6）は完了。9月中は毎週末に医療保険情報取得API等の初回利用制限が入る計画は継続中。次回は9/12（土）21:00〜9/13（日）8:00。",
-      "whatIsNew": "パスポートオンライン申請の停止（9/4-9/6）は完了。次のAPI制限は本日夜9/12 21:00から。",
+      "summary": "9月4日18時から54時間、マイナポータルのパスポートオンライン申請が停止。週末にかけて医療保険情報取得API・PMH情報連携API・自己情報取得APIにも予定された利用制限が入る。障害ではなく計画停止で、周知不足による混乱が重点監視対象。",
+      "whatIsNew": "9月中は毎週末に医療系APIの初回利用制限が入ることを確認。単発ではなく反復する制限。",
       "audience": "マイナポータルで旅券申請する利用者、医療系API利用事業者",
-      "dailyDiff": "9/11朝：パスポートオンライン申請の停止（9/4 18:00〜9/6 24:00）は完了済み。本日夜9/12（土）21:00〜9/13（日）8:00に医療保険情報取得API等の初回利用制限あり（予定通り）。9/19〜9/21の制限も続く。",
+      "dailyDiff": "9/3午後の公式ページ確認で、9月の定期メンテナンス日程（9/5・9/12・9/19・9/20）の全体像を把握。停止開始は明日9/4 18:00。",
       "tags": [
         "計画停止",
         "障害ではない",
@@ -2870,20 +2584,20 @@
         {
           "label": "旅券申請の停止時間",
           "value": "54",
-          "unit": "時間（完了済み）"
+          "unit": "時間"
         },
         {
-          "label": "完了",
-          "value": "9/6 24:00"
+          "label": "開始",
+          "value": "9/4 18:00"
         },
         {
-          "label": "医療系APIの次回制限",
-          "value": "9/12（土）21:00〜9/13（日）8:00",
-          "note": "初回利用時のみ"
+          "label": "医療系APIの制限日",
+          "value": "9/5・9/12・9/20",
+          "note": "いずれも初回利用時のみ"
         },
         {
           "label": "戸籍関係情報の停止",
-          "value": "9/19〜9/21"
+          "value": "9/5〜9/7・9/19〜9/21"
         }
       ],
       "publicVoices": [],
@@ -2896,17 +2610,17 @@
         {
           "claim": "パスポート申請停止は突発障害である",
           "assessment": "misunderstanding",
-          "explanation": "事前公表されている計画メンテナンス。既に完了。"
+          "explanation": "事前公表されている計画メンテナンス。"
         },
         {
           "claim": "戸籍関係情報にも影響がある",
           "assessment": "fact",
-          "explanation": "自己情報取得APIは9/19 9:00〜9/21 0:00、戸籍関係情報が取得できない予定。"
+          "explanation": "自己情報取得APIは9/5 0:00〜9/7 0:00、戸籍関係情報が取得できない予定。"
         },
         {
           "claim": "医療系APIの制限は9月5日の一度だけ",
           "assessment": "misunderstanding",
-          "explanation": "9/5・9/12・9/19・9/20と9月中に繰り返し予定されている。単発ではない。"
+          "explanation": "9/5・9/12・9/20と9月中に繰り返し予定されている。単発ではない。"
         }
       ],
       "sources": [
@@ -2925,7 +2639,7 @@
           "url": "https://developers.digital.go.jp/documents/mynaportal-api/maintenance/",
           "linkText": "一次情報を開く",
           "publisher": "デジタル庁",
-          "verifiedAt": "2026-09-11T08:00:00+09:00",
+          "verifiedAt": "2026-09-03T08:07:00+09:00",
           "active": true
         }
       ],
@@ -2934,25 +2648,25 @@
     {
       "id": "incident-cert-renewal-congestion-20260902",
       "incidentCategory": "local_government_insurer",
-      "title": "マイナンバーカード・電子証明書更新の窓口負荷が継続（2026年度は更新ラッシュ）",
-      "entityName": "立川市 / 姫路市 / 広島市中区ほか全国",
-      "region": "東京都・兵庫県・広島県ほか",
+      "title": "マイナンバーカード・電子証明書更新の窓口負荷が継続（立川市は60分以上待ちが多いと明記）",
+      "entityName": "立川市 / 姫路市 / 広島市中区ほか",
+      "region": "東京都・兵庫県・広島県",
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-12T08:52:10.247+09:00",
+      "lastMaterialUpdateAt": "2026-09-11T08:41:39.635+09:00",
       "affectedCount": null,
-      "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
-      "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
-      "cause": "電子証明書の有効期限到来による更新需要の集中。2026年度は初のカード大量更新年度で全国的に混雑が見込まれている。",
+      "affectedCountNote": "更新期限を迎える保有者。人数は自治体別に未公表",
+      "symptoms": "立川市は9/2更新の案内で、カード交付に加え電子証明書の更新・新規発行、暗証番号再設定が混雑し待ち時間が60分以上となることが多いと明記。姫路市はマイナンバーコールセンターへの問い合わせ集中で電話がつながりにくい状態が続くと案内。広島市中区は夜間・休日の予約窓口を案内。",
+      "cause": "電子証明書の有効期限到来による更新需要の集中。",
       "workaround": "期限3か月前からの更新、事前予約、夜間・休日窓口の利用、来庁の分散。",
       "medicalImpact": "システム障害ではなく、窓口の行政サービス負荷。",
       "officialStatus": "各自治体が公式サイトで案内。",
       "cyberAttack": false,
-      "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
-      "whatIsNew": "2026年度全体で590万件超のカード更新・1,430万件超の電子証明書更新が見込まれることが確認された。",
+      "summary": "電子証明書の更新需要により自治体窓口の負荷が継続。立川市は「60分以上待つことが多い」と明記し、姫路市は電話混雑を案内している。SNSの反応ではなく自治体公式の一次情報として確認。",
+      "whatIsNew": "立川市が9/2に待ち時間「60分以上」を明記。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体5件の追加報道を自動検知（2026-09-12）。",
+      "dailyDiff": "独立媒体4件の追加報道を自動検知（2026-09-11）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -2971,14 +2685,6 @@
         {
           "label": "姫路市",
           "value": "電話混雑が継続"
-        },
-        {
-          "label": "2026年度カード更新見込み",
-          "value": "590万件超"
-        },
-        {
-          "label": "2026年度電子証明書更新見込み",
-          "value": "1,430万件超"
         }
       ],
       "publicVoices": [],
@@ -3029,21 +2735,12 @@
         },
         {
           "type": "media",
-          "label": "DXマガジン（2026年度更新ラッシュ予測）",
-          "url": "https://dxmagazine.jp/news/2625kowo08-2re-02-03/",
-          "linkText": "報道を開く",
-          "publisher": "DXマガジン",
-          "verifiedAt": "2026-09-11T08:00:00+09:00",
-          "active": true
-        },
-        {
-          "type": "media",
           "label": "デジタル庁",
           "url": "https://www.digital.go.jp/resources/govdashboard/mynumber_card_penetration_usage",
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁",
           "publishedAt": "2026-08-28T15:00:00+09:00",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
+          "verifiedAt": "2026-09-11T08:41:39.635+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -3054,18 +2751,7 @@
           "linkText": "報道記事を開く",
           "publisher": "デジタル庁 ウェブサービス・アプリケーション",
           "publishedAt": "2026-08-25T19:50:56+09:00",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "city.fukaya.saitama.jp",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQZTJjUFFVXzlYaktseWgwTDNsMzN4bmRMOVZqczV6ZldySmQ2WVpwWmx2dktyYnRwSXZCcHRmLUlKdUtXSHBxNC1xRU5NelZmY1c5SDhnLVEzcjVfM3Buc0JlT1VEcWxNMzc1T2R5Y1VuSzdUOWxENm96ek5qYjdlWXpZWDVEdV9nWjFjOGhfd3l6OWJoVlB3QXB1R2o1TlN5?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "city.fukaya.saitama.jp",
-          "publishedAt": "2026-09-08T07:00:00.000Z",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
+          "verifiedAt": "2026-09-11T08:41:39.635+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -3076,7 +2762,7 @@
           "linkText": "報道記事を開く",
           "publisher": "沼津市ホームページ",
           "publishedAt": "2026-09-07T05:57:39.000Z",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
+          "verifiedAt": "2026-09-11T08:41:39.635+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -3087,7 +2773,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.niigata.lg.jp",
           "publishedAt": "2026-08-27T07:00:00.000Z",
-          "verifiedAt": "2026-09-12T08:52:10.247+09:00",
+          "verifiedAt": "2026-09-11T08:41:39.635+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -3113,7 +2799,7 @@
       "summary": "PMHによる医療費助成のオンライン資格確認について、FY2027以降の運営費を自治体がどう負担するかの事務連絡が掲載された。具体額は未確認。",
       "whatIsNew": "9/1付の事務連絡が自治体サイトに掲載された。",
       "audience": "PMH参加自治体、医療費助成の実施主体",
-      "dailyDiff": "9/11朝：新たな公式発表なし。",
+      "dailyDiff": "新規に確認。",
       "tags": [
         "PMH",
         "自治体運用費"
@@ -3179,7 +2865,7 @@
       "summary": "8月31日夕方に約1時間40分、マイナポータルの自己情報取得APIで情報が取得できない障害が発生し、解消済み。原因は公共サービスメッシュの障害と公表されている。",
       "whatIsNew": "9/3の確認で、公式稼働ページに発生・解消の記載を確認した。",
       "audience": "自己情報取得APIを利用する事業者・サービス",
-      "dailyDiff": "9/11朝：解消済み。変化なし。",
+      "dailyDiff": "9/3朝の確認で新たに把握。既に解消済み。",
       "tags": [
         "解消済み",
         "公共サービスメッシュ"
@@ -3281,7 +2967,7 @@
         "接触場所",
         "センシティブ表現"
       ],
-      "dailyDiff": "9/11朝：変化なし。",
+      "dailyDiff": "前日から変化なし。",
       "tags": [
         "タイアップ中止",
         "ポスター回収"
@@ -3344,7 +3030,7 @@
         "被害者感情",
         "作品文脈との不整合"
       ],
-      "dailyDiff": "9/11朝：変化なし。",
+      "dailyDiff": "前日から変化なし。",
       "tags": [
         "タイアップ取りやめ"
       ],
@@ -3398,10 +3084,10 @@
       "startAt": "2026-08-31",
       "lastMaterialUpdateAt": "2026-09-03T08:07:00+09:00",
       "pinned": true,
-      "summary": "掲載中。9/4の地方紙大量掲載後も、広告起点の大規模批判・記事化は確認できていない。既存のオプトアウト批判との結び付き・スクリーンショット転載・Yahoo!ニュース化を引き続き監視する。",
+      "summary": "掲載中。既存のオプトアウト批判と広告コピーの結び付き、スクリーンショット転載、Yahoo!ニュース化を監視している。",
       "message": "手続きは不要です。",
       "creative": "年金受給者向け新聞広告",
-      "placement": "全国紙・地方紙 朝刊",
+      "placement": "全国紙 朝刊",
       "targetAudience": "年金受給者",
       "controversyLevel": 1,
       "mediaPickupCount": 0,
@@ -3414,7 +3100,7 @@
         "地方紙の大量掲載で「手続きは不要です」の見出しだけが画像転載され、不同意時の条件が切り落とされる可能性",
         "高齢者向け紙面のため、返送手続きの説明が届かない層が生じる可能性"
       ],
-      "dailyDiff": "9/11朝：9/4の地方紙大量掲載を経ても、広告起点の大規模批判・記事化は確認できず。SNS上の既存の警戒感は継続しているが、量・波及に有意な変化は未確認。",
+      "dailyDiff": "9/2は産経新聞に掲載。9/4に地方紙へ一気に拡大予定。広告を直接起点とする新たな大規模批判・記事化は9/3朝時点で未確認。",
       "tags": [
         "掲載中"
       ],
@@ -3452,7 +3138,7 @@
       "relatedIds": [
         "news-public-account-ad-20260831"
       ],
-      "whatIsNew": "9/4の地方紙大量掲載後も大規模批判は未確認。引き続き監視中。",
+      "whatIsNew": "掲載媒体が拡大。9/4の地方紙大量掲載が次の重点。",
       "reviewState": "reviewed"
     },
     {
@@ -3466,14 +3152,13 @@
       "severity": "low",
       "medium": "web_ad",
       "startAt": "2026-08-30",
-      "endAt": "2026-09-05",
       "lastMaterialUpdateAt": "2026-08-30T00:00:00+09:00",
-      "summary": "防災週間（8/30〜9/5）は終了。掲載期間中に大規模な否定的反応は確認していない。",
+      "summary": "掲載中だが大規模な否定的反応は確認していない。好意的反応や効果が定量確認できた場合に「ポジティブ」へ切り替える。",
       "controversyLevel": 0,
       "mediaPickupCount": 0,
-      "dailyDiff": "9/11朝：防災週間（8/30〜9/5）終了。変化なし。",
+      "dailyDiff": "前日から変化なし。",
       "tags": [
-        "掲載終了"
+        "掲載中"
       ],
       "publicVoices": [],
       "sources": [
@@ -3516,7 +3201,7 @@
           "unit": "件"
         }
       ],
-      "dailyDiff": "9/11朝：新たな変化なし。",
+      "dailyDiff": "8/31に参照数が前日比+21%。",
       "tags": [
         "実務的安心材料",
         "効果確認済み"
@@ -3583,11 +3268,6 @@
     }
   ],
   "archive": [
-    {
-      "date": "2026-09-11",
-      "title": "日次レポート",
-      "dataPath": "archive/2026-09-11.json"
-    },
     {
       "date": "2026-09-10",
       "title": "日次レポート",
@@ -3667,12 +3347,6 @@
       "title": "公金受取口座 新聞広告開始",
       "description": "既存批判との接続を監視中。",
       "relatedId": "pr-public-account-ad"
-    },
-    {
-      "date": "2026-09-04",
-      "title": "パスポートオンライン申請54時間停止（計画）",
-      "description": "9/6 24:00に完了。医療系API制限は9月中継続。",
-      "relatedId": "incident-planned-outage-20260904"
     }
   ],
   "corrections": [
