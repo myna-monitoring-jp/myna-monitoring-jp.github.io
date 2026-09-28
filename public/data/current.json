@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-09-28T12:57:09.534+09:00",
+  "generatedAt": "2026-09-28T14:26:48.519+09:00",
   "reportDate": "2026-09-28",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-09-28T12:57:09.534+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-28T14:26:48.519+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -493,7 +493,7 @@
           "linkText": "報道記事を開く",
           "publisher": "厚生労働省",
           "publishedAt": "2026-09-14T14:00:00+09:00",
-          "verifiedAt": "2026-09-28T12:57:09.534+09:00",
+          "verifiedAt": "2026-09-28T14:26:48.519+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -504,7 +504,7 @@
           "linkText": "報道記事を開く",
           "publisher": "厚生労働省",
           "publishedAt": "2026-09-09T14:00:00+09:00",
-          "verifiedAt": "2026-09-28T12:57:09.534+09:00",
+          "verifiedAt": "2026-09-28T14:26:48.519+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -2322,7 +2322,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-28T12:57:09.534+09:00",
+      "lastMaterialUpdateAt": "2026-09-28T14:26:48.519+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -2443,7 +2443,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.fukuoka.lg.jp",
           "publishedAt": "2026-09-18T07:00:00.000Z",
-          "verifiedAt": "2026-09-28T12:57:09.534+09:00",
+          "verifiedAt": "2026-09-28T14:26:48.519+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -2454,7 +2454,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.fukuroi.shizuoka.jp",
           "publishedAt": "2026-09-11T07:00:00.000Z",
-          "verifiedAt": "2026-09-28T12:57:09.534+09:00",
+          "verifiedAt": "2026-09-28T14:26:48.519+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -2465,7 +2465,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.fukaya.saitama.jp",
           "publishedAt": "2026-09-08T07:00:00.000Z",
-          "verifiedAt": "2026-09-28T12:57:09.534+09:00",
+          "verifiedAt": "2026-09-28T14:26:48.519+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -2476,7 +2476,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.niigata.lg.jp",
           "publishedAt": "2026-09-09T07:00:00.000Z",
-          "verifiedAt": "2026-09-28T12:57:09.534+09:00",
+          "verifiedAt": "2026-09-28T14:26:48.519+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -2487,7 +2487,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.osaka-izumi.lg.jp",
           "publishedAt": "2026-09-14T07:00:00.000Z",
-          "verifiedAt": "2026-09-28T12:57:09.534+09:00",
+          "verifiedAt": "2026-09-28T14:26:48.519+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -2828,6 +2828,51 @@
       "lastMaterialUpdateAt": "2026-09-25T09:15:29.671+09:00",
       "dailyDiff": "2026-09-25に公式稼働状況ページを自動確認して検知。",
       "category": "other"
+    },
+    {
+      "id": "incident-status-mynaportal-api-nwexjh",
+      "incidentCategory": "common_system",
+      "entityName": "デジタル庁",
+      "systemName": "マイナポータルAPI",
+      "title": "マイナポータルAPI：法人設立手続申請API、社会保険・税手続申請APIでエラーが発生する事象が発生していました 詳細：2026/9/",
+      "status": "resolved",
+      "severity": "medium",
+      "symptoms": "【解消済】法人設立手続申請API、社会保険・税手続申請APIでエラーが発生する事象が発生していました 詳細：2026/9/16(水)17 :08頃 ～2026/9/17(木)15 :10頃に法人設立ワンストップサービスにて使用しているクラウドサービスの障害により 、OSSに関するAPIにてエラーが発生しやすい状況となっておりました。 現在は解消しております。 メンテナンス情報 システムメンテナンスのため、以下の期間で対象のAPIを利用できません。 自己情報取得API 10月3日(土) 0 :00 ～ 10月5日(月) 0 :00 (戸籍関係情報が取得できません。) 10月17日(土) 0 :00 ～ 10月19日(月) 0 :00 (戸籍関係情報が取得できません。) 10月18日(日) 0 :00 ～ 10月18日(日) 8 :00 医療保険情報取得API 10月18日(日) 0 :00 ～ 10月18日(日) 8 :00 (初回利用時のみ利用できません。2回目以降の場合は利用できます。) PMH情報連携API 10月5日(月) 0 :00 ～ 10月5日(月) 6 :00 10月18",
+      "officialStatus": "公式の稼働状況ページに記載あり。",
+      "affectedCount": null,
+      "affectedCountNote": "影響件数は未公表",
+      "cyberAttack": false,
+      "summary": "【解消済】法人設立手続申請API、社会保険・税手続申請APIでエラーが発生する事象が発生していました 詳細：2026/9/16(水)17 :08頃 ～2026/9/17(木)15 :10頃に法人設立ワンストップサービスにて使用しているクラウドサービスの障害により 、OSSに関するAPIにてエラーが発生しやすい状況となっておりました。 現在は解消しております。 メンテナンス情報 システムメンテナンスのため、以下の期間で対象のAPIを利用できません。 自己情報取得API 10月3日(土) 0 :00 ～ 10月5日(月) 0 :00 (戸籍関係情報が取得できません。) 10月17日(土) 0 :0",
+      "whatIsNew": "公式の稼働状況ページを自動確認して検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "公式稼働状況",
+        "解消済み"
+      ],
+      "publicVoices": [],
+      "factChecks": [
+        {
+          "claim": "オンライン資格確認が全国的に停止している",
+          "assessment": "scope_separation",
+          "explanation": "このAPIの障害・制限と、医療機関のオンライン資格確認の全国停止は別事象。公式ページの記載範囲を確認すること。"
+        }
+      ],
+      "sources": [
+        {
+          "type": "primary",
+          "label": "マイナポータルAPI 稼働状況",
+          "url": "https://developers.digital.go.jp/documents/mynaportal-api/maintenance/",
+          "linkText": "一次情報を開く",
+          "publisher": "デジタル庁",
+          "verifiedAt": "2026-09-28T05:26:48.519Z",
+          "active": true
+        }
+      ],
+      "_origin": "status:mynaportal-api",
+      "detectedAt": "2026-09-28T14:26:48.519+09:00",
+      "lastMaterialUpdateAt": "2026-09-28T14:26:48.519+09:00",
+      "dailyDiff": "2026-09-28に公式稼働状況ページを自動確認して検知。"
     }
   ],
   "prItems": [
