@@ -208,8 +208,13 @@ describe('日次自動更新パイプライン', () => {
 
     const auto = dataset.news.filter((n: { reviewState: string }) => n.reviewState === 'unreviewed');
     expect(auto).toHaveLength(2);
-    expect(auto[0].tags).toContain('不具合候補（自治体・保険者）');
-    expect(auto[1].tags).toContain('広報候補');
+    // 候補タグ付き同士は pub_date の新しい順に並ぶ。article() の pub_date は
+    // 呼び出し時刻なので、2回の生成がミリ秒をまたぐと順序が入れ替わる。
+    // 添字ではなく URL で引く。
+    const byUrl = (u: string) =>
+      auto.find((n: { sources: { url: string }[] }) => n.sources[0].url === u);
+    expect(byUrl('https://example.com/news/incident').tags).toContain('不具合候補（自治体・保険者）');
+    expect(byUrl('https://example.com/news/pr').tags).toContain('広報候補');
   });
 
   it('解説記事には候補タグを付けない', async () => {
