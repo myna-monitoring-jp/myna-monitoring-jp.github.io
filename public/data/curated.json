@@ -1917,6 +1917,21 @@
     }
   ],
   "_comment": "人が判断して書くファイル。自動処理はこのファイルを読むだけで、書き換えません。current.json はこれと自動収集結果のマージ結果（生成物）です。",
-  "dismissedIds": [],
+  "dismissedIds": [
+    "news-auto-20260908-7sf115",
+    "news-auto-20260911-nw7qd0",
+    "news-auto-20260903-rjs5dv",
+    "news-auto-20260916-ncubld",
+    "news-auto-20260911-q4ojjy",
+    "news-auto-20260901-k3mbxv",
+    "news-auto-20260918-h1g32f",
+    "news-auto-20260901-1diat",
+    "news-auto-20260918-3gahe0",
+    "news-auto-20260916-6c582h",
+    "news-auto-20260831-eb39nw",
+    "news-auto-20260918-1baeb5",
+    "news-auto-20260918-pveqx1",
+    "news-auto-20260918-naaqoc"
+  ],
   "_dismissedIdsHint": "却下した自動収集項目のidをここに並べると、以後ずっと表示されません。idは画面のカードのdata-item-id、またはcurrent.jsonで確認できます。"
 }
