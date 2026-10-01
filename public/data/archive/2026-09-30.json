@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-10-01T10:03:39.300+09:00",
-  "reportDate": "2026-10-01",
+  "generatedAt": "2026-09-30T10:02:17.966+09:00",
+  "reportDate": "2026-09-30",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-10-01T10:03:39.300+09:00"
+    "lastSuccessfulUpdateAt": "2026-09-30T10:02:17.966+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -493,7 +493,7 @@
           "linkText": "報道記事を開く",
           "publisher": "厚生労働省",
           "publishedAt": "2026-09-14T14:00:00+09:00",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
+          "verifiedAt": "2026-09-30T10:02:17.966+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -504,7 +504,7 @@
           "linkText": "報道記事を開く",
           "publisher": "厚生労働省",
           "publishedAt": "2026-09-09T14:00:00+09:00",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
+          "verifiedAt": "2026-09-30T10:02:17.966+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -1040,6 +1040,99 @@
         "news-android-mdoc-20260831"
       ],
       "reviewState": "reviewed"
+    },
+    {
+      "title": "広報資料にマイナンバーカードの利活用に関する動画を更新しました",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-17T09:03:59.060+09:00",
+      "publishedAt": "2026-09-16T06:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-09-16T06:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-09-17の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "広報候補"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/policies/mynumber_resources",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-09-16T06:00:00.000Z",
+          "verifiedAt": "2026-09-17T09:03:59.060+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260916-qaqelh",
+      "category": "other"
+    },
+    {
+      "title": "医療機関への「マイナ保険証」対応義務づけは「適法」…東京高裁、一審判決を支持 原告側は上告の方針",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-17T09:03:59.060+09:00",
+      "publishedAt": "2026-09-16T18:43:22+09:00",
+      "lastMaterialUpdateAt": "2026-09-16T18:43:22+09:00",
+      "summary": "マイナ保険証で患者の保険資格を確かめる「オンライン資格確認」などを医療機関に義務付けた厚生労働省令は違法として、医師や歯科医師らが国を相手取り、義務がないことの確認を求めた訴訟の控訴審判決で、東京高裁は16日、義務化は適法とした一審東京地裁判決を踏襲し請求を棄却した。",
+      "dailyDiff": "2026-09-17の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "東京新聞",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5ZalpaajhWTlBxWV9TUE9SV1VnVldKZUJVQjAtVnQ4UVFqY1M3N2VHY2pZbTFrdTVFZ3FrYTIyTWlyZVVEVE9UVnczVnp2bmxpQVFz?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "東京新聞",
+          "publishedAt": "2026-09-16T18:43:22+09:00",
+          "verifiedAt": "2026-09-17T09:03:59.060+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260916-f0nyq2",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "マイナ保険証義務化、二審も「適法」 医師らの訴え退ける―東京高裁",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-09-17T09:03:59.060+09:00",
+      "publishedAt": "2026-09-16T18:15:00+09:00",
+      "lastMaterialUpdateAt": "2026-09-16T18:15:00+09:00",
+      "summary": "マイナンバーカードに健康保険証の機能を持たせた「マイナ保険証」が利用できる体制の整備などを医療機関に義務付けたのは違法として、医師ら１２３０人が国に義務の無効確認と１人当たり１０万円の損害賠償を求めた訴訟の控訴審判決が１６日、東京高裁であった。",
+      "dailyDiff": "2026-09-17の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "時事ドットコム",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9GWUc0YWZRenNBWFpRT2NlZDdYV3NuY2VnZHBNMHhSZTBsb0dQNDhscnJmenNSU0RzcXFjaWd5ZjVFMHE3dEZsSHQ1bTkxVW0yd3pyU3RQR0JfLTVQMkd0SWRDZw?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "時事ドットコム",
+          "publishedAt": "2026-09-16T18:15:00+09:00",
+          "verifiedAt": "2026-09-17T09:03:59.060+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20260916-1dp1e8",
+      "category": "commentary",
+      "polarity": "neutral"
     },
     {
       "title": "ApplyNowの採用管理プラットフォーム 不正アクセスによるサイバー攻撃のまとめ 入間市や一宮市 他自治体の職員採用試験の個人情報漏洩|セキュリティニュースのセキュリティ対策Lab",
@@ -1962,160 +2055,6 @@
       "id": "news-auto-20260928-mwmsac",
       "category": "commentary",
       "polarity": "neutral"
-    },
-    {
-      "title": "自治体が実施する健康・医療・介護分野の事業のデジタル化（PMH）ー医療費助成に関するダッシュボードを公開しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-01T10:03:39.300+09:00",
-      "publishedAt": "2026-09-30T06:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-09-30T06:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/resources/govdashboard/pmh-medical-expense-subsidies",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-09-30T06:00:00.000Z",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260930-d5gfq",
-      "category": "reference"
-    },
-    {
-      "title": "「小遣い稼ぎになると…」 虚偽の在留資格証明書を申請した疑いで元行政書士を逮捕",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-01T10:03:39.300+09:00",
-      "publishedAt": "2026-09-30T20:05:16+09:00",
-      "lastMaterialUpdateAt": "2026-09-30T20:05:16+09:00",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "中日新聞Web",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1YUjBSZ3QwYUtZTm5aT0ZxaDRZYlFXZHI1UDVSNmFoVHpaZDZkT0dLTXFfMy0tRjZGTnplbDRSMVV5MTVaRmpocFNIX2dsZ0lCUnVvbA?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "中日新聞Web",
-          "publishedAt": "2026-09-30T20:05:16+09:00",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260930-9u9x35",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナンバーカードで3万円もらえる？総務省が名指しで注意する「便乗詐欺」の実態 そのような一律の国の制度は存在しません。過去のマイナポイント事業や住民税非課税世帯給付金との混同、公金受取口座の本当の役割を整理 | LIMO | くらしとお金の経済メディア",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-01T10:03:39.300+09:00",
-      "publishedAt": "2026-09-30T14:09:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-30T14:09:00+09:00",
-      "summary": "そのような一律の国の制度は存在しません。過去のマイナポイント事業や住民税非課税世帯給付金との混同、公金受取口座の本当の役割を整理 ...",
-      "dailyDiff": "2026-10-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "LIMO | くらしとお金の経済メディア",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5VZ0RTZk8wZ2RpN0lBM1Y1RjJqdlVkZVFxeEZhX3hVbW1OZ2lCZUM3Z0dNMk9jYm5mWHdILWRUdmE4TFJkTHY5bTdIVk4?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "LIMO | くらしとお金の経済メディア",
-          "publishedAt": "2026-09-30T14:09:00+09:00",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260930-9t46py",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナカードの電子証明書、10月から市内4郵便局で更新可能に【宇部】（宇部日報）",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-01T10:03:39.300+09:00",
-      "publishedAt": "2026-09-30T04:46:37.000Z",
-      "lastMaterialUpdateAt": "2026-09-30T04:46:37.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE12UlVWR2dzWU14TzVkZU9SWlN1UXNVWHc3aUhaR0Y2ZGI4X2JnTV82VkRvUndFTDlDcUR1bXF6UVNvOUU4T040WVJWMkVmQ1NjUWk3Z0xPR053a3RhaG1LT0pzcXJIUXJqUVJOa1k1UVBEWWxGYXVxcVBubE14TkU?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-09-30T04:46:37.000Z",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260930-551fwl",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "運転免許証の更新で、「マイナ免許証」と「従来の免許証」との2枚持ちを選択する人が多いのは？",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-01T10:03:39.300+09:00",
-      "publishedAt": "2026-09-30T07:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-09-30T07:00:00+09:00",
-      "summary": "「身分証を何枚も持つことでお財布やカードケースが膨れるのが嫌で、まとめられるなら便利かな？と思っていました。運転免許の更新のタイミングがちょうどマイナンバーカードとの一体化が始まったタイミングだったため、免許証は身分証として使う機会も多いことから、免許更新センターの案内の方に相談してみました」（大塚…",
-      "dailyDiff": "2026-10-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Infoseek",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZbGROOUs0RHZyb09hdWxrNmZZeFNuX3FRVDNUOFJ4NTBWdUtfT1B6X2U2RnZpTlFxeW5Pc2gxbjhoeHJFNlZZV1ZPRDJuX3gtTVd4cnFyOU5zNWVVU2gzdmxmbWhTMF9v0gFuQVVfeXFMT2pxSHJxSTVSLUxZYmFWdGx2LV9aVG93Nk0ybXl0ZE9Kd3p2c3N1S1lYTlZJRWRxcTJPbXctTlJhMW9uajJyLU82ems2bEVCM3EzYm92aHV2aFZ5UzRvU241TnpnSm8wUEFYTnVrcGc?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Infoseek",
-          "publishedAt": "2026-09-30T07:00:00+09:00",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20260930-1rnvk3",
-      "category": "commentary",
-      "polarity": "positive"
     }
   ],
   "incidents": [
@@ -2616,7 +2555,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-01T10:03:39.300+09:00",
+      "lastMaterialUpdateAt": "2026-09-30T10:02:17.966+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -2628,7 +2567,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "2026年度全体で590万件超のカード更新・1,430万件超の電子証明書更新が見込まれることが確認された。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体4件の追加報道を自動検知（2026-10-01）。",
+      "dailyDiff": "独立媒体4件の追加報道を自動検知（2026-09-30）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -2737,18 +2676,7 @@
           "linkText": "報道記事を開く",
           "publisher": "city.ome.tokyo.jp",
           "publishedAt": "2026-09-25T07:00:00.000Z",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "city.fukuoka.lg.jp",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNX2MwbURUeWhYQ1lpdmtoRk5vQm9TY09lbVF3ZFI1R1djc2ctMmdWVjNEWGFwOVBvQ1dhdm1NYlZJODFKUHJyd1hCalNBcEVyUTdVN1FQaWJDRk5adXdubHRsWThZRmtWWFZDMmRMdFlKelRXSE9rUTl5b1g0eXc4V1BJZw?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "city.fukuoka.lg.jp",
-          "publishedAt": "2026-09-18T07:00:00.000Z",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
+          "verifiedAt": "2026-09-30T10:02:17.966+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -2759,18 +2687,29 @@
           "linkText": "報道記事を開く",
           "publisher": "city.fukuroi.shizuoka.jp",
           "publishedAt": "2026-09-11T07:00:00.000Z",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
+          "verifiedAt": "2026-09-30T10:02:17.966+09:00",
           "active": true,
           "note": "自動収集"
         },
         {
           "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE12UlVWR2dzWU14TzVkZU9SWlN1UXNVWHc3aUhaR0Y2ZGI4X2JnTV82VkRvUndFTDlDcUR1bXF6UVNvOUU4T040WVJWMkVmQ1NjUWk3Z0xPR053a3RhaG1LT0pzcXJIUXJqUVJOa1k1UVBEWWxGYXVxcVBubE14TkU?oc=5",
+          "label": "city.niigata.lg.jp",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZWY1SGF4RmxxaFF5RE1MWG5FNVlCRXZfV1VLTDlLQmgwTF9KSnM4RVVRYzl2dWhMTG95TTQybmZtTG5kcU8tUkdvakRPZVhSVUVNSElJSVp4MTh6c3JqRFcyX1RzN2t5N1hzUmg2d190QVBWQ2JORGlGQV85WDEyR0lyZ25XVWhk?oc=5",
           "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-09-30T04:46:37.000Z",
-          "verifiedAt": "2026-10-01T10:03:39.300+09:00",
+          "publisher": "city.niigata.lg.jp",
+          "publishedAt": "2026-09-09T07:00:00.000Z",
+          "verifiedAt": "2026-09-30T10:02:17.966+09:00",
+          "active": true,
+          "note": "自動収集"
+        },
+        {
+          "type": "media",
+          "label": "city.osaka-izumi.lg.jp",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQbmdwODdub1NoZlN1VGUxTjdWQi1BcXFSa0xBalUwSWlzcGpoRktFLW4zTll4dmUycWNLSHV4a09Pc0MtOWY3TVc3UDRfZFpnX3RkejNaUVZ6clFnYUZ4M0NvLXhZaWo2TEViMEVSYk8yU0RUcGVydjI0SW1vVlIzN1YxOEJWV0g2OGxQWkNBSVdtQQ?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "city.osaka-izumi.lg.jp",
+          "publishedAt": "2026-09-14T07:00:00.000Z",
+          "verifiedAt": "2026-09-30T10:02:17.966+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -3498,11 +3437,6 @@
     }
   ],
   "archive": [
-    {
-      "date": "2026-09-30",
-      "title": "日次レポート",
-      "dataPath": "archive/2026-09-30.json"
-    },
     {
       "date": "2026-09-29",
       "title": "日次レポート",
