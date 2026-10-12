@@ -1,63 +1,38 @@
 {
-  "generatedAt": "2026-10-11T00:39:16.495Z",
+  "generatedAt": "2026-10-12T00:56:24.095Z",
   "items": [
     {
       "eventId": "unknown|other|2026-10-10|nolayer",
-      "title": "「マイナ保険証」対策！スキミング防止マイナンバーカード本革ケース「rokora」",
+      "title": "製造の方順調に進んでおります！｜「マイナ保険証」対策！スキミング防止マイナンバーカード本革ケース「rokora」",
       "reasons": [
         "見出しだけでは事象種別を判定できませんでした"
       ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
-    },
-    {
-      "eventId": "unknown|security_incident|2026-10-10|nolayer",
-      "title": "デンマーク版「マイナンバー」で人口超の880万人分に不正アクセス ─ 個人情報の流出が相次ぐ中、デジタル化の推進は\"諸刃の剣\"",
-      "reasons": [
-        "個人情報・セキュリティ事案"
-      ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
-    },
-    {
-      "eventId": "unknown|positive_service_update|2026-10-08|nolayer",
-      "title": "普及率8割の「マイナンバーカード」で忘れがちな“2つの有効期限”とは…利便性向上の裏で更新には窓口へ行く必要も",
-      "reasons": [
-        "炎上認定"
-      ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
+      "queuedAt": "2026-10-12T00:56:24.095Z"
     },
     {
       "eventId": "unknown|other|2026-10-09|nolayer",
       "title": "「カードは10年なのに期限切れ？」マイナンバーカードが病院やコンビニで使えなくなる前の確認事項",
       "reasons": [
-        "見出しだけでは事象種別を判定できませんでした"
-      ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
-    },
-    {
-      "eventId": "unknown|other|2026-10-08|nolayer",
-      "title": "愛媛県宇和島市、市民課のマイナンバーカードに関する電話対応にAI電話「Graffer AIオペレーター」を実証導入",
-      "reasons": [
         "見出しだけでは事象種別を判定できませんでした",
         "炎上認定"
       ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
+      "queuedAt": "2026-10-12T00:56:24.095Z"
     },
     {
-      "eventId": "unknown|other|2026-10-08|マイナアプリ",
-      "title": "マイナポータルアプリを使ってパスポートの切替申請する方法【受取り編】✈️[103] Titolo (yVdSpejPx9)",
+      "eventId": "unknown|security_incident|2026-10-11|nolayer",
+      "title": "福岡・嘉麻市で日本郵便や警察名乗り「マイナンバーが偽造された」 口座情報を尋ねる 住民宅に不審電話",
       "reasons": [
-        "見出しだけでは事象種別を判定できませんでした"
+        "個人情報・セキュリティ事案"
       ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
+      "queuedAt": "2026-10-12T00:56:24.095Z"
     },
     {
-      "eventId": "unknown|security_incident|2026-10-08|nolayer",
-      "title": "福岡・飯塚市で「＋1」から不審電話連続発生 郵便局員や警察官かたりマイナンバー聞き出そうとする",
+      "eventId": "unknown|security_incident|2026-10-10|nolayer",
+      "title": "福岡・嘉麻市で郵便局員名乗り「マイナンバーカードが偽造されている」 住民宅に個人情報を尋ねる不審電話",
       "reasons": [
-        "個人情報・セキュリティ事案",
-        "炎上認定"
+        "個人情報・セキュリティ事案"
       ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
+      "queuedAt": "2026-10-12T00:56:24.095Z"
     },
     {
       "eventId": "unknown|security_incident|2026-10-09|nolayer",
@@ -65,7 +40,15 @@
       "reasons": [
         "個人情報・セキュリティ事案"
       ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
+      "queuedAt": "2026-10-12T00:56:24.095Z"
+    },
+    {
+      "eventId": "unknown|other|2026-10-06|マイナポタルapi自己情報取得",
+      "title": "マイナポータルAPI一覧 | マイナポータルAPI 仕様公開サイト | ドキュメント",
+      "reasons": [
+        "見出しだけでは事象種別を判定できませんでした"
+      ],
+      "queuedAt": "2026-10-12T00:56:24.095Z"
     },
     {
       "eventId": "unknown|other|2026-10-06|nolayer",
@@ -73,7 +56,7 @@
       "reasons": [
         "見出しだけでは事象種別を判定できませんでした"
       ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
+      "queuedAt": "2026-10-12T00:56:24.095Z"
     },
     {
       "eventId": "unknown|other|2026-10-05|電子証明書jpki",
@@ -81,7 +64,15 @@
       "reasons": [
         "見出しだけでは事象種別を判定できませんでした"
       ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
+      "queuedAt": "2026-10-12T00:56:24.095Z"
+    },
+    {
+      "eventId": "unknown|security_incident|2026-10-08|nolayer",
+      "title": "福岡・飯塚市で「＋1」から不審電話連続発生 郵便局員や警察官かたりマイナンバー聞き出そうとする",
+      "reasons": [
+        "個人情報・セキュリティ事案"
+      ],
+      "queuedAt": "2026-10-12T00:56:24.095Z"
     },
     {
       "eventId": "unknown|security_incident|2026-10-07|nolayer",
@@ -89,7 +80,15 @@
       "reasons": [
         "個人情報・セキュリティ事案"
       ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
+      "queuedAt": "2026-10-12T00:56:24.095Z"
+    },
+    {
+      "eventId": "unknown|other|2026-10-08|nolayer",
+      "title": "愛媛県宇和島市、市民課のマイナンバーカードに関する電話対応にAI電話「Graffer AIオペレーター」を実証導入",
+      "reasons": [
+        "見出しだけでは事象種別を判定できませんでした"
+      ],
+      "queuedAt": "2026-10-12T00:56:24.095Z"
     },
     {
       "eventId": "unknown|security_incident|2026-10-06|nolayer",
@@ -97,15 +96,7 @@
       "reasons": [
         "個人情報・セキュリティ事案"
       ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
-    },
-    {
-      "eventId": "unknown|other|2026-10-07|nolayer",
-      "title": "マイナカードでJPYCを円に戻せる？発行・償還がアプリ内で簡単に",
-      "reasons": [
-        "見出しだけでは事象種別を判定できませんでした"
-      ],
-      "queuedAt": "2026-10-11T00:39:16.495Z"
+      "queuedAt": "2026-10-12T00:56:24.095Z"
     }
   ]
 }
