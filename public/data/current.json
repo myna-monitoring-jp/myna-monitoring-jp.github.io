@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-10-13T10:47:24.050+09:00",
+  "generatedAt": "2026-10-13T11:50:27.572+09:00",
   "reportDate": "2026-10-13",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-10-13T10:47:24.050+09:00"
+    "lastSuccessfulUpdateAt": "2026-10-13T11:50:27.572+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -509,7 +509,7 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-13T10:47:24.050+09:00",
+      "lastMaterialUpdateAt": "2026-10-13T11:50:27.572+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
@@ -546,7 +546,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-05T11:00:00+09:00",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -557,7 +557,7 @@
           "linkText": "報道記事を開く",
           "publisher": "クラウド Watch",
           "publishedAt": "2026-10-05T10:00:00+09:00",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -568,7 +568,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Ricoh Global",
           "publishedAt": "2026-10-01T10:20:43+09:00",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -579,7 +579,7 @@
           "linkText": "報道記事を開く",
           "publisher": "ZDNET Japan",
           "publishedAt": "2026-10-01T10:00:00+09:00",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -3936,6 +3936,67 @@
         }
       ],
       "id": "news-auto-20261009-bxf1kt",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "マイナンバーカードの電子証明書の更新手続は、事前予約をご利用ください！",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-13T11:50:27.572+09:00",
+      "publishedAt": "2026-10-13T02:36:04.000Z",
+      "lastMaterialUpdateAt": "2026-10-13T02:36:04.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-13の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "沼津市ホームページ",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5zZmh3V1hHU1FqVUQ3T2tRTE5GM0piWWpIMEQzRzBOT0FvdG00Z3JDQW95d3NwWlN6MGxOV2dBeFF0MDMzbFZ2WTZ5VG53TURYdWlEWENpZTR2UnRJdUtRUW9oZHU5VUVPV2t0QnUxMFQ1bWY0b25ud2JEMUU?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "沼津市ホームページ",
+          "publishedAt": "2026-10-13T02:36:04.000Z",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261013-6cpwk7",
+      "category": "reference"
+    },
+    {
+      "title": "国外からオンライン申請する｜外務省",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-13T11:50:27.572+09:00",
+      "publishedAt": "2026-10-08T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-08T07:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-13の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Ministry of Foreign Affairs of Japan",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBNcU5uaEwwQ0w1ZWNsbVRWUWs3UjhzV2w4aHFIbFdPejFfV3lhZDlXQXMxMUVycjJPQXhuZkJFRk1XeTZUdEljMnhReG1tSE80XzdqNVdhMF9KaVlvdkk4b3NMUGU5SDFibmtiaHpn?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Ministry of Foreign Affairs of Japan",
+          "publishedAt": "2026-10-08T07:00:00.000Z",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261008-nfgbzw",
       "category": "reference"
     }
   ],
@@ -4447,7 +4508,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-13T10:47:24.050+09:00",
+      "lastMaterialUpdateAt": "2026-10-13T11:50:27.572+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -4605,7 +4666,18 @@
           "linkText": "報道記事を開く",
           "publisher": "city.himeji.lg.jp",
           "publishedAt": "2026-09-28T16:00:00+09:00",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
+          "active": true,
+          "note": "自動収集"
+        },
+        {
+          "type": "media",
+          "label": "沼津市ホームページ",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5zZmh3V1hHU1FqVUQ3T2tRTE5GM0piWWpIMEQzRzBOT0FvdG00Z3JDQW95d3NwWlN6MGxOV2dBeFF0MDMzbFZ2WTZ5VG53TURYdWlEWENpZTR2UnRJdUtRUW9oZHU5VUVPV2t0QnUxMFQ1bWY0b25ud2JEMUU?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "沼津市ホームページ",
+          "publishedAt": "2026-10-13T02:36:04.000Z",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4616,7 +4688,7 @@
           "linkText": "報道記事を開く",
           "publisher": "新潟市",
           "publishedAt": "2026-10-05T07:00:00.000Z",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4627,18 +4699,7 @@
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
           "publishedAt": "2026-10-01T07:00:00.000Z",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "沼津市ホームページ",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE80TldpQVJvUkJuVEVMNGRsTDFtY3RoRldsQUtVcUFIbFpIZTBCN1p6NjBHU09RUFlIbVBabGZneFVQQmJJUEpLTmNsNktOZldERXl6dWZnUGd3MGR1MWtPb3ZmdHlkX3ZfbV9tdWhnTVVvcTh3X0E?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "沼津市ホームページ",
-          "publishedAt": "2026-10-06T07:00:00.000Z",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4649,7 +4710,7 @@
           "linkText": "報道記事を開く",
           "publisher": "袋井市",
           "publishedAt": "2026-10-01T07:00:00.000Z",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4660,7 +4721,7 @@
           "linkText": "報道記事を開く",
           "publisher": "恵庭市ホームページ",
           "publishedAt": "2026-10-01T07:00:00.000Z",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4671,7 +4732,7 @@
           "linkText": "報道記事を開く",
           "publisher": "www.city.ome.tokyo.jp",
           "publishedAt": "2026-09-25T07:00:00.000Z",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4682,7 +4743,7 @@
           "linkText": "報道記事を開く",
           "publisher": "豊中市",
           "publishedAt": "2026-09-29T07:00:00.000Z",
-          "verifiedAt": "2026-10-13T10:47:24.050+09:00",
+          "verifiedAt": "2026-10-13T11:50:27.572+09:00",
           "active": true,
           "note": "自動収集"
         }
