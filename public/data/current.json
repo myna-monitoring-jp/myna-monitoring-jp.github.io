@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-10-21T13:04:13.997+09:00",
-  "reportDate": "2026-10-21",
+  "generatedAt": "2026-10-22T09:25:48.713+09:00",
+  "reportDate": "2026-10-22",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-10-21T13:04:13.997+09:00"
+    "lastSuccessfulUpdateAt": "2026-10-22T09:25:48.713+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -565,11 +565,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-21T13:04:13.997+09:00",
+      "lastMaterialUpdateAt": "2026-10-22T09:25:48.713+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "独立媒体5件の追加報道を自動検知（2026-10-21）。",
+      "dailyDiff": "独立媒体5件の追加報道を自動検知（2026-10-22）。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -602,7 +602,7 @@
           "linkText": "報道記事を開く",
           "publisher": "GemMed",
           "publishedAt": "2026-10-13T15:12:29+09:00",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -613,7 +613,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-05T11:00:00+09:00",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -624,7 +624,7 @@
           "linkText": "報道記事を開く",
           "publisher": "クラウド Watch",
           "publishedAt": "2026-10-05T10:00:00+09:00",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -635,7 +635,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Ricoh Global",
           "publishedAt": "2026-10-01T10:20:43+09:00",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -646,7 +646,7 @@
           "linkText": "報道記事を開く",
           "publisher": "ZDNET Japan",
           "publishedAt": "2026-10-01T10:00:00+09:00",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -3801,6 +3801,192 @@
       ],
       "id": "news-auto-20261016-6up2ad",
       "category": "reference"
+    },
+    {
+      "title": "マイナカードを誤交付 窓口で確認怠り 高知市",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-22T09:25:48.713+09:00",
+      "publishedAt": "2026-10-21T23:40:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-21T23:40:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-22の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "高知新聞",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1QdTNjbWQ0Q3FYS2RNOTB4clJnZVlqS2hqRVBPd2ZsbUJRaU83Y1htYlkwZ0dSNEV2MGFIdzJnelh6MVpwMWFGdndFZzRKUVJUR25ESUFtVkFtVzRkN0sw?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "高知新聞",
+          "publishedAt": "2026-10-21T23:40:00.000Z",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261021-d7hrw9",
+      "category": "other"
+    },
+    {
+      "title": "高知市マイナンバーカード誤交付で個人情報一時漏えい 窓口職員が「別の呼出番号」の人に誤って手渡す人為的ミスが原因",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-10-22T09:25:48.713+09:00",
+      "publishedAt": "2026-10-21T10:03:26.000Z",
+      "lastMaterialUpdateAt": "2026-10-21T10:03:26.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-22の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "au Webポータル",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5VUEcwMkRGX29HcGhkX1k0ZjZiZGVtTGtmUVgwRXB5Nm1rcTdhdGJzM25rV0MtWEdNNHNWOHlQdWdrdlBaWmlhWUdYMEJsVmdVN1RqM3VHWDJvVzYyQ3h0V2JHQVpyX1B1ZkpXbGVn?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "au Webポータル",
+          "publishedAt": "2026-10-21T10:03:26.000Z",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261021-ojv3dl",
+      "category": "other"
+    },
+    {
+      "title": "自治体向け情報配信サービス運営会社「アルカディア」への不正アクセスで安芸市でも情報漏えいか（高知）",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-10-22T09:25:48.713+09:00",
+      "publishedAt": "2026-10-15T02:55:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-15T02:55:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-22の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "TBS NEWS DIG",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PWndQbWZtZEVvbVkyOGVUWE12RWV1blJFeHpMbVhXX2VpOVdYRm9ENmZ6S21rVVhmZnkxVEpuNVhub194aUd4Z2hxdks5N1U0Yk1zU2Z5N091VGM?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "TBS NEWS DIG",
+          "publishedAt": "2026-10-15T02:55:00.000Z",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261015-iumaez",
+      "category": "other"
+    },
+    {
+      "title": "マイナンバーカードに2つの有効期限 来年にかけて更新のピーク 窓口へ足を運ぶ必要あり 更新の落とし穴（UTYテレビ山梨）",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-22T09:25:48.713+09:00",
+      "publishedAt": "2026-10-21T20:41:14+09:00",
+      "lastMaterialUpdateAt": "2026-10-21T20:41:14+09:00",
+      "summary": "電子証明書の有効期限が切れるとマイナ保険証（3か月は利用可）や住民票などをコンビニで受け取るサービスが使えなくなってしまい、カード本体の期限が切れると身分証明書として使えなくなります。 甲府市 市民課　小池さおり課長： ...",
+      "dailyDiff": "2026-10-22の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9zeHZRWjZCMWJIMTk5cjNCbDg5U183ODB3VmhWbEtYekdrUzZ5Q3F2Z2hIMlBXYnFFNURjd09YdkI3OS1QRlhFVV95REtnb2lsZ2hJbWl0Ny1ja3pVN3Q0WFQ1dVUxS2haaWpPYUtFc0wyV2FfU0JmZktMcVgxZkk?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-10-21T20:41:14+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261021-nrrwx8",
+      "category": "commentary",
+      "polarity": "negative"
+    },
+    {
+      "title": "マイナンバーカードに2つの有効期限 来年にかけて更新のピーク 窓口へ足を運ぶ必要あり 更新の落とし穴",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-22T09:25:48.713+09:00",
+      "publishedAt": "2026-10-21T11:40:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-21T11:40:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-22の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "TBS NEWS DIG",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE85cE13Z3NMdTFvb3dIaHRVY0FOSmszNW9hZzN0bU9FRk5ReGRrSVUxQlhBVndXa0JjUWRvUlNMZFc5SzBmc2FPc0x4eU5jb2xVbERZQkZoWW41bGNseWhIb21ZNA?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "TBS NEWS DIG",
+          "publishedAt": "2026-10-21T11:40:00.000Z",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261021-oth8of",
+      "category": "commentary",
+      "polarity": "negative"
+    },
+    {
+      "title": "「マイナカード落としたら全情報漏れる！？」ICチップの高度な安全構造と失効した紙保険証の破棄ルール",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-22T09:25:48.713+09:00",
+      "publishedAt": "2026-10-19T15:20:00+09:00",
+      "lastMaterialUpdateAt": "2026-10-19T15:20:00+09:00",
+      "summary": "マイナ保険証時代！知っておくべき個人情報と破棄マナー マイナンバーカードやマイナ保険証の利用が定着してきましたが、「落としたら全部の情報が漏れてしまうのでは？」と不安に思う方もいるかもしれません。",
+      "dailyDiff": "2026-10-22の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "TRILL",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBETGVDNWVxdnZQcnlibm9UcFI3ZTBDR3N5ZlRsVzhsU3VuUWdjUERzM010dUtJWlA3enVmUUlxZEZsYjZubTMwQWRDanRzclE?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "TRILL",
+          "publishedAt": "2026-10-19T15:20:00+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261019-9i98cv",
+      "category": "commentary",
+      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -4292,7 +4478,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-21T13:04:13.997+09:00",
+      "lastMaterialUpdateAt": "2026-10-22T09:25:48.713+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -4304,7 +4490,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体7件の追加報道を自動検知（2026-10-21）。",
+      "dailyDiff": "独立媒体7件の追加報道を自動検知（2026-10-22）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -4454,12 +4640,23 @@
         },
         {
           "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9zeHZRWjZCMWJIMTk5cjNCbDg5U183ODB3VmhWbEtYekdrUzZ5Q3F2Z2hIMlBXYnFFNURjd09YdkI3OS1QRlhFVV95REtnb2lsZ2hJbWl0Ny1ja3pVN3Q0WFQ1dVUxS2haaWpPYUtFc0wyV2FfU0JmZktMcVgxZkk?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-10-21T20:41:14+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
+          "active": true,
+          "note": "自動収集"
+        },
+        {
+          "type": "media",
           "label": "伊東市",
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObEZxT3dhbmpWZ1BTd1F3aTl5eXFkS0tCMTdBbWMtYmxXQlhVSDhyaWFGUDZ3QmhIa1h0MDQxMHJBeXozUjZ4OGFZWTVVMnEzeFZDeTc5ckJHMkFvTnJyYVhsT3RsUGNtUW5aNE1lSGkyLWFJbkRybjZyNEx5LU1qb0hmNWsxczEwR3Jfb0doRnM3Q185Mk1GelhpMlVhOG9t?oc=5",
           "linkText": "報道記事を開く",
           "publisher": "伊東市",
           "publishedAt": "2026-10-16T23:53:06.000Z",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4470,7 +4667,7 @@
           "linkText": "報道記事を開く",
           "publisher": "新潟市",
           "publishedAt": "2026-10-05T07:00:00.000Z",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4481,18 +4678,7 @@
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
           "publishedAt": "2026-10-01T07:00:00.000Z",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "袋井市",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5SU2pIb2s4aEVBbDNrSnBOdndZekJpUzBtd2QtLUxUNFhIY29Ibm00aHNZaVdGbGF3T0IwVjUxc1lXaXdwNlRla2FCS3NzLXVkN3BVZVBuY0kxVDRIU1JleDBpUndZM09GWVZZbkxZMkY3Mzlm?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "袋井市",
-          "publishedAt": "2026-10-01T07:00:00.000Z",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4503,7 +4689,18 @@
           "linkText": "報道記事を開く",
           "publisher": "沼津市ホームページ",
           "publishedAt": "2026-10-06T07:00:00.000Z",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
+          "active": true,
+          "note": "自動収集"
+        },
+        {
+          "type": "media",
+          "label": "袋井市",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5SU2pIb2s4aEVBbDNrSnBOdndZekJpUzBtd2QtLUxUNFhIY29Ibm00aHNZaVdGbGF3T0IwVjUxc1lXaXdwNlRla2FCS3NzLXVkN3BVZVBuY0kxVDRIU1JleDBpUndZM09GWVZZbkxZMkY3Mzlm?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "袋井市",
+          "publishedAt": "2026-10-01T07:00:00.000Z",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4514,18 +4711,7 @@
           "linkText": "報道記事を開く",
           "publisher": "恵庭市ホームページ",
           "publishedAt": "2026-10-01T07:00:00.000Z",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "和泉市",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQbmdwODdub1NoZlN1VGUxTjdWQi1BcXFSa0xBalUwSWlzcGpoRktFLW4zTll4dmUycWNLSHV4a09Pc0MtOWY3TVc3UDRfZFpnX3RkejNaUVZ6clFnYUZ4M0NvLXhZaWo2TEViMEVSYk8yU0RUcGVydjI0SW1vVlIzN1YxOEJWV0g2OGxQWkNBSVdtQQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "和泉市",
-          "publishedAt": "2026-10-13T07:00:00.000Z",
-          "verifiedAt": "2026-10-21T13:04:13.997+09:00",
+          "verifiedAt": "2026-10-22T09:25:48.713+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -5856,6 +6042,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-10-21",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-10-21.json"
+    },
     {
       "date": "2026-10-20",
       "title": "日次レポート",
