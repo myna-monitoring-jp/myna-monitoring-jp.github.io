@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-10-26T18:09:15.316+09:00",
-  "reportDate": "2026-10-26",
+  "generatedAt": "2026-10-27T10:05:54.628+09:00",
+  "reportDate": "2026-10-27",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-10-26T18:09:15.316+09:00"
+    "lastSuccessfulUpdateAt": "2026-10-27T10:05:54.628+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -879,11 +879,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-26T18:09:15.316+09:00",
+      "lastMaterialUpdateAt": "2026-10-27T10:05:54.628+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "独立媒体3件の追加報道を自動検知（2026-10-26）。",
+      "dailyDiff": "独立媒体1件の追加報道を自動検知（2026-10-27）。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -916,29 +916,7 @@
           "linkText": "報道記事を開く",
           "publisher": "GemMed",
           "publishedAt": "2026-10-13T15:12:29+09:00",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5mUTJBWUZVVnVXQXhwQ0tmMVZrUHYyZWxCVW5PSnE0ZUUzVkNXVWF3UTJFb2dwNjhiVFFnOXFoamRUd3Zlc3JCMl9TdzRqZDIySHBEQkRwSFVJdmpzZjQ2RnJxZ1F2OHZEclRrckJxamJVdEY5aC01ZGU4cG9GWXc?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-05T11:00:00+09:00",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "クラウド Watch",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8zV0FScTdXXzhJWVRyZXFEaVhKQTZHUUZTM2gyYjZ5LVVQZmhXUGplWHdBQ0hoZGlkT1B1VjFxaFFjRTI1Rkx2anctT0tzUS1vSldZX1dUTllSMWpSMkdwNnA2czMxdEE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "クラウド Watch",
-          "publishedAt": "2026-10-05T10:00:00+09:00",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -4306,7 +4284,8 @@
         }
       ],
       "id": "news-auto-20261023-hp3e62",
-      "category": "reference"
+      "category": "commentary",
+      "polarity": "neutral"
     },
     {
       "title": "マイナンバーカードと電子証明書の更新について",
@@ -4336,7 +4315,316 @@
         }
       ],
       "id": "news-auto-20261022-y7rxgo",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "「ユミルリンク」延べ5162万件余りの個人情報漏えいを確認 JR東海や阪急百貨店などもシステム利用 企業や自治体のメール配信事業など手がける（TBS NEWS DIG Powered by JNN）",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-26T11:15:52.000Z",
+      "lastMaterialUpdateAt": "2026-10-26T11:15:52.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43cjhWc2FNZjNtcXN0dzY4LVpVb3VDOVE1TDN0aFg2bFV3UlFYblUzUUpobHY4OUcwV2JfVktYSGRxa2d4NkxabHVwa3hFV3VvbXZTamE1TTdXbTMwMlB0aW9zNVVfbXpfNWlVT3QzYWQ3a2R2VVl5TWplTjFJcEE?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-10-26T11:15:52.000Z",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261026-sqmlbq",
+      "category": "other"
+    },
+    {
+      "title": "「マイナポータル自治体手続申請サービス」の本格運用開始について掲載しました",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-27T10:01:19+09:00",
+      "lastMaterialUpdateAt": "2026-10-27T10:01:19+09:00",
+      "summary": "デジタル庁は11日、主要な政策についての記者向け説明会を開催し、マイナンバーカードやマイナポータルの今後の展開について説明した。マイナポータルでは、今夏に旅券申請の対応を強化するほか、「マイナポータルアプリ」を「マイナアプリ」に刷新 ...",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/policies/administrative_procedures_online",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-10-27T10:01:19+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261027-809g67",
       "category": "reference"
+    },
+    {
+      "title": "資格情報のお知らせおよび資格確認書",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-20T23:34:39.000Z",
+      "lastMaterialUpdateAt": "2026-10-20T23:34:39.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "www.city.shinagawa.tokyo.jp",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1IZ2dVYkl3OWhCdjRybkR3eW5qUXFPS2VaalRIT0hmMVB1QTV4cENHLUFSM3MyR3kzbi1hSlRRbFpiLTZiemJ2MmhPUkFmZUJYNVRzd0JTVUZNb0F3X0xSZmRzaGkzVm4zS2RsLTJzdmF0dEdDajJYSXNjMFNhZU0?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "www.city.shinagawa.tokyo.jp",
+          "publishedAt": "2026-10-20T23:34:39.000Z",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261020-7my8cf",
+      "category": "reference"
+    },
+    {
+      "title": "『マイナンバーカードの更新』へ明石市の大久保市民センターへ 兵庫県議会議員（明石市）伊藤勝正",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-26T15:41:48.000Z",
+      "lastMaterialUpdateAt": "2026-10-26T15:41:48.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "選挙ドットコム",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5HSlR2WGVVTEtkbkxRbjNrTHBkVGVpX1VEaGMwcTNvU05DSldkXzlKbzJxeUhRT3lGR0FPWENKU1prSkoybjBLMnJPcGxNdTFvUXZFV2NUWFRkUEN5S2c?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "選挙ドットコム",
+          "publishedAt": "2026-10-26T15:41:48.000Z",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261026-p8ljlp",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "偽アカウントやオンライン詐欺に徹底的に対処し、高度な生体認証によるなりすましを防止する。",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-26T18:07:01+09:00",
+      "lastMaterialUpdateAt": "2026-10-26T18:07:01+09:00",
+      "summary": "SNS上の農家・農園をかたる偽アカウント・筆者撮影・加工 実在する農家や農園をかたった偽アカウントが次々にSNS上に出てきています。果物や野菜を販売する生産者の顔が見えることから、安心して商品を購入しようとする人を狙った悪質な手口です。",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdzZGblpDVzFqOXNLUVBnM1Z1YzFCaWhJX2Z3Nm1ab2h0ZFV6d2VQRTBBWWdJX3QzWnNFSzk1aFNZRkJZaThDdWp4XzI4QTZRbFFzcE9QcS1NMTlPdHY3a1ZESGtNd0RfY3VtZGM0V29JN1gxNFU0cXZYd0tnck1FMWNLNGhRWGo1UXB2T3RKYTRhNEstM0dhenVRT19QNHRnSk5NemJseTFEWUpCRVJFbTZn?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Vietnam.vn",
+          "publishedAt": "2026-10-26T18:07:01+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261026-gu9n7u",
+      "category": "commentary",
+      "polarity": "positive"
+    },
+    {
+      "title": "スタッフ定着を考える院長へ：DXや最新設備だけでは足りない組織づくり（note）",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-26T16:01:31+09:00",
+      "lastMaterialUpdateAt": "2026-10-26T16:01:31+09:00",
+      "summary": "「日本の福田康夫元首相が死去した」&#160;中国メディアも速報福田元総理は親子二代にわたって中国と関わり「戦略的互恵関係」の深化・民間交流の重要性を訴え 文春オンライン10/26(月)6:12 ...",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1LeGVUVl9YazU5NzkxdFVyZUxZSURwdXNHLTIxbVQ2S0EyajYzMXR0NV9fNThmVmQ5NDc2S1ZDN2FiTG5fd2F0ZTRHVnV4bGFtbWRNOHd6QWN4RkJWVXJ4WW5Oa19xaUFqcDJVcnc2S3VzaktTQXV3bXRUTncycEU?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-10-26T16:01:31+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261026-tdzf06",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "電子認証法：認証範囲の拡大",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-26T15:18:25+09:00",
+      "lastMaterialUpdateAt": "2026-10-26T15:18:25+09:00",
+      "summary": "JFEシステムズ株式会社(東証スタンダード市場 4832、本社：東京都港区、代表取締役社長：大木 哲夫、以下 当社)は、当社開発の電子帳簿システム「DataDelivery(R)」が、公益社団法人 日本文書情報マネジメント協会(以下、JIIMA)が認証する、デジタル ...",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOeEZ4eWF6cEI0Ym0zOVVTcVhjRklIQ1F5YUNQR2RENFQ3Ym9rdTYtVTVkMmlYUFRNeHo3WmdYOV9Nc0RJM2JMYXhmVlc5SmJKcEdWdDBzTXJ1RTFodHg4T2lqU2RTMi1xY3hzSjNZdFptN1FIS1g1cXg3S2tGUHJ4UDhaT0w0RWVJYV8tbE01U1pZdw?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Vietnam.vn",
+          "publishedAt": "2026-10-26T15:18:25+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261026-mew29k",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "AIで受講中も本人確認、ONLINE FACEがドローン講習の不正受講対策を強化",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-26T13:12:11+09:00",
+      "lastMaterialUpdateAt": "2026-10-26T13:12:11+09:00",
+      "summary": "世界初のAI特許技術により、オンライン環境下でも代理受講やなりすまし、不正受講を防止。航空法遵守が求められるドローン講習を対面同等の厳格性でオンライン運用へシフト。 ONLINE FACE株式会社（所在地：東京都港区、代表取締役：菊池 ...",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "ニコニコニュース",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xRElEM01KT1d3aUdHUWQ0Rl9IUkpHUll4enVZTmJON2pkODk5X0ZGSUFYZ0h1eFU3Rkc4WU5UbW83S3VtdElyVUtTbF9hSnhXNzM3anRMOExNeFRLYkNJUFpPQVB6Q2NZVzg0a3ZicFpBQWRPWVZqN1puWQ?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "ニコニコニュース",
+          "publishedAt": "2026-10-26T13:12:11+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261026-i86chc",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "パナソニック アビオニクス、大阪・門真工場を拡張 最新モデルの生産能力を6倍に",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-26T11:38:48+09:00",
+      "lastMaterialUpdateAt": "2026-10-26T11:38:48+09:00",
+      "summary": "パナソニック コネクトグループで航空機内エンターテインメントシステムを手がけるパナソニック アビオニクス（米カリフォルニア州アーバイン）は、大阪・門真工場を拡張した。",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "電波新聞デジタル",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uQ0lyWWliNHpxTkdfdnVfS0pMaGxjb2lUQkE2SVlEdTJJeW96X0FPRHV4aXUwNmZEaHc5ZHlkdERKbDJUdm02cUd4UzdWWDBFNFE?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "電波新聞デジタル",
+          "publishedAt": "2026-10-26T11:38:48+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261026-lho1xc",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "【ドローン免許・操縦者教育のDX】AI搭載『ONLINE FACE®』（オンラインフェイス）で安心・安全・法令遵守のオンライン教育を強化",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-27T10:05:54.628+09:00",
+      "publishedAt": "2026-10-25T12:16:19+09:00",
+      "lastMaterialUpdateAt": "2026-10-25T12:16:19+09:00",
+      "summary": "世界初のAI特許技術により、オンライン環境下でも代理受講やなりすまし、不正受講を防止。航空法遵守が求められるドローン講習を対面同等の厳格性でオンライン運用へシフト。 ONLINE FACE株式会社（所在地：東京都港区、代表取締役：菊池 ...",
+      "dailyDiff": "2026-10-27の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "PR TIMES",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9wN0ZqOW1WV21VQXFmZzcwdGR0NkV0NmdPVTdBOC1EOVlfVkg5WThEY3ZNR3AxdHJIMHlmMlBVc1ItQlpOdjNwejNETUVFNGJJYkJOdUJkNmowWU54eFFRUXN2Z3ZSTk9FTmc?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "PR TIMES",
+          "publishedAt": "2026-10-25T12:16:19+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261025-tbev3k",
+      "category": "commentary",
+      "polarity": "positive"
     }
   ],
   "incidents": [
@@ -4819,7 +5107,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-26T18:09:15.316+09:00",
+      "lastMaterialUpdateAt": "2026-10-27T10:05:54.628+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -4831,7 +5119,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体10件の追加報道を自動検知（2026-10-26）。",
+      "dailyDiff": "独立媒体6件の追加報道を自動検知（2026-10-27）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -4986,7 +5274,7 @@
           "linkText": "報道記事を開く",
           "publisher": "재경일보",
           "publishedAt": "2026-10-22T10:01:04+09:00",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -4997,7 +5285,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-21T20:41:14+09:00",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5008,7 +5296,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-19T15:00:00+09:00",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5019,7 +5307,7 @@
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
           "publishedAt": "2026-10-22T23:36:23.000Z",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5030,7 +5318,7 @@
           "linkText": "報道記事を開く",
           "publisher": "新潟市",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5041,51 +5329,7 @@
           "linkText": "報道記事を開く",
           "publisher": "ひたちなか市公式ウェブサイト",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "三条市",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWV81MzR6WEwxNnljNnNOb1hFOVd4OTFqZWVNYi0tOF8yYTVRSFhwdEtXUnlaSkVIR0Nmd0Q4ckR0ckdtTWJpRDkxRDhSWjctT0xUSHIySEdoVHp3VUduN0o4TE54TTM2blhrLUlBbGNEMlVpeG9FZ1lyZTlwc3drRkdYd2Y3UG5zbklWcS0wc1hNLUVBd0U3b2JwdTRCODg2?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "三条市",
-          "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "沼津市ホームページ",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE80TldpQVJvUkJuVEVMNGRsTDFtY3RoRldsQUtVcUFIbFpIZTBCN1p6NjBHU09RUFlIbVBabGZneFVQQmJJUEpLTmNsNktOZldERXl6dWZnUGd3MGR1MWtPb3ZmdHlkX3ZfbV9tdWhnTVVvcTh3X0E?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "沼津市ホームページ",
-          "publishedAt": "2026-10-06T07:00:00.000Z",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "伊東市",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObEZxT3dhbmpWZ1BTd1F3aTl5eXFkS0tCMTdBbWMtYmxXQlhVSDhyaWFGUDZ3QmhIa1h0MDQxMHJBeXozUjZ4OGFZWTVVMnEzeFZDeTc5ckJHMkFvTnJyYVhsT3RsUGNtUW5aNE1lSGkyLWFJbkRybjZyNEx5LU1qb0hmNWsxczEwR3Jfb0doRnM3Q185Mk1GelhpMlVhOG9t?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "伊東市",
-          "publishedAt": "2026-10-16T07:00:00.000Z",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "山陽新聞",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9qelg5YmhCcXN0aHhEM0pSTzZ3WENJMkpocnBYaEtzaTcxUXF4WngwQnRkVllqdGFVakNnNFdIb2JJVUI2T21tUUFJX1pGWFU5SWJHQ2JZRHJrZjBjMVdtQlBfLUp1T1R3UFJ5elhnRFk?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "山陽新聞",
-          "publishedAt": "2026-10-24T03:51:31.000Z",
-          "verifiedAt": "2026-10-26T18:09:15.316+09:00",
+          "verifiedAt": "2026-10-27T10:05:54.628+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -6447,6 +6691,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-10-26",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-10-26.json"
+    },
     {
       "date": "2026-10-25",
       "title": "日次レポート",
