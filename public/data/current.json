@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-10-30T10:40:39.360+09:00",
-  "reportDate": "2026-10-30",
+  "generatedAt": "2026-10-31T10:25:40.334+09:00",
+  "reportDate": "2026-10-31",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-10-30T10:40:39.360+09:00"
+    "lastSuccessfulUpdateAt": "2026-10-31T10:25:40.334+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -1044,11 +1044,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-30T10:40:39.360+09:00",
+      "lastMaterialUpdateAt": "2026-09-01T14:00:00+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "独立媒体1件の追加報道を自動検知（2026-10-30）。",
+      "dailyDiff": "10/30朝：本日の横断検索（デジタル庁・厚労省新着、開発者サイト、自治体、報道）で新たな公式発表・追加報道は確認できず。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -1073,17 +1073,6 @@
           "publisher": "厚生労働省",
           "publishedAt": "2026-09-01T14:00:00+09:00",
           "active": true
-        },
-        {
-          "type": "media",
-          "label": "GemMed",
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5uSEtpSEVBenNUZnl4M1E0SE5OenVHS0pkRDB5OFJ0ZzhqbWRsbk9tZEFXUTZwS2ZIZjl5azBRTHV3cEkySXhpdQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "GemMed",
-          "publishedAt": "2026-10-13T15:12:29+09:00",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
-          "active": true,
-          "note": "自動収集"
         }
       ],
       "reviewState": "reviewed"
@@ -1864,17 +1853,6 @@
           "verifiedAt": "2026-10-13T08:00:00+09:00",
           "active": true,
           "note": "厚生労働省老健局の通知を関係団体が掲載したもの。厚労省サイト上の原本URL・公布日は未確認。"
-        },
-        {
-          "type": "media",
-          "label": "厚生労働省",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1SNkJyZlNPMFNVbUpjRU0xRGNERk5sLTVPYW5uNThuWFExeWlUaU5oRDUwTVBzQWtpTGhPVzE0ZjI1b0YzWFlvLWlqLUNyd0dkT2kxalpWZXM3NV9GQ1JBZWJYUjRFYjc5bThHYQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "厚生労働省",
-          "publishedAt": "2026-10-10T01:52:40+09:00",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
-          "active": true,
-          "note": "自動収集"
         }
       ],
       "relatedIds": [
@@ -2173,312 +2151,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "政府広報オンラインCM「マイナアプリ」 Leonardo Dicaprio (FDVu0kIcDN)",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-15T13:41:12.000Z",
-      "lastMaterialUpdateAt": "2026-10-15T13:41:12.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集",
-        "広報候補"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Unisba Media",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB0UU9LWlhSMUxvNllRME5pYjRBZkVCTlFBZ2l3YjIwUUZDczhMNnVqckx0VnZyX0xLV09jZ050eUx6Ukx2NThFR2k2OGNYRDBEV1ppSllnZ0MzVjNraXZmenEyTjBGb2UyeEhr?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Unisba Media",
-          "publishedAt": "2026-10-15T13:41:12.000Z",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261015-kq7oqv",
-      "category": "other"
-    },
-    {
-      "title": "防災情報メールの個人情報漏えいの可能性 香川県や岡山市など システム運営会社に不正アクセス",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-14T02:54:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-14T02:54:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集",
-        "不具合候補（自治体・保険者）"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Infoseek",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE80YzdkekprSkhSWU9aYkMycFBuSkpBYVJfZWMwYUlDMUhLaGpNem9MakkyTWsybnVMV3ZMelBHMjBPSER3S2NuQUVXNGZUalpiR1FRbkJpV0s0TktabVHSAWNBVV95cUxQVGJMSkxpYWRGcmtlRl8xa1ZQdHpXUVItekVFWnRRcURDYVZMS0VWZHRzR2FQcXNPMDVaY0x0eVBlV0x0cUtlUTZoeWtNNXh2WW9RaEs3MkVNeUlBYU1vSVpOTE0?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Infoseek",
-          "publishedAt": "2026-10-14T02:54:00.000Z",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261014-ds912w",
-      "category": "other"
-    },
-    {
-      "title": "マイナンバーカード・インフォ（民間事業者向け情報）Vol.156を掲載しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-16T06:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-16T06:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/policies/mynumber/private-business/info",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-10-16T06:00:00.000Z",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261016-h1g32f",
-      "category": "reference"
-    },
-    {
-      "title": "電子処方箋の導入状況に関するダッシュボードを更新しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-16T06:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-16T06:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/resources/govdashboard/electronic-prescription",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-10-16T06:00:00.000Z",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261016-8btffv",
-      "category": "reference"
-    },
-    {
-      "title": "自治体が実施する健康・医療・介護分野の事業のデジタル化（PMH）ー医療費助成に関するダッシュボードを更新しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-16T06:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-16T06:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/resources/govdashboard/pmh-medical-expense-subsidies",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-10-16T06:00:00.000Z",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261016-d5gfq",
-      "category": "reference"
-    },
-    {
-      "title": "マイナンバーカード手続きの事前予約について",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-13T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-13T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "函館市",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1vYlZoU0RWRm4wdmUtWlZBOENzOWVSd1hiQTF3YXhvSEhiWGlBNmxLNHI2SG1lMDFjUlJwYUEzaF9SODJwZ09TT0tONzRmR2tpTUVZUkVQZU02V1pRMDlPRFNWdVUwZHhf?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "函館市",
-          "publishedAt": "2026-10-13T07:00:00.000Z",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261013-h8t866",
-      "category": "reference"
-    },
-    {
-      "title": "マイナンバーカードは大丈夫?相次ぐ情報漏洩は約1億1500万件超に…ヤマトや日経も被害 「9万円クレカ請求」“不審なメール”も【Nスタ解説】（TBS NEWS DIG Powered by JNN）",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-16T10:42:17.000Z",
-      "lastMaterialUpdateAt": "2026-10-16T10:42:17.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1fWm5YQ2swbk1oMmFod3VDM0RzbGVkUmRyaWJtcHI2ekJtTy1VQ2NTTHczUEwwSWlTOERDMktaaXk1M0ZlZkFLNXRFU3o3bFZJSHFPd1dZUUdza24zRUpXdkROQXJHZms4dExrWFdBWVBWTzdCVzJpMTBhbmE1aEU?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-16T10:42:17.000Z",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261016-6xvimi",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナンバーカードは大丈夫？相次ぐ情報漏洩は約1億1500万件超に…ヤマトや日経も被害 「9万円クレカ請求」“不審なメール”も【Nスタ解説】",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-16T10:41:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-16T10:41:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "TBS NEWS DIG",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8wYkVNVHZzX2FQQ3ppd2UzS2xfWFF2U3dCeWtIZXd4aEJUeXM3VFFYVmEzOTAzSnhXMEYyTGwxLURNY1RxZURueVRTakdSeVJ3WnNyaUphSUVxVUxoWTZ5Ng?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "TBS NEWS DIG",
-          "publishedAt": "2026-10-16T10:41:00.000Z",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261016-2knl31",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "2026年分確定申告、スマホ・マイナポータル連携でさらに便利に",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-16T15:59:21+09:00",
-      "lastMaterialUpdateAt": "2026-10-16T15:59:21+09:00",
-      "summary": "ITmedia NEWSにおける1週間の記事アクセス数を集計し、上位10記事を紹介する「ITmedia NEWS Weekly Top10」。今回は3月7～13日までの7日間について集計し、まとめた。 先週のアクセストップは、大手回転すしチェーンで、セルフレジで支払いせず「食い逃げ」される ...",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "創業手帳株式会社",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5URmhoTk1yU2VrMXhtMEU0cmtSSTNVYmRYYzBUYzhIWDVCZE01Tmt1SHlBaFprUG1iZ05Fa05tLTJMTmlKNnRkaUhqYTg5UHpTTUE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "創業手帳株式会社",
-          "publishedAt": "2026-10-16T15:59:21+09:00",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261016-nzvyob",
-      "category": "commentary",
-      "polarity": "positive"
-    },
-    {
-      "title": "全国で相次ぐ不正アクセス 防災メール登録情報が流出か 情報漏えいから身を守るには？",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-17T09:09:00.368+09:00",
-      "publishedAt": "2026-10-14T09:47:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-14T09:47:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-17の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Infoseek",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE81YnhjUmR3TUpnWG9kQnF1Q3BXdHF5TzYwSWpXX0JwaFNYWDE3eEhBQ3ZaSEFJVnFpRXp4cDRMTmNCanNBZi1jUGJEQVExbFh4ai05MVBTNmRoS2ZDZjN4dElxUVJvUW1L0gFuQVVfeXFMTzhUYktNdkwtcWxuUW5nNUsyR1Z2SlZNdUZPeDBXUmFhRXJ4TkVqRnNheWxnSXp2UndkSFRlRGRYTmJlbjZDb2FKVFNhYzgtMHZZOG5FVEVSMTZzbHJlN2gyVnA5Y21KOWM1d0dGMVE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Infoseek",
-          "publishedAt": "2026-10-14T09:47:00.000Z",
-          "verifiedAt": "2026-10-17T09:09:00.368+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261014-yd1ysk",
-      "category": "commentary",
-      "polarity": "neutral"
     },
     {
       "title": "千葉県職員ら４３００人分の個人情報漏えいか 不正アクセス影響 自治体でも｜Infoseekニュース",
@@ -4970,6 +4642,344 @@
       "id": "news-auto-20261028-2dfeqm",
       "category": "commentary",
       "polarity": "neutral"
+    },
+    {
+      "title": "バンキングアカデミーは、教育データのデジタル化と透明性の確保において先駆的な役割を果たしています。",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-30T17:15:24+09:00",
+      "lastMaterialUpdateAt": "2026-10-30T17:15:24+09:00",
+      "summary": "Sensor Towerの「2026年デジタルバンキング年鑑」レポートで、デジタルバンキングアプリがダウンロード数、エンゲージメント、オーディエンス行動、広告を通じて金融サービスをどのように再構築しているかをご確認ください。主要市場、高成長デジタル ...",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "広報候補"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOdlNjWm5sSjRSN0Z3MjNseXlqa245WnRxUDlvallWX29FY2lQeUhtVXIzcEJ4cnpZU0RWWl9BaW10WlBsUEJUQmNMZnc5ZUlrNEZOWjZwTjl5MDVxb1Y2VUVJWE55X3hXMTZzVXVZRy1Pai1RUUtxZ3JOQ0xsVTgwUFVYVjVUNWlkVmlNZU5mRjJJSzg?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Vietnam.vn",
+          "publishedAt": "2026-10-30T17:15:24+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-8dp2m8",
+      "category": "other"
+    },
+    {
+      "title": "マイナ保険証ミスで負担額誤り 返還・追加徴収へ 青森 弘前",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-30T16:45:46+09:00",
+      "lastMaterialUpdateAt": "2026-10-30T16:45:46+09:00",
+      "summary": "弘前市は、マイナ保険証のデータ連携の不具合で医療費の自己負担割合が間違って表示されていた人たちに対し、負担金の返還や追加の徴収を行うと発表しました。",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "NHKニュース",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBtMm16XzJfNWZ0TTlTWVBxSUdoZURXNUFBeFZaTWVrQlg5a0xkb0VKMVpiT3RMTVU1NFJZcXhaN0hmby1EcnFzb1g0Z292Z0g3bkhmMFlteFZSRV9QUHBZ?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "NHKニュース",
+          "publishedAt": "2026-10-30T16:45:46+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-e8pa3i",
+      "category": "other"
+    },
+    {
+      "title": "窓口負担割合の表示誤りで過払い21人に返還・未払い22人から追加徴収へ マイナ保険証のデータ連係不具合 弘前市",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-30T13:48:00+09:00",
+      "lastMaterialUpdateAt": "2026-10-30T13:48:00+09:00",
+      "summary": "弘前市は、マイナ保険証のデータ連携の不具合で医療費の自己負担割合が間違って表示されていた人たちに対し、負担金の返還や追加の徴収を行うと発表しました。 市ではことし8月、満70歳から74歳の国民健康保険加入者の一部で、窓口負担割合が確認できなかったり異なった表示がされるなどのトラブルが起きました。",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9iTVc1dTZ0dDNzcHFrelRVRXVmXzlxdGJodFBnR2M1OVgwVm1hSUtORng5WEVDZFEtcnFQWTRQemJubFNUWDB5MWRTSnZNMzlrMnoyemFzb1R6dGNxSHIxdjFvNDgwc096NWpEVW0xbExYUUFPYVM0UUdSSVVZU0k?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-10-30T13:48:00+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-2f7mye",
+      "category": "other"
+    },
+    {
+      "title": "自治体・医療機関等をつなぐ情報連携システム（Public Medical Hub：PMH）に係る「先行実施事業の実施状況」「自治体・自治体システムベンダー向けの情報」「医療機関・薬局システムベンダー向けの情報」の資料を更新しました",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-30T06:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-30T06:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/policies/health/public-medical-hub",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-10-30T06:00:00.000Z",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-bsudzs",
+      "category": "reference"
+    },
+    {
+      "title": "公金受取口座の登録状況に関するダッシュボードを更新しました",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-30T06:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-30T06:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/resources/govdashboard/account_registration_status",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-10-30T06:00:00.000Z",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-oc6lve",
+      "category": "reference"
+    },
+    {
+      "title": "マイナンバーカードの普及と利活用に関するダッシュボードを更新しました",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-30T06:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-30T06:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/resources/govdashboard/mynumber_card_penetration_usage",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-10-30T06:00:00.000Z",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-ja390o",
+      "category": "reference"
+    },
+    {
+      "title": "パナソニック インダストリー AI関連事業へ約920億円投資 基板材料・高分子コンデンサーの生産能力拡大",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-30T19:42:09+09:00",
+      "lastMaterialUpdateAt": "2026-10-30T19:42:09+09:00",
+      "summary": "多層基板材料・導電性高分子コンデンサの生産能力拡大、次世代半導体用材料の研究開発棟も新設 パナソニック インダストリー株式会社（本社：東京都港区、代表取締役 社長執行役員・CEO：小澤 正人、以下、当社）は、拡大する生成AI市場の需要に対応するため、AI関連事業への積極投資を進めています。",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "電波新聞デジタル",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB1Y1MxVWlwam9rUHVWZGx4NWt0dWEwS3FQejZ6N2JjUmo4LVctSFlnWHhYb2FTRWpWWFhYNTQxZ3pnbm5YcWNJajVXMFFnOTRvTHc?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "電波新聞デジタル",
+          "publishedAt": "2026-10-30T19:42:09+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-1e873z",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "BSIジャパン（英国規格協会）、AIガバナンス実践セミナーを開催 信頼できるAIの実現に向け、 先進企業はなぜISO/IEC 42001認証取得に取り組むのか",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-29T14:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-10-29T14:00:00+09:00",
+      "summary": "2026年10月20日：BSI(英国規格協会)の新たな調査によると、日本企業の74％(グローバル：75％)が過去1年間にAIの不具合を経験し、業務効率化や事業成長を追求する上での新たなリスクとなっていることが明らかになりました。日本を含む9カ国のビジ ...",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "アットプレス",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBPczlyUUVKajJ0aElWQlR5eFFfa0hPdXlJYTh6cFhsRXowVTIzTUdaU3BwR0FkVEdQT2pJRWFUdndmRUdSek9fOU4teFZMUQ?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "アットプレス",
+          "publishedAt": "2026-10-29T14:00:00+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261029-1eq3xj",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "薬剤師は「誤った情報を処方医に提供していないか」「不適切な薬剤変更を処方医に提案していないか」確認を—医療機能評価機構",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-29T11:27:40+09:00",
+      "lastMaterialUpdateAt": "2026-10-29T11:27:40+09:00",
+      "summary": "薬局薬剤師が「誤った情報を処方医に提供してしまう」「不適切な薬剤変更を処方医に提案してしまう」事例が生じている—。",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "GemMed",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE91b0s0MDdKTnB6WE9ITDdqM2N3Xzg1OFp1NjZNQzZxb08yMUl1dUV0bVdYWHJzc2NJOFpuUVZvUlM0SEdFU1hjRQ?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "GemMed",
+          "publishedAt": "2026-10-29T11:27:40+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261029-s5fafd",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "エムシーディースリーが建設サイト・シリーズの新規申し込み手続きにデジタル認証を導入",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-28T18:24:57+09:00",
+      "lastMaterialUpdateAt": "2026-10-28T18:24:57+09:00",
+      "summary": "エムシーディースリーが新規申し込み手続きにデジタル認証を導入 エムシーディースリー株式会社は、建設業向けクラウドサービス「建設サイト・シリーズ」の新規申し込み手続きにおいて、オンラインで事業者情報を確認する仕組みを導入し […] ...",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "ニュースメディアVOIX",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFAyLUhiaDZOTVVQcDVjdUFNR1BCdFptRmgycDA5dGo2SXA3QmNpSzU0YkZ3NEFnaEc1b2ZaZEt4clhxSjlCM1hVX3NSampWS0FIWDBuUFZyWUE4eWlZQlFHZ2tPU21peWlSdnVXSUdqdEdsRW1sR3NfeWdWOA?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "ニュースメディアVOIX",
+          "publishedAt": "2026-10-28T18:24:57+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261028-ecwc11",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "親のマイナ保険証、使えているか心配な人へ…8月から届く書類は「資格確認書」と「資格情報のお知らせ」の2種類（LIMO）",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-10-31T10:25:40.334+09:00",
+      "publishedAt": "2026-10-28T12:10:49+09:00",
+      "lastMaterialUpdateAt": "2026-10-28T12:10:49+09:00",
+      "summary": "後期高齢者の医療保険では、令和8年8月1日から、年齢とマイナ保険証の利用実績に応じて、届く書類が変わっています。高齢の家族の利用状況によって、どの書類が届き、受診にどう影響するのかを知りたい方もいると考えられます。◆【画像】令和8年8月から届く書類はどっち？",
+      "dailyDiff": "2026-10-31の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQOUtyU0tXSmdiUXZaX3I2WEhKNnlVcDZYRnEtMUc5eks5ejhBbVRBc05QYzJ6aVVjLTkybzRORk5pdWUxYjZLLW9aQS1RbklKSk1FbHdYZkt4MVBmdnRzX3FlcmsyZEdfSHp5bklreG1ZbFE5WkNCRTJ5cDF3b3RsYUVQbkhuRHB1?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-10-28T12:10:49+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261028-xfqvt9",
+      "category": "commentary",
+      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -5452,7 +5462,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-30T10:40:39.360+09:00",
+      "lastMaterialUpdateAt": "2026-10-31T10:25:40.334+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -5464,7 +5474,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体8件の追加報道を自動検知（2026-10-30）。",
+      "dailyDiff": "独立媒体6件の追加報道を自動検知（2026-10-31）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -5619,7 +5629,7 @@
           "linkText": "報道記事を開く",
           "publisher": "재경일보",
           "publishedAt": "2026-10-22T10:01:04+09:00",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5630,18 +5640,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-21T20:41:14+09:00",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9kMmZSWWo0M2VyYlJzNnhyT2dvcFVETXhOLVJwZG1sb0VTZmt0VkE3eVAyTGV4NEQyTnJqM1hBWHRLTXMwYkNic0lvSU5iYUUyeF9DY09RbVBKUEt6WEdLTjNSTWRfMHJodktkM0tUX3cycU5YbVNjdHpBS1VpQzg?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-19T15:00:00+09:00",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5652,7 +5651,7 @@
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
           "publishedAt": "2026-10-26T07:00:00.000Z",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5663,7 +5662,7 @@
           "linkText": "報道記事を開く",
           "publisher": "新潟市",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5674,7 +5673,7 @@
           "linkText": "報道記事を開く",
           "publisher": "三条市",
           "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5685,18 +5684,7 @@
           "linkText": "報道記事を開く",
           "publisher": "ひたちなか市公式ウェブサイト",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "熊本市公式サイト",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE82bVhuUmpNZU9BMDdmZWdSUE9JUnYxTVVieVk2LXV2Tk9ER09hUVZRY0VPZ2JYQmtUNmRNYlpzR1g5aFBaeXJzckMtNFNXNlB5bi1fc21UeElKNFpyUkxyVURB?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "熊本市公式サイト",
-          "publishedAt": "2026-10-22T23:36:23.000Z",
-          "verifiedAt": "2026-10-30T10:40:39.360+09:00",
+          "verifiedAt": "2026-10-31T10:25:40.334+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -7303,6 +7291,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-10-30",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-10-30.json"
+    },
     {
       "date": "2026-10-29",
       "title": "日次レポート",
