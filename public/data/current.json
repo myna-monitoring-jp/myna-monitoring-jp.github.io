@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-11-01T09:40:55.513+09:00",
-  "reportDate": "2026-11-01",
+  "generatedAt": "2026-11-02T10:14:26.872+09:00",
+  "reportDate": "2026-11-02",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-11-01T09:40:55.513+09:00"
+    "lastSuccessfulUpdateAt": "2026-11-02T10:14:26.872+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -2151,159 +2151,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "埼玉県警1万3000人の情報漏えいか 委託先アルカディア被害",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-19T08:54:05.470+09:00",
-      "publishedAt": "2026-10-16T09:19:57.000Z",
-      "lastMaterialUpdateAt": "2026-10-16T09:19:57.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-19の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集",
-        "不具合候補（自治体・保険者）"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Infoseek",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5QbTNMTjZweUw5U3Jid3ZZdXJpSno3VkRfMnVVWnAtYko0TzRmLWR5MlZDMU1BZFRoRVotWEJYeklaUHNjS0VDWjVFNEtVbFZRdElXa3FaVnZnazYtS2Q3ZUdYZUVhdF9QUkdkanpFekpLdURrLWFBS2ZR0gF_QVVfeXFMTmxNRUtlMmswOHR5WDVwQnJnSDBtVUwxMHBJWC1DUmpIVHFkU3hZR3hiMkptbWhOVTVneGtUQmV1U1JBY09UcW9SQ3dqcE95cTBLY0UwbVFSakkyQkR5MGtxZHNBa21pWUxwWWhpNGFTMjFLY1hwQ19PSTZNUUM1QQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Infoseek",
-          "publishedAt": "2026-10-16T09:19:57.000Z",
-          "verifiedAt": "2026-10-19T08:54:05.470+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261016-x144kz",
-      "category": "other"
-    },
-    {
-      "title": "防災メール配信停止も「アルカディア」不正アクセス 山陰にも影響 10市町で約4万件の個人情報漏えいも",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-19T08:54:05.470+09:00",
-      "publishedAt": "2026-10-15T09:32:01.000Z",
-      "lastMaterialUpdateAt": "2026-10-15T09:32:01.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-19の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集",
-        "不具合候補（自治体・保険者）"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE44dF9YU1ExNnZiQzJHU2NPTjB3Tmhnd2pxYVUyVUxBc2psQmw5TE42N2dXVHgzUDk1UEpiT203NXdHZWgzSE4tOUFudVFWOUliLU9JUjF2dEtMeVJETEpYaW1LcUUtNnAzX2dGenBpMzYtNWJTYmI5ZThnT1QwZ1U?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-15T09:32:01.000Z",
-          "verifiedAt": "2026-10-19T08:54:05.470+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261015-6mltim",
-      "category": "other"
-    },
-    {
-      "title": "山陰両県の行政機関や大型モール運営企業で不正アクセス・情報漏えい相次ぐ 不審なメールや問い合わせへ個人情報やパスワードなどを安易に伝えないよう注意を 鳥取県･島根県",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-19T08:54:05.470+09:00",
-      "publishedAt": "2026-10-14T09:36:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-14T09:36:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-19の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集",
-        "不具合候補（自治体・保険者）"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Infoseek",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5UTnhaZ1ZieGdRbnotTmV0WUg0dXJqS05UY3lfX0RSZnZVOUs0RXdybzFqaEFXYkVjbUJqeHVqLVpST3BONUtoWmg4Y2NIcGIyVEpjQ0ZRaW5CZ0FZOVJEQ2s4Ujhzbk040gFuQVVfeXFMT2xOYjNQZldvd21SN0xmenRVeEhtdkJPcU9BVUpBUms5YmYxczhUdjZNa1U5WW5VcGgtWldUUU96N25KSElLaElIUUFfNEVoMkFRdF9GVnhKNmdZQk5fd3RDdUhubzI4eHhuSjVIRnc?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Infoseek",
-          "publishedAt": "2026-10-14T09:36:00.000Z",
-          "verifiedAt": "2026-10-19T08:54:05.470+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261014-hkncz0",
-      "category": "other"
-    },
-    {
-      "title": "教える人のためのデジタル情報ひろば",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-19T08:54:05.470+09:00",
-      "publishedAt": "2026-10-16T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-16T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-19の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE81RWU4QW5GV1lhTXBNTEdFS1MyVUJ2a2V4dUgzQUUxb3NfNE1rbHI2eGxaREhvdVI5LTBSZUpDT0lndldvZ29kazNGVVpWZEZ0QVpxTUpRSVhOS2ZMdG5kakRMeGF4bUJWNmRIbk5DTWRkeUZQTWc?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-10-16T07:00:00.000Z",
-          "verifiedAt": "2026-10-19T08:54:05.470+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261016-86ienq",
-      "category": "reference"
-    },
-    {
-      "title": "毎月第2日曜日の日曜開庁で電子証明書の更新等が可能になりました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-19T08:54:05.470+09:00",
-      "publishedAt": "2026-10-13T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-13T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-19の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "和泉市",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQbmdwODdub1NoZlN1VGUxTjdWQi1BcXFSa0xBalUwSWlzcGpoRktFLW4zTll4dmUycWNLSHV4a09Pc0MtOWY3TVc3UDRfZFpnX3RkejNaUVZ6clFnYUZ4M0NvLXhZaWo2TEViMEVSYk8yU0RUcGVydjI0SW1vVlIzN1YxOEJWV0g2OGxQWkNBSVdtQQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "和泉市",
-          "publishedAt": "2026-10-13T07:00:00.000Z",
-          "verifiedAt": "2026-10-19T08:54:05.470+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261013-xwjc7c",
-      "category": "reference"
     },
     {
       "title": "「Androidのマイナンバーカード」の提供を開始しました（デジタル庁 ウェブサービス・アプリケーション）",
@@ -4949,6 +4796,97 @@
       "id": "news-auto-20261031-wbojsl",
       "category": "commentary",
       "polarity": "neutral"
+    },
+    {
+      "title": "国内からオンライン申請する｜外務省",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-02T10:14:26.872+09:00",
+      "publishedAt": "2026-10-30T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-30T07:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-02の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Ministry of Foreign Affairs of Japan",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE12OTIxbVlrUWE1TndHRWVlZFNXMVJaYnFhclZVUGRfZjhDcHIyRkIydmVQUUlNWmRVRU9oODd6dXdoM2JZSEU4Tk9EeFcwUXJWWER5SzduX1BkMWdjbHd1eE96NjQwbWtIX0JET09R?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Ministry of Foreign Affairs of Japan",
+          "publishedAt": "2026-10-30T07:00:00.000Z",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-uvc8zn",
+      "category": "reference"
+    },
+    {
+      "title": "マイナンバーカード電子証明書更新手続について",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-02T10:14:26.872+09:00",
+      "publishedAt": "2026-10-16T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-16T07:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-02の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "伊東市",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObEZxT3dhbmpWZ1BTd1F3aTl5eXFkS0tCMTdBbWMtYmxXQlhVSDhyaWFGUDZ3QmhIa1h0MDQxMHJBeXozUjZ4OGFZWTVVMnEzeFZDeTc5ckJHMkFvTnJyYVhsT3RsUGNtUW5aNE1lSGkyLWFJbkRybjZyNEx5LU1qb0hmNWsxczEwR3Jfb0doRnM3Q185Mk1GelhpMlVhOG9t?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "伊東市",
+          "publishedAt": "2026-10-16T07:00:00.000Z",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261016-6uel4x",
+      "category": "reference"
+    },
+    {
+      "title": "薬局でマイナ保険証を使うと薬代はいくら変わる？令和8年6月新設ルールと3割負担の試算（LIMO）",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-02T10:14:26.872+09:00",
+      "publishedAt": "2026-11-01T12:10:51+09:00",
+      "lastMaterialUpdateAt": "2026-11-01T12:10:51+09:00",
+      "summary": "厚生労働省は、令和8年度の診療報酬改定（令和8年6月施行）で、保険薬局の調剤について、医療情報取得加算を廃止し、医療DX推進体制整備加算を「電子的調剤情報連携体制整備加算」に改めました。新しい加算は、月1回に限り8点です（厚生労働省「令和8年度診療報酬改定の概要【調剤】」）。",
+      "dailyDiff": "2026-11-02の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5kNHh6M3dWMXh4Z2RGSTFDUG94M2hTNGc5QVRuSVZkRG5nX3FaYm1uNVFoWFJGcXFSbzk1REo5V2JmeUJFdDQtMFgzd3lGX3VjbGpKNDV5RU9neXYtRXlMOFFYRmlUY2FsQnNMWllUZ1I3STF5dHdIN0hkLXUydk0?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-11-01T12:10:51+09:00",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261101-llu0sw",
+      "category": "commentary",
+      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -5431,7 +5369,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-01T09:40:55.513+09:00",
+      "lastMaterialUpdateAt": "2026-11-02T10:14:26.872+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -5443,7 +5381,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体7件の追加報道を自動検知（2026-11-01）。",
+      "dailyDiff": "独立媒体7件の追加報道を自動検知（2026-11-02）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -5598,7 +5536,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-31T18:10:51+09:00",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5609,7 +5547,7 @@
           "linkText": "報道記事を開く",
           "publisher": "재경일보",
           "publishedAt": "2026-10-22T10:01:04+09:00",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5620,7 +5558,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-21T20:41:14+09:00",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5630,8 +5568,8 @@
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE05bHRIbm50Y3ptVUhYa1Fpd3ZHSnhRSTJlSWNNWEpQZEJ6OHAxbzY1Y0tVdERlUXNnZnQtT1lQV3ZiSHJ5T2NabElwYkU3alBqZjRkM0E5YTQyU2VsTEpiOTRhUQ?oc=5",
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
-          "publishedAt": "2026-10-26T07:00:00.000Z",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
+          "publishedAt": "2026-10-29T07:00:00.000Z",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5642,7 +5580,7 @@
           "linkText": "報道記事を開く",
           "publisher": "三条市",
           "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5652,19 +5590,19 @@
           "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE82bVhuUmpNZU9BMDdmZWdSUE9JUnYxTVVieVk2LXV2Tk9ER09hUVZRY0VPZ2JYQmtUNmRNYlpzR1g5aFBaeXJzckMtNFNXNlB5bi1fc21UeElKNFpyUkxyVURB?oc=5",
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
-          "publishedAt": "2026-10-22T23:36:23.000Z",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
+          "publishedAt": "2026-10-23T07:00:00.000Z",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
           "active": true,
           "note": "自動収集"
         },
         {
           "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNjNwYVBrTFlqXzYzVEZwWFJSQ2JUVG8tbVl4bnFJS3ZXejdURFJMSUNUTTk1RlhuSVFKYW9yY1YzRWowUnlOOE5SVmZ6emhkLXdORHhDR3JzSDdwZXhuRElzM2daZXJLLWZyRHE2VEVWZWFMSXpnQnVFVHJncHVTUFgyQ1NJNDRY?oc=5",
+          "label": "伊東市",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObEZxT3dhbmpWZ1BTd1F3aTl5eXFkS0tCMTdBbWMtYmxXQlhVSDhyaWFGUDZ3QmhIa1h0MDQxMHJBeXozUjZ4OGFZWTVVMnEzeFZDeTc5ckJHMkFvTnJyYVhsT3RsUGNtUW5aNE1lSGkyLWFJbkRybjZyNEx5LU1qb0hmNWsxczEwR3Jfb0doRnM3Q185Mk1GelhpMlVhOG9t?oc=5",
           "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-31T09:10:51.000Z",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
+          "publisher": "伊東市",
+          "publishedAt": "2026-10-16T07:00:00.000Z",
+          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -7271,6 +7209,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-11-01",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-11-01.json"
+    },
     {
       "date": "2026-10-31",
       "title": "日次レポート",
