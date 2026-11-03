@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-11-02T10:14:26.872+09:00",
-  "reportDate": "2026-11-02",
+  "generatedAt": "2026-11-03T12:26:37.404+09:00",
+  "reportDate": "2026-11-03",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-11-02T10:14:26.872+09:00"
+    "lastSuccessfulUpdateAt": "2026-11-03T12:26:37.404+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -2151,128 +2151,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "「Androidのマイナンバーカード」の提供を開始しました（デジタル庁 ウェブサービス・アプリケーション）",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-20T09:54:39.753+09:00",
-      "publishedAt": "2026-10-20T00:31:53.000Z",
-      "lastMaterialUpdateAt": "2026-10-20T00:31:53.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-20の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://services.digital.go.jp/mynumbercard-android/news/13d5101e1dce63e2b6bdc/",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-10-20T00:31:53.000Z",
-          "verifiedAt": "2026-10-20T09:54:39.753+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-i0kzhx",
-      "category": "reference"
-    },
-    {
-      "title": "マイナンバー制度における制度解説の情報連携に係る資料を更新しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-20T09:54:39.753+09:00",
-      "publishedAt": "2026-10-19T15:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-19T15:00:00+09:00",
-      "summary": "これまでは郵送が必要であった中小企業診断士の登録・管理における申請等（新規登録申請や更新登録申請等）について、2026年6月1日(月)10:00よりマイナポータルを用いたオンライン手続きが可能となりました。以降は、原則「オンラインによる受付」とさせ ...",
-      "dailyDiff": "2026-10-20の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/policies/mynumber/explanation",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-10-19T15:00:00+09:00",
-          "verifiedAt": "2026-10-20T09:54:39.753+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261019-fd3inz",
-      "category": "reference"
-    },
-    {
-      "title": "「Androidのマイナンバーカード」が利用可能なスマホが判明 フル対応の機種は少なめ",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-20T09:54:39.753+09:00",
-      "publishedAt": "2026-10-19T15:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-19T15:00:00+09:00",
-      "summary": "デジタル庁は、10月20日に提供開始を予定する「Androidのマイナンバーカード」の対応機種の一覧を公開している。10月19日時点の一覧によると、本人確認や年齢確認などに使う新たな「属性証明機能」は、一部の対応機種でのみ利用できる。",
-      "dailyDiff": "2026-10-20の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "ASCII.jp",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE83dVd4VE1GRU53Z3lUbTdfSEdoMDNmN3JVcXpqcnJycXFZRkpnY0dwZXI0ZnJha3FQd0V3T0V2LVhHcGcybjRVc3otNlhqcE4wV2VoLQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "ASCII.jp",
-          "publishedAt": "2026-10-19T15:00:00+09:00",
-          "verifiedAt": "2026-10-20T09:54:39.753+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261019-e88g90",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "KSK2はまだ全力パワーではない(10/19)~ いつになったらトラブル解消する？",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-20T09:54:39.753+09:00",
-      "publishedAt": "2026-10-19T04:48:56.000Z",
-      "lastMaterialUpdateAt": "2026-10-19T04:48:56.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-20の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "村上知也",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0teUIwRGVTWExqT19pZ01xYjN0RVdFdXh5b3BKYmpLRVVpcEphTGJFZWg0ZHFCZHRJSVNBVEZWeUZxTXhUTU5DN29NaFdveUF1V0VFejJQTmRXQzg?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "村上知也",
-          "publishedAt": "2026-10-19T04:48:56.000Z",
-          "verifiedAt": "2026-10-20T09:54:39.753+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261019-1i0ytk",
-      "category": "commentary",
-      "polarity": "negative"
     },
     {
       "title": "マイナンバーカード・電子証明書の有効期限通知書について",
@@ -4825,7 +4703,8 @@
         }
       ],
       "id": "news-auto-20261030-uvc8zn",
-      "category": "reference"
+      "category": "commentary",
+      "polarity": "neutral"
     },
     {
       "title": "マイナンバーカード電子証明書更新手続について",
@@ -4885,6 +4764,188 @@
         }
       ],
       "id": "news-auto-20261101-llu0sw",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "会計システムのTKC、アララ メッセージへの不正アクセスで最大223万812件のメールアドレスが漏えい対象に 自治体のマイナンバーカード交付予約システムなどでメール送信停止|セキュリティニュースのセキュリティ対策Lab",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-11-03T12:26:37.404+09:00",
+      "publishedAt": "2026-11-02T23:38:12.000Z",
+      "lastMaterialUpdateAt": "2026-11-02T23:38:12.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "合同会社ロケットボーイズ",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWkJYWk9USWV6NlRVQkFRRnNKQzBxT21aamJvSDNyd1ZOSnJfclIxS2p6NW9lOXZ6dFI1X0hKQVZYdE9uS1BmV0pRMkpsRjd0SnhNUElwdmNlNjA2X0dXaTRldnhnSWlMak5LZjlLb0lNSG01SU1vN1c1N0tMOFBISC1JbnZOMjBiR3Q4Q2J0LUFjdllZTnB5djhKRUw4Z2Ry?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "合同会社ロケットボーイズ",
+          "publishedAt": "2026-11-02T23:38:12.000Z",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261102-gg8c89",
+      "category": "other"
+    },
+    {
+      "title": "第219回社会保障審議会医療保険部会（ペーパーレス）の開催について",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-03T12:26:37.404+09:00",
+      "publishedAt": "2026-11-02T14:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-11-02T14:00:00+09:00",
+      "summary": "社会保障審議会の医療保険部会が令和8年10月16日に開催され、持続可能な医療保険制度の構築に向けた改革案が議論されました。今回の部会では、高齢者の窓口負担見直しや金融所得の反映方針とともに、薬局や薬剤師の実務に直結するOTC医薬品との代替性が高い薬剤を保険給付から除外する「一部保険外療養」の具体策が…",
+      "dailyDiff": "2026-11-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "厚生労働省",
+          "url": "https://www.mhlw.go.jp/stf/newpage_77043.html",
+          "linkText": "報道記事を開く",
+          "publisher": "厚生労働省",
+          "publishedAt": "2026-11-02T14:00:00+09:00",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261102-vf7de1",
+      "category": "reference"
+    },
+    {
+      "title": "国外からオンライン申請する｜外務省",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-03T12:26:37.404+09:00",
+      "publishedAt": "2026-10-30T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-30T07:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Ministry of Foreign Affairs of Japan",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBNcU5uaEwwQ0w1ZWNsbVRWUWs3UjhzV2w4aHFIbFdPejFfV3lhZDlXQXMxMUVycjJPQXhuZkJFRk1XeTZUdEljMnhReG1tSE80XzdqNVdhMF9KaVlvdkk4b3NMUGU5SDFibmtiaHpn?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Ministry of Foreign Affairs of Japan",
+          "publishedAt": "2026-10-30T07:00:00.000Z",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-nfgbzw",
+      "category": "reference"
+    },
+    {
+      "title": "令和6年12月2日以降の保険証について",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-03T12:26:37.404+09:00",
+      "publishedAt": "2026-10-30T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-30T07:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "八戸市",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZXF0Q2J3LUFsTXY1aVlleldyWHgzSlRFZl9xQTZJYjBFM3NwS0RkTm9lUVl5dUc2UFVVVXFmWWd0djcyQ0xZeUUtUnU2eC05SXZkeE5IRkFMZ3htWDdVMUdtX09ZUy1zVzYwblVDbGp6WW1mRkJKUkFYM19OMUFBSUtuM3p5UWREbm1CNU9XVDRJc3Nhd2V5bnFlNA?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "八戸市",
+          "publishedAt": "2026-10-30T07:00:00.000Z",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261030-64riei",
+      "category": "reference"
+    },
+    {
+      "title": "マイナンバーカード（個人番号カード）について",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-03T12:26:37.404+09:00",
+      "publishedAt": "2026-10-19T07:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-10-19T07:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "長岡市",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQaHMwZFA2RlNJa0xJNnZDM0NmTEVEeFRmNHdGaUZiX3NfWmRmRXMwVEtQLU9ZWVFkOVBHc3JQRjFGMDR6SG5sVmhHc08xYTR0TThOYTA1bjhZU05qYTBCa1J0NlFReTMzT01keG5pdFZGVE50M0JPRzAzM0IxZy1hTQ?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "長岡市",
+          "publishedAt": "2026-10-19T07:00:00.000Z",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261019-90e68z",
+      "category": "reference"
+    },
+    {
+      "title": "病院の領収書に「見慣れない加算」が？令和8年6月から変わったマイナ関連の新ルールと窓口負担（LIMO）",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-03T12:26:37.404+09:00",
+      "publishedAt": "2026-11-02T13:10:54+09:00",
+      "lastMaterialUpdateAt": "2026-11-02T13:10:54+09:00",
+      "summary": "病院でもらう領収書や診療明細書に、見慣れない加算の名前が出てくる時期です。 厚生労働省の「令和8年度診療報酬改定の概要【医科全体版】」によると、令和8年（2026年）6月から、医療DX推進体制整備加算と医療情報取得加算は廃止され、電子的診療情報連携体制整備加算が新設されます。",
+      "dailyDiff": "2026-11-03の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UeXYxTTFHT3BvcXVDTC12aDJkNlYxdC1fQkFJeDU0d0JZcUtkZzhFLTlBSXNWNElROWloNElady1CSWJLd0JTUWNFR3FfLVB5Yk84bDl3WGY1NnZ2NTNJdTVNQng2RzBWa2ppenU3aGQwNGhJYUxlbi1CRVA0eTQ?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-11-02T13:10:54+09:00",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261102-lpxaae",
       "category": "commentary",
       "polarity": "neutral"
     }
@@ -5369,7 +5430,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-02T10:14:26.872+09:00",
+      "lastMaterialUpdateAt": "2026-11-03T12:26:37.404+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -5381,7 +5442,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体7件の追加報道を自動検知（2026-11-02）。",
+      "dailyDiff": "独立媒体8件の追加報道を自動検知（2026-11-03）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -5536,7 +5597,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-31T18:10:51+09:00",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5547,7 +5608,7 @@
           "linkText": "報道記事を開く",
           "publisher": "재경일보",
           "publishedAt": "2026-10-22T10:01:04+09:00",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5558,7 +5619,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-21T20:41:14+09:00",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5569,7 +5630,7 @@
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
           "publishedAt": "2026-10-29T07:00:00.000Z",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5580,7 +5641,7 @@
           "linkText": "報道記事を開く",
           "publisher": "三条市",
           "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5591,7 +5652,7 @@
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5602,7 +5663,18 @@
           "linkText": "報道記事を開く",
           "publisher": "伊東市",
           "publishedAt": "2026-10-16T07:00:00.000Z",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "active": true,
+          "note": "自動収集"
+        },
+        {
+          "type": "media",
+          "label": "山陽新聞",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE02amstZUVMZnVSdnpSSTZZQ0lqanloYUhBRmM1SUhwQ3ZabnpwZUJTbkVnQlctb0RBbTJZbTYxeW4yYUMteWdJWHVZRUMxdHlJaHZ3cWVQQVNkY1l2bDFVb0NNeWRUTTg?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "山陽新聞",
+          "publishedAt": "2026-11-02T09:12:55.000Z",
+          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -7209,6 +7281,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-11-02",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-11-02.json"
+    },
     {
       "date": "2026-11-01",
       "title": "日次レポート",
