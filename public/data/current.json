@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-11-03T12:26:37.404+09:00",
-  "reportDate": "2026-11-03",
+  "generatedAt": "2026-11-04T10:53:15.314+09:00",
+  "reportDate": "2026-11-04",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-11-03T12:26:37.404+09:00"
+    "lastSuccessfulUpdateAt": "2026-11-04T10:53:15.314+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -2151,284 +2151,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "マイナンバーカード・電子証明書の有効期限通知書について",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-21T09:22:52.000+09:00",
-      "publishedAt": "2026-10-01T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-01T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-21の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "所沢市",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQc3ZFNVpQYjI4d19VQk1BVS1CUm83OGl1VUQwZzBybGtrNGd0aXB3YVp2RDduMWN4MnBOZ3JiZkN0VUNrUlMzSHJMZ1NzTGlrZDEwa2pzdzdNYWNJWDNpeUdPUW5VREY0NzBIWXlydEVZNDB1ZkkxM2pYeUFKSkMyVEFBazhqdnJfam1ETFYyTFRyNUItQUtCNTFZTmFqT0k?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "所沢市",
-          "publishedAt": "2026-10-01T07:00:00.000Z",
-          "verifiedAt": "2026-10-21T09:22:52.000+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261001-fvkiim",
-      "category": "reference"
-    },
-    {
-      "title": "不正アクセス…「犯罪者というよりテロリスト」なぜ被害が広がる？どう身を守ればいい？専門家に聞く 秋田",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-21T09:22:52.000+09:00",
-      "publishedAt": "2026-10-20T08:47:32.000Z",
-      "lastMaterialUpdateAt": "2026-10-20T08:47:32.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-21の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Infoseek",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1SS2swdTMxOEUtZUZhckF0bWlJZFBSNjhsRzVPbVdIY1JQUHJlcHJ0Vm9oTWdEX3M0NXdBclVicHNKZ2JsS2Nwd1F3c2JKdWVHVUgtbVFaS1JLUDI5QlhqUkZpWlJYeVk3QzU2aHRNMGE5QdIBckFVX3lxTE1SS2swdTMxOEUtZUZhckF0bWlJZFBSNjhsRzVPbVdIY1JQUHJlcHJ0Vm9oTWdEX3M0NXdBclVicHNKZ2JsS2Nwd1F3c2JKdWVHVUgtbVFaS1JLUDI5QlhqUkZpWlJYeVk3QzU2aHRNMGE5QQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Infoseek",
-          "publishedAt": "2026-10-20T08:47:32.000Z",
-          "verifiedAt": "2026-10-21T09:22:52.000+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-53y1du",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "【2027年7月まで】協会けんぽ限度額認定証の期限。マイナ保険証なら入院時の事前手続なし（LIMO）",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-21T09:22:52.000+09:00",
-      "publishedAt": "2026-10-20T17:10:50+09:00",
-      "lastMaterialUpdateAt": "2026-10-20T17:10:50+09:00",
-      "summary": "マイナ保険証でも所得区分により「標準負担額減額認定証」の事前申請が必要な場合も 入院や手術で医療費が高額になりそうなとき、窓口での支払いを自己負担限度額までに抑える証明書が「限度額適用認定証」です。マイナ保険証を使う人は、この認定証を申請しなくても同じ扱いを受けられます。",
-      "dailyDiff": "2026-10-21の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1EaWwtZ1FCMWZ2VkpWaXI1ZW5ibHNfY1B5UXdybXQ0Q0VBcy0zRWVvby04b20yTTJnaU9qcnB6Mk9BWThXOWZQQnR5ZFY1Vk1ya19wNzVtZ1BWT0pUektHdm5WVU1jTmFURXlpYklpOXRqMHI3YjNMN1lkdDRLc28?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-20T17:10:50+09:00",
-          "verifiedAt": "2026-10-21T09:22:52.000+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-ie7qly",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "本日開始「Androidのマイナンバーカード」さっそく登録、試してわかったiPhoneとの違いと注意点",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-21T09:22:52.000+09:00",
-      "publishedAt": "2026-10-20T16:08:02+09:00",
-      "lastMaterialUpdateAt": "2026-10-20T16:08:02+09:00",
-      "summary": "「Androidのマイナンバーカードの設定をはじめる」が表示されたら「はじめる」をタップ。すると、物理マイナンバーカードの署名用パスワード（6～16桁の英数字）の入力が求められるので入力し「次へ」をタップ。すると、再度物理マイナンバーカードを読み取る ...",
-      "dailyDiff": "2026-10-21の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "ケータイ Watch",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5nQ0RLXzRZa0VWTXN3ZE1RemFUYUUxeENsV2pCZFNhNE9FT2IxS0ctM3J0Wl9TTmRMVHdDdk1vNGgwZDAyWmZNS21KWTVJbzNLSHFqZzI2TzRvNTY0OXMzdHBVb3J3eXBLaFE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "ケータイ Watch",
-          "publishedAt": "2026-10-20T16:08:02+09:00",
-          "verifiedAt": "2026-10-21T09:22:52.000+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-xhgtpa",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "「Androidのマイナンバーカード」サービス開始　概要とセットアップ方法を紹介",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-21T09:22:52.000+09:00",
-      "publishedAt": "2026-10-20T10:55:40+09:00",
-      "lastMaterialUpdateAt": "2026-10-20T10:55:40+09:00",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-21の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Infoseek",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBiTlJrZGl2X0JTb0F0d3hvR05ULWJYbll6LUJFeHpPVkx0WUZtQnJmWVNkcHJFeEJPN3U0V0lIOF8zQlZUMi15ZHp2X0xmY0h1NTRGTk85aUZhU0VQakk2RzgwMXptWGZRU25NUlRPbFrSAXZBVV95cUxOaEROazJGc1JYNkxaMV91OUV6U0g3aWwyVkZmaXY1VEg0blJiMDVtLTA4MUZCS2hsWHVDRlEwb2Iwc3FSdGJQT2tCVThWcmtWVWdtanJwM0RjeE9xaHJpc25PX2dIZ0NCNjJjSEpZTmFDeDQ3b2tR?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Infoseek",
-          "publishedAt": "2026-10-20T10:55:40+09:00",
-          "verifiedAt": "2026-10-21T09:22:52.000+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-l21coy",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "Android のマイナンバーカード、本日より提供開始。日常生活での本人確認をよりスマートに",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-21T09:22:52.000+09:00",
-      "publishedAt": "2026-10-20T10:45:28+09:00",
-      "lastMaterialUpdateAt": "2026-10-20T10:45:28+09:00",
-      "summary": "「Androidのマイナンバーカードの設定をはじめる」が表示されたら「はじめる」をタップ。すると、物理マイナンバーカードの署名用パスワード（6～16桁の英数字）の入力が求められるので入力し「次へ」をタップ。すると、再度物理マイナンバーカードを読み取る ...",
-      "dailyDiff": "2026-10-21の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "blog.google",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbGVHZVBkQ3d1UmhDcl8xdk44cGM5OFJ1Ml9EREdudmlEcTF6YVVDalg5d2hIWXdYYTBCSm4yWkpJVVlzYlptTm5xUmg1eW1ieWpBU2xuajIyMHRkQXpsRWR5cXBhZ1FEUDFraGJrbU5leVNMSzBfVUpkVWtBRnJPWFFvQjhmYUNjRnQ2ekl4RWJSdU9palE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "blog.google",
-          "publishedAt": "2026-10-20T10:45:28+09:00",
-          "verifiedAt": "2026-10-21T09:22:52.000+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-8ns5am",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "Androidのマイナンバーカードが10月20日から本人確認に対応。使えるのはPixel 6以降など一部機種",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-21T09:22:52.000+09:00",
-      "publishedAt": "2026-10-20T07:40:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-20T07:40:00+09:00",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-21の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "GAZLOG",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDZ1QyZy1MYUE4ZTBWeWNUd1dudGl6T0FrTnh0aGZPaGdNQTJoekFHZ2RRcC1tZFgtYjV3cHYwZERHMDVtYmw0cmRkTmZ4c1VQZlhKeG1vdEg0T0c3V1E?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "GAZLOG",
-          "publishedAt": "2026-10-20T07:40:00+09:00",
-          "verifiedAt": "2026-10-21T09:22:52.000+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-rm78pb",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "『Androidのマイナンバーカード』OPPOスマホは２機種のみ対応",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-21T09:22:52.000+09:00",
-      "publishedAt": "2026-10-20T04:50:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-20T04:50:00+09:00",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-21の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "OPPOラボ",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxdy1kb2hqZlBZOEw3bkc5UG5TR3AySmJpZjB6V2x4X3hJek5XMURuTmtEaXY2SkViSjNTYjZTU05wYjEyZVdXLTFjaUpPUVNrZnpZa18zTDNqWDlPd3BQdHRzeDRlLUU?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "OPPOラボ",
-          "publishedAt": "2026-10-20T04:50:00+09:00",
-          "verifiedAt": "2026-10-21T09:22:52.000+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-3djsu9",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナンバーカードの一体化による利便性についてどう思いますか？",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-21T09:22:52.000+09:00",
-      "publishedAt": "2026-10-20T00:08:57+09:00",
-      "lastMaterialUpdateAt": "2026-10-20T00:08:57+09:00",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-21の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE01aVVmZ0hYZXVhWXVaVUJUV09GemZwRUNaaldjZk0zaTB6V0RTTm13Nm9BN3BGTWs1OElhSDJzaUExb0F5WjdhOFcxdV8?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-20T00:08:57+09:00",
-          "verifiedAt": "2026-10-21T09:22:52.000+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-kwc4ej",
-      "category": "commentary",
-      "polarity": "neutral"
     },
     {
       "title": "マイナンバーカードの健康保険証としての利用",
@@ -4856,7 +4578,8 @@
         }
       ],
       "id": "news-auto-20261030-nfgbzw",
-      "category": "reference"
+      "category": "commentary",
+      "polarity": "neutral"
     },
     {
       "title": "令和6年12月2日以降の保険証について",
@@ -4946,6 +4669,68 @@
         }
       ],
       "id": "news-auto-20261102-lpxaae",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "マイナ保険証で歯医者代は上がる？下がる？令和8年6月の「新加算ルール」で変わるリアルな自己負担額（LIMO）",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-04T10:53:15.314+09:00",
+      "publishedAt": "2026-11-03T06:10:57+09:00",
+      "lastMaterialUpdateAt": "2026-11-03T06:10:57+09:00",
+      "summary": "歯医者でもらう領収書や診療明細書にも、令和8年6月から見慣れない加算の名前が出てきます。◆【画像】歯科の初診でマイナ保険証に関わる加算はどう変わる？厚生労働省の「令和8年度診療報酬改定の概要【歯科】」によると、令和8年（2026年）6月から、歯科の医療DX推進体制整備加算と医療情報取得加算は廃止され…",
+      "dailyDiff": "2026-11-04の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ySDhkZGhaTFh6Z0NaM3pPZl9VZVd0Z3R5SnFodm5LQlF5STk1Y2xiS3RhUXdOSkdPeU1rbW42RzcyY0s3dEJzS1hReUJlMW53Rl9qU0c1azdMaWFsR3FrVWM4c1U3WHVJVHliMW01MW42Mlk1Ujh5RDlpMEhuSTg?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-11-03T06:10:57+09:00",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261103-jd60f",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "【2026年6月】電子的歯科診療情報連携体制整備加算を改定、歯科の初診の加算1は3割負担で「27円」。施設基準はマイナ保険証の利用率30%以上 「また値上げ？」と思いきや実は安くなる。令和8年6月から変わる歯医者の領収書と“見慣れない新加算”の正体 | 概要 | LIMO |",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-04T10:53:15.314+09:00",
+      "publishedAt": "2026-11-03T06:09:00+09:00",
+      "lastMaterialUpdateAt": "2026-11-03T06:09:00+09:00",
+      "summary": "厚生労働省の「令和8年度診療報酬改定の概要【歯科】」によると、令和8年（2026年）6月から、歯科の医療DX推進体制整備加算と医療情報取得加算は廃止され、電子的歯科診療情報連携体制整備加算が新設されます。",
+      "dailyDiff": "2026-11-04の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "LIMO | くらしとお金の経済メディア",
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9WUmtZX1BuaUZELVdXU3ZoVEhhYTNYOEM1UFBScHl6OV9TR0FZZGZaVWxkSzI2S0h6ZFN4UldEY2ZNUnN0TmlvMXJKX3k?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "LIMO | くらしとお金の経済メディア",
+          "publishedAt": "2026-11-03T06:09:00+09:00",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261103-ohu4ub",
       "category": "commentary",
       "polarity": "neutral"
     }
@@ -5430,7 +5215,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-03T12:26:37.404+09:00",
+      "lastMaterialUpdateAt": "2026-11-04T10:53:15.314+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -5442,7 +5227,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体8件の追加報道を自動検知（2026-11-03）。",
+      "dailyDiff": "独立媒体8件の追加報道を自動検知（2026-11-04）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -5597,7 +5382,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-31T18:10:51+09:00",
-          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5608,7 +5393,7 @@
           "linkText": "報道記事を開く",
           "publisher": "재경일보",
           "publishedAt": "2026-10-22T10:01:04+09:00",
-          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5619,7 +5404,18 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-21T20:41:14+09:00",
-          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
+          "active": true,
+          "note": "自動収集"
+        },
+        {
+          "type": "media",
+          "label": "新潟市",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRk5IWXpjZHJqN24zcTh4SFZ0dmxPVk01bE9LN1VSOG8xX1kwcl96WmtMLTJLeEFWWWE0YU50Q0lNTTB4SnNRRkQwLXV1VVBuMmI3ZGY1N1Q4NERjVkxiRUlSMENxeS1CbkZoOTNEWHRpaG1NZVlnaFp5RDZ3ZmZpc0lzRkJNTkU?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "新潟市",
+          "publishedAt": "2026-10-30T07:00:00.000Z",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5630,7 +5426,7 @@
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
           "publishedAt": "2026-10-29T07:00:00.000Z",
-          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5641,7 +5437,7 @@
           "linkText": "報道記事を開く",
           "publisher": "三条市",
           "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5652,29 +5448,18 @@
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
           "active": true,
           "note": "自動収集"
         },
         {
           "type": "media",
-          "label": "伊東市",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObEZxT3dhbmpWZ1BTd1F3aTl5eXFkS0tCMTdBbWMtYmxXQlhVSDhyaWFGUDZ3QmhIa1h0MDQxMHJBeXozUjZ4OGFZWTVVMnEzeFZDeTc5ckJHMkFvTnJyYVhsT3RsUGNtUW5aNE1lSGkyLWFJbkRybjZyNEx5LU1qb0hmNWsxczEwR3Jfb0doRnM3Q185Mk1GelhpMlVhOG9t?oc=5",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNjNwYVBrTFlqXzYzVEZwWFJSQ2JUVG8tbVl4bnFJS3ZXejdURFJMSUNUTTk1RlhuSVFKYW9yY1YzRWowUnlOOE5SVmZ6emhkLXdORHhDR3JzSDdwZXhuRElzM2daZXJLLWZyRHE2VEVWZWFMSXpnQnVFVHJncHVTUFgyQ1NJNDRY?oc=5",
           "linkText": "報道記事を開く",
-          "publisher": "伊東市",
-          "publishedAt": "2026-10-16T07:00:00.000Z",
-          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "山陽新聞",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE02amstZUVMZnVSdnpSSTZZQ0lqanloYUhBRmM1SUhwQ3ZabnpwZUJTbkVnQlctb0RBbTJZbTYxeW4yYUMteWdJWHVZRUMxdHlJaHZ3cWVQQVNkY1l2bDFVb0NNeWRUTTg?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "山陽新聞",
-          "publishedAt": "2026-11-02T09:12:55.000Z",
-          "verifiedAt": "2026-11-03T12:26:37.404+09:00",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-10-31T09:10:51.000Z",
+          "verifiedAt": "2026-11-04T10:53:15.314+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -7281,6 +7066,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-11-03",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-11-03.json"
+    },
     {
       "date": "2026-11-02",
       "title": "日次レポート",
