@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-11-05T10:59:25.391+09:00",
-  "reportDate": "2026-11-05",
+  "generatedAt": "2026-11-06T10:59:09.973+09:00",
+  "reportDate": "2026-11-06",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-11-05T10:59:25.391+09:00"
+    "lastSuccessfulUpdateAt": "2026-11-06T10:59:09.973+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -2172,252 +2172,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "電子証明書の更新について",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-23T09:23:33.468+09:00",
-      "publishedAt": "2026-10-21T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-21T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-23の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "三条市",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWV81MzR6WEwxNnljNnNOb1hFOVd4OTFqZWVNYi0tOF8yYTVRSFhwdEtXUnlaSkVIR0Nmd0Q4ckR0ckdtTWJpRDkxRDhSWjctT0xUSHIySEdoVHp3VUduN0o4TE54TTM2blhrLUlBbGNEMlVpeG9FZ1lyZTlwc3drRkdYd2Y3UG5zbklWcS0wc1hNLUVBd0U3b2JwdTRCODg2?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "三条市",
-          "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-10-23T09:23:33.468+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261021-s6vyhw",
-      "category": "reference"
-    },
-    {
-      "title": "資格確認書・資格情報のお知らせ",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-23T09:23:33.468+09:00",
-      "publishedAt": "2026-10-19T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-19T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-23の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "新潟市",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORk9peTVkSmtTc1Fjb3gtN2ZfVmNQOVJzN0p5dTZkWEhCX29BdTZHR2cxR3dzNVl3bmxkTTJmZkVuczhaWkFVNjhQeTRrWnBRLWEzRTlTLXhCcGlKSUFibFNjQVZhQjdBSjNzNU9mcl9MWFFmRVZOd0JTcjRMcER5UzRMNA?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "新潟市",
-          "publishedAt": "2026-10-19T07:00:00.000Z",
-          "verifiedAt": "2026-10-23T09:23:33.468+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261019-lk36k8",
-      "category": "reference"
-    },
-    {
-      "title": "医療費控除はスマホとマイナンバーカードだけでも申告できるが、マイナポータル連携で自動入力されるのは保険診療分だけ。通知にない8万円を入れ忘れると、控除額は17万円から9万円に小さくなる試算 国税庁とデジタル庁の案内で確認すると、医療費通知情報は例年2月9日",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-23T09:23:33.468+09:00",
-      "publishedAt": "2026-10-22T21:09:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-22T21:09:00+09:00",
-      "summary": "まずは、会社員でも確定申告をした方がいい主なケースを確認しましょう。 1．医療費が多くかかった(医療費控除) 2025年1月1日～12月31日までの期間に支払った医療費が多かった場合に、医療費控除が受けられます。 ＜控除額＞ 支払った医療費－保険金等の ...",
-      "dailyDiff": "2026-10-23の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "LIMO | くらしとお金の経済メディア",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5aWG9iaERaMWNWWEt3X3haQUhxdXNzWUZTeHk2cmlmRHNtdFlRMGJaRVQ2YmM4Z3h3dHR1eW5zQXlmRDQyWTFhaXhyQjU?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "LIMO | くらしとお金の経済メディア",
-          "publishedAt": "2026-10-22T21:09:00+09:00",
-          "verifiedAt": "2026-10-23T09:23:33.468+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261022-8qvmun",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "【徳島市】電子証明書更新専用窓口（マイナンバーカード更新コーナー）開設",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-23T09:23:33.468+09:00",
-      "publishedAt": "2026-10-22T08:00:01.000Z",
-      "lastMaterialUpdateAt": "2026-10-22T08:00:01.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-23の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "PR TIMES",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5iQlVxMjhmTmdSb1ItYVpweEtaQ09BTFp1eDNTb0R0eDdQRzFoTHNncVlyTnpxODlJem1tWVl1UUU5YkRjeXVQRG42VzlwYnJnVW1YRWdGeVBiMF9ObDdSR0Q0dF9MSWE4MUE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "PR TIMES",
-          "publishedAt": "2026-10-22T08:00:01.000Z",
-          "verifiedAt": "2026-10-23T09:23:33.468+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261022-xhpb0e",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナカード総合サイトを一時停止　「ＰＨＰ」問題で―情報システム機構",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-23T09:23:33.468+09:00",
-      "publishedAt": "2026-10-22T11:10:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-22T11:10:00+09:00",
-      "summary": "マイナンバーカードの発行業務を担う地方公共団体情報システム機構（Ｊ―ＬＩＳ）は２２日、マイナカードの申請方法などを紹介する総合サイトを一時停止していると発表した。",
-      "dailyDiff": "2026-10-23の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "時事通信",
-          "url": "https://www.jiji.com/jc/article?k=2026102200421&g=pol&m=rss",
-          "linkText": "報道記事を開く",
-          "publisher": "時事通信",
-          "publishedAt": "2026-10-22T11:10:00+09:00",
-          "verifiedAt": "2026-10-23T09:23:33.468+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261022-cix4gq",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナンバーカードの電子証明書更新、期限切れの影響と自治体窓口での必須手続き : 国会 : 財経日報",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-23T09:23:33.468+09:00",
-      "publishedAt": "2026-10-22T10:01:04+09:00",
-      "lastMaterialUpdateAt": "2026-10-22T10:01:04+09:00",
-      "summary": "マイナンバーカードに搭載されている電子証明書はカード本体よりも有効期限が短く、失効するとe-Taxやコンビニ交付が利用できなくなる。更新はオンラインでは完結せず市区町村窓口での手続きが必要となるため、猶予措置や更新手順の把握が重要だ。",
-      "dailyDiff": "2026-10-23の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "재경일보",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBKSEhULVBOY0N0Z2FtQjJlWmo0eUxudGZLZGk5Qk9WQjc5SUFxNl9EODBnSDVUNGxNWWs4Wi1pdWRlczc1TUV0bkt4Sl9HYW4xdzQ1di13QkJrMzM1S0JDZjlyVQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "재경일보",
-          "publishedAt": "2026-10-22T10:01:04+09:00",
-          "verifiedAt": "2026-10-23T09:23:33.468+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261022-cj1l9l",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "10月20日開始「Androidのマイナンバーカード」利用前に知りたい対応機種の条件とiPhoneとの違い",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-23T09:23:33.468+09:00",
-      "publishedAt": "2026-10-20T11:00:02+09:00",
-      "lastMaterialUpdateAt": "2026-10-20T11:00:02+09:00",
-      "summary": "Android版マイナンバーカードが10月20日開始。対応機種の条件やStrongBoxの注意点、iPhoneとの違いを分かりやすく解説します。",
-      "dailyDiff": "2026-10-23の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5ja2NFT3BEWW14Zk9JUVNaR1V5Yk83aFRqcTEyZ3JhSlc2LUI3ZmVFZ1FXMDJlZ1JiODUyUUlKVkl1NzZHbEhYWHRPOTBlVXB6cFFSVkhmRUVDcDNUZkpTaURRUGlQS3MxbWx1Qk1KQXdSeUtJaDhSMGsxTldndGs?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-20T11:00:02+09:00",
-          "verifiedAt": "2026-10-23T09:23:33.468+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-l9rwjz",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナンバーカードの申請・更新ガイド｜デジタル庁がAndroid版を開始、e-Taxに必要な電子証明書の期限も確認",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-23T09:23:33.468+09:00",
-      "publishedAt": "2026-10-19T21:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-19T21:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-23の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "セレクトラ",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBLekRGZmg0M29IOVNZcEdfTVNILXRYeTJESlYwZUJ5Skk2ZWZ3SlZVSm1PWFVkQXhYSkxuZnk2SmlmZ29TMjBmSVRNdkxDX3kzX1FoeGh2SC1BWU90V25GQ09rOG9XMldZRXc?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "セレクトラ",
-          "publishedAt": "2026-10-19T21:00:00.000Z",
-          "verifiedAt": "2026-10-23T09:23:33.468+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261019-n1jtzf",
-      "category": "commentary",
-      "polarity": "neutral"
     },
     {
       "title": "旅券（パスポート）の申請受付・交付",
@@ -4755,6 +4509,160 @@
       "id": "news-auto-20261103-3ul1ty",
       "category": "commentary",
       "polarity": "neutral"
+    },
+    {
+      "title": "メール配信サービス会社「アララ」への不正アクセス問題 佐世保市と諫早市でも個人情報漏えいの可能性",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-11-06T10:59:09.973+09:00",
+      "publishedAt": "2026-11-05T02:11:00.000Z",
+      "lastMaterialUpdateAt": "2026-11-05T02:11:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-06の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "KTNテレビ長崎",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9NVjVmTHpjU2ZxaEdPc3VRTDYybEN1THNscHhTUUNBTmhWX3hSMVRsdjU3a3NpOHltOXZuZWJXcGZtSUNkUDUzSDh4N0dBdHNiMDdCTktqTVJKT1ZsdWpqQWFB?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "KTNテレビ長崎",
+          "publishedAt": "2026-11-05T02:11:00.000Z",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261105-wvq86x",
+      "category": "other"
+    },
+    {
+      "title": "マイナンバーカードの機能のスマートフォン搭載に関する検討会（第8回）の会議資料等を掲載しました",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-11-06T10:59:09.973+09:00",
+      "publishedAt": "2026-11-05T15:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-11-05T15:00:00+09:00",
+      "summary": "マイナンバーカードは9月末時点で1億472万枚が発行され、保有率は84.5％に達した。一方、カードの機能をスマートフォンに入れて使っている人は979万人にとどまる。10人に9人は、まだ実物のカードだけを持っている計算だ。 【この記事の他の画像を見る】 ...",
+      "dailyDiff": "2026-11-06の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/councils/smartphone-mynumbercard/963f6b16-1056-4bcf-b22f-dbc11ceaf322",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-11-05T15:00:00+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261105-eaziqz",
+      "category": "reference"
+    },
+    {
+      "title": "サイバーリンクスとRAUMSOFT、AI顔認証を活用した本人確認サービスの提供に向け合弁会社を設立",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-06T10:59:09.973+09:00",
+      "publishedAt": "2026-11-05T10:44:52+09:00",
+      "lastMaterialUpdateAt": "2026-11-05T10:44:52+09:00",
+      "summary": "当社は2026年4月、韓国大手ソフトウェア企業HANCOM ...",
+      "dailyDiff": "2026-11-06の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "PR TIMES",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE8tS2N0ek5INUNjZE1ZTW1rRng0TzhLUTZOTzd3c3VjZnRXSThlVFpSMkhLaS1LSnNIY2NPMnhQdTNGdy1uN0pBUkNnNTNCQnJvcGllcnE5cWdOX1R4TWVpamN3UkdHS1dWTFE?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "PR TIMES",
+          "publishedAt": "2026-11-05T10:44:52+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261105-lus3td",
+      "category": "commentary",
+      "polarity": "positive"
+    },
+    {
+      "title": "修学旅行に「マイナ保険証」を持たせるのは不安？厚労省が通知した“原本なし”でも3割負担で受診できる3つの代用書類（LIMO）",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-06T10:59:09.973+09:00",
+      "publishedAt": "2026-11-05T10:10:52+09:00",
+      "lastMaterialUpdateAt": "2026-11-05T10:10:52+09:00",
+      "summary": "修学旅行や部活の遠征、保育園での急な発熱。これまでは、「保険証のコピー」を子どもに持たせたり、園に預けたりする場面が、一部で見られました。◆【一覧表】子どもに持たせる書類3つの一覧と、連れて行く人別の窓口で出すものその保険証は、令和6年（2024年）12月2日以降、新しく発行されなくなりました。",
+      "dailyDiff": "2026-11-06の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBEeDlmNGRUeElobjJlNXFtbmFCNzFzNUxTRlJOUHQwbUkwOFVqejNJRktDZzdMSUp6U19XaWpKbkx3UXJtd3lqQ3BpTHVTQWF3S2NPUTV5NUk5VllnSkwwZE1FT3AyeUdIRGhLWUVhbFJKWGNrUVZsbmpJcWwxTXc?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "Yahoo!ニュース",
+          "publishedAt": "2026-11-05T10:10:52+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261105-yvlbil",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "エメラダが提供する金融機関向けBaaSにオンライン本人確認サービス「LIQUID eKYC」を提供",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-06T10:59:09.973+09:00",
+      "publishedAt": "2026-11-05T10:04:42+09:00",
+      "lastMaterialUpdateAt": "2026-11-05T10:04:42+09:00",
+      "summary": "ELEMENTSグループの株式会社Liquidは、エメラダ株式会社が提供する金融機関向けBaaS「エメラダ・スマートバンク・アシスタント」の立会人型電子契約サービスに対し、オンライン本人確認サービス「LIQUID eKYC」を提供します。",
+      "dailyDiff": "2026-11-06の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "株式会社Liquid",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9RSkk0VW5VaF9Ya3V5QzM1YTlneUdJaHdGSnMyRjlBcGNjc3gyaWRNWjdSTUJfOUszVEROZkg0N3FaUUY2cmpocjljd2lBMW1Ub2R0OFpFMTFHS3Zx?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "株式会社Liquid",
+          "publishedAt": "2026-11-05T10:04:42+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261105-1ywy8f",
+      "category": "commentary",
+      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -5247,7 +5155,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-05T10:59:25.391+09:00",
+      "lastMaterialUpdateAt": "2026-11-06T10:59:09.973+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -5259,7 +5167,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体8件の追加報道を自動検知（2026-11-05）。",
+      "dailyDiff": "独立媒体6件の追加報道を自動検知（2026-11-06）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -5414,29 +5322,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-31T18:10:51+09:00",
-          "verifiedAt": "2026-11-05T10:59:25.391+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "재경일보",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBKSEhULVBOY0N0Z2FtQjJlWmo0eUxudGZLZGk5Qk9WQjc5SUFxNl9EODBnSDVUNGxNWWs4Wi1pdWRlczc1TUV0bkt4Sl9HYW4xdzQ1di13QkJrMzM1S0JDZjlyVQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "재경일보",
-          "publishedAt": "2026-10-22T10:01:04+09:00",
-          "verifiedAt": "2026-11-05T10:59:25.391+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9zeHZRWjZCMWJIMTk5cjNCbDg5U183ODB3VmhWbEtYekdrUzZ5Q3F2Z2hIMlBXYnFFNURjd09YdkI3OS1QRlhFVV95REtnb2lsZ2hJbWl0Ny1ja3pVN3Q0WFQ1dVUxS2haaWpPYUtFc0wyV2FfU0JmZktMcVgxZkk?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-21T20:41:14+09:00",
-          "verifiedAt": "2026-11-05T10:59:25.391+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5447,7 +5333,7 @@
           "linkText": "報道記事を開く",
           "publisher": "新潟市",
           "publishedAt": "2026-10-30T07:00:00.000Z",
-          "verifiedAt": "2026-11-05T10:59:25.391+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5458,7 +5344,7 @@
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
           "publishedAt": "2026-10-29T07:00:00.000Z",
-          "verifiedAt": "2026-11-05T10:59:25.391+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5469,7 +5355,7 @@
           "linkText": "報道記事を開く",
           "publisher": "三条市",
           "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-11-05T10:59:25.391+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5480,7 +5366,7 @@
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-11-05T10:59:25.391+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5491,7 +5377,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-31T09:10:51.000Z",
-          "verifiedAt": "2026-11-05T10:59:25.391+09:00",
+          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -7203,6 +7089,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-11-05",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-11-05.json"
+    },
     {
       "date": "2026-11-04",
       "title": "日次レポート",
