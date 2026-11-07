@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-11-06T10:59:09.973+09:00",
-  "reportDate": "2026-11-06",
+  "generatedAt": "2026-11-07T10:35:44.958+09:00",
+  "reportDate": "2026-11-07",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-11-06T10:59:09.973+09:00"
+    "lastSuccessfulUpdateAt": "2026-11-07T10:35:44.958+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -2172,130 +2172,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "旅券（パスポート）の申請受付・交付",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-24T09:15:13.574+09:00",
-      "publishedAt": "2026-10-19T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-19T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-24の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "広島市公式ウェブサイト",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNT25jUlhLUDZzclU3VlNjbFBISTlrMGNmSmVZazBIbDVPbVpaTkQ4RkhMaXg4TVFMUE91NElGcC10bXRpSkF4b3lvcHZzaTd2ZHV5dWwtTW1OcFhzMXlGUWtxT3VseXVJazdhcUg3N3dWZmRTcnNYOXd5RnFrU3RTaA?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "広島市公式ウェブサイト",
-          "publishedAt": "2026-10-19T07:00:00.000Z",
-          "verifiedAt": "2026-10-24T09:15:13.574+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261019-vh0wvx",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナンバーカード・電子証明書の更新について",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-24T09:15:13.574+09:00",
-      "publishedAt": "2026-10-06T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-06T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-24の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "沼津市ホームページ",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE80TldpQVJvUkJuVEVMNGRsTDFtY3RoRldsQUtVcUFIbFpIZTBCN1p6NjBHU09RUFlIbVBabGZneFVQQmJJUEpLTmNsNktOZldERXl6dWZnUGd3MGR1MWtPb3ZmdHlkX3ZfbV9tdWhnTVVvcTh3X0E?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "沼津市ホームページ",
-          "publishedAt": "2026-10-06T07:00:00.000Z",
-          "verifiedAt": "2026-10-24T09:15:13.574+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261006-ksjcvq",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "teppay、本人確認はなぜマイナンバーカードだけ？ JR東に理由を聞いた",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-24T09:15:13.574+09:00",
-      "publishedAt": "2026-10-23T15:56:23+09:00",
-      "lastMaterialUpdateAt": "2026-10-23T15:56:23+09:00",
-      "summary": "JR東日本が10月20日に始めたコード決済サービス「teppay」（テッペイ）では、本人確認（eKYC）に使える書類をマイナンバーカードのみとしており、運転免許証やパスポート、健康保険証などは使えない。なぜマイナンバーカードに限定したのか。ITmed ...",
-      "dailyDiff": "2026-10-24の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "ITmedia",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1FRFF3SXJiQ2JTY1ZubXVvMHBteXd0YkFicVhRck5ueDlWMjlsUzBFY2NMS0pGNDhueXdPSGZVclUxdEVNdEs0OVd3YnE3RngwbDBrNkZLQXhlU1FtTE41cDFIeWlXSS1Wdmc?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "ITmedia",
-          "publishedAt": "2026-10-23T15:56:23+09:00",
-          "verifiedAt": "2026-10-24T09:15:13.574+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261023-y2aa7t",
-      "category": "commentary",
-      "polarity": "negative"
-    },
-    {
-      "title": "マイナカードの機能拡充",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-24T09:15:13.574+09:00",
-      "publishedAt": "2026-10-20T04:41:59.000Z",
-      "lastMaterialUpdateAt": "2026-10-20T04:41:59.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-24の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "京都新聞デジタル",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBxY2ZXZDJPVkNPa1lQamZOOHpfV2ZNQUhhUTFjQWY1RzJvZWt2STV5c2lBaG95eE9STS1DRllmM3VVTHptZVpfTmV5TVRRWnNXa1JTX0dTc1g4TVk?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "京都新聞デジタル",
-          "publishedAt": "2026-10-20T04:41:59.000Z",
-          "verifiedAt": "2026-10-24T09:15:13.574+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261020-jjtoz4",
-      "category": "commentary",
-      "polarity": "neutral"
     },
     {
       "title": "マイナンバーカード専用窓口の開設と来庁時事前予約制度のお知らせ",
@@ -4663,6 +4539,252 @@
       "id": "news-auto-20261105-1ywy8f",
       "category": "commentary",
       "polarity": "neutral"
+    },
+    {
+      "title": "仙台市、マイナンバーカード予約者のメールアドレス1万2,211件に漏えいの可能性 TKC経由でアララへのサイバー攻撃で、通知メール停止|セキュリティニュースのセキュリティ対策Lab",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-11-07T10:35:44.958+09:00",
+      "publishedAt": "2026-11-07T00:40:43.000Z",
+      "lastMaterialUpdateAt": "2026-11-07T00:40:43.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-07の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "合同会社ロケットボーイズ",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNSTY1MWw3YXlmYVgycktmeDdFM0hzcmg0UXRZeHFMOVV5ZURHRHpGc1pMbEtmRnZUZXV0djJMQ1N0blhoTDM3T3laU3VGZVRwTnBkandjVXlDUzFzWXJSTWE3RG11bXpZZFBOUVRwaGE1SkxmUy1EdHBmcXhnSGRwVU5YbS03bm9QV2tOX0lsdlBkdGdQUWZpaWJWWmNZdVpObnpPQk52X3lwbW9wOEdzOA?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "合同会社ロケットボーイズ",
+          "publishedAt": "2026-11-07T00:40:43.000Z",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261107-a6dlj8",
+      "category": "other"
+    },
+    {
+      "title": "意見招請：令和9年度マイナポータル自治体お知らせ送信システムの運用・保守及び追加開発業務を掲載しました",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-07T10:35:44.958+09:00",
+      "publishedAt": "2026-11-06T15:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-11-06T15:00:00+09:00",
+      "summary": "デジタル庁はマイナポータルのお知らせ機能を拡充する。自治体が給付制度の案内や手続き期限の通知などを幅広く配信できるようにする。デジタル庁の承認を得た民間アプリでも、住民が行政からの通知を受け取れるようにする。これによりマイナ ...",
+      "dailyDiff": "2026-11-07の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/procurement",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-11-06T15:00:00+09:00",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261106-6otwb5",
+      "category": "reference"
+    },
+    {
+      "title": "マイナンバーカード・インフォ（自治体向け情報）Vol.132を掲載しました",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-07T10:35:44.958+09:00",
+      "publishedAt": "2026-11-06T06:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-11-06T06:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-07の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "デジタル庁",
+          "url": "https://www.digital.go.jp/policies/mynumber/local-government/info",
+          "linkText": "報道記事を開く",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-11-06T06:00:00.000Z",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261106-y1jxao",
+      "category": "reference"
+    },
+    {
+      "title": "選挙でのマイナンバー提示について",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-07T10:35:44.958+09:00",
+      "publishedAt": "2026-11-06T20:11:43+09:00",
+      "lastMaterialUpdateAt": "2026-11-06T20:11:43+09:00",
+      "summary": "むしろ身分証がなくても大丈夫。氏名・住所・生年月日を伝えれば、係の人が選挙人名簿と照らし合わせて、投票用紙を渡してくれるそうです。",
+      "dailyDiff": "2026-11-07の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "選挙ドットコム",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFByck92d04zajJGZzdRUS1WeU1NYWlsLVZTeVN2M0dzbWpCSXJPejlGM1FKYkt3SHJIYnVtVXlMcHpUbnp3dWhyTTZ6LUp1endnWTFtb3ZUOE5sNlBvY0dz?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "選挙ドットコム",
+          "publishedAt": "2026-11-06T20:11:43+09:00",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261106-irkr64",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "【WEBセミナー開催のお知らせ】 電子カルテ入力の限界をどう突破する？ ～AI×人×仕組みで実現する、新しいクリニック運営の実践論～",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-07T10:35:44.958+09:00",
+      "publishedAt": "2026-11-06T16:31:03+09:00",
+      "lastMaterialUpdateAt": "2026-11-06T16:31:03+09:00",
+      "summary": "［株式会社ソラスト］株式会社ソラストは、クリニックの院長、事務長の方を対象としたWEBセミナーを開催いたします。　クリニックにおける電子カルテの入力作業は、診療後の残業増加やピーク時の診療遅延を招く大きな要因となっています。",
+      "dailyDiff": "2026-11-07の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "PR TIMES",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1MUHlHc0dBNUhWc1k3Z1JFbVZRblpTMEdqT09meVN6LUN6TUVISGZWSFdOZ0piVDlFUjhvaXdpaWNGMW9NRTUtaUE5enBUNjRCNzhEVjRPbk1HRFVxT1FvMm55Q21SYy1mYWc?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "PR TIMES",
+          "publishedAt": "2026-11-06T16:31:03+09:00",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261106-v071m0",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "《医療機関の倒産が過去最多》医師の高齢化と後継者不足に追い打ち…マイナ保険証が招く地域医療の危機《経済のプロ荻原博子が徹底解説》",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-07T10:35:44.958+09:00",
+      "publishedAt": "2026-11-06T11:00:10+09:00",
+      "lastMaterialUpdateAt": "2026-11-06T11:00:10+09:00",
+      "summary": "2026年上半期の医療機関の倒産は39件となり、過去最多のペースで推移した。物価高や人件費の高騰による収益力悪化や経営者の高齢化・後継者難を背景として、事業継続を断念する事業者が相次いだ。年間では初めて80件に達する可能性がある。 ・倒産件数 ...",
+      "dailyDiff": "2026-11-07の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "au Webポータル",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBGQXhudF9TTmdEMTlpNkVfMXpfdEZaaUVkOG05QzRLYkFhZ3dMMlVYQjVRT2VDdHZSS3Q4a2VZM2oyRGcyUDY1QlBDeGx6UXpTdDFHdC0yT2tBRlJjbmVEVDluQWNHU2hJOTBLQzRB?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "au Webポータル",
+          "publishedAt": "2026-11-06T11:00:10+09:00",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261106-dcuajv",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "《医療機関の倒産が過去最多》医師の高齢化と後継者不足に追い打ち…マイナ保険証が招く地域医療の危機《経済のプロ荻原博子が徹底解説》",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-07T10:35:44.958+09:00",
+      "publishedAt": "2026-11-06T11:00:10+09:00",
+      "lastMaterialUpdateAt": "2026-11-06T11:00:10+09:00",
+      "summary": "「お医者さんは儲かる」は昔の話？赤字病院が増え、看護師も辞めていく ある都市の居酒屋で夕食をとっていたときのことです。同じカウンターに座っていた女性が、店の主人に深刻な相談をしていました。 女性は民間病院に勤務する看護師でした。",
+      "dailyDiff": "2026-11-07の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "ライブドアニュース",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE92d3dia0tEZl9KV3B4QmY0NmV0Q0pxa3NUcVVGbnFaLUNMSWF4NDVQSjBCWGJTZTg2cFRoMVlzc01hOFU3QjRkS2NRTzB1all0aTM2UGJMN1Z0OTBPeE5j?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "ライブドアニュース",
+          "publishedAt": "2026-11-06T11:00:10+09:00",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261106-68lvi",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "NTT西日本の電話加入権にオンライン本人確認サービス「LIQUID eKYC（リキッドイーケーワイシー）」を提供",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-07T10:35:44.958+09:00",
+      "publishedAt": "2026-11-06T10:05:49+09:00",
+      "lastMaterialUpdateAt": "2026-11-06T10:05:49+09:00",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-07の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "株式会社Liquid",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBKeDBtem1EOFUzX2dCRTlSV3hIeThjeG1GU1lSUHpqQ3JRR3ZoZGRneTdOcGRPcGxuNm4wcWZKWDdpM194XzZWZkl6S3dwemgzcmdqOUtGTXdRNUNw?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "株式会社Liquid",
+          "publishedAt": "2026-11-06T10:05:49+09:00",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261106-6jro5",
+      "category": "commentary",
+      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -5155,7 +5277,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-06T10:59:09.973+09:00",
+      "lastMaterialUpdateAt": "2026-11-07T10:35:44.958+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -5167,7 +5289,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体6件の追加報道を自動検知（2026-11-06）。",
+      "dailyDiff": "独立媒体4件の追加報道を自動検知（2026-11-07）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -5322,18 +5444,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-31T18:10:51+09:00",
-          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "新潟市",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRk5IWXpjZHJqN24zcTh4SFZ0dmxPVk01bE9LN1VSOG8xX1kwcl96WmtMLTJLeEFWWWE0YU50Q0lNTTB4SnNRRkQwLXV1VVBuMmI3ZGY1N1Q4NERjVkxiRUlSMENxeS1CbkZoOTNEWHRpaG1NZVlnaFp5RDZ3ZmZpc0lzRkJNTkU?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "新潟市",
-          "publishedAt": "2026-10-30T07:00:00.000Z",
-          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5344,18 +5455,7 @@
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
           "publishedAt": "2026-10-29T07:00:00.000Z",
-          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
-          "active": true,
-          "note": "自動収集"
-        },
-        {
-          "type": "media",
-          "label": "三条市",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWV81MzR6WEwxNnljNnNOb1hFOVd4OTFqZWVNYi0tOF8yYTVRSFhwdEtXUnlaSkVIR0Nmd0Q4ckR0ckdtTWJpRDkxRDhSWjctT0xUSHIySEdoVHp3VUduN0o4TE54TTM2blhrLUlBbGNEMlVpeG9FZ1lyZTlwc3drRkdYd2Y3UG5zbklWcS0wc1hNLUVBd0U3b2JwdTRCODg2?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "三条市",
-          "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5366,18 +5466,18 @@
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
           "active": true,
           "note": "自動収集"
         },
         {
           "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNjNwYVBrTFlqXzYzVEZwWFJSQ2JUVG8tbVl4bnFJS3ZXejdURFJMSUNUTTk1RlhuSVFKYW9yY1YzRWowUnlOOE5SVmZ6emhkLXdORHhDR3JzSDdwZXhuRElzM2daZXJLLWZyRHE2VEVWZWFMSXpnQnVFVHJncHVTUFgyQ1NJNDRY?oc=5",
+          "label": "三条市",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWV81MzR6WEwxNnljNnNOb1hFOVd4OTFqZWVNYi0tOF8yYTVRSFhwdEtXUnlaSkVIR0Nmd0Q4ckR0ckdtTWJpRDkxRDhSWjctT0xUSHIySEdoVHp3VUduN0o4TE54TTM2blhrLUlBbGNEMlVpeG9FZ1lyZTlwc3drRkdYd2Y3UG5zbklWcS0wc1hNLUVBd0U3b2JwdTRCODg2?oc=5",
           "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-31T09:10:51.000Z",
-          "verifiedAt": "2026-11-06T10:59:09.973+09:00",
+          "publisher": "三条市",
+          "publishedAt": "2026-10-21T07:00:00.000Z",
+          "verifiedAt": "2026-11-07T10:35:44.958+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -7089,6 +7189,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-11-06",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-11-06.json"
+    },
     {
       "date": "2026-11-05",
       "title": "日次レポート",
