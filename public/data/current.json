@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-11-08T10:03:08.344+09:00",
-  "reportDate": "2026-11-08",
+  "generatedAt": "2026-11-09T10:25:46.112+09:00",
+  "reportDate": "2026-11-09",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-11-08T10:03:08.344+09:00"
+    "lastSuccessfulUpdateAt": "2026-11-09T10:25:46.112+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -1065,11 +1065,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-08T10:03:08.344+09:00",
+      "lastMaterialUpdateAt": "2026-11-09T10:25:46.112+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "独立媒体1件の追加報道を自動検知（2026-11-08）。",
+      "dailyDiff": "独立媒体1件の追加報道を自動検知（2026-11-09）。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -1102,7 +1102,7 @@
           "linkText": "報道記事を開く",
           "publisher": "LIMO | くらしとお金の経済メディア",
           "publishedAt": "2026-11-07T18:09:00+09:00",
-          "verifiedAt": "2026-11-08T10:03:08.344+09:00",
+          "verifiedAt": "2026-11-09T10:25:46.112+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -2183,98 +2183,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "サンケイリビング新聞社に不正アクセス、複数自治体の個人情報に漏えいの可能性 「リビングWeb」停止、広島・三重・島根・登米市に影響|セキュリティニュースのセキュリティ対策Lab",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-26T08:46:57.845+09:00",
-      "publishedAt": "2026-10-25T23:30:38.000Z",
-      "lastMaterialUpdateAt": "2026-10-25T23:30:38.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-26の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集",
-        "不具合候補（自治体・保険者）"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "合同会社ロケットボーイズ",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ2I3d1NLNXNQUmlldTQtSXFJYkdFeE1ob1pyMU13S0pOa2thUnE5dmVKMW8tNmJWMEx2bDdTZzFybUl5OUFNUEpXUldQMXFJakNyQm93WUFGVzBDZDVUTEx1ZHhxZVc3NlhsWjhjRFVVZTRCLVVHWDZLb2VUdnlNX2NfWFctZGgzc1d1YTY1RU1HNGVGLTV0YjZlWWxsMU9SZ0VyaGRPVENrWVE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "合同会社ロケットボーイズ",
-          "publishedAt": "2026-10-25T23:30:38.000Z",
-          "verifiedAt": "2026-10-26T08:46:57.845+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261025-h0h4b",
-      "category": "other"
-    },
-    {
-      "title": "マイナンバーカードセンター予約ページ",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-26T08:46:57.845+09:00",
-      "publishedAt": "2026-10-23T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-23T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-26の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "加古川市",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZ2lnbEIteFEwSnVtZGNUN2l1QmJHRFh4V1QtRnJQQXktdE5XeExmdGplTERMN2J3d1NsQUQ1Q2JJN2hMZUpNaXVhOTUzejYyeFd6ZFltRjd6aWRQOWN4aWlLcU82N1J6TWl3MnIxQmJ0MnBuVjNONnhRZE1VbjREdG4yZlYzMkh1VVU3TTBBcWdBc2lRejZaeFA5YTNCTkNwNGgtZE4tT05mSXp4eFBiVmtOb3AwRzYzYmdnVndpRmM5R3F1NHlz?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "加古川市",
-          "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-10-26T08:46:57.845+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261023-t3z19v",
-      "category": "reference"
-    },
-    {
-      "title": "旅券（パスポート）の申請手続きに関するお知らせ",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-26T10:07:44.837+09:00",
-      "publishedAt": "2026-10-21T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-21T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-26の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "豊見城市役所",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1Ic0NHWVhtWEg4TFV4dUJtZmd4TU1aQnBybE9OdUxrdkdLMVhraWlJeGp4eW9NZlRMUFRHU21xaE1wMS02NWFjWU1iMjZpMy1sMWswa3VyRHV4VXdUNTI3Mm9Fdjg0ZXVRdVRFOVB6SFZxZVowZnJCSTlvS0wzQQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "豊見城市役所",
-          "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-10-26T10:07:44.837+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261021-yh2vhi",
-      "category": "commentary",
-      "polarity": "neutral"
     },
     {
       "title": "マイナンバーカード電子証明書の更新手続きについて",
@@ -4829,6 +4737,67 @@
       "id": "news-auto-20261105-k71no7",
       "category": "commentary",
       "polarity": "neutral"
+    },
+    {
+      "title": "マイナ保険証を基本とする仕組みへの移行について",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-09T10:25:46.112+09:00",
+      "publishedAt": "2026-11-02T08:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-11-02T08:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-09の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "広島市公式ウェブサイト",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaDE3d1VMdVktblRTRlVCMUhSZWRnVlNVbW8zbDUyZFhsU0hkcUROOS1lYm5DMldzX3ZLRGNUcUpjYjYwT2xBZEw1OXpDb0dvWG9sQ09CT1lmLUUxSmxiZnFYaTJ0bFZEZG5IMG12LWRNdFkxN2Z5Y3p0ZlJFYkZncHo1allONWV1?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "広島市公式ウェブサイト",
+          "publishedAt": "2026-11-02T08:00:00.000Z",
+          "verifiedAt": "2026-11-09T10:25:46.112+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261102-c9fkyd",
+      "category": "reference"
+    },
+    {
+      "title": "福島県郡山市、行政手続き・マイナンバーカード予約で約5万2,600件が影響対象の可能性-アララに不正アクセス、登録者情報を調査|セキュリティニュースのセキュリティ対策Lab",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-09T10:25:46.112+09:00",
+      "publishedAt": "2026-11-07T01:54:58.000Z",
+      "lastMaterialUpdateAt": "2026-11-07T01:54:58.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-09の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "合同会社ロケットボーイズ",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNczZqeE52ZHRQV2lxdU1SODdoZEc4X2pac2ZRZ2tvREotVFdrUEhuYTl4aE5nR2ZVRThnY3RXSXJjYnVLYVR6SUhVRGF6MTdqMENlMzdFU0VoTjBHSVRIaURLRXJWNlA2Y1VuVzdSaVdYUXpHalNqTXFVS202anVVdlpxNjV4dGFUSEpVb0RieV9lYU0?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "合同会社ロケットボーイズ",
+          "publishedAt": "2026-11-07T01:54:58.000Z",
+          "verifiedAt": "2026-11-09T10:25:46.112+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261107-jje97h",
+      "category": "commentary",
+      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -5321,7 +5290,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-08T10:03:08.344+09:00",
+      "lastMaterialUpdateAt": "2026-11-09T10:25:46.112+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -5333,7 +5302,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "独立媒体4件の追加報道を自動検知（2026-11-08）。",
+      "dailyDiff": "独立媒体4件の追加報道を自動検知（2026-11-09）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -5488,7 +5457,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-31T18:10:51+09:00",
-          "verifiedAt": "2026-11-08T10:03:08.344+09:00",
+          "verifiedAt": "2026-11-09T10:25:46.112+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5499,7 +5468,7 @@
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
           "publishedAt": "2026-10-29T07:00:00.000Z",
-          "verifiedAt": "2026-11-08T10:03:08.344+09:00",
+          "verifiedAt": "2026-11-09T10:25:46.112+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5510,7 +5479,7 @@
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-11-08T10:03:08.344+09:00",
+          "verifiedAt": "2026-11-09T10:25:46.112+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5521,7 +5490,7 @@
           "linkText": "報道記事を開く",
           "publisher": "三条市",
           "publishedAt": "2026-10-21T07:00:00.000Z",
-          "verifiedAt": "2026-11-08T10:03:08.344+09:00",
+          "verifiedAt": "2026-11-09T10:25:46.112+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -7233,6 +7202,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-11-08",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-11-08.json"
+    },
     {
       "date": "2026-11-07",
       "title": "日次レポート",
