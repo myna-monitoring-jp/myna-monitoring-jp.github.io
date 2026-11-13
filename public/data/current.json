@@ -1,6 +1,6 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-11-13T10:20:13.782+09:00",
+  "generatedAt": "2026-11-13T11:22:25.105+09:00",
   "reportDate": "2026-11-13",
   "settings": {
     "dashboardQuietDays": 7,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-11-13T10:20:13.782+09:00"
+    "lastSuccessfulUpdateAt": "2026-11-13T11:22:25.105+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -1106,7 +1106,7 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-13T10:20:13.782+09:00",
+      "lastMaterialUpdateAt": "2026-11-13T11:22:25.105+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
@@ -1143,7 +1143,7 @@
           "linkText": "報道記事を開く",
           "publisher": "LIMO | くらしとお金の経済メディア",
           "publishedAt": "2026-11-07T18:09:00+09:00",
-          "verifiedAt": "2026-11-13T10:20:13.782+09:00",
+          "verifiedAt": "2026-11-13T11:22:25.105+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -2224,190 +2224,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "有効期限通知書が届いた方へ",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-30T10:28:03.926+09:00",
-      "publishedAt": "2026-10-27T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-27T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-30の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "山形市公式ホームページ",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPb2lZU1ZIaG10QUN5ejU4Nm5rZVlfSlMtdjBkU244eG1HQjIxbHg2bWk2NUo1UDZkRG5UZzhzUFVCTkVOWktDX2dsWEE3d2RqTkx5azhMbjdMM2x3ejNzN0d2dTItOGFHeFdabHJrcUtCUVAxQlZCWkhKUXZWaFo5TTdQOWw2TFY1R3o3ZS1ZOA?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "山形市公式ホームページ",
-          "publishedAt": "2026-10-27T07:00:00.000Z",
-          "verifiedAt": "2026-10-30T10:28:03.926+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261027-ncubld",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "「マイナンバーカードの更新」と「電子証明書の更新」",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-30T10:28:03.926+09:00",
-      "publishedAt": "2026-10-26T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-26T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-30の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "姫路市",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE05bHRIbm50Y3ptVUhYa1Fpd3ZHSnhRSTJlSWNNWEpQZEJ6OHAxbzY1Y0tVdERlUXNnZnQtT1lQV3ZiSHJ5T2NabElwYkU3alBqZjRkM0E5YTQyU2VsTEpiOTRhUQ?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "姫路市",
-          "publishedAt": "2026-10-26T07:00:00.000Z",
-          "verifiedAt": "2026-10-30T10:28:03.926+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261026-5d0bud",
-      "category": "reference"
-    },
-    {
-      "title": "令和9年4月1日から医療費助成受給資格のオンライン確認（PMH)がはじまります",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-30T10:28:03.926+09:00",
-      "publishedAt": "2026-10-02T10:10:35.000Z",
-      "lastMaterialUpdateAt": "2026-10-02T10:10:35.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-10-30の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "海南市",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBOZ2pPdHM3eF9MZmthNkp6SDlQcU9Nb05ZVE1NSmdSZTYtVVpKaXoycTk4dExPUXJBVV9lbHBSY2lmdU9aZmtGN2ZkWFlDNEczRFZvX19NcVo1UGxmLWRnRjYxUTRrd0R0ZnhOeHNTcw?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "海南市",
-          "publishedAt": "2026-10-02T10:10:35.000Z",
-          "verifiedAt": "2026-10-30T10:28:03.926+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261002-rz7whp",
-      "category": "reference"
-    },
-    {
-      "title": "マイナ保険証での受診は、4月の全国で100件のうち約68件。富山県は約78件、沖縄県は約55件で、都道府県によって約23件の差が（LIMO）",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-30T10:28:03.926+09:00",
-      "publishedAt": "2026-10-29T10:10:52+09:00",
-      "lastMaterialUpdateAt": "2026-10-29T10:10:52+09:00",
-      "summary": "厚生労働省は、令和8年6月18日の社会保障審議会医療保険部会（第212回）の資料で、令和8年4月のマイナ保険証の利用率が全国で68.15％だったと示しました。利用率は、マイナ保険証の利用人数をレセプト件数で割った値で、令和8年3月の67.21％から0.94ポイント上がっています。",
-      "dailyDiff": "2026-10-30の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9TOTY2SWxYODRxNVd6RkdsdzFNZHFtdHJLY1RRZG1Uek9CLWlGejRuMWtzcHc5RVU4WW42SjRINC1qRHhJd3JJUUNaUGtYbzdQMXdTVTk5ekJFeEdyVks0TVNzUG1KTEZoeG1tRkZlQkRWd0JuVVo0ejdIZTVWekk?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-29T10:10:52+09:00",
-          "verifiedAt": "2026-10-30T10:28:03.926+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261029-7f934c",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナ保険証の利用率は令和8年4月分で68.15%、厚生労働省が令和8年6月18日に公表。都道府県別は富山県77.91%から沖縄県55.31%まで、資格確認書などは約3人に1人",
-      "status": "new",
-      "severity": "medium",
-      "detectedAt": "2026-10-30T10:28:03.926+09:00",
-      "publishedAt": "2026-10-29T10:09:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-29T10:09:00+09:00",
-      "summary": "厚生労働省は、令和8年6月18日の社会保障審議会医療保険部会（第212回）の資料で、令和8年4月のマイナ保険証の利用率が全国で68.15%だったと示しました。利用率は、マイナ保険証の利用人数をレセプト件数で割った値で、令和8年3月の67.21%から0.94ポイント上がっています。",
-      "dailyDiff": "2026-10-30の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "LIMO | くらしとお金の経済メディア",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1jaHRZUjdudXJyVk5ZQ2MwRGt1Z3pDRjZRYVB0RFRUb0VqVHozOWJWSFJ2RHlEdEhOZm5iMnA1eW4waTVCQjRvMTNUUkk?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "LIMO | くらしとお金の経済メディア",
-          "publishedAt": "2026-10-29T10:09:00+09:00",
-          "verifiedAt": "2026-10-30T10:28:03.926+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261029-o7gak4",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "親のマイナ保険証、使えているか心配な人へ…8月から届く書類は「資格確認書」と「資格情報のお知らせ」の2種類 (LIMO)",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-10-30T10:28:03.926+09:00",
-      "publishedAt": "2026-10-28T12:10:49+09:00",
-      "lastMaterialUpdateAt": "2026-10-28T12:10:49+09:00",
-      "summary": "後期高齢者の医療保険では、令和8年8月1日から、年齢とマイナ保険証の利用実績に応じて、届く書類が変わっています。高齢の家族の利用状況によって、どの書類が届き、受診にどう影響するのかを知りたい方もいると考えられます。◆【画像】令和8年8月から届く書類はどっち？",
-      "dailyDiff": "2026-10-30の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObE4wYTNDWDZXcWU1QlBEMHQ4dmxOWjkwMldhTGlFQXlnaGVHendtcThnWWtWaXZOTEthSnFOUWk3Mlo3RzYtOUVBVHlpdUYzLUZDYmF3N211cXR4Y1UyazI5dmFIeVBhQ3ZkRVYyUGlIMnhXQjJySVd0T3lOQWNUeGh4aFo3Z3J4MXdURzNB?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-28T12:10:49+09:00",
-          "verifiedAt": "2026-10-30T10:28:03.926+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261028-2dfeqm",
-      "category": "commentary",
-      "polarity": "neutral"
     },
     {
       "title": "バンキングアカデミーは、教育データのデジタル化と透明性の確保において先駆的な役割を果たしています。",
@@ -5504,7 +5320,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-13T10:20:13.782+09:00",
+      "lastMaterialUpdateAt": "2026-11-13T11:22:25.105+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -5671,7 +5487,7 @@
           "linkText": "報道記事を開く",
           "publisher": "Yahoo!ニュース",
           "publishedAt": "2026-10-31T18:10:51+09:00",
-          "verifiedAt": "2026-11-13T10:20:13.782+09:00",
+          "verifiedAt": "2026-11-13T11:22:25.105+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5682,7 +5498,7 @@
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
           "publishedAt": "2026-10-29T07:00:00.000Z",
-          "verifiedAt": "2026-11-13T10:20:13.782+09:00",
+          "verifiedAt": "2026-11-13T11:22:25.105+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -5693,7 +5509,7 @@
           "linkText": "報道記事を開く",
           "publisher": "熊本市公式サイト",
           "publishedAt": "2026-10-23T07:00:00.000Z",
-          "verifiedAt": "2026-11-13T10:20:13.782+09:00",
+          "verifiedAt": "2026-11-13T11:22:25.105+09:00",
           "active": true,
           "note": "自動収集"
         }
