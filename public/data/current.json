@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-11-14T10:58:27.163+09:00",
-  "reportDate": "2026-11-14",
+  "generatedAt": "2026-11-15T10:30:32.554+09:00",
+  "reportDate": "2026-11-15",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-11-14T10:58:27.163+09:00"
+    "lastSuccessfulUpdateAt": "2026-11-15T10:30:32.554+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -1106,11 +1106,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-14T10:58:27.163+09:00",
+      "lastMaterialUpdateAt": "2026-11-15T10:30:32.554+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "独立媒体2件の追加報道を自動検知（2026-11-14）。",
+      "dailyDiff": "独立媒体2件の追加報道を自動検知（2026-11-15）。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -1143,7 +1143,7 @@
           "linkText": "報道記事を開く",
           "publisher": "全国保険医団体連合会",
           "publishedAt": "2026-11-13T11:56:36+09:00",
-          "verifiedAt": "2026-11-14T10:58:27.163+09:00",
+          "verifiedAt": "2026-11-15T10:30:32.554+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -1154,7 +1154,7 @@
           "linkText": "報道記事を開く",
           "publisher": "LIMO | くらしとお金の経済メディア",
           "publishedAt": "2026-11-07T18:09:00+09:00",
-          "verifiedAt": "2026-11-14T10:58:27.163+09:00",
+          "verifiedAt": "2026-11-15T10:30:32.554+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -2235,160 +2235,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "窓口負担割合の表示誤りで過払い21人に返還・未払い22人から追加徴収へ マイナ保険証のデータ連係不具合 弘前市",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-11-01T09:40:55.513+09:00",
-      "publishedAt": "2026-10-30T13:48:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-30T13:48:00+09:00",
-      "summary": "弘前市は、マイナ保険証のデータ連携の不具合で医療費の自己負担割合が間違って表示されていた人たちに対し、負担金の返還や追加の徴収を行うと発表しました。 市ではことし8月、満70歳から74歳の国民健康保険加入者の一部で、窓口負担割合が確認できなかったり異なった表示がされるなどのトラブルが起きました。",
-      "dailyDiff": "2026-11-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集",
-        "不具合候補（自治体・保険者）"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "日テレNEWS NNN",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQWRaNmtxUFpIeTZjNml0Zzh0aGFmdVAxTVBjUXRzaW0xNnc4N1lwdVhIdlJlUDk1RmFmQ01Nb1p1SzE5V1JaNzJiM3dYejBmckVyMXNXS1B6UEQ4eEhTaWUzOHJCaW4zblBvMjhKX3hJaFpTNGlzMjJoWnRyNGZwM3NZN1ZGWXM?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "日テレNEWS NNN",
-          "publishedAt": "2026-10-30T13:48:00+09:00",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261030-8uhhc7",
-      "category": "other"
-    },
-    {
-      "title": "政府広報オンラインCM「マイナアプリ」 Leonardo Dicaprio (FDVu0kIcDN)",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-11-01T09:40:55.513+09:00",
-      "publishedAt": "2026-10-25T12:23:32.000Z",
-      "lastMaterialUpdateAt": "2026-10-25T12:23:32.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-11-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集",
-        "広報候補"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Unisba Media",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB0UU9LWlhSMUxvNllRME5pYjRBZkVCTlFBZ2l3YjIwUUZDczhMNnVqckx0VnZyX0xLV09jZ050eUx6Ukx2NThFR2k2OGNYRDBEV1ppSllnZ0MzVjNraXZmenEyTjBGb2UyeEhr?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Unisba Media",
-          "publishedAt": "2026-10-25T12:23:32.000Z",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261025-kq7oqv",
-      "category": "other"
-    },
-    {
-      "title": "マイナンバーカード・インフォ（民間事業者向け情報）Vol.157、158を掲載しました",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-11-01T09:40:55.513+09:00",
-      "publishedAt": "2026-10-30T06:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-30T06:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-11-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "デジタル庁",
-          "url": "https://www.digital.go.jp/policies/mynumber/private-business/info",
-          "linkText": "報道記事を開く",
-          "publisher": "デジタル庁",
-          "publishedAt": "2026-10-30T06:00:00.000Z",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261030-h1g32f",
-      "category": "reference"
-    },
-    {
-      "title": "マイナンバーカードの電子証明書、来年度は更新見込み何件？期限後の猶予は3か月で、その間は診療や薬の情報が見られないかを解説（LIMO）",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-11-01T09:40:55.513+09:00",
-      "publishedAt": "2026-10-31T18:10:51+09:00",
-      "lastMaterialUpdateAt": "2026-10-31T18:10:51+09:00",
-      "summary": "マイナンバーカードを持っている人は、カード本体のほかに「電子証明書」にも有効期限があります。電子証明書の期限が切れると、マイナポータルや確定申告の電子申告など、オンラインの行政サービスが使えなくなります。",
-      "dailyDiff": "2026-11-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB1WmdEVU5ZN0NSS2xua0YzUzh3bFp5Zl9vV2pQT2RNZjFzYVZtYVhUX3d3OEc0cmxfSDFjRE5jcDJhb1VIRTJ2d1NoZkRBeG5CbElqNi01WUZVOXYzdm1mbXRHbXNsYWVBeXlzTS1LYXpmM3V2Q1h3VllEQjI5MkE?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-31T18:10:51+09:00",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261031-5dc15f",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナンバーカードの電子証明書、来年度は更新見込み何件？期限後の猶予は3か月で、その間は診療や薬の情報が見られないかを解説（LIMO）",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-11-01T09:40:55.513+09:00",
-      "publishedAt": "2026-10-31T09:10:51.000Z",
-      "lastMaterialUpdateAt": "2026-10-31T09:10:51.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-11-01の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNjNwYVBrTFlqXzYzVEZwWFJSQ2JUVG8tbVl4bnFJS3ZXejdURFJMSUNUTTk1RlhuSVFKYW9yY1YzRWowUnlOOE5SVmZ6emhkLXdORHhDR3JzSDdwZXhuRElzM2daZXJLLWZyRHE2VEVWZWFMSXpnQnVFVHJncHVTUFgyQ1NJNDRY?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-10-31T09:10:51.000Z",
-          "verifiedAt": "2026-11-01T09:40:55.513+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261031-wbojsl",
-      "category": "commentary",
-      "polarity": "neutral"
     },
     {
       "title": "国内からオンライン申請する｜外務省",
@@ -4854,6 +4700,68 @@
       "id": "news-auto-20261112-a8ll6a",
       "category": "commentary",
       "polarity": "neutral"
+    },
+    {
+      "title": "医師偏在対策の一方策「地方勤務医の特別手当」の具体的検討開始、特定機能病院での情報セキュリティ対策強化—社保審・医療部会",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-15T10:30:32.554+09:00",
+      "publishedAt": "2026-11-12T13:11:25+09:00",
+      "lastMaterialUpdateAt": "2026-11-12T13:11:25+09:00",
+      "summary": "特定機器による「言わばサイバー攻撃の時限爆弾」導入を阻止するため、特定機能病院における電子カルテシステムなどを「国の基幹インフラ」に位置づけ、機器等の購入・更新等にあたっては「国が事前の審査」を行い、必要に応じて「セキュリティ対策」の強化に向けた勧告 ...",
+      "dailyDiff": "2026-11-15の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（医療IT・サイバー）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "GemMed",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBfdmpkUmxNUzdyT29IdjBoMV9qcW9lWWkyOEFDUEhjNTZIYTAtNV9SUXFoVWdEODhKaTVMdy1YLVpDVXVzSDJzMg?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "GemMed",
+          "publishedAt": "2026-11-12T13:11:25+09:00",
+          "verifiedAt": "2026-11-15T10:30:32.554+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261112-wspspl",
+      "category": "other"
+    },
+    {
+      "title": "「受験にもお金がかかるので…」“偽造”資格証明書で保育士と偽り勤務か 女逮捕",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-11-15T10:30:32.554+09:00",
+      "publishedAt": "2026-11-13T11:17:10+09:00",
+      "lastMaterialUpdateAt": "2026-11-13T11:17:10+09:00",
+      "summary": "保育士資格の証明書を偽造し、札幌市の保育園で保育士と偽って勤務したとして、42歳の女が逮捕されました。",
+      "dailyDiff": "2026-11-15の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "テレ朝NEWS",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ISUxaMm5wZ3lFYjlxTW4tdmlYUWo2YUk5aXU5Sk5GZWxIdkczSThKOHZ1SEhuMnBwak1Gam1Pd0VrS0ZQdzJQYjlHUWZtMDUtSTBMMHAyZ2xFLTl0NWEtQWJIbkZQMUxzZEhvd19jRWVpdw?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "テレ朝NEWS",
+          "publishedAt": "2026-11-13T11:17:10+09:00",
+          "verifiedAt": "2026-11-15T10:30:32.554+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261113-hbda3b",
+      "category": "commentary",
+      "polarity": "neutral"
     }
   ],
   "incidents": [
@@ -5527,7 +5435,7 @@
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
           "publishedAt": "2026-10-29T07:00:00.000Z",
-          "verifiedAt": "2026-11-14T10:58:27.163+09:00",
+          "verifiedAt": "2026-11-15T10:30:32.554+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -7675,6 +7583,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-11-14",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-11-14.json"
+    },
     {
       "date": "2026-11-13",
       "title": "日次レポート",
