@@ -1,7 +1,7 @@
 {
   "dataset": "live",
-  "generatedAt": "2026-11-15T10:30:32.554+09:00",
-  "reportDate": "2026-11-15",
+  "generatedAt": "2026-11-16T10:33:40.715+09:00",
+  "reportDate": "2026-11-16",
   "settings": {
     "dashboardQuietDays": 7,
     "newItemHours": 48,
@@ -10,7 +10,7 @@
   },
   "dataUpdate": {
     "state": "ok",
-    "lastSuccessfulUpdateAt": "2026-11-15T10:30:32.554+09:00"
+    "lastSuccessfulUpdateAt": "2026-11-16T10:33:40.715+09:00"
   },
   "headline": {
     "title": "今日の全体像",
@@ -1106,11 +1106,11 @@
       "severity": "medium",
       "detectedAt": "2026-09-01T14:00:00+09:00",
       "publishedAt": "2026-09-01T14:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-11-15T10:30:32.554+09:00",
+      "lastMaterialUpdateAt": "2026-11-16T10:33:40.715+09:00",
       "summary": "第214回社会保障審議会医療保険部会（ペーパーレス）の開催案内。関連して、マイナ保険証の受付に使う第2世代（次期）顔認証付きカードリーダーの販売が2026年度から順次始まったことが部会資料で示されている。",
       "whatIsNew": "部会の開催が公表された。",
       "audience": "医療機関、医療システムベンダー",
-      "dailyDiff": "独立媒体2件の追加報道を自動検知（2026-11-15）。",
+      "dailyDiff": "独立媒体2件の追加報道を自動検知（2026-11-16）。",
       "tags": [
         "審議会",
         "顔認証付きカードリーダー"
@@ -1143,7 +1143,7 @@
           "linkText": "報道記事を開く",
           "publisher": "全国保険医団体連合会",
           "publishedAt": "2026-11-13T11:56:36+09:00",
-          "verifiedAt": "2026-11-15T10:30:32.554+09:00",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
           "active": true,
           "note": "自動収集"
         },
@@ -1154,7 +1154,7 @@
           "linkText": "報道記事を開く",
           "publisher": "LIMO | くらしとお金の経済メディア",
           "publishedAt": "2026-11-07T18:09:00+09:00",
-          "verifiedAt": "2026-11-15T10:30:32.554+09:00",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -2235,98 +2235,6 @@
         "incident-planned-outage-20260904"
       ],
       "reviewState": "reviewed"
-    },
-    {
-      "title": "国内からオンライン申請する｜外務省",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-11-02T10:14:26.872+09:00",
-      "publishedAt": "2026-10-30T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-30T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-11-02の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Ministry of Foreign Affairs of Japan",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE12OTIxbVlrUWE1TndHRWVlZFNXMVJaYnFhclZVUGRfZjhDcHIyRkIydmVQUUlNWmRVRU9oODd6dXdoM2JZSEU4Tk9EeFcwUXJWWER5SzduX1BkMWdjbHd1eE96NjQwbWtIX0JET09R?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Ministry of Foreign Affairs of Japan",
-          "publishedAt": "2026-10-30T07:00:00.000Z",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261030-uvc8zn",
-      "category": "commentary",
-      "polarity": "neutral"
-    },
-    {
-      "title": "マイナンバーカード電子証明書更新手続について",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-11-02T10:14:26.872+09:00",
-      "publishedAt": "2026-10-16T07:00:00.000Z",
-      "lastMaterialUpdateAt": "2026-10-16T07:00:00.000Z",
-      "summary": "本文未取得。出典を参照してください。",
-      "dailyDiff": "2026-11-02の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "伊東市",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObEZxT3dhbmpWZ1BTd1F3aTl5eXFkS0tCMTdBbWMtYmxXQlhVSDhyaWFGUDZ3QmhIa1h0MDQxMHJBeXozUjZ4OGFZWTVVMnEzeFZDeTc5ckJHMkFvTnJyYVhsT3RsUGNtUW5aNE1lSGkyLWFJbkRybjZyNEx5LU1qb0hmNWsxczEwR3Jfb0doRnM3Q185Mk1GelhpMlVhOG9t?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "伊東市",
-          "publishedAt": "2026-10-16T07:00:00.000Z",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261016-6uel4x",
-      "category": "reference"
-    },
-    {
-      "title": "薬局でマイナ保険証を使うと薬代はいくら変わる？令和8年6月新設ルールと3割負担の試算（LIMO）",
-      "status": "new",
-      "severity": "low",
-      "detectedAt": "2026-11-02T10:14:26.872+09:00",
-      "publishedAt": "2026-11-01T12:10:51+09:00",
-      "lastMaterialUpdateAt": "2026-11-01T12:10:51+09:00",
-      "summary": "厚生労働省は、令和8年度の診療報酬改定（令和8年6月施行）で、保険薬局の調剤について、医療情報取得加算を廃止し、医療DX推進体制整備加算を「電子的調剤情報連携体制整備加算」に改めました。新しい加算は、月1回に限り8点です（厚生労働省「令和8年度診療報酬改定の概要【調剤】」）。",
-      "dailyDiff": "2026-11-02の自動収集で新規検知。",
-      "reviewState": "unreviewed",
-      "tags": [
-        "自動収集"
-      ],
-      "publicVoices": [],
-      "factChecks": [],
-      "sources": [
-        {
-          "type": "media",
-          "label": "Yahoo!ニュース",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5kNHh6M3dWMXh4Z2RGSTFDUG94M2hTNGc5QVRuSVZkRG5nX3FaYm1uNVFoWFJGcXFSbzk1REo5V2JmeUJFdDQtMFgzd3lGX3VjbGpKNDV5RU9neXYtRXlMOFFYRmlUY2FsQnNMWllUZ1I3STF5dHdIN0hkLXUydk0?oc=5",
-          "linkText": "報道記事を開く",
-          "publisher": "Yahoo!ニュース",
-          "publishedAt": "2026-11-01T12:10:51+09:00",
-          "verifiedAt": "2026-11-02T10:14:26.872+09:00",
-          "active": true
-        }
-      ],
-      "id": "news-auto-20261101-llu0sw",
-      "category": "commentary",
-      "polarity": "neutral"
     },
     {
       "title": "会計システムのTKC、アララ メッセージへの不正アクセスで最大223万812件のメールアドレスが漏えい対象に 自治体のマイナンバーカード交付予約システムなどでメール送信停止|セキュリティニュースのセキュリティ対策Lab",
@@ -4762,6 +4670,191 @@
       "id": "news-auto-20261113-hbda3b",
       "category": "commentary",
       "polarity": "neutral"
+    },
+    {
+      "title": "「ユミルリンク」延べ5162万件余りの個人情報漏えいを確認 JR東海や阪急百貨店などもシステム利用 企業や自治体のメール配信事業など手がける",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-11-16T10:33:40.715+09:00",
+      "publishedAt": "2026-11-13T04:10:41.000Z",
+      "lastMaterialUpdateAt": "2026-11-13T04:10:41.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-16の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集",
+        "不具合候補（自治体・保険者）"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "TBS NEWS DIG",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5IbmFMTk5iS2xEUzdZZ0xxTllvaXN3b1RSczlRNWFYbUhlTGRlNzRVNThXZFFVWWgwUjIyRl9PMUZZRVJFbFpuWU5TbUJEaXZLWWhrZ3J3VTZpR0hfSU40?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "TBS NEWS DIG",
+          "publishedAt": "2026-11-13T04:10:41.000Z",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261113-bsyk2",
+      "category": "other"
+    },
+    {
+      "title": "マイナンバーカード電子証明書の更新手続きについて",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-16T10:33:40.715+09:00",
+      "publishedAt": "2026-11-11T08:00:00.000Z",
+      "lastMaterialUpdateAt": "2026-11-11T08:00:00.000Z",
+      "summary": "本文未取得。出典を参照してください。",
+      "dailyDiff": "2026-11-16の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "新潟市",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRk5IWXpjZHJqN24zcTh4SFZ0dmxPVk01bE9LN1VSOG8xX1kwcl96WmtMLTJLeEFWWWE0YU50Q0lNTTB4SnNRRkQwLXV1VVBuMmI3ZGY1N1Q4NERjVkxiRUlSMENxeS1CbkZoOTNEWHRpaG1NZVlnaFp5RDZ3ZmZpc0lzRkJNTkU?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "新潟市",
+          "publishedAt": "2026-11-11T08:00:00.000Z",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261111-5159a9",
+      "category": "reference"
+    },
+    {
+      "title": "【2026年最新】マイナ保険証と「資格確認書」の落とし穴！知らないと医療費の立て替えで30万円消える罠と手元確認",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-16T10:33:40.715+09:00",
+      "publishedAt": "2026-11-15T18:10:54+09:00",
+      "lastMaterialUpdateAt": "2026-11-15T18:10:54+09:00",
+      "summary": "健康保険証が使えなくなる話を聞いたことはないだろうか。従来の健康保険証は2025年12月1日をもって有効期限が終了している。 ただし、有効期限切れの保険証をそのまま使える「暫定措置」が複数回にわたって延長されているため、現在の状況がわかり ...",
+      "dailyDiff": "2026-11-16の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBBSW1pQnp5cU1BTTdmU3c0RXV4czFXeGxZZVRiRElHbnBqOGoxc2psZnBxMTNJTWNaV09Yd2Zsc2JhU0wxelJzbVllY1JQWS1KZmxsMWRwWS1GRHQt?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "YouTube",
+          "publishedAt": "2026-11-15T18:10:54+09:00",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261115-rbgbfu",
+      "category": "commentary",
+      "polarity": "negative"
+    },
+    {
+      "title": "【2026年11月】仕事中や通勤途中のけがは、マイナ保険証で受診しても健康保険は使えない。誤って使うと協会けんぽの負担分「7割」を返す手続きに。けがで受診すると届く「負傷原因」の照会は返送が必要 「健康保険か労災か」は自分で選べない？通勤中のケガで誤ってマイナ",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-16T10:33:40.715+09:00",
+      "publishedAt": "2026-11-15T12:09:00+09:00",
+      "lastMaterialUpdateAt": "2026-11-15T12:09:00+09:00",
+      "summary": "歯を磨いた直後にコーヒーを飲んでいる、歯磨き後のうがいは念入りに——このどちらかに心当たりがある人は要注意です。歯磨きは一日の中で、お口の中がもっとも清潔になる瞬間。しかし実は磨いた“直後”の行動次第で、せっかくのケアがほとんど無駄になってしまうこと ...",
+      "dailyDiff": "2026-11-16の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "LIMO | くらしとお金の経済メディア",
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9QM003MUN6QmI0UUJnckxocl9STE9weExvcnREb01vbUJhZkF0c2psMkJrMzFoUVhEMjVCSFhOd2xxNUd2WVBjZ3pOVWI?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "LIMO | くらしとお金の経済メディア",
+          "publishedAt": "2026-11-15T12:09:00+09:00",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261115-kg1paw",
+      "category": "commentary",
+      "polarity": "negative"
+    },
+    {
+      "title": "米住宅支援、世帯全員の市民権・在留資格確認へ HUDが最終規則（11/13）",
+      "status": "new",
+      "severity": "low",
+      "detectedAt": "2026-11-16T10:33:40.715+09:00",
+      "publishedAt": "2026-11-14T22:53:13+09:00",
+      "lastMaterialUpdateAt": "2026-11-14T22:53:13+09:00",
+      "summary": "米住宅都市開発省（HUD）は12日付の連邦官報に、連邦の住宅支援を受ける世帯について、年齢を問わず全員の米国市民権または支援対象となる在留資格の確認を求める最終規則を掲載した。施行日は12月14日。公営住宅や家賃補助のセクション8などが対象で、資格を ...",
+      "dailyDiff": "2026-11-16の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "LALALA USA",
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9xRTUtbHlJTzhqSlFpUFVyVHo1SHd6c3MzX3FjSnFqT1ZMV3NfWE5mc3RtTG5PblA2Q0ZGdDFyU0NNY3BBREVJMEZuRTA?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "LALALA USA",
+          "publishedAt": "2026-11-14T22:53:13+09:00",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261114-60o5af",
+      "category": "commentary",
+      "polarity": "neutral"
+    },
+    {
+      "title": "大量・重要な個人情報の漏洩・流出から国民を守るために－－「ＡＩ攻撃」の多発に対応した個人情報保護政策への転換を",
+      "status": "new",
+      "severity": "medium",
+      "detectedAt": "2026-11-16T10:33:40.715+09:00",
+      "publishedAt": "2026-11-14T14:31:01+09:00",
+      "lastMaterialUpdateAt": "2026-11-14T14:31:01+09:00",
+      "summary": "先の特別国会で、経済界の要求に従い改悪された個人情報保護法は、これまで本人同意が必要だった病歴など要配慮個人情報を、ＡＩ開発の学習などに本人同意なく「利活用」することを認めた。個人の機微にわたる情報が流出すればいっそう深刻な権利侵害をもたらすものであり、実施を中止すべきである。",
+      "dailyDiff": "2026-11-16の自動収集で新規検知。",
+      "reviewState": "unreviewed",
+      "tags": [
+        "自動収集"
+      ],
+      "publicVoices": [],
+      "factChecks": [],
+      "sources": [
+        {
+          "type": "media",
+          "label": "日本共産党",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0zNXBwNXVPa2xXaWdLR3Q5em9MalhueEhpa2w4OXIyVkhzWmRoSXRMZ1I2R2Y5cWFrVWNWTk5ZZmk4R3hiTFlGSzM4amtOVzBBTTFHaHdR?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "日本共産党",
+          "publishedAt": "2026-11-14T14:31:01+09:00",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
+          "active": true
+        }
+      ],
+      "id": "news-auto-20261114-4tos4a",
+      "category": "commentary",
+      "polarity": "positive"
     }
   ],
   "incidents": [
@@ -5268,7 +5361,7 @@
       "status": "attention",
       "severity": "high",
       "publishedAt": "2026-09-02T00:00:00+09:00",
-      "lastMaterialUpdateAt": "2026-10-21T08:00:00+09:00",
+      "lastMaterialUpdateAt": "2026-11-16T10:33:40.715+09:00",
       "affectedCount": null,
       "affectedCountNote": "2026年度：カード更新590万件超・電子証明書更新1,430万件超の見込み",
       "symptoms": "立川市は待ち時間「60分以上」が多いと明記。姫路市はコールセンター電話がつながりにくい状態が継続。2016年度から本格交付した初回更新需要が集中している。",
@@ -5280,7 +5373,7 @@
       "summary": "2026年度はカード更新590万件超・電子証明書更新1,430万件超が見込まれる大規模更新ラッシュ年度。全国的に窓口の混雑が継続している。立川市は「60分以上待つことが多い」と明記。",
       "whatIsNew": "一宮市が10/7更新のページで、12/1から電子証明書の更新を予約制（電話・WEB）にすると案内した。12月以降に対象者が増えるためとしており、更新ラッシュへの対応が特別窓口（10/7開設）に続き予約制へ進んだ。",
       "audience": "電子証明書の更新期限を迎える保有者、自治体窓口",
-      "dailyDiff": "11/13朝：新規の公式発表・続報は確認できず（前回から変化なし）。",
+      "dailyDiff": "独立媒体2件の追加報道を自動検知（2026-11-16）。",
       "tags": [
         "窓口混雑",
         "電子証明書更新",
@@ -5430,12 +5523,23 @@
         },
         {
           "type": "media",
+          "label": "新潟市",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRk5IWXpjZHJqN24zcTh4SFZ0dmxPVk01bE9LN1VSOG8xX1kwcl96WmtMLTJLeEFWWWE0YU50Q0lNTTB4SnNRRkQwLXV1VVBuMmI3ZGY1N1Q4NERjVkxiRUlSMENxeS1CbkZoOTNEWHRpaG1NZVlnaFp5RDZ3ZmZpc0lzRkJNTkU?oc=5",
+          "linkText": "報道記事を開く",
+          "publisher": "新潟市",
+          "publishedAt": "2026-11-11T08:00:00.000Z",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
+          "active": true,
+          "note": "自動収集"
+        },
+        {
+          "type": "media",
           "label": "姫路市",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE05bHRIbm50Y3ptVUhYa1Fpd3ZHSnhRSTJlSWNNWEpQZEJ6OHAxbzY1Y0tVdERlUXNnZnQtT1lQV3ZiSHJ5T2NabElwYkU3alBqZjRkM0E5YTQyU2VsTEpiOTRhUQ?oc=5",
           "linkText": "報道記事を開く",
           "publisher": "姫路市",
           "publishedAt": "2026-10-29T07:00:00.000Z",
-          "verifiedAt": "2026-11-15T10:30:32.554+09:00",
+          "verifiedAt": "2026-11-16T10:33:40.715+09:00",
           "active": true,
           "note": "自動収集"
         }
@@ -7583,6 +7687,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-11-15",
+      "title": "日次レポート",
+      "dataPath": "archive/2026-11-15.json"
+    },
     {
       "date": "2026-11-14",
       "title": "日次レポート",
